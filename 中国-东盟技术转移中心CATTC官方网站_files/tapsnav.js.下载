@@ -1,0 +1,58 @@
+﻿
+$(function () {
+    var urlstr = window.location.href;
+
+    var tapindex = 0;
+    if (urlstr.indexOf("index") != -1 || urlstr.indexOf("Index") != -1) {
+        tapindex = 0;
+    } else if (urlstr.indexOf("news") != -1 || urlstr.indexOf("video") != -1) {
+        tapindex = 1;
+    } else if (urlstr.indexOf("supply") != -1) {
+        tapindex = 2;
+    } else if (urlstr.indexOf("activity") != -1) {
+        tapindex = 3;
+    } else if (urlstr.indexOf("innovation") != -1) {
+        tapindex = 4;
+    } else if (urlstr.indexOf("customer") != -1) {
+        tapindex = 5;
+    } else if (urlstr.indexOf("case") != -1) {
+        tapindex = 6;
+    } else if (urlstr.indexOf("partner") != -1) {
+        tapindex = 7;
+    } else if (urlstr.indexOf("experts") != -1) {
+        tapindex = 8;
+    } else if (urlstr.indexOf("templates") != -1) {
+        tapindex = 9;
+    } else if (urlstr.indexOf("asean") != -1) {
+        tapindex = 10;
+    } else if (urlstr.indexOf("about") != -1) {
+        tapindex = 11;
+    }
+
+    var lilist = $(".topwrapper .navitem>li");//ul下的第一层li标签
+    //判断创新大会和专题专栏是否还存在；
+    if ($(lilist[4]).attr("id") == "five")//大会存在
+    {
+        if ($(lilist[9]).attr("id") == "ten") {//专题存在
+
+        }
+        else {//专题不存在
+            if (tapindex > 9) tapindex = tapindex - 1;
+        }
+    }
+    else {//大会不存在
+        if ($(lilist[8]).attr("id") == "ten") {//专题存在
+            if (tapindex > 4) tapindex = tapindex - 1;
+        }
+        else {//专题不存在
+            if (tapindex > 4 && tapindex < 9) tapindex = tapindex - 1;
+            else if (tapindex > 9) tapindex = tapindex - 2;
+        }
+
+    }
+    $(lilist[tapindex]).attr("class","cur");
+
+    //alert($(".topwrapper .navitem li a").text());
+
+    //alert('最外层的DIV的ID是：' + $(this).parents("div")[$(this).parents("div").length - 1].id);
+})

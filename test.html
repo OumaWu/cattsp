@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<title>test</title>
+<style>
+#ticker { width:180px; height:300px; border:1px solid #aaaaaa; overflow:auto; margin: 0 auto;}
+#ticker dt { font:normal 14px Georgia; padding:0 10px 5px 10px; background-color:#e5e5e5; padding-top:10px; border:1px solid #ffffff; border-bottom:none; border-right:none; position:relative; }
+#ticker dd { margin-left:0; font:normal 11px Verdana; padding:0 10px 10px 10px; border-bottom:1px solid #aaaaaa; background-color:#e5e5e5; border-left:1px solid #ffffff; position:relative; }
+#ticker dd.last { border-bottom:1px solid #ffffff; }
+#ticker div { margin-top:0; }
+#tickerContainer { text-align:center;}
+
+
+.test1,.test2,.test3{
+ height: 100px;
+ background-color: #ccc;
+ margin-top: 20px;
+        }
+ ul{
+ list-style: none;
+ overflow: hidden;
+ padding: 0;
+ margin: 0;
+ width: 360px;
+        }
+ 
+ ul li{
+ height: 20px;
+ width: 100px;
+ background-color: #00aaaa;
+ float: left;
+ margin-right: 20px;
+ text-align: center;
+        }
+        .test1 ul{
+ margin: 0 auto;
+        }
+        .test2{
+ position: relative;
+        }
+        .test2 ul{
+ position: absolute;
+ left: 0;
+ top: 50%;
+ transform:translate(0,-50%);
+ }
+ 
+        .test3{
+ position: relative;
+        }
+        .test3 ul{
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ transform:translate(-50%,-50%);
+ }
+</style>
+</head>
+
+<body>
+<div id="tickerContainer">
+  <dl id="ticker">
+    <dt class="heading">This is a news title!</dt>
+    	<dd class="text">This is a snippet of the news. It could be the whole news item or it could link to another page containing...</dd>
+    <dt class="heading">News Heading 2</dt>
+   		<dd class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+    <dt class="heading">News Heading 3</dt>
+    	<dd class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+    <dt class="heading">News Heading 4</dt><dd class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+    <dt class="heading">This item is long!</dt>
+    	<dd class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+  </dl>
+</div>
+<script type="text/javascript">
+  $(function() {
+    var ticker = $("#ticker");
+    ticker.children().filter("dt").each(function() {
+      var dt = $(this),
+        container = $("<div>");
+      dt.next().appendTo(container);
+      dt.prependTo(container);
+      container.appendTo(ticker);
+    });
+    ticker.css("overflow", "hidden");
+    function animator(currentItem) {
+      var distance = currentItem.height();
+        duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
+      currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+        currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+        animator(currentItem.parent().children(":first"));
+      }); 
+    };
+    animator(ticker.children(":first"));
+    ticker.mouseenter(function() {
+      ticker.children().stop();
+    });
+    ticker.mouseleave(function() {
+      animator(ticker.children(":first"));
+    });
+  });
+</script>
+
+<div class="test1">
+    <ul>
+        <li>水平居中</li>
+        <li>水平居中</li>
+        <li>水平居中</li>
+    </ul>
+</div>
+<div class="test2">
+    <ul>
+        <li>垂直居中</li>
+        <li>垂直居中</li>
+        <li>垂直居中</li>
+    </ul>
+</div>
+<div class="test3">
+    <ul>
+        <li>水平垂直居中</li>
+        <li>水平垂直居中</li>
+        <li>水平垂直居中</li>
+    </ul>
+</div>
+</body>
+</html>

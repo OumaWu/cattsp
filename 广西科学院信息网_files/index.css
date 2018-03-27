@@ -1,0 +1,77 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body {
+	/*background-repeat: no-repeat;*/
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+-->
+.STYLE2 {
+	font-size: small;
+	text-align: center;
+	text-decoration: underline;
+	color: #F00;
+	font-family: 华文中宋;
+}
+.STYLE1 {
+	font-family: "华文中宋";
+	color: #F00;
+	font-size: 19px;
+}
+.bottom_f {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #FFF;
+}
+.bottom_f a{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	color: #CCC;
+}
+.bottom_f a:hover{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 12px;
+	font-style:italicl;
+	line-height: normal;
+	color: #CCC;
+}
+
+
+#gzhd ul {
+	background-image: url(../images/gzhd.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	height: 280px;
+}
+#gzhd ul li {
+	display: block;
+	height: 115px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	float: left;
+	width: 105px;
+}
+#gzhd ul li a {
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 95px;
+	height: 60px;
+}
+
+#gzhd ul li.n1 {
+	height: 41px;
+	width: 107px;
+}
+#gzhd ul li.n1 a {
+	padding-top: 5px;
+	text-align: left;
+	padding-left: 45px;
+	height: 35px;
+}

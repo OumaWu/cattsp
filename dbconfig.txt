@@ -1,0 +1,12 @@
+localhost db
+$db = 'sttp';
+$username = 'root';
+$pwd = '111';
+$host = 'localhost';
+$dsn = "$dbms:host=$host;dbname=$db";
+
+Amazon RDS db
+$db = 'casttp';
+$username = 'sttpadmin';
+$pwd = 'sttpadmin';
+$host = 'casttpdb.cvpg8sczyk4i.eu-central-1.rds.amazonaws.com';

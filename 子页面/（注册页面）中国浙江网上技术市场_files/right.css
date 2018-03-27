@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.gd_tabpanel{ background: url(../../images/zjmi/Plate/Lt_ttbg.gif) repeat-x;border-bottom:1px solid #C9C7C7; height:31px;}
+.gd_tabpanel ul{ width:100%;}
+.gd_tabpanel li{display:block;float: left;width:97px; text-align:center; cursor:pointer;background:#5391be;color:#fff;height:31px;padding-top:1px;line-height:31px; font-weight:bold; border-right:1px solid #fff; font-size:12px;}
+.gd_tabpanel li.on{ background:#f5f5f5; height:31px;}
+.gd_tabpanel li a {color:#fff;}
+.gd_tabpanel li.on a{color:#666;}
+
+
+.gd_s table{ margin:10px auto; line-height:25px}
+.gd_s .input01{ border:1px solid #ddd}
+.gd_searchbtn{ border:0px; background:url(../../images/market/btn01.gif) no-repeat; width:73px; height:25px; font-weight:700;cursor:pointer;}
+
+.price_num{font: 17px Verdana;letter-spacing: 0px;color: #FF5500;}
+.gd_pagetop{ background:#F3F3F3; border-top:1px solid #DEDEE0; border-bottom:1px solid #DEDEE0; height:25px; line-height:25px; text-align:right; margin-bottom:3px; padding-right:5px; padding-top:3px;}
+.gd_pagetop a{ border: solid 1px #CCC;height: 23px; background:#FFF;line-height: 23px;overflow: hidden;min-width: 15px;_width: 15px;padding: 2px 6px;margin-right: 5px;text-align: center;white-space: nowrap;font-size: 13px;vertical-align: middle;font-family: Arial,SimSun; color:#0066FF}
+.gd_pagetop a.next{ border: solid 1px #CCC;height: 23px; background: url(../../images/market/ico15.gif) 50px 8px no-repeat #FFF;line-height: 23px;overflow: hidden;min-width: 15px;_width: 15px;padding: 3px 10px;margin-right: 5px;text-align: center;white-space: nowrap;font-size: 13px;vertical-align: middle;font-family: Arial,SimSun; color:#0066FF}
+
+.ht_tb{  border:1px solid #E6E6E6; margin-bottom:3px;}
+.ht_tb td{ border:1px solid #E6E6E6;line-height:23px; border-left:none; border-bottom:none;padding-left:5px; vertical-align:middle}
+.ht_tb th{ border:0px solid #E6E6E6; vertical-align:middle;background:#F3F3F3; padding-left:5px; text-align:left; font-weight:normal;line-height:25px;}
+.ht_tb a:link ,.ht_tb a:visited{ color:#3366CC}
+
+.gd_pagination { line-height: 20px; font-family: Tahoma;padding:5px 0; line-height:20px; background:#F7F7F7}
+.gd_pagination .gd_page-r{ float:right; width:100%; text-align:right }
+.gd_pagination .gd_page-r a{ border: solid 1px #CCC;height: 20px;line-height: 20px;overflow: hidden;min-width: 15px;_width: 15px;padding-left:4px;padding-right:2px;margin-bottom:12px;margin-right: 2px;margin-left: 2px;text-align: center;white-space: nowrap;font-size: 12px;vertical-align: baseline;font-family: Arial,SimSun;background:#FFF;}
+
+.gd_pagination .gd_pagebtn{ background:url(../../images/market/img05.gif) no-repeat; width:25px; font-size:12px; height:22px; line-height:22px; border:none;margin-right: 5px;cursor:pointer;}
+.gd_pagination a.gd_pagecur{ background:#ggg; border:1px #ff6600 solid; color:#ff6600}
+.Fy_Cspages a:link,.Fy_Cspages a:visited,.Fy_Cspages a:active{color:#999; text-decoration:none;}
+.Fy_Cspages a:hover{color:#FF6600;}
+.Fy_Cspages span{ background:url(../../images/manager/model/img01.gif)  no-repeat center; cursor:hand; padding:0px 2px; margin-bottom:4px; width:22px; text-align:center; height:16px; line-height:16px; color:#666666; font-weight:bold; display:block; float:left; margin-top:1px;}
+.Fy_Cspages span.on{ background:url(../../images/manager/model/img01_on.gif) no-repeat center; cursor:hand; padding:0px 2px;  width:22px; height:16px;text-align:center;   font-weight:bold;}
+.Fy_Cspages span.on a{color:#FF6600;}
+.Fy_Cspages span.over{ background:url(../../images/manager/model/img01_over.gif) no-repeat center;cursor:hand; padding:0 2px; width:22px; height:16px;text-align:center;  color:#999999; font-weight:bold;}
+
+
+.gd_w10{ width:20px;}
+
+
+.zs_zyfb_jhrq {width:600px; overflow:hidden;}
+.zs_zyfb_jhrqtop {height:27px; line-height:27px;}
+.zs_zyfb_jhrqtop h2 {float:left; width:136px; height:27px; line-height:27px; margin-right:5px; font-weight:bold; color:#fff; text-align:center; background:url(../../images/market/jhrq_bg.gif) no-repeat;}
+.zs_zyfb_jhrqtop span {float:left; height:27px; line-height:27px; color:#ff6b00;}
+.zs_zyfb_jhrqcont {width:588px; padding:5px; border:1px solid #f8ba1b; overflow:hidden;}
+
+.gd_jj_ul{width:100%;margin-left:10px;text-align:left;}
+.gd_jj_ul li{width:170px;float: left;white-space: nowrap;overflow: hidden; text-overflow: ellipsis;}
+.gd_jj_ul .li250{width:250px;float: left;white-space: nowrap;overflow: hidden; text-overflow: ellipsis;}

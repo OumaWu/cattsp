@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+/* CSS Document */
+#focusimg 
+{
+	height: 220px;
+	width: 330px;
+	overflow: hidden;
+	position: relative;
+	color: #CCC;
+	border: 1px solid #757575;
+	margin-top:15px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	FLOAT: left;
+}
+#focusimg .slider {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#focusimg .slider {
+	background: #FFF;
+	margin: 0px;
+	padding: 0px;
+}
+#focusimg .slider li img {
+	z-index: 1;
+}
+
+#focusimg .slider li span {
+	text-align: left;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2;
+	font-size: 10px;
+	font-weight:normal;
+	padding: 0px 50px 0px 0px;
+}
+#focusimg .slider li a span {
+	color: #000;
+}
+#focusimg .slider li a:hover {
+	color: #FE2F35;
+}
+
+
+#focusimg .num {
+	position: absolute;
+	right: 4px;
+	bottom: 3px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	z-index: 3;
+}
+#focusimg .num li {
+	margin-right: 1px;
+	font-size: 10px;
+	height: 15px;
+	width: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: bold;
+	color: #FFF;
+	float: left;
+	background-color: #C0C0C0;
+	cursor: pointer;
+}
+#focusimg .num .focus {
+	color: #FFF;
+	background-color: #008EF1;	
+}
+.numtitle
+{
+  background-color:#C0C0C0;
+  height:20px;
+  width:330px; 
+  padding-right:30px;
+}

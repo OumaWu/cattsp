@@ -1,0 +1,507 @@
+﻿
+
+$().ready(function () {
+    $(".icon-share").parent().addClass("hideimportant");
+    $(".article_share").addClass("hideimportant");
+    $(".bor-tit").addClass("hideimportant");
+});
+
+
+function hreflog(urlstr) {
+    var name = "AdminName";//Cookies名字
+    this.GetCookie = function (name) {
+        var session = checksession();
+        return session;
+    }
+    var a = GetCookie(name);
+    if (a == null) {
+        $(".login-dialog").dialog({
+            autoOpen: false,
+            width: '720',
+            height: '520',
+            dialogClass: "modal-dialog",
+            title: "",
+            modal: true,
+            resizable: false
+        }).dialog("open");
+
+        //自定义弹出层关闭事件，点击关闭时摧毁弹出层
+        $(".login-dialog .dialog_close").unbind("click").click(function () {
+            $(".login-dialog").dialog("destroy");
+        })
+
+    } else {
+        window.location.href = urlstr;
+    }
+}
+function checksession() {
+    var session = null;
+    $.ajax({
+        url: "/CheckSession.aspx",
+        type: "post",
+        async: false,
+        contentType: "application/json",
+        data: "{'username':'A','password':'123' }",
+        dataType: "json",
+        success: function (data) {
+            if (data != null && data != "") {
+                session = data;
+            }
+            return session;
+        }
+    });
+    return session;
+}
+
+function hreflog_div(urlstr) {
+    var name = "AdminName";//Cookies名字
+    this.GetCookie = function (name) {
+        var session = checksession();
+        return session;
+    }
+
+    var a = GetCookie(name);
+    if (a == null) {
+        $(".login-dialog").dialog({
+            autoOpen: false,
+            width: '720',
+            height: '520',
+            dialogClass: "modal-dialog",
+            title: "",
+            modal: true,
+            resizable: false
+        }).dialog("open");
+
+        //自定义弹出层关闭事件，点击关闭时摧毁弹出层
+        $(".login-dialog .dialog_close").unbind("click").click(function () {
+            $(".login-dialog").dialog("destroy");
+        })
+    } else {
+        showdiv();
+    }
+
+}
+
+
+$(function () {
+
+    var $infocurPage = $("#infocurPage");
+    var i = 1;
+    var infoPages = Math.ceil($("#infoLists li").length / 5);
+
+
+    $(window).bind('scroll resize', function () {
+        // $(this).back2top();
+    });
+
+    $infocurPage.text(i);
+    $("#infoTotalPage").text(infoPages);
+    if ($("#infoLists").length > 0) {//判断是否存在 否则undefined
+        $("#infoLists").jCarouselLite({
+            btnNext: "#infoPageRightBtn",
+            btnPrev: "#infoPageLeftBtn",
+            vertical: true,
+            visible: 5,
+            circular: false,
+            vertical: true,
+            scroll: 5
+        });
+
+    }
+
+    if (infoPages > 1) {
+        var $infoPageRightBtn = $("#infoPageRightBtn");
+        var $infoPageLeftBtn = $("#infoPageLeftBtn");
+        $infoPageRightBtn.click(function () {
+            if (i < infoPages) {
+                $infocurPage.text(++i);
+            }
+        });
+        $infoPageLeftBtn.click(function () {
+            if (i > 1 && i <= infoPages) {
+                $infocurPage.text(--i);
+            }
+        });
+    }
+})
+
+function checkFormData() {
+
+    var str = "";
+    $.post("/Home/Process", { Type: "CHorEN", delid: str }, function (data) {//检验是中文还是英文（data)
+        var patrn = /[%]/im;
+
+        var userName = $("#userName").val();
+        var passWord = $("#passWord").val();
+        var checkCode = $("#checkCode").val();
+        if (data == "0") {
+            if (userName == "") {
+                alert("Please Enter The UserName。");
+                $("#userName").focus();
+                ReImg();
+                return false;
+            }
+            else if(patrn.test(userName)){
+                alert("UserName Illegal string。");
+                $("#userName").focus();
+                ReImg();
+                return false;
+            }
+            else if (passWord == "") {
+                alert("Please Enter The Password。");
+                $("#passWord").focus();
+                ReImg();
+                return false;
+            }
+            else if(patrn.test(passWord)){
+                alert("Password Illegal string。");
+                $("#passWord").focus();
+                ReImg();
+                return false;
+            }
+            else if (checkCode == "") {
+                alert("Please Enter The Auth code。");
+                $("#checkCode").focus();
+                ReImg();
+                return false;
+            }
+            else if(patrn.test(passWord)){
+                alert("code Illegal string。");
+                $("#checkCode").focus();
+                ReImg();
+                return false;
+            }
+        }
+        else {
+            if (userName == "") {
+                alert("请输入用户名。");
+                $("#userName").focus();
+                ReImg();
+                return false;
+            }
+            else if (patrn.test(userName)) {
+                alert("用户名含非法字符串。");
+                $("#userName").focus();
+                ReImg();
+                return false;
+            }
+            else if (passWord == "") {
+                alert("请输入密码。");
+                $("#passWord").focus();
+                ReImg();
+                return false;
+            }
+            else if (patrn.test(passWord)) {
+                alert("密码含非法字符串。");
+                $("#passWord").focus();
+                ReImg();
+                return false;
+            }
+            else if (checkCode == "") {
+                alert("请输入验证码。");
+                $("#checkCode").focus();
+                ReImg();
+                return false;
+            }
+            else if (patrn.test(checkCode)) {
+                alert("验证码含有非法字符串。");
+                $("#checkCode").focus();
+                ReImg();
+                return false;
+            }
+        }
+        var isMemory = 0;
+        var obj = document.getElementsByName("rememberMe");
+        for (var i = 0; i < obj.length; i++) {
+            if (obj[i].checked) {
+                isMemory = "1";
+            }
+            else {
+                isMemory = "0";
+            }
+        }
+        var Params = {
+            UserName: userName,
+            UserPwd: passWord,
+            CheckCode: checkCode,
+            isMemory: isMemory
+        }
+        var strObject = JSON.stringify(Params);
+        $.ajax({
+            url: "/IService.aspx/DoLogin",
+            type: "post",
+            contentType: "application/json",
+            data: "{'strObject':'" + strObject + "'}",
+            dataType: "json",
+            success: function (data) {
+                if (data.d.length > 0) {
+                    alert(data.d);
+                    ReImg();
+                }
+                else {
+                    location.reload();
+                }
+            }
+        });
+
+    });
+}
+
+$().ready(function () {
+    $("#btnSubmit").click(function () {
+        requestLogin();
+    })
+
+    $("#btnSendMail").click(function () {
+        if ($("#userName").val() == "") {
+            alert("请输入用户名。");
+            $("#userName").focus();
+            return;
+        }
+
+        var postValue = $("#userName").val();
+        $.ajax({
+            url: "/DoSendMail.aspx/" + postValue,
+            type: "post",
+            contentType: "application/json",
+            data: "{'username':'A','password':'123' }",
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+            }
+        });
+    })
+
+    $("#userName").keypress(function (e) {
+        var key = window.event ? e.keyCode : e.which;
+        if (key.toString() == "13") {
+            requestLogin();
+        }
+    });
+
+    $("#passWord").keypress(function (e) {
+        var key = window.event ? e.keyCode : e.which;
+        if (key.toString() == "13") {
+            requestLogin();
+        }
+    });
+
+    $("#checkCode").keypress(function (e) {
+        var key = window.event ? e.keyCode : e.which;
+        if (key.toString() == "13") {
+            requestLogin();
+        }
+    });
+
+    function requestLogin() {
+       
+        if (checkFormData()) {
+
+        } else {
+
+        }
+    }
+
+})
+
+function showdiv() {
+    $(".abutment-dialog").dialog({
+        autoOpen: false,
+        width: '800',
+        height: '440',
+        dialogClass: "modal-dialog",
+        title: "",
+        modal: true,
+        resizable: false
+    }).dialog("open");
+
+    //自定义弹出层关闭事件，点击关闭时摧毁弹出层
+    $(".abutment-dialog .dialog_close_btn").unbind("click").click(function () {
+        $(".abutment-dialog").dialog("destroy");
+    })
+
+
+    //e.preventDefault();
+    //return false;
+}
+
+function ReImg() {
+    var numkey = Math.random();
+    numkey = Math.round(numkey * 10000);
+
+    var img = document.getElementById("loginyzm");
+    img.src = "../../Admin/js/imgcode.aspx?k=" + numkey;
+}
+
+//点整行时，跳转
+function gotohref(obj) {
+    window.location = $(obj).find("a").attr("href");
+}
+
+
+
+//检索用的
+
+$(document).ready(function () {
+    //给URL加上参数
+    $.getUrl = function (name, value) {
+        var url = location.href;
+        if (url.indexOf("?") === -1) {
+            return url + "?" + name + "=" + value;
+        } else {
+            var arrUrl = url.split("?");
+            var para = arrUrl[1].split("&");
+            var str = "";
+            var boolean = true;
+            $.each(para, function (k, v) {
+                if (v.indexOf(name + "=") !== -1) {
+                    if (value === -1) {
+                        boolean = false;
+                    }
+                } else {
+                    str += v + "&";
+                }
+            });
+            if (boolean) {
+                str += name + "=" + value + "&";
+            }
+            str = str.substr(-1, 1) == "&" ? str.substr(0, str.length - 1) : str;
+            if (str == "") {
+                return arrUrl[0];
+            } else {
+                return arrUrl[0] + "?" + str;
+            }
+        }
+    }
+
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    var sobj = $("select");
+    var sval;
+    $.each(sobj, function () {
+        sval = getUrlParam($(this).attr("name"))
+        if (sval != null) {
+            $(this).children("option").each(function () {
+                if ($(this).val() == sval) {
+                    $(this).attr("selected", "selected");
+                }
+            });
+        }
+    });
+
+    sobj.change(function () {
+        var obj = $(this);
+
+        var h = $.getUrl(obj.attr("name"), obj.val());
+
+        h = rewritepage(h);//更改page=1
+
+        location.href = h;
+
+        //location.href = $.getUrl(obj.attr("name"), obj.val());
+
+
+    });
+
+
+
+    function getmenuurl(url, name, value) {
+
+        if (url.indexOf("?") === -1) {
+            return url + "?" + name + "=" + value;
+        } else {
+            var arrUrl = url.split("?");
+            var para = arrUrl[1].split("&");
+            var str = "";
+            var boolean = true;
+            $.each(para, function (k, v) {
+                if (v.indexOf(name + "=") !== -1) {
+                    if (value === -1) {
+                        boolean = false;
+                    }
+                } else {
+                    str += v + "&";
+                }
+            });
+            if (boolean) {
+                str += name + "=" + value + "&";
+            }
+            str = str.substr(-1, 1) == "&" ? str.substr(0, str.length - 1) : str;
+            if (str == "") {
+                return arrUrl[0];
+            } else {
+                return arrUrl[0] + "?" + str;
+            }
+        }
+    }
+
+
+    function rewritepage(h) {
+        var index = h.indexOf("?");
+        if (index > 0) {
+            var parm = h.substring(index + 1, h.length);
+            var arrtem = parm.split('&');
+            for (var i = 0; i < arrtem.length; i++) {
+                var num = arrtem[i].indexOf("=");
+                if (num > 0) {
+                    name = arrtem[i].substring(0, num);//等号前面是参数脕E
+                    //value = arrtmp[i].substr(num + 1);//等号后面是参数的值
+                    if (name.indexOf("page") >= 0) {
+                        h = h.replace(arrtem[i], name + "=1");
+                    }
+                }
+            }
+        }
+        return h;
+    }
+
+    //其它处理
+
+    $("#button").click(function () {
+        var obj = $("#keyword");
+        location.href = $.getUrl(obj.attr("name"), obj.val());
+    });
+
+
+
+    //function getCookie(c_name) {
+    //    if (document.cookie.length > 0) {
+    //        c_start = document.cookie.indexOf(c_name + "=")
+    //        if (c_start != -1) {
+    //            c_start = c_start + c_name.length + 1
+    //            c_end = document.cookie.indexOf(";", c_start)
+    //            if (c_end == -1)
+    //                c_end = document.cookie.length
+    //            return unescape(document.cookie.substring(c_start, c_end))
+    //        }
+    //    }
+    //    return ""
+    //}
+
+    //function setCookie(c_name, value, expiredays) {
+    //    var exdate = new Date()
+    //    exdate.setDate(exdate.getDate() + expiredays)
+    //    document.cookie = c_name + "=" + escape(value) +
+    //            ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString())
+    //}
+
+    //function checkCookie() {
+    //    var rempwd = getCookie('checkbox');
+    //    if (rempwd) {
+    //        $("#checkbox").attr("checked", "checked");
+    //        $("#user_name").val(getCookie('user_name'));
+    //        $("#user_pwd").val(getCookie('user_pwd'));
+
+    //    } else {
+
+    //    }
+    //}
+    //checkCookie();
+});
+
+
+

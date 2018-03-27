@@ -1,0 +1,22 @@
+﻿(function () {
+    function init() {
+        $.ajax({
+            type: "POST",
+            url: "/HttpHandler/GetAssDateTimeHandler.ashx",
+            success: function (data) {
+                var data2 = JSON.parse(data);
+                if (data2) {
+                    $('#day').text(data2.day);
+                    $('#NumAssembly').text(data2.NumAssembly);
+                    $('#day_content').show();
+                } else {
+                    $('#day_content').hide();
+                }
+            }
+        });
+    }
+
+    $(function () {
+        init();
+    });
+})()

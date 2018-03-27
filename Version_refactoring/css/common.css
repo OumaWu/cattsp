@@ -1,0 +1,164 @@
+﻿@charset "UTF-8";
+
+/**
+ *
+ * @authors Jiahong Wu
+ * @date    2018-02-20
+ * @version 1
+ */
+
+body {
+    min-width: 1220px;
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    font: 13px/1.5 "helvetical", "arial", sans-serif, "微软雅黑", "宋体";
+}
+
+html, body, div, p, span, h1, h2, h3, h4, p, a, em, font, img, strong, dl, dt, dd, ul, li {
+  margin: 0;
+  padding: 0;
+  font-family: \5b8b\4f53;
+  word-wrap: break-word;
+  font-size: 13px;
+  color: #777;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+ul, menu, dir {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+/*header*/
+.header { 
+  width: 100%;
+  z-index: 999;
+  position: relative;
+  min-width:1220px;
+}
+
+.w1220.clearfix { /* 表示同时应用2个类，中间不能加空格 */
+  width: inherit !important;
+  background: #FFF url(../images/banner.jpg) no-repeat;
+  filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.top { 
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #e7e7e7;
+  background: #efefef;
+  overflow: hidden;
+}
+
+.clear, .clearfix {
+  zoom: 1
+}
+
+.w1220 {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clr {
+    color: #005bac;
+}
+
+a {
+    text-decoration: none;
+    color: #2d64b3;
+}
+
+a:visited, a:active {
+    text-decoration: none;
+}
+
+
+
+.top-right a {
+    margin-right: 15px;
+}
+
+.header-tool {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.nav-wrap {
+    background: #005bac;
+    /*height: 40px;
+    line-height: 40px;*/
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    background-color: #005bac;
+}
+
+.nav .nLi {
+    float: left;
+    position: relative;
+    display: inline;
+}
+
+.nav .nLi h3 {
+    float: left;
+}
+
+.nav .cur h3 a {
+    background: #fa9800;
+    color: #fff;
+}
+
+.nav .nLi h3 a {
+    display: block;
+    padding: 0 19px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.nav a {
+    color: #fff;
+}

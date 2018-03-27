@@ -1,0 +1,294 @@
+.member-page {
+	
+}
+.member-index {
+	
+}
+.member-sidebar {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 190px;
+}
+.member-sidebar .m-title {
+	background: rgb(243, 243, 243); height: 50px; color: rgb(51, 51, 51); line-height: 50px; padding-left: 10px; font-size: 18px; font-weight: bold; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.member-sidebar .m-title .icon {
+	margin-top: -5px; margin-right: 5px;
+}
+.member-sidebar ul {
+	padding: 10px 10px 10px 45px;
+}
+.member-sidebar ul li a {
+	width: 100%; color: rgb(102, 102, 102); font-size: 15px; margin-bottom: 10px; display: inline-block;
+}
+.member-sidebar ul li a:hover {
+	color: rgb(0, 91, 172);
+}
+.member-main {
+	width: 990px; font-size: 14px;
+}
+.member-title {
+	background: rgb(252, 252, 252); border: 1px solid rgb(221, 221, 221); border-image: none; height: 50px; color: rgb(250, 152, 0); line-height: 50px; padding-left: 20px; font-size: 18px; font-weight: bold;
+}
+.member-title a {
+	margin: 0px 20px; font-weight: normal;
+}
+.member-title a:hover {
+	color: rgb(250, 152, 0);
+}
+.member-title a.on {
+	color: rgb(250, 152, 0);
+}
+.s-bar {
+	background: rgb(236, 236, 236); width: 155px; height: 15px; vertical-align: middle; display: inline-block; position: relative;
+}
+.s-bar span {
+	background: rgb(250, 152, 0); left: 0px; top: 0px; width: 80%; height: 15px; position: absolute;
+}
+.tips {
+	color: rgb(250, 152, 0);
+}
+.m-info {
+	line-height: 27px;
+}
+.m-info .left {
+	margin-right: 40px;
+}
+.m-info .mid {
+	margin-right: 40px;
+}
+.m-recommendation {
+	
+}
+.m-recommendation ul li {
+	overflow: hidden; padding-bottom: 15px; margin-bottom: 15px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.m-recommendation .pic {
+	margin-right: 20px;
+}
+.m-recommendation .words {
+	width: 805px; line-height: 26px;
+}
+.m-recommendation .title {
+	color: rgb(51, 51, 51); font-size: 18px;
+}
+.m-recommendation .date {
+	color: rgb(153, 153, 153); font-size: 12px;
+}
+.loading {
+	background: rgb(252, 252, 252); border: 1px solid rgb(221, 221, 221); border-image: none; width: 100%; height: 50px; text-align: center; color: rgb(102, 102, 102); line-height: 50px; font-size: 14px; display: inline-block;
+}
+.m-info-detial {
+	
+}
+.user-form {
+	width: 660px; color: rgb(102, 102, 102);
+}
+.post-pic {
+	width: 320px;
+}
+.p-btn {
+	background: rgb(249, 249, 249); border: 1px solid rgb(221, 221, 221); border-image: none; width: 115px; height: 35px; text-align: center; color: rgb(51, 51, 51); line-height: 35px; font-size: 14px; display: inline-block;
+}
+.p-label {
+	width: 140px; height: 50px; text-align: right; color: rgb(102, 102, 102); line-height: 50px; padding-right: 10px; font-size: 14px;
+}
+.p-label .str {
+	color: rgb(255, 0, 0); font-size: 14px; margin-right: 5px;
+}
+.p-input {
+	width: 480px; height: 50px; color: rgb(153, 153, 153); line-height: 50px; padding-left: 20px;
+}
+.p-input textarea.txt {
+	padding: 10px; border: 1px solid rgb(223, 223, 223); border-image: none; width: 580px; height: 250px; color: rgb(153, 153, 153); margin-bottom: 15px;
+}
+.i-input {
+	background: rgb(255, 255, 255); border: 1px solid rgb(222, 222, 222); border-image: none; width: 250px; height: 35px; color: rgb(102, 102, 102); line-height: 35px; padding-left: 10px; font-size: 13px;
+}
+.select {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 250px; height: 35px;
+}
+.b-box {
+	background: rgb(252, 252, 252); padding: 10px 20px; border: 1px solid rgb(221, 221, 221); border-image: none;
+}
+.b-box-t {
+	background: rgb(252, 252, 252); padding: 50px 50px 20px; border: 1px solid rgb(221, 221, 221); border-image: none; position: relative;
+}
+.b-box-t .tips {
+	background: url("../images/bg01.png") no-repeat center; left: -10px; top: 0px; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; font-size: 18px; display: inline-block; position: absolute;
+}
+.b-box-t table.form {
+	width: 600px;
+}
+.b-box-t table.form td {
+	padding: 5px 0px;
+}
+.b-box-t table.shops-form {
+	width: 100%; font-size: 14px; font-weight: normal;
+}
+.b-box-t table.shops-form .line-d {
+	width: 100%;
+}
+.b-box-t table.shops-form td {
+	padding: 10px 0px; text-align: center;
+}
+.b-box-t table.shops-form th {
+	padding: 10px 0px; font-weight: normal; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.b-box-t table.shops-form .on {
+	color: rgb(250, 152, 0);
+}
+.m-news {
+	
+}
+.m-news ul li {
+	margin-bottom: 30px;
+}
+.m-news ul li .delete {
+	margin: -2px 5px 0px;
+}
+.m-news ul li .title {
+	color: rgb(102, 102, 102); padding-left: 15px; font-size: 16px; margin-bottom: 10px; border-left-color: rgb(250, 152, 0); border-left-width: 5px; border-left-style: solid;
+}
+.m-news ul li .cnt {
+	background: rgb(249, 249, 249); padding: 10px;
+}
+.m-money {
+	
+}
+.m-money .b-box {
+	background: rgb(255, 255, 255);
+}
+.m-money .item {
+	padding: 0px 50px 20px; margin-bottom: 20px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: dotted;
+}
+.myshop-nav-wrap {
+	background: rgb(0, 91, 172); height: 50px; color: rgb(255, 255, 255); font-size: 16px;
+}
+.myshop-nav-wrap .nav {
+	height: 50px; line-height: 50px;
+}
+.myshop-nav-wrap li {
+	float: left;
+}
+.myshop-nav-wrap li a {
+	margin: 0px 40px; padding: 0px 19px; height: 50px; line-height: 50px; display: block;
+}
+.nav .on a {
+	background: rgb(250, 152, 0); color: rgb(255, 255, 255);
+}
+.myshop-nav-wrap li a img {
+	vertical-align: middle; display: inline-block;
+}
+.myshop-nav-wrap li a span {
+	vertical-align: middle; display: inline-block;
+}
+.myshop-grid {
+	
+}
+.myshop-grid .col-sub {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 190px; float: left;
+}
+.myshop-grid .col-sub dl dt {
+	background: rgb(243, 243, 243); height: 50px; text-align: center; color: rgb(51, 51, 51); line-height: 50px; font-size: 18px;
+}
+.myshop-grid .col-sub dl:not(:first-child) dt {
+	border-top-color: rgb(221, 221, 221); border-top-width: 1px; border-top-style: solid;
+}
+.myshop-grid .col-sub dl dt img {
+	vertical-align: middle; display: inline-block;
+}
+.myshop-grid .col-sub dl dt span {
+	vertical-align: middle; display: inline-block;
+}
+.myshop-grid .col-sub dl dd {
+	padding: 10px 0px; text-align: center;
+}
+.myshop-grid .col-sub dl dd a {
+	color: rgb(102, 102, 102); line-height: 30px; font-size: 15px; display: block;
+}
+.myshop-grid .col-sub dl dd a.active {
+	color: rgb(250, 152, 0);
+}
+.myshop-grid .col-main {
+	width: 990px; float: right;
+}
+.myshop-grid .myshopinfo.col-main .hd {
+	background: rgb(252, 252, 252); border: 1px solid rgb(221, 221, 221); border-image: none; height: 50px; color: rgb(250, 152, 0); line-height: 50px; padding-left: 20px; font-size: 18px; font-weight: bold;
+}
+.myshop-grid .myshopinfo.col-main .bd {
+	padding: 60px 60px 10px; color: rgb(102, 102, 102); font-size: 14px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group {
+	margin-bottom: 20px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group span {
+	line-height: 50px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group label {
+	width: 90px; text-align: right; line-height: 35px; margin-right: 10px; vertical-align: top; display: inline-block;
+}
+.myshop-grid .myshopinfo.col-main .bd .group input[type=text] {
+	border: 1px solid rgb(221, 221, 221); border-image: none; width: 250px; height: 35px; text-indent: 10px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group input[type=text].lg {
+	width: 400px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group input[type=text].xs {
+	width: 120px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group textarea {
+	padding: 10px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 760px; height: 270px; line-height: 50px;
+}
+.myshop-grid .myshopinfo.col-main .bd .group a {
+	background: rgb(249, 249, 249); border-radius: 5px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 116px; height: 36px; text-align: center; color: rgb(51, 51, 51); line-height: 36px; display: inline-block;
+}
+.myshop-grid .myshopinfo.col-main .bd .group .thumb {
+	display: inline-block;
+}
+.myshop-grid .myshopinfo.col-main .bd .group .thumb img {
+	display: block;
+}
+.myshop-grid .myshopinfo.col-main .bd .group .thumb .upload {
+	background: rgb(249, 249, 249); border-radius: 5px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 116px; height: 36px; text-align: center; color: rgb(51, 51, 51); line-height: 36px; display: inline-block; position: relative; cursor: pointer;
+}
+.myshop-grid .myshopinfo.col-main .bd .group .thumb .upload input[type=file] {
+	top: 0px; right: 0px; font-size: 400px; position: absolute; opacity: 0;
+}
+.myshop-grid .myshopinfo.col-main .bd .group input[type=submit] {
+	background: rgb(250, 152, 0); border-radius: 5px; width: 120px; height: 36px; text-align: center; color: rgb(255, 255, 255); line-height: 36px; font-size: 16px; display: inline-block;
+}
+.proimg {
+	padding: 15px 5px; width: 98px; height: 90px; vertical-align: middle; display: inline-block;
+}
+.proimg img {
+	border: 1px solid rgb(219, 219, 219); border-image: none; width: 98px; height: 90px; vertical-align: middle;
+}
+.proName {
+	width: 300px; text-align: left; line-height: 30px; vertical-align: middle; display: inline-block;
+}
+.myshop-grid .myshopinfo.col-main .bd .group a.close {
+	background: url("../images/sprite.gif") no-repeat 0px -240px; border-radius: 5px; border: currentColor; border-image: none; top: 1px; width: 14px; height: 14px; text-align: center; right: 1px; color: rgb(51, 51, 51); line-height: 14px; text-indent: -99em; overflow: hidden; display: block; position: absolute; cursor: pointer;
+}
+.step {
+	padding-bottom: 15px;
+}
+.step .step-bar {
+	background: rgb(153, 153, 153); top: 55px; height: 2px; position: relative;
+}
+.step .step-bar .step-bar-active {
+	background: rgb(0, 91, 172); height: 2px;
+}
+.step ul {
+	position: relative;
+}
+.step ul li {
+	width: 25%; text-align: center; color: rgb(0, 91, 172); font-size: 16px; float: left;
+}
+.step ul li span {
+	background: rgb(245, 245, 245); margin: 10px auto 0px; border-radius: 100%; border: 2px solid rgb(153, 153, 153); border-image: none; width: 46px; height: 46px; color: rgb(153, 153, 153); line-height: 44px; font-size: 24px; display: block;
+}
+.step ul li.step-current span {
+	background: rgb(0, 91, 172); border: 2px solid rgb(0, 91, 172); border-image: none; color: rgb(255, 255, 255);
+}
+.step ul li.step-active span {
+	background: url("../images/right.png") no-repeat center rgb(245, 245, 245); border: 2px solid rgb(0, 91, 172); border-image: none;
+}

@@ -1,0 +1,45 @@
+﻿@charset "UTF-8";
+
+/**
+ *
+ * @authors Jiahong Wu
+ * @date    2018-02-20
+ * @version 1
+ */
+
+.wys_layout {clear:both; position:relative; width:1200px; margin:0 auto;}
+.wys_layout:after ,.clearfix:after {clear:both; content:"."; display:block; height:0; visibility:hidden;}
+
+/*news images*/
+.wysn_banner {height:382px; width:658px; overflow:hidden; position:relative; -webkit-box-shadow:0 2px 3px rgba(0,0,0,0.12); -moz-box-shadow:0 2px 3px rgba(0,0,0,0.12); box-shadow:0 2px 3px rgba(0,0,0,0.12);}
+.wysn_banner #slides li {height:inherit; width:inherit; float:left;}
+.wysn_banner #slides li a {display:block; height:inherit; width:inherit;}
+.wysn_banner .flip {height:14px; position:absolute; left:290px; z-index:999; bottom:20px; overflow:hidden;}/*flip*/
+.wysn_banner .flip li {float:left; width:12px; height:12px; margin-right:10px; border-radius:50%; background:#fff; box-shadow:0 0 1px #777; cursor:pointer; text-indent:-999px;}
+.wysn_banner .flip li.on {background:#7fa7f6;} 
+.wysn_banner .flip li:hover {background:#7fa7f6;} 
+.mt10 {margin-top:0;}
+
+/*news titles*/
+.wysn_news {width:542px; height:382px; background:#fff; overflow:hidden; -webkit-box-shadow:0 2px 3px rgba(0,0,0,0.12); -moz-box-shadow:0 2px 3px rgba(0,0,0,0.12); box-shadow:0 2px 3px rgba(0,0,0,0.12);}
+.wysn_news .slideTxtBox {
+  height: inherit;
+  padding: 20px;
+  padding-top: 0;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+  padding-bottom: 0px;
+}
+.wysn_news .slideTxtBox .hd {height:42px; border-bottom:1px solid #ddd; line-height:40px; position:relative;}
+.wysn_news .slideTxtBox .hd ul {float:left; position:absolute; left:0; top:0;}
+.wysn_news .slideTxtBox .hd li {float:left; margin-right:25px; font-size:14px; font-weight:bold;}
+.wysn_news .slideTxtBox .hd li.on {border-bottom:3px solid #6293f5;}
+.wysn_news .slideTxtBox .hd li.on a {color:#555;}
+.wysn_news .slideTxtBox .bd ul {
+  padding: 10px 0;
+  overflow: hidden;
+  clear: both;
+}
+.wysn_news .slideTxtBox .bd li{height:24px; line-height:24px;}
+.wysn_news .slideTxtBox .bd li p {width:378px; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; vertical-align:middle;}
+.wysn_news .slideTxtBox .bd li em {width:50px; text-align:right;}

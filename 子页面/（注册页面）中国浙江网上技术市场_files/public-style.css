@@ -1,0 +1,27 @@
+/**下拉列的选中样式**/
+.gd_selected_style {background-Color: #102681;color: #FF0000;}
+img{ border:0; margin-right:0px; _behavior:url('iepngfix.htc');}
+/**弹出选择框按钮样式**/
+.gd_selected_button{background:url('../images/searchbox_button.png') no-repeat center;border-style:none;}
+
+/**下拉列只读的情况下的文本框样式（有个下拉箭头）**/
+.gd_dropinput{background:url(../images/downxia.gif) right #fff no-repeat;}
+
+/**必填项星号样式**/
+.must_input {color:#FF0000;}
+
+.redFont{ color:#BA020F;}
+.priceFont{ color:#D60312;}
+.nr img {
+    border: 0 none;
+    margin-left: 14px;
+    margin-right: 0;
+    margin-top: 10px;
+}
+
+/**div文字浮动显示**/
+.divFloat{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap; 
+}
