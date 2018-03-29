@@ -15,5 +15,4 @@ if (isset($news_id)) {
     }
 } else
     echo "没有接收到新闻id！";
-
 ?>

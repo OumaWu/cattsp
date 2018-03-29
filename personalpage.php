@@ -3,6 +3,7 @@
 <!-- saved from url=(0021)http://www.vtitt.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>中国-东盟太阳能技术转移中心</title>
 
@@ -118,6 +119,11 @@
                         </div>
                         <span style="color: #fa9800;">&nbsp;&nbsp;&nbsp;&nbsp;30%</span></div>
                     <div class="clearfix">
+                        <?php
+                        $user_id = $_SESSION['userid'];
+                        include("sql/userPage.php");
+                        $res = $result->fetch(PDO::FETCH_OBJ);
+                        ?>
                         <div class="post-pic txc fl"><a class="m_img"> <img
                                         src="./（个人信息页面）中国第一家交易链共享平台最大的技术交易平台技大大_专利技术_全部科技成果_技术交易转让_files/m_default.jpg"
                                         id="headimg" alt=""> </a>
@@ -142,37 +148,47 @@
                                 <div class="p-label fl">昵称：</div>
                                 <div class="p-input fl">
                                     <input name="accountname" type="text" id="accountname"
-                                           value="<?php echo $_SESSION['user']; ?>" class="i-input"
+                                           value="<?php echo $res->accountname; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                             </div>
                             <div class="p-item clearfix">
                                 <div class="p-label fl">真实姓名：</div>
                                 <div class="p-input fl">
-                                    <input name="realname" type="text" id="realname" class="i-input"
+                                    <input name="realname" type="text" id="realname"
+                                           value="<?php echo $res->realname; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">性别：</div>
-                                    <div class="p-input fl"><span id="rblSex">
-                    <input id="rblSex_0" type="radio" name="sex" value="1" checked="checked">
-                    <label for="rblSex_0">先生</label>
-                    <input id="rblSex_1" type="radio" name="sex" value="0">
-                    <label for="rblSex_1">女生</label>
-                    </span></div>
+                                    <div class="p-input fl">
+                                        <span id="rblSex">
+                                            <input id="rblSex_1" type="radio" name="sex"
+                                                value="1" <?php echo $res->sex ? 'checked="checked"' : ""; ?>
+                                            <label for="rblSex_0">先生</label>
+                                            <input id="rblSex_1" type="radio" name="sex"
+                                                value="0" <?php echo !$res->sex ? 'checked="checked"' : ""; ?>
+                                            <label for="rblSex_1">女士</label>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">账户类型：</div>
-                                    <div class="p-input fl"> 个人</div>
+                                    <div class="p-input fl"><?php echo $res->type; ?></div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">手机号码：</div>
-                                    <div class="p-input fl"> 18977184383</div>
+                                    <div class="p-input fl">
+                                        <input name="tel" type="text" id="tel"
+                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                               style="width: 350px;">
+                                    </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">邮箱：</div>
                                     <div class="p-input fl">
                                         <input name="email" type="text" id="email" class="i-input"
+                                               value="<?php echo $res->email; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -180,6 +196,7 @@
                                     <div class="p-label fl">所在地：</div>
                                     <div class="p-input fl">
                                         <input type="text" name="location" id="location" class="i-input"
+                                               value="<?php echo $res->location; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -187,13 +204,15 @@
                                     <div class="p-label fl">联系地址：</div>
                                     <div class="p-input fl">
                                         <input name="txtAddr" type="text" id="txtAddr" class="i-input"
+                                               value="<?php echo $res->address; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item mb40 clearfix">
                                     <div class="p-label fl"></div>
                                     <span class="p-input fl">
-                  <input type="submit" name="btSave" value="保  存" id="btSave" class="btn" style="width: 350px;"/>
+                  <input type="submit" name="btSave" value="保  存" id="btSave" class="btn"
+                         style="width: 350px; background-color: #0b47a7; color: white"/>
                   </span>
                                     <div class="p-input fl"></div>
                                 </div>
