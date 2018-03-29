@@ -6,7 +6,7 @@
         <div class="contact_info">
             <dl>
                 <dt>地址</dt>
-                <dd>中国广西南宁市星湖路24号</dd>
+                <dd>中国广西南宁市大岭路98号</dd>
                 <dt>邮编</dt>
                 <dd>530022</dd>
                 <dt>电话</dt>
