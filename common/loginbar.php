@@ -5,7 +5,7 @@
         </div>
         <div class="top-right fr">
             <?php
-            if (!isset($_SESSION['user']) || $_SESSION['user'] == "") {
+            if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
                 ?>
                 <span id="header_header_top_noLogin"> <a href="login.php" class="clr mr15">登录</a> <a href="register.php"
                                                                                                      class="mr5">免费注册</a></span>

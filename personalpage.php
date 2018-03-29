@@ -143,41 +143,48 @@
                             </div>
                             <p class="mb10">支持JPG,JPEG,GIF,PNG,BMP,且小于2M</p>
                         </div>
+                        <form action="sql/updateUser.php" method="post">
                         <div class="fl user-form">
                             <div class="p-item clearfix">
-                                <div class="p-label fl">昵称：</div>
+                                <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
+                                <div class="p-label fl">用户名<font color="red"><b>*</b></font></div>
                                 <div class="p-input fl">
                                     <input name="accountname" type="text" id="accountname"
                                            value="<?php echo $res->accountname; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
-                            </div>
-                            <div class="p-item clearfix">
-                                <div class="p-label fl">真实姓名：</div>
+                                <div class="p-label fl">真实姓名<font color="red"><b>*</b></font></div>
                                 <div class="p-input fl">
                                     <input name="realname" type="text" id="realname"
                                            value="<?php echo $res->realname; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                                 <div class="p-item clearfix">
-                                    <div class="p-label fl">性别：</div>
+                                    <div class="p-label fl">性别<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <span id="rblSex">
-                                            <input id="rblSex_1" type="radio" name="sex"
+                                            <input id="male" type="radio" name="sex"
                                                 value="1" <?php echo $res->sex ? 'checked="checked"' : ""; ?>
-                                            <label for="rblSex_0">先生</label>
-                                            <input id="rblSex_1" type="radio" name="sex"
+                                            <label for="male">先生</label>
+                                            <input id="female" type="radio" name="sex"
                                                 value="0" <?php echo !$res->sex ? 'checked="checked"' : ""; ?>
-                                            <label for="rblSex_1">女士</label>
+                                            <label for="female">女士</label>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
-                                    <div class="p-label fl">账户类型：</div>
-                                    <div class="p-input fl"><?php echo $res->type; ?></div>
+                                    <div class="p-label fl">账户类型<font color="red"><b>*</b></font></div>
+                                    <div class="p-input fl">
+                                        <input id="personal" type="radio" name="type"
+                                               value="个人" <?php echo $res->type=="个人" ? 'checked="checked"' : ""; ?>
+                                        <label for="personal">个人</label>
+                                        <input id="company" type="radio" name="type"
+                                               value="企业" <?php echo $res->type=="企业" ? 'checked="checked"' : ""; ?>
+                                        <label for="company">企业</label>
+                                    </div>
                                 </div>
                                 <div class="p-item clearfix">
-                                    <div class="p-label fl">手机号码：</div>
+                                    <div class="p-label fl">手机号码<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="tel" type="text" id="tel"
                                                value="<?php echo $res->tel; ?>" class="i-input"
@@ -185,7 +192,7 @@
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
-                                    <div class="p-label fl">邮箱：</div>
+                                    <div class="p-label fl">邮箱<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="email" type="text" id="email" class="i-input"
                                                value="<?php echo $res->email; ?>"
@@ -193,7 +200,7 @@
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
-                                    <div class="p-label fl">所在地：</div>
+                                    <div class="p-label fl">所在地<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input type="text" name="location" id="location" class="i-input"
                                                value="<?php echo $res->location; ?>"
@@ -201,23 +208,24 @@
                                     </div>
                                 </div>
                                 <div class="p-item mb40 clearfix">
-                                    <div class="p-label fl">联系地址：</div>
+                                    <div class="p-label fl">联系地址<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="txtAddr" type="text" id="txtAddr" class="i-input"
+                                        <input name="address" type="text" id="address" class="i-input"
                                                value="<?php echo $res->address; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item mb40 clearfix">
                                     <div class="p-label fl"></div>
-                                    <span class="p-input fl">
-                  <input type="submit" name="btSave" value="保  存" id="btSave" class="btn"
-                         style="width: 350px; background-color: #0b47a7; color: white"/>
-                  </span>
-                                    <div class="p-input fl"></div>
+                                        <span class="p-input fl">
+                                            <input type="submit" name="btSave" value="保  存" id="btSave" class="btn"
+                                                style="width: 250px; background-color: #0b47a7; color: white"/>
+                                        </span>
                                 </div>
                             </div>
                         </div>
+                            <input type="hidden" name="userid" id="userid" value="<?=$user_id;?>"/>
+                        </form>
                     </div>
                 </div>
             </div>
