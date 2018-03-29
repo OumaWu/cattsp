@@ -149,8 +149,12 @@
                         <table width="100%" cellpadding="3" cellspacing="3" align="center">
                             <tbody>
                             <tr>
-                                <td width="100">公司名称：</td>
-                                <td>广西科学院应用物理研究所</td>
+                                <td width="90">所长：</td>
+                                <td>杨  磊</td>
+                            </tr>
+                            <tr>
+                                <td>书记：</td>
+                                <td>杨  磊</td>
                             </tr>
                             <tr>
                                 <td>公司地址：</td>
@@ -180,10 +184,6 @@
                                 <td>公司网址：</td>
                                 <td><a href="http://www.gxas.cn/Gxas/unit.aspx?id=16" target="_blank">http://www.gxas.cn/Gxas/unit.aspx?id=16</a>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>联 系 人：</td>
-                                <td>杨磊</td>
                             </tr>
                             </tbody>
                         </table>
