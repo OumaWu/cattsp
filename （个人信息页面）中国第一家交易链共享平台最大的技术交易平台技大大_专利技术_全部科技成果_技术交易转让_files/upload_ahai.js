@@ -6,7 +6,7 @@
 var extType = "jpg,png,gif,bmp,jpeg";
 
 //初始化WebUploader
-function initWebUploader(Obj, returnObj, returnImg, filetype,name) {
+function initWebUploader(Obj, returnObj, returnImg, filetype, name) {
     if (filetype == "video") {
         extType = "rar,zip";
     }

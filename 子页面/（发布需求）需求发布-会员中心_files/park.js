@@ -40,6 +40,7 @@ function park_manae_setcover(p_obj) {
     $(p_obj).html("取消封面");
     $(p_obj).parent().find("input[name='piccover']").val("1");
 }
+
 /**************************人才需求开始*********************************/
 //加载窗体
 function park_manae_addhire(p_id) {
@@ -48,7 +49,7 @@ function park_manae_addhire(p_id) {
             url: "/server/park/gethire/",
             type: 'post',
             dataType: 'json',
-            data: { "hid": p_id },
+            data: {"hid": p_id},
             success: function (data) {
                 if (data != null) {
                     if (data.msg == 0) {
@@ -90,6 +91,7 @@ function park_manae_addhire(p_id) {
         $('#screen').show();
     }
 }
+
 //保存数据
 function park_manae_savehire() {
     $.ajax({
@@ -108,7 +110,7 @@ function park_manae_savehire() {
                         html += '<li id="hire_' + data.hid + '">';
                         html += '<a href="javascript:park_manae_delhire(' + data.hid + ')" >删除</a>';
                         html += '<a href="javascript:park_manae_addhire(' + data.hid + ')" >修改</a>';
-                        html += '<span>'+data.title + '</span></li>';
+                        html += '<span>' + data.title + '</span></li>';
 
                         $("#hirelist").append(html);
                     }
@@ -125,6 +127,7 @@ function park_manae_savehire() {
         }
     });
 }
+
 //删除数据
 function park_manae_delhire(p_id) {
     if (p_id != "") {
@@ -132,7 +135,7 @@ function park_manae_delhire(p_id) {
             url: "/server/park/delhire/",
             type: 'post',
             dataType: 'json',
-            data: { "hid": p_id },
+            data: {"hid": p_id},
             success: function (data) {
                 if (data != null) {
                     if (data.msg == 0) {
@@ -149,6 +152,7 @@ function park_manae_delhire(p_id) {
         });
     }
 }
+
 /**************************人才需求结束*********************************/
 /**************************人才政策开始*********************************/
 //加载窗体
@@ -158,7 +162,7 @@ function park_manae_addpolicy(p_id) {
             url: "/server/park/getpolicy/",
             type: 'post',
             dataType: 'json',
-            data: { "pid": p_id },
+            data: {"pid": p_id},
             success: function (data) {
                 $("#pl_id").val("0");
                 $("#fm3").find("input[type='text']").val("");
@@ -203,6 +207,7 @@ function park_manae_addpolicy(p_id) {
         $('#screen').show();
     }
 }
+
 //保存数据
 function park_manae_savepolicy() {
     $.ajax({
@@ -221,7 +226,7 @@ function park_manae_savepolicy() {
                         html += '<li id="policy_' + data.pid + '">';
                         html += '<a href="javascript:park_manae_delpolicy(' + data.pid + ')" >删除</a>';
                         html += '<a href="javascript:park_manae_addpolicy(' + data.pid + ')" >修改</a>';
-                        html += '<span>'+data.title + '</span></li>';
+                        html += '<span>' + data.title + '</span></li>';
 
                         $("#policylist").append(html);
                     }
@@ -238,6 +243,7 @@ function park_manae_savepolicy() {
         }
     });
 }
+
 //删除数据
 function park_manae_delpolicy(p_id) {
     if (p_id != "") {
@@ -245,7 +251,7 @@ function park_manae_delpolicy(p_id) {
             url: "/server/park/delpolicy/",
             type: 'post',
             dataType: 'json',
-            data: { "pid": p_id },
+            data: {"pid": p_id},
             success: function (data) {
                 if (data != null) {
                     if (data.msg == 0) {
@@ -262,6 +268,7 @@ function park_manae_delpolicy(p_id) {
         });
     }
 }
+
 /**************************人才政策结束*********************************/
 /***********************列表页*******************************/
 //人才登记管理数据加载

@@ -1,20 +1,20 @@
 /************************************************************
- *	TimerAsk 客户端定时轮询
+ *    TimerAsk 客户端定时轮询
  *
  *************************************************************/
 
 /************************************************************
  * function : onlineAsk
- * author	: flotage
- * create	: 2012.10.15
- * des		: 定时向服务器发送在线信号，通知服务器，我在线，用于单点用户登录识别。
+ * author    : flotage
+ * create    : 2012.10.15
+ * des        : 定时向服务器发送在线信号，通知服务器，我在线，用于单点用户登录识别。
  ***********************************************************
-function onlineAsk(){
+ function onlineAsk(){
 	try{
 		$.post(ROOT_PATH+"/ask/meIsOnline.do");
 	}catch(e){
 		
 	}
 }
-window.setInterval("onlineAsk()",50000);
-*/
+ window.setInterval("onlineAsk()",50000);
+ */

@@ -1,66 +1,367 @@
 ﻿@charset "utf-8";
 
-.clear{ clear:both; font-size:0px; height:0px; overflow:hidden; }
-/* Clear Fix */ 
-.clearfix:after{ content:"."; display:block; height:0; clear:both; visibility:hidden; }
-.clearfix{ display:inline-block; } 
-/* Hide from IE Mac */ 
-.clearfix { display:block; } 
-/* End hide from IE Mac */ 
-/* end of clearfix */ 
+.clear {
+    clear: both;
+    font-size: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+/* Clear Fix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+/* Hide from IE Mac */
+.clearfix {
+    display: block;
+}
+
+/* End hide from IE Mac */
+/* end of clearfix */
 
 /*按钮样式*/
-.cms_btn{ display:inline-block; margin:0; padding:0 25px; color:#fff; font-size:12px; height:38px; line-height:38px; text-align:center; }
-.cms_btn{ background:#1e7bb3; border:1px solid #02598E; border-radius:2px; vertical-align:middle; }
-.cms_btn:hover{ color:#fff; opacity:0.9; }
-.cms_btn-mini{ height:20px; line-height:20px; padding:1px 8px 0; }
-input.cms_btn, button.cms_btn{ height:40px; cursor:pointer; overflow:visible; }
-.cms_btn-success{ background:#52A152; border:1px solid #417F41; text-shadow:0 -1px 0 #52A152; }
-.cms_btn-error{ background:#CB423B; border:1px solid #AA352F; text-shadow:0 -1px 0 #CB423B; }
-.cms_btn-gray{ background:#ddd; border:1px solid #A9A9A9; text-shadow:0 -1px 0 #EEEEEE;}
-.cms_btn-gray,.cms_btn-gray:hover{ color:#777; }
+.cms_btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0 25px;
+    color: #fff;
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
 
+.cms_btn {
+    background: #1e7bb3;
+    border: 1px solid #02598E;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+.cms_btn:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.cms_btn-mini {
+    height: 20px;
+    line-height: 20px;
+    padding: 1px 8px 0;
+}
+
+input.cms_btn, button.cms_btn {
+    height: 40px;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.cms_btn-success {
+    background: #52A152;
+    border: 1px solid #417F41;
+    text-shadow: 0 -1px 0 #52A152;
+}
+
+.cms_btn-error {
+    background: #CB423B;
+    border: 1px solid #AA352F;
+    text-shadow: 0 -1px 0 #CB423B;
+}
+
+.cms_btn-gray {
+    background: #ddd;
+    border: 1px solid #A9A9A9;
+    text-shadow: 0 -1px 0 #EEEEEE;
+}
+
+.cms_btn-gray, .cms_btn-gray:hover {
+    color: #777;
+}
 
 /*头像上传*/
-.avatar-img{ display:block; margin:20px 0; padding:1px; width:180px; height:180px; border:1px solid #f0f0f0; border-radius:2px; background:#fff; }
-	.avatar-img img{ width:180px; height:180px; }
-.cropper-wraper{ margin-top:20px; }
-	.cropper-wraper .cropper-box{ position:relative; float:left; margin-right:20px; padding:1px; width:300px; height:300px; text-align:center; border:1px solid #f0f0f0; border-radius:2px; background:#f4f4f4; text-align:center; vertical-align:middle; }
-	.cropper-wraper .cropper-box div{ margin:auto; vertical-align:middle; }
-	
-	.cropper-wraper .cropper-view{ float:left; width:184px; }
-	.cropper-wraper .cropper-view .img-box{ padding:1px; width:180px; height:180px; border:1px solid #f0f0f0; border-radius:2px; background:#fff; overflow:hidden; }
-	.cropper-wraper .cropper-view .img-box img{ display:block; width:180px; height:180px; }
-	.cropper-wraper .cropper-view .btn-box p{ margin:8px 0; text-align:center; color:#333; font-size:13px; line-height:24px; }
-	.cropper-wraper .cropper-view .btn-box p.tip{ text-align:left; color:#999; font-size:13px; line-height:22px; }
-	.cropper-wraper .cropper-view .btn-box .btn{ width:100%; line-height:34px; height:36px; }
+.avatar-img {
+    display: block;
+    margin: 20px 0;
+    padding: 1px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    background: #fff;
+}
 
+.avatar-img img {
+    width: 180px;
+    height: 180px;
+}
+
+.cropper-wraper {
+    margin-top: 20px;
+}
+
+.cropper-wraper .cropper-box {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    padding: 1px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    background: #f4f4f4;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cropper-wraper .cropper-box div {
+    margin: auto;
+    vertical-align: middle;
+}
+
+.cropper-wraper .cropper-view {
+    float: left;
+    width: 184px;
+}
+
+.cropper-wraper .cropper-view .img-box {
+    padding: 1px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.cropper-wraper .cropper-view .img-box img {
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+
+.cropper-wraper .cropper-view .btn-box p {
+    margin: 8px 0;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.cropper-wraper .cropper-view .btn-box p.tip {
+    text-align: left;
+    color: #999;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.cropper-wraper .cropper-view .btn-box .btn {
+    width: 100%;
+    line-height: 34px;
+    height: 36px;
+}
 
 /*以下部分是WebUploader必须的
 ----------------------------------------------*/
-.webuploader-container{ position:relative; }
-.webuploader-element-invisible{ position:absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px,1px,1px,1px);z-index:999999;top:0px !important; left:0px !important;margin:0px !important; }
-.webuploader-pick{ position:relative; display:inline-block; padding:0 25px; line-height:32px; height:34px; border:1px solid #ddd; border-radius:2px; cursor:pointer; background:#f9f9f9; color:#333; text-align:center; overflow:hidden; zoom:1; *display:inline; min-width:108px;min-height:34px;}
-.webuploader-pick-hover{ /*opacity:0.9;*/color:#005bac;  }
-.webuploader-pick-disable{ opacity:0.6; pointer-events:none; }
-.upload-box{ position:relative; display:inline-block; height:32px; vertical-align:middle; zoom:1; *display:inline;}
-	.upload-box .upload-btn{ display:inline-block; height:32px; zoom:1; *display:inline; }
-	.upload-box .upload-progress{ position:absolute; top:0; left:0; padding:2px 5px; width:115px; height:28px; border:1px solid #d7d7d7; background:#fff; overflow:hidden; }
-	.upload-box .upload-progress .txt{ display:block; padding-right:10px; font-weight:normal; font-style:normal; font-size:11px; line-height:18px; height:18px; text-overflow:ellipsis; overflow:hidden; }
-	.upload-box .upload-progress .bar{ position:relative; display:block; width:112px; height:4px; border:1px solid #1da76b; }
-	.upload-box .upload-progress .bar b{ display:block; width:0%; height:4px; font-weight:normal; text-indent:-99em; background:#28B779; overflow:hidden; }
-	.upload-box .upload-progress .close{ position:absolute; display:block; top:1px; right:1px; width:14px; height:14px; text-indent:-99em; background:url(../images/sprite.gif) 0 -240px no-repeat; cursor:pointer; overflow:hidden; }
+.webuploader-container {
+    position: relative;
+}
 
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    z-index: 999999;
+    top: 0px !important;
+    left: 0px !important;
+    margin: 0px !important;
+}
+
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 32px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #f9f9f9;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    zoom: 1;
+    *display: inline;
+    min-width: 108px;
+    min-height: 34px;
+}
+
+.webuploader-pick-hover { /*opacity:0.9;*/
+    color: #005bac;
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.upload-box {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+}
+
+.upload-box .upload-btn {
+    display: inline-block;
+    height: 32px;
+    zoom: 1;
+    *display: inline;
+}
+
+.upload-box .upload-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 5px;
+    width: 115px;
+    height: 28px;
+    border: 1px solid #d7d7d7;
+    background: #fff;
+    overflow: hidden;
+}
+
+.upload-box .upload-progress .txt {
+    display: block;
+    padding-right: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 18px;
+    height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.upload-box .upload-progress .bar {
+    position: relative;
+    display: block;
+    width: 112px;
+    height: 4px;
+    border: 1px solid #1da76b;
+}
+
+.upload-box .upload-progress .bar b {
+    display: block;
+    width: 0%;
+    height: 4px;
+    font-weight: normal;
+    text-indent: -99em;
+    background: #28B779;
+    overflow: hidden;
+}
+
+.upload-box .upload-progress .close {
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 1px;
+    width: 14px;
+    height: 14px;
+    text-indent: -99em;
+    background: url(../images/sprite.gif) 0 -240px no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+}
 
 /*图片相册样式*/
-.photo-list{ margin:0; padding:10px 0 0 0; }
-	.photo-list ul{ margin:0 0 0 -15px; }
-	.photo-list ul li{ float:left; margin-left:15px; text-align:center; *width:118px; }
-	.photo-list ul li .img-box{ position:relative; margin:5px auto; width:112px; height:112px; border:3px #efefed solid; cursor:pointer; overflow:hidden; }
-	.photo-list ul li .img-box.selected{ border:3px #f60 solid; }
-	.photo-list ul li .img-box img{ width:100%; height:100%; opacity:1; }
-	.photo-list ul li .img-box .remark{ position:absolute; display:block; left:0; right:0; bottom:0; margin:0; padding:3px 2px; height:18px; line-height:18px; background:#000; filter:alpha(opacity=50); opacity:0.5; -moz-opacity:0.5; text-align:left; overflow:hidden;}
-	.photo-list ul li .img-box .remark:hover{ top:0; bottom:0; height:100%; }
-	.photo-list ul li .img-box .remark i{ position:relative; font-size:12px; color:#fff; font-style:normal; line-height:18px; }
-	.photo-list ul li a{ padding-right:1em; }
-.photo-list ul,.photo-list li{ margin:0; padding:0; border:0; font-size:100%; text-decoration:none; list-style:none;}
+.photo-list {
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.photo-list ul {
+    margin: 0 0 0 -15px;
+}
+
+.photo-list ul li {
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    *width: 118px;
+}
+
+.photo-list ul li .img-box {
+    position: relative;
+    margin: 5px auto;
+    width: 112px;
+    height: 112px;
+    border: 3px #efefed solid;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.photo-list ul li .img-box.selected {
+    border: 3px #f60 solid;
+}
+
+.photo-list ul li .img-box img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.photo-list ul li .img-box .remark {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 3px 2px;
+    height: 18px;
+    line-height: 18px;
+    background: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    text-align: left;
+    overflow: hidden;
+}
+
+.photo-list ul li .img-box .remark:hover {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.photo-list ul li .img-box .remark i {
+    position: relative;
+    font-size: 12px;
+    color: #fff;
+    font-style: normal;
+    line-height: 18px;
+}
+
+.photo-list ul li a {
+    padding-right: 1em;
+}
+
+.photo-list ul, .photo-list li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    text-decoration: none;
+    list-style: none;
+}

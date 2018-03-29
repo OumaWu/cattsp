@@ -1,50 +1,219 @@
-
 /**下拉列只读的情况下的文本框样式（有个下拉箭头）**/
-.gd_dropinput{background:url(../../images/downxia.gif) right #fff no-repeat;}
+.gd_dropinput {
+    background: url(../../images/downxia.gif) right #fff no-repeat;
+}
+
 /*按钮*/
-.button02 {width: 130px; cursor:pointer; height: 30px;border-width:0px;background:url(../../images/market/login_btn.gif) 0 -35px no-repeat;line-height: 30px;margin: 2px auto;font-weight: bold;font-size: 13px;margin-top: 2px; color:#fff;text-shadow: 1px 1px 1px rgba(0,0,255, .22);}
-.button01 {width:  73px; cursor:pointer; height: 30px;border-width:0px;background:url(../../images/market/login_btn_small.gif) 0 -35px no-repeat;line-height: 30px;margin: 2px auto;font-weight: bold;font-size: 13px;margin-top: 2px; color:#fff;text-shadow: 1px 1px 1px rgba(0,0,255, .22);}
+.button02 {
+    width: 130px;
+    cursor: pointer;
+    height: 30px;
+    border-width: 0px;
+    background: url(../../images/market/login_btn.gif) 0 -35px no-repeat;
+    line-height: 30px;
+    margin: 2px auto;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 2px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 255, .22);
+}
+
+.button01 {
+    width: 73px;
+    cursor: pointer;
+    height: 30px;
+    border-width: 0px;
+    background: url(../../images/market/login_btn_small.gif) 0 -35px no-repeat;
+    line-height: 30px;
+    margin: 2px auto;
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 2px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 255, .22);
+}
+
 /**下划线**/
-.gd_ud_line{border-bottom:#5A91BA dotted 1px;}
+.gd_ud_line {
+    border-bottom: #5A91BA dotted 1px;
+}
+
 /**提示信息样式**/
-.gd_tip_msg{border:1px solid #FF9966; padding:5px;background-color:#FEF9EF}
+.gd_tip_msg {
+    border: 1px solid #FF9966;
+    padding: 5px;
+    background-color: #FEF9EF
+}
 
 /**列表形表格样式**/
-.gdzr_tb {border-collapse:collapse;margin-top:10px;margin-bottom:3px;}
-.gdzr_tb th {line-height:20px; padding:5px 2px; border-top:1px solid #bababa; border-bottom:1px solid #bababa; border-left:1px solid #ffffff;border-right:1px solid #ffffff; background:#b7d9fc;  font-weight:bold; color:#666;}
-.gdzr_tb .th_left{border-left:1px solid #bababa;}
-.gdzr_tb .th_right{border-right:1px solid #bababa;}
-.gdzr_tb td {line-height:20px; padding:5px 2px; border:1px solid #bababa; text-align:center;}
-.gdzr_tb a {color:#3366CC}
-.gdzr_tb a:hover {color:#f00; text-decoration:underline;}
-.gdzr_tb .even {background:#f7f5f1;}
-.gdzr_tb .selected {background:#eaf3fd;}
-.gdzr_tb .cfont {color:#d60312;}
-.gd_fb_btn{height: 25px;font-family: Tahoma;padding:5px 0; line-height:25px; text-align:center;}
-.gd_row_color{ background:#f7f5f1}
-.gd_row_color_se{ background:#eaf3fd;}
-.reg_font01{color:#ff5500;}
-.bigfont td		{font-size:14px}
-.bigfont a		{font-size:14px}
-.bigfont a:hover {font-size: 14px}
+.gdzr_tb {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.gdzr_tb th {
+    line-height: 20px;
+    padding: 5px 2px;
+    border-top: 1px solid #bababa;
+    border-bottom: 1px solid #bababa;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    background: #b7d9fc;
+    font-weight: bold;
+    color: #666;
+}
+
+.gdzr_tb .th_left {
+    border-left: 1px solid #bababa;
+}
+
+.gdzr_tb .th_right {
+    border-right: 1px solid #bababa;
+}
+
+.gdzr_tb td {
+    line-height: 20px;
+    padding: 5px 2px;
+    border: 1px solid #bababa;
+    text-align: center;
+}
+
+.gdzr_tb a {
+    color: #3366CC
+}
+
+.gdzr_tb a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+.gdzr_tb .even {
+    background: #f7f5f1;
+}
+
+.gdzr_tb .selected {
+    background: #eaf3fd;
+}
+
+.gdzr_tb .cfont {
+    color: #d60312;
+}
+
+.gd_fb_btn {
+    height: 25px;
+    font-family: Tahoma;
+    padding: 5px 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+.gd_row_color {
+    background: #f7f5f1
+}
+
+.gd_row_color_se {
+    background: #eaf3fd;
+}
+
+.reg_font01 {
+    color: #ff5500;
+}
+
+.bigfont td {
+    font-size: 14px
+}
+
+.bigfont a {
+    font-size: 14px
+}
+
+.bigfont a:hover {
+    font-size: 14px
+}
 
 /**输入框样式**/
-.gd_inputtable {border: 1px solid #CEDCED;border-collapse: collapse;margin: 0 auto;vertical-align: middle;width: 100%;}
-.gd_inputtable thead td {background-color: #E5EFF5;color: #2E5488;font-weight: bold;height: 28px;line-height: 28px;vertical-align: middle;}
-.gd_inputtable td {border-bottom: 1px solid #CEDCED;border-left: 1px solid #CEDCED;height: 30px;line-height: 30px;padding-left: 5px;vertical-align: middle;}
-.gd_color2{ background:#f7f5f1}
+.gd_inputtable {
+    border: 1px solid #CEDCED;
+    border-collapse: collapse;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 100%;
+}
 
-.ellipsis {text-overflow:ellipsis;overflow: hidden;white-space:nowrap;display: block;}
+.gd_inputtable thead td {
+    background-color: #E5EFF5;
+    color: #2E5488;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+}
+
+.gd_inputtable td {
+    border-bottom: 1px solid #CEDCED;
+    border-left: 1px solid #CEDCED;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.gd_color2 {
+    background: #f7f5f1
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
 
 /**资金平台列表表格样式**/
-.zs_fd_table {border-collapse:collapse;margin-top:10px;margin-bottom:3px;}
-.zs_fd_table th {line-height:20px; padding:5px 2px; border:1px solid #BABABA; background:#FCF6DC; color:#BA020F; font-weight:bold;}
-.zs_fd_table td {line-height:20px; padding:5px 2px; border:1px solid #bababa; text-align:center;}
-.zs_fd_table .even {background:#f6f5f1;}
-.zs_fd_table .selected {background:#eaf3fd;}
-.zs_fd_table .cfont {color:#d60312;}
-.zs_fd_table a {color:#3366CC}
-.zs_fd_table a:hover {color:#f00; text-decoration:underline;}
+.zs_fd_table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.zs_fd_table th {
+    line-height: 20px;
+    padding: 5px 2px;
+    border: 1px solid #BABABA;
+    background: #FCF6DC;
+    color: #BA020F;
+    font-weight: bold;
+}
+
+.zs_fd_table td {
+    line-height: 20px;
+    padding: 5px 2px;
+    border: 1px solid #bababa;
+    text-align: center;
+}
+
+.zs_fd_table .even {
+    background: #f6f5f1;
+}
+
+.zs_fd_table .selected {
+    background: #eaf3fd;
+}
+
+.zs_fd_table .cfont {
+    color: #d60312;
+}
+
+.zs_fd_table a {
+    color: #3366CC
+}
+
+.zs_fd_table a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
 
 
 

@@ -6,7 +6,7 @@
 //========================基于artdialog插件========================
 //可以自动关闭的提示，基于artdialog插件
 function jsprint(msgtitle, url, callback) {
-    var d = dialog({ content: msgtitle }).show();
+    var d = dialog({content: msgtitle}).show();
     setTimeout(function () {
         d.close().remove();
     }, 2000);
@@ -20,13 +20,15 @@ function jsprint(msgtitle, url, callback) {
         callback();
     }
 }
+
 //弹出一个Dialog窗口
 function jsdialog(msgtitle, msgcontent, url, callback) {
     var d = dialog({
         title: msgtitle,
         content: msgcontent,
         okValue: '确定',
-        ok: function () { },
+        ok: function () {
+        },
         onclose: function () {
             if (url == "back") {
                 history.back(-1);
@@ -40,6 +42,7 @@ function jsdialog(msgtitle, msgcontent, url, callback) {
         }
     }).showModal();
 }
+
 //打开一个最大化的Dialog
 function ShowMaxDialog(tit, url) {
     dialog({
@@ -47,6 +50,7 @@ function ShowMaxDialog(tit, url) {
         url: url
     }).showModal();
 }
+
 //执行回传函数
 function ExePostBack(objId, objmsg) {
     //checkedselect("ckb", "");
@@ -55,7 +59,8 @@ function ExePostBack(objId, objmsg) {
             title: '提示',
             content: '对不起，请选中您要操作的记录！',
             okValue: '确定',
-            ok: function () { }
+            ok: function () {
+            }
         }).showModal();
         return false;
     }
@@ -71,11 +76,13 @@ function ExePostBack(objId, objmsg) {
             __doPostBack(objId, '');
         },
         cancelValue: '取消',
-        cancel: function () { }
+        cancel: function () {
+        }
     }).showModal();
 
     return false;
 }
+
 //检查是否有选中再决定回传
 function CheckPostBack(objId, objmsg) {
     //checkedselect("ckb", "");
@@ -88,13 +95,15 @@ function CheckPostBack(objId, objmsg) {
             title: '提示',
             content: msg,
             okValue: '确定',
-            ok: function () { }
+            ok: function () {
+            }
         }).showModal();
         return false;
     }
     __doPostBack(objId, '');
     return false;
 }
+
 //执行回传无复选框确认函数
 function ExeNoCheckPostBack(objId, objmsg) {
     //checkedselect("ckb", "");
@@ -110,11 +119,13 @@ function ExeNoCheckPostBack(objId, objmsg) {
             __doPostBack(objId, '');
         },
         cancelValue: '取消',
-        cancel: function () { }
+        cancel: function () {
+        }
     }).showModal();
 
     return false;
 }
+
 //======================以上基于artdialog插件======================
 
 /*验证手机号码的正确性*/

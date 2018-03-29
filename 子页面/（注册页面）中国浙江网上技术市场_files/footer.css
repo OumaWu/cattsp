@@ -1,13 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
-.gd_footer{ text-align:center; clear:both; padding:20px 0}
+.gd_footer {
+    text-align: center;
+    clear: both;
+    padding: 20px 0
+}
 
 .xh_tile_kj {
     margin: 8px auto;
     width: 960px;
-    overflow:hidden;
-    clear:both;
+    overflow: hidden;
+    clear: both;
 }
+
 .xh_tile_bg {
     background: url("../../images/market/index_foot_bg.gif") repeat-x scroll 0 0 transparent;
     color: #FFFFFF;
@@ -15,29 +20,35 @@
     padding-top: 15px;
     text-align: center;
 }
+
 .xh_tile_bg ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 .xh_tile_bg li {
     list-style-type: none;
     text-align: center;
     color: #FFFFFF;
 }
+
 .xh_tile_bg .li01 {
     height: 22px;
     width: 99%;
 }
+
 .xh_tile_bg .li02 {
     width: 99%;
 }
+
 .xh_tile_bg a:link, .xh_tile_bg a:visited, .xh_tile_bg a:active {
     color: #FFFFFF;
     text-decoration: none;
 }
+
 .xh_tile_bg a:hover {
     color: #FF4400;
     text-decoration: none;
-    
+
 }

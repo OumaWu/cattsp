@@ -1,17 +1,17 @@
 function hongbao_GetOrderStateTime(ordernum) {
     var status = "";
-    $("#statustime div[status]").each(function(index, element) {
-        status += $(element).attr("status")+",";
+    $("#statustime div[status]").each(function (index, element) {
+        status += $(element).attr("status") + ",";
     });
     if (status == "" || status == ",") {
         return false;
     }
-    //提交查询
+    //锟结交锟斤拷询
     $.ajax({
         type: "get",
         url: "/server/hongbao/order/GetStateTime?ordernum=" + ordernum + "&statuses=" + status,
         dataType: "json",
-        success: function(json) {
+        success: function (json) {
             if (json.data != null) {
                 if (json.data.length > 0) {
                     for (var i = 0; i < json.data.length; i++) {

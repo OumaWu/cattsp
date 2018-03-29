@@ -1,327 +1,685 @@
 .ui-dialog {
-	outline: 0px; border-radius: 6px; border: 1px solid rgb(153, 153, 153); transition:transform 0.15s ease-in-out, opacity 0.15s ease-in-out; border-image: none; color: rgb(51, 51, 51); line-height: 1.4285; font-family: Helvetica, arial, sans-serif; font-size: 14px; position: relative; opacity: 0; transform: scale(0); background-clip: padding-box; background-color: rgb(255, 255, 255); _float: left; -webkit-transform: scale(0); -webkit-transition: -webkit-transform .15s ease-in-out, opacity .15s ease-in-out;
+    outline: 0px;
+    border-radius: 6px;
+    border: 1px solid rgb(153, 153, 153);
+    transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    border-image: none;
+    color: rgb(51, 51, 51);
+    line-height: 1.4285;
+    font-family: Helvetica, arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0);
+    background-clip: padding-box;
+    background-color: rgb(255, 255, 255);
+    _float: left;
+    -webkit-transform: scale(0);
+    -webkit-transition: -webkit-transform .15s ease-in-out, opacity .15s ease-in-out;
 }
+
 .ui-popup-show .ui-dialog {
-	opacity: 1; transform: scale(1); -webkit-transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
 }
+
 .ui-popup-focus .ui-dialog {
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
+
 .ui-popup-modal .ui-dialog {
-	box-shadow: 0px 0px 8px rgba(0,0,0,0.1), 0px 0px 256px rgba(255,255,255,0.3);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1), 0px 0px 256px rgba(255, 255, 255, 0.3);
 }
+
 .ui-dialog-grid {
-	background: none; margin: 0px; border: 0px currentColor; border-image: none; width: auto; border-collapse: collapse; border-spacing: 0;
+    background: none;
+    margin: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 .ui-dialog-header {
-	background: none; padding: 0px; border: 0px currentColor; border-image: none; text-align: left;
+    background: none;
+    padding: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    text-align: left;
 }
+
 .ui-dialog-body {
-	background: none; padding: 0px; border: 0px currentColor; border-image: none; text-align: left;
+    background: none;
+    padding: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    text-align: left;
 }
+
 .ui-dialog-footer {
-	background: none; padding: 0px; border: 0px currentColor; border-image: none; text-align: left;
+    background: none;
+    padding: 0px;
+    border: 0px currentColor;
+    border-image: none;
+    text-align: left;
 }
+
 .ui-dialog-header {
-	border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; white-space: nowrap;
+    border-bottom-color: rgb(229, 229, 229);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    white-space: nowrap;
 }
+
 .ui-dialog-close {
-	background: none; padding: 0px 4px; border: 0px currentColor; border-image: none; top: 13px; right: 13px; color: rgb(0, 0, 0); line-height: 1; font-size: 21px; font-weight: bold; float: right; position: relative; cursor: pointer; opacity: 0.2; text-shadow: 0px 1px 0px #fff; _position: absolute; _height: 26px; _background: #FFF; -webkit-appearance: none;
+    background: none;
+    padding: 0px 4px;
+    border: 0px currentColor;
+    border-image: none;
+    top: 13px;
+    right: 13px;
+    color: rgb(0, 0, 0);
+    line-height: 1;
+    font-size: 21px;
+    font-weight: bold;
+    float: right;
+    position: relative;
+    cursor: pointer;
+    opacity: 0.2;
+    text-shadow: 0px 1px 0px #fff;
+    _position: absolute;
+    _height: 26px;
+    _background: #FFF;
+    -webkit-appearance: none;
 }
+
 .ui-dialog-close:hover {
-	outline: 0px; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer; opacity: 0.5;
+    outline: 0px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
 }
+
 .ui-dialog-close:focus {
-	outline: 0px; color: rgb(0, 0, 0); text-decoration: none; cursor: pointer; opacity: 0.5;
+    outline: 0px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
 }
+
 .ui-dialog-title {
-	margin: 0px; padding: 15px; line-height: 1.4285; overflow: hidden; font-weight: bold; white-space: nowrap; cursor: default; -ms-text-overflow: ellipsis; min-height: 16.42px;
+    margin: 0px;
+    padding: 15px;
+    line-height: 1.4285;
+    overflow: hidden;
+    font-weight: bold;
+    white-space: nowrap;
+    cursor: default;
+    -ms-text-overflow: ellipsis;
+    min-height: 16.42px;
 }
+
 .ui-dialog-body {
-	padding: 20px; text-align: center;
+    padding: 20px;
+    text-align: center;
 }
+
 .ui-dialog-content {
-	text-align: left; vertical-align: middle; display: inline-block; position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
 }
+
 .ui-dialog-footer {
-	padding: 0px 20px 20px;
+    padding: 0px 20px 20px;
 }
+
 .ui-dialog-statusbar {
-	padding: 6px 0px; color: rgb(136, 136, 136); line-height: 1.4285; font-size: 14px; margin-right: 20px; float: left; white-space: nowrap;
+    padding: 6px 0px;
+    color: rgb(136, 136, 136);
+    line-height: 1.4285;
+    font-size: 14px;
+    margin-right: 20px;
+    float: left;
+    white-space: nowrap;
 }
+
 .ui-dialog-statusbar label:hover {
-	color: rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
 }
+
 .ui-dialog-statusbar input {
-	vertical-align: middle;
+    vertical-align: middle;
 }
+
 .ui-dialog-statusbar .label {
-	vertical-align: middle;
+    vertical-align: middle;
 }
+
 .ui-dialog-button {
-	float: right; white-space: nowrap;
+    float: right;
+    white-space: nowrap;
 }
+
 .ui-dialog-footer button + button {
-	margin-bottom: 0px; margin-left: 5px;
+    margin-bottom: 0px;
+    margin-left: 5px;
 }
+
 .ui-dialog-footer button {
-	padding: 6px 12px; border-radius: 4px; border: 1px solid transparent; border-image: none; width: auto; text-align: center; line-height: 1.4285; overflow: visible; font-size: 14px; font-weight: normal; margin-bottom: 0px; vertical-align: middle; display: inline-block; white-space: nowrap; cursor: pointer; -ms-user-select: none; background-image: none; _margin-left: 5px; -webkit-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    border-image: none;
+    width: auto;
+    text-align: center;
+    line-height: 1.4285;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    -ms-user-select: none;
+    background-image: none;
+    _margin-left: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
+
 .ui-dialog-footer button:focus {
-	outline: rgb(51, 51, 51) dotted thin; outline-offset: -2px;
+    outline: rgb(51, 51, 51) dotted thin;
+    outline-offset: -2px;
 }
+
 .ui-dialog-footer button:hover {
-	color: rgb(51, 51, 51); text-decoration: none;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
 }
+
 .ui-dialog-footer button:focus {
-	color: rgb(51, 51, 51); text-decoration: none;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
 }
+
 .ui-dialog-footer button:active {
-	outline: 0px; box-shadow: inset 0px 3px 5px rgba(0,0,0,0.125); background-image: none; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    outline: 0px;
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125);
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
+
 .ui-dialog-footer button[disabled] {
-	cursor: not-allowed; opacity: 0.65; pointer-events: none; box-shadow: none; -webkit-box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
+
 .ui-dialog-footer button {
-	border-color: rgb(204, 204, 204); color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
 }
+
 .ui-dialog-footer button:hover {
-	border-color: rgb(173, 173, 173); color: rgb(51, 51, 51); background-color: rgb(235, 235, 235);
+    border-color: rgb(173, 173, 173);
+    color: rgb(51, 51, 51);
+    background-color: rgb(235, 235, 235);
 }
+
 .ui-dialog-footer button:focus {
-	border-color: rgb(173, 173, 173); color: rgb(51, 51, 51); background-color: rgb(235, 235, 235);
+    border-color: rgb(173, 173, 173);
+    color: rgb(51, 51, 51);
+    background-color: rgb(235, 235, 235);
 }
+
 .ui-dialog-footer button:active {
-	border-color: rgb(173, 173, 173); color: rgb(51, 51, 51); background-color: rgb(235, 235, 235);
+    border-color: rgb(173, 173, 173);
+    color: rgb(51, 51, 51);
+    background-color: rgb(235, 235, 235);
 }
+
 .ui-dialog-footer button:active {
-	background-image: none;
+    background-image: none;
 }
+
 .ui-dialog-footer button[disabled] {
-	border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    background-color: rgb(255, 255, 255);
 }
+
 .ui-dialog-footer button[disabled]:hover {
-	border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    background-color: rgb(255, 255, 255);
 }
+
 .ui-dialog-footer button[disabled]:focus {
-	border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    background-color: rgb(255, 255, 255);
 }
+
 .ui-dialog-footer button[disabled]:active {
-	border-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    background-color: rgb(255, 255, 255);
 }
+
 .ui-dialog-footer button.ui-dialog-autofocus {
-	border-color: rgb(53, 126, 189); color: rgb(255, 255, 255); background-color: rgb(66, 139, 202);
+    border-color: rgb(53, 126, 189);
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
 }
+
 .ui-dialog-footer button.ui-dialog-autofocus:hover {
-	border-color: rgb(40, 94, 142); color: rgb(255, 255, 255); background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
 }
+
 .ui-dialog-footer button.ui-dialog-autofocus:focus {
-	border-color: rgb(40, 94, 142); color: rgb(255, 255, 255); background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
 }
+
 .ui-dialog-footer button.ui-dialog-autofocus:active {
-	border-color: rgb(40, 94, 142); color: rgb(255, 255, 255); background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
 }
+
 .ui-dialog-footer button.ui-dialog-autofocus:active {
-	background-image: none;
+    background-image: none;
 }
+
 .ui-popup-top-left .ui-dialog {
-	top: -8px;
+    top: -8px;
 }
+
 .ui-popup-top .ui-dialog {
-	top: -8px;
+    top: -8px;
 }
+
 .ui-popup-top-right .ui-dialog {
-	top: -8px;
+    top: -8px;
 }
+
 .ui-popup-bottom-left .ui-dialog {
-	top: 8px;
+    top: 8px;
 }
+
 .ui-popup-bottom .ui-dialog {
-	top: 8px;
+    top: 8px;
 }
+
 .ui-popup-bottom-right .ui-dialog {
-	top: 8px;
+    top: 8px;
 }
+
 .ui-popup-left-top .ui-dialog {
-	left: -8px;
+    left: -8px;
 }
+
 .ui-popup-left .ui-dialog {
-	left: -8px;
+    left: -8px;
 }
+
 .ui-popup-left-bottom .ui-dialog {
-	left: -8px;
+    left: -8px;
 }
+
 .ui-popup-right-top .ui-dialog {
-	left: 8px;
+    left: 8px;
 }
+
 .ui-popup-right .ui-dialog {
-	left: 8px;
+    left: 8px;
 }
+
 .ui-popup-right-bottom .ui-dialog {
-	left: 8px;
+    left: 8px;
 }
+
 .ui-dialog-arrow-a {
-	border: 8px dashed transparent; border-image: none; width: 0px; height: 0px; overflow: hidden; display: none; position: absolute; _color: #FF3FFF;
+    border: 8px dashed transparent;
+    border-image: none;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    _color: #FF3FFF;
 }
+
 .ui-dialog-arrow-b {
-	border: 8px dashed transparent; border-image: none; width: 0px; height: 0px; overflow: hidden; display: none; position: absolute; _color: #FF3FFF;
+    border: 8px dashed transparent;
+    border-image: none;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    _color: #FF3FFF;
 }
+
 .ui-popup-follow .ui-dialog-arrow-a {
-	display: block;
+    display: block;
 }
+
 .ui-popup-follow .ui-dialog-arrow-b {
-	display: block;
+    display: block;
 }
+
 .ui-popup-top-left .ui-dialog-arrow-a {
-	bottom: -16px; border-top-color: rgb(124, 124, 124); border-top-width: 8px; border-top-style: solid;
+    bottom: -16px;
+    border-top-color: rgb(124, 124, 124);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top .ui-dialog-arrow-a {
-	bottom: -16px; border-top-color: rgb(124, 124, 124); border-top-width: 8px; border-top-style: solid;
+    bottom: -16px;
+    border-top-color: rgb(124, 124, 124);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top-right .ui-dialog-arrow-a {
-	bottom: -16px; border-top-color: rgb(124, 124, 124); border-top-width: 8px; border-top-style: solid;
+    bottom: -16px;
+    border-top-color: rgb(124, 124, 124);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top-left .ui-dialog-arrow-b {
-	bottom: -15px; border-top-color: rgb(255, 255, 255); border-top-width: 8px; border-top-style: solid;
+    bottom: -15px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top .ui-dialog-arrow-b {
-	bottom: -15px; border-top-color: rgb(255, 255, 255); border-top-width: 8px; border-top-style: solid;
+    bottom: -15px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top-right .ui-dialog-arrow-b {
-	bottom: -15px; border-top-color: rgb(255, 255, 255); border-top-width: 8px; border-top-style: solid;
+    bottom: -15px;
+    border-top-color: rgb(255, 255, 255);
+    border-top-width: 8px;
+    border-top-style: solid;
 }
+
 .ui-popup-top-left .ui-dialog-arrow-a {
-	left: 15px;
+    left: 15px;
 }
+
 .ui-popup-top-left .ui-dialog-arrow-b {
-	left: 15px;
+    left: 15px;
 }
+
 .ui-popup-top .ui-dialog-arrow-a {
-	left: 50%; margin-left: -8px;
+    left: 50%;
+    margin-left: -8px;
 }
+
 .ui-popup-top .ui-dialog-arrow-b {
-	left: 50%; margin-left: -8px;
+    left: 50%;
+    margin-left: -8px;
 }
+
 .ui-popup-top-right .ui-dialog-arrow-a {
-	right: 15px;
+    right: 15px;
 }
+
 .ui-popup-top-right .ui-dialog-arrow-b {
-	right: 15px;
+    right: 15px;
 }
+
 .ui-popup-bottom-left .ui-dialog-arrow-a {
-	top: -16px; border-bottom-color: rgb(124, 124, 124); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -16px;
+    border-bottom-color: rgb(124, 124, 124);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom .ui-dialog-arrow-a {
-	top: -16px; border-bottom-color: rgb(124, 124, 124); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -16px;
+    border-bottom-color: rgb(124, 124, 124);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom-right .ui-dialog-arrow-a {
-	top: -16px; border-bottom-color: rgb(124, 124, 124); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -16px;
+    border-bottom-color: rgb(124, 124, 124);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom-left .ui-dialog-arrow-b {
-	top: -15px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -15px;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom .ui-dialog-arrow-b {
-	top: -15px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -15px;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom-right .ui-dialog-arrow-b {
-	top: -15px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 8px; border-bottom-style: solid;
+    top: -15px;
+    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
 }
+
 .ui-popup-bottom-left .ui-dialog-arrow-a {
-	left: 15px;
+    left: 15px;
 }
+
 .ui-popup-bottom-left .ui-dialog-arrow-b {
-	left: 15px;
+    left: 15px;
 }
+
 .ui-popup-bottom .ui-dialog-arrow-a {
-	left: 50%; margin-left: -8px;
+    left: 50%;
+    margin-left: -8px;
 }
+
 .ui-popup-bottom .ui-dialog-arrow-b {
-	left: 50%; margin-left: -8px;
+    left: 50%;
+    margin-left: -8px;
 }
+
 .ui-popup-bottom-right .ui-dialog-arrow-a {
-	right: 15px;
+    right: 15px;
 }
+
 .ui-popup-bottom-right .ui-dialog-arrow-b {
-	right: 15px;
+    right: 15px;
 }
+
 .ui-popup-left-top .ui-dialog-arrow-a {
-	right: -16px; border-left-color: rgb(124, 124, 124); border-left-width: 8px; border-left-style: solid;
+    right: -16px;
+    border-left-color: rgb(124, 124, 124);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left .ui-dialog-arrow-a {
-	right: -16px; border-left-color: rgb(124, 124, 124); border-left-width: 8px; border-left-style: solid;
+    right: -16px;
+    border-left-color: rgb(124, 124, 124);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left-bottom .ui-dialog-arrow-a {
-	right: -16px; border-left-color: rgb(124, 124, 124); border-left-width: 8px; border-left-style: solid;
+    right: -16px;
+    border-left-color: rgb(124, 124, 124);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left-top .ui-dialog-arrow-b {
-	right: -15px; border-left-color: rgb(255, 255, 255); border-left-width: 8px; border-left-style: solid;
+    right: -15px;
+    border-left-color: rgb(255, 255, 255);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left .ui-dialog-arrow-b {
-	right: -15px; border-left-color: rgb(255, 255, 255); border-left-width: 8px; border-left-style: solid;
+    right: -15px;
+    border-left-color: rgb(255, 255, 255);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left-bottom .ui-dialog-arrow-b {
-	right: -15px; border-left-color: rgb(255, 255, 255); border-left-width: 8px; border-left-style: solid;
+    right: -15px;
+    border-left-color: rgb(255, 255, 255);
+    border-left-width: 8px;
+    border-left-style: solid;
 }
+
 .ui-popup-left-top .ui-dialog-arrow-a {
-	top: 15px;
+    top: 15px;
 }
+
 .ui-popup-left-top .ui-dialog-arrow-b {
-	top: 15px;
+    top: 15px;
 }
+
 .ui-popup-left .ui-dialog-arrow-a {
-	top: 50%; margin-top: -8px;
+    top: 50%;
+    margin-top: -8px;
 }
+
 .ui-popup-left .ui-dialog-arrow-b {
-	top: 50%; margin-top: -8px;
+    top: 50%;
+    margin-top: -8px;
 }
+
 .ui-popup-left-bottom .ui-dialog-arrow-a {
-	bottom: 15px;
+    bottom: 15px;
 }
+
 .ui-popup-left-bottom .ui-dialog-arrow-b {
-	bottom: 15px;
+    bottom: 15px;
 }
+
 .ui-popup-right-top .ui-dialog-arrow-a {
-	left: -16px; border-right-color: rgb(124, 124, 124); border-right-width: 8px; border-right-style: solid;
+    left: -16px;
+    border-right-color: rgb(124, 124, 124);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right .ui-dialog-arrow-a {
-	left: -16px; border-right-color: rgb(124, 124, 124); border-right-width: 8px; border-right-style: solid;
+    left: -16px;
+    border-right-color: rgb(124, 124, 124);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right-bottom .ui-dialog-arrow-a {
-	left: -16px; border-right-color: rgb(124, 124, 124); border-right-width: 8px; border-right-style: solid;
+    left: -16px;
+    border-right-color: rgb(124, 124, 124);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right-top .ui-dialog-arrow-b {
-	left: -15px; border-right-color: rgb(255, 255, 255); border-right-width: 8px; border-right-style: solid;
+    left: -15px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right .ui-dialog-arrow-b {
-	left: -15px; border-right-color: rgb(255, 255, 255); border-right-width: 8px; border-right-style: solid;
+    left: -15px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right-bottom .ui-dialog-arrow-b {
-	left: -15px; border-right-color: rgb(255, 255, 255); border-right-width: 8px; border-right-style: solid;
+    left: -15px;
+    border-right-color: rgb(255, 255, 255);
+    border-right-width: 8px;
+    border-right-style: solid;
 }
+
 .ui-popup-right-top .ui-dialog-arrow-a {
-	top: 15px;
+    top: 15px;
 }
+
 .ui-popup-right-top .ui-dialog-arrow-b {
-	top: 15px;
+    top: 15px;
 }
+
 .ui-popup-right .ui-dialog-arrow-a {
-	top: 50%; margin-top: -8px;
+    top: 50%;
+    margin-top: -8px;
 }
+
 .ui-popup-right .ui-dialog-arrow-b {
-	top: 50%; margin-top: -8px;
+    top: 50%;
+    margin-top: -8px;
 }
+
 .ui-popup-right-bottom .ui-dialog-arrow-a {
-	bottom: 15px;
+    bottom: 15px;
 }
+
 .ui-popup-right-bottom .ui-dialog-arrow-b {
-	bottom: 15px;
+    bottom: 15px;
 }
+
 .ui-dialog-loading {
-	margin: -16px auto 0px; top: 50%; width: 32px; height: 32px; color: rgb(102, 102, 102); text-indent: -999em; overflow: hidden; font-size: 0px; vertical-align: middle; display: block; position: relative;
+    margin: -16px auto 0px;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    color: rgb(102, 102, 102);
+    text-indent: -999em;
+    overflow: hidden;
+    font-size: 0px;
+    vertical-align: middle;
+    display: block;
+    position: relative;
 }
+
 .ui-dialog-loading {
-	
+
 }
+
 .ui-dialog-loading::after {
-	margin: 14.5px 0px 0px 14.5px; border-radius: 100%; animation:ui-dialog-loading 1.5s linear infinite; width: 3px; height: 3px; position: absolute; content: ""; box-shadow: 0px -10px 0px 1px #ccc, 10px 0px #ccc, 0px 10px #ccc, -10px 0px #ccc, -7px -7px 0px 0.5px #ccc, 7px -7px 0px 1.5px #ccc, 7px 7px #ccc, -7px 7px #ccc; transform: rotate(360deg); -webkit-transform: rotate(360deg); -webkit-animation: ui-dialog-loading 1.5s infinite linear;
+    margin: 14.5px 0px 0px 14.5px;
+    border-radius: 100%;
+    animation: ui-dialog-loading 1.5s linear infinite;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    content: "";
+    box-shadow: 0px -10px 0px 1px #ccc, 10px 0px #ccc, 0px 10px #ccc, -10px 0px #ccc, -7px -7px 0px 0.5px #ccc, 7px -7px 0px 1.5px #ccc, 7px 7px #ccc, -7px 7px #ccc;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -webkit-animation: ui-dialog-loading 1.5s infinite linear;
 }

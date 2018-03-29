@@ -1,43 +1,148 @@
 ﻿/*初始化结构*/
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; word-wrap: break-word; }
-body, html, input { font: 13px/1.5 "helvetical", "arial", sans-serif, "微软雅黑", "宋体"; }
-table { border-collapse: collapse; border-spacing: 0; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+body, html, input {
+    font: 13px/1.5 "helvetical", "arial", sans-serif, "微软雅黑", "宋体";
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 /*td, th, div { word-break: break-all; word-wrap: break-word; }*/
-img { border: none }
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight:normal }
-h1 { font-size: 34px; }
-h2 { font-size: 24px; }
-h3 { font-size: 18px; }
-h4 { font-size: 15px; }
-h5 { font-size: 14px; }
-h6 { font-size: 12px; }
-form { display: inline; }
-* {/*outline:none*/ }
-em, cite { font-style: normal; padding: 0 2px }
-blockquote { quotes: none; }
-.oh { overflow: hidden; }
+img {
+    border: none
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 15px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+form {
+    display: inline;
+}
+
+* { /*outline:none*/
+}
+
+em, cite {
+    font-style: normal;
+    padding: 0 2px
+}
+
+blockquote {
+    quotes: none;
+}
+
+.oh {
+    overflow: hidden;
+}
+
 /*清除浮动*/
 
-.pr { position: relative }
-.pa { position: absolute }
+.pr {
+    position: relative
+}
+
+.pa {
+    position: absolute
+}
+
 /*通用样式*/
-.b, b { font-weight: bold; }
-.w { white-space: nowrap; }
-.tal { text-align: left }
-.tac { text-align: center }
-.tar { text-align: right }
-.fr { float: right }
-.fl { /*float: left*/ }
-.vt, .vt td, .vt th { vertical-align: top; }
-.divHr { background: #eaeaea; height: 1px; overflow: hidden; margin: 10px 0; }
-input, label, img, th { vertical-align: middle;padding: 0;margin: 0; }
+.b, b {
+    font-weight: bold;
+}
+
+.w {
+    white-space: nowrap;
+}
+
+.tal {
+    text-align: left
+}
+
+.tac {
+    text-align: center
+}
+
+.tar {
+    text-align: right
+}
+
+.fr {
+    float: right
+}
+
+.fl { /*float: left*/
+}
+
+.vt, .vt td, .vt th {
+    vertical-align: top;
+}
+
+.divHr {
+    background: #eaeaea;
+    height: 1px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+input, label, img, th {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
 /*input.button, input.btn { padding: 0.25em; width: auto; _width: 0; overflow:visible !ie;
 }*/
-ul, ol, li { list-style: none; }
-a{ color: #222; text-decoration: none; cursor: pointer; }
+ul, ol, li {
+    list-style: none;
+}
 
-a:hover{ color: #37c; text-decoration: none; }
+a {
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #37c;
+    text-decoration: none;
+}
 
 /*通用样式*/
-.ib, .ib-a a { display: inline-block; zoom: 1; *display:inline;
+.ib, .ib-a a {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
 }
