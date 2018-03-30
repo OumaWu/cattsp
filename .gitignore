@@ -2,7 +2,6 @@
 *.[oa]
 *~
 dbconfig.txt
-test.txt
-sql/connection.php
 Version_refactoring/*
 .idea
+*.ini
