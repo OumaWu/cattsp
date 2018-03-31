@@ -11,7 +11,6 @@
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
     <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>
-    <script src="./中国浙江网上技术市场_files/WdatePicker.js.下载" type="text/javascript"></script>
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
@@ -80,7 +79,6 @@
 
 <!--  首页信息板块{  -->
 <div class="main">
-
     <!--  新闻板块{  -->
     <div class="wys_layout">
         <div class="wysn_banner fl mt10">
@@ -89,11 +87,11 @@
                     <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
                         <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                             <li style="float: left; width: 640px;"><a
-                                        href="http://www.51jishu.com/cmsweb/zxzx/ztch/zhejiang/7403.htm" title="智汇营"
+                                        href="#" title="智汇营"
                                         target="_blank"><img src="./中国浙江网上技术市场_files/20170419120459051.jpg" title=""
                                                              alt="" width="640" height="382"></a></li>
                             <li style="float: left; width: 640px;"><a
-                                        href="http://www.51jishu.com/cmsweb/cgpm/spzx/7636.htm"
+                                        href="#"
                                         title="2017年浙江省春季科技成果竞价（拍卖）会" target="_blank"><img
                                             src="./中国浙江网上技术市场_files/20170511170534996.jpg" title="" alt="" width="640"
                                             height="382"></a></li>
@@ -118,134 +116,56 @@
         <div class="wysn_pro mt10"></div>
     </div>
     <!-- 图片滑动脚本{ -->
-    <script>
-        function iFrameHeight() {
-            var ifm = document.getElementById("hzhb_page");
-            var subWeb = document.frames ? document.frames["hzhb_page"].document : ifm.contentDocument;
-            if (ifm != null && subWeb != null) {
-                ifm.height = subWeb.body.clientHeight;//内容可视区域的高度 兼容各种浏览器 scrollHeight 在火狐和IE下取得的高度可能不一样
-                ifm.width = subWeb.body.scrollWidth;
-            }
-        }
-
-        $(".slideTxtBox").slide({trigger: "click"});
-        $(".wysn_banner").slide({
-            titCell: ".flip ul",
-            mainCell: "#slides ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true
-        });
-        $(".altimg1").slide({
-            titCell: ".flip ul",
-            mainCell: "#slides1 ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true
-        });
-        $(".altimg2").slide({
-            titCell: ".flip ul",
-            mainCell: "#slides2 ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true
-        });
-        $(".wysn_ad").slide({
-            titCell: ".flip ul",
-            mainCell: "#slides3 ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true
-        });
-        $(".wysn_mallmc").slide({
-            titCell: ".hd ul",
-            mainCell: ".bd ul",
-            autoPage: true,
-            effect: "left",
-            autoPlay: true,
-            vis: 5
-        });
-    </script>
     <!-- }图片滑动脚本 -->
     <!--  }新闻板块  -->
 
     <!--  专利技术{  -->
-    <div class="n_site_h2 n_site_h2a"><a href="http://www.vtitt.com/strong_tec/" target="_blank">更多&gt;</a>
+    <div class="n_site_h2 n_site_h2a"><a href="solartech.php" target="_blank">更多&gt;</a>
         <h2>太阳能技术</h2>
     </div>
     <div class="n_site_f">
         <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
             <li class="n_site_f_li1"
                 style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
-                <div class="card">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19607.html" target="_blank" class="c333"
-                                       title="富钛料制备技术的研发需求">太阳能空调热泵三合一技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西南宁</p>
-                    <p class="hur4">需求简介：富钛料制备技术的研发需求</p>
-                </div>
-                <div class="card cardon">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19266.html" target="_blank" class="c333"
-                                       title="含氨废水处理工艺研究">太阳能空调热泵三合一技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西桂林</p>
-                    <p class="hur4">需求简介：含氨废水处理工艺研究</p>
-                </div>
-                <div class="card">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19264.html" target="_blank" class="c333"
-                                       title="降低钒钛矿高炉冶炼过程铁损的技术研究">太阳能空调热泵三合一技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西崇左</p>
-                    <p class="hur4">需求简介：降低钒钛矿高炉冶炼过程铁损的技术研究</p>
-                </div>
-                <div class="card cardon">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19261.html" target="_blank" class="c333"
-                                       title="硫酸法钛白副产废酸的综合利用技术">太阳能空调热泵三合一技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西柳州</p>
-                    <p class="hur4">需求简介：硫酸法钛白副产废酸的综合利用技术</p>
-                </div>
+                <?php
+                include_once("sql/solarTechList.php");
+                for ($i=0; $i<4; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                    ?>
+                    <div class="card">
+                        <p class="hur1"><a href="solartech_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
+                                           title="<?=$res->title;?>"><?=$res->title;?></a></p>
+                        <p class="hur2">企业：<?=$res->entreprise;?></p>
+                        <p class="hur3">地点：<?=$res->location;?></p>
+                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 110, "utf-8");?></p>
+                    </div>
+                <?php } ?>
             </li>
         </ul>
     </div>
     <!--  }专利技术  -->
 
     <!--  技术需求{  -->
-    <div class="n_site_h2 n_site_h2c"><a href="http://www.vtitt.com/xuqiu/" target="_blank">更多&gt;</a>
+    <div class="n_site_h2 n_site_h2c"><a href="demands.php" target="_blank">更多&gt;</a>
         <h2>技术需求</h2>
     </div>
     <div class="n_site_f">
         <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
             <li class="n_site_f_li1"
                 style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
+                <?php
+                include_once("sql/demandList.php");
+                for ($i=0; $i<4; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                ?>
                 <div class="card">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19607.html" target="_blank" class="c333"
-                                       title="富钛料制备技术的研发需求">太阳能高效热利用技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西南宁</p>
-                    <p class="hur4">需求简介：富钛料制备技术的研发需求</p>
+                    <p class="hur1"><a href="demands_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
+                                       title="<?=$res->title;?>">太阳能高效热利用技术</a></p>
+                    <p class="hur2">企业：<?=$res->entreprise;?></p>
+                    <p class="hur3">地点：<?=$res->location;?></p>
+                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 110, "utf-8");?>
                 </div>
-                <div class="card cardon">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19266.html" target="_blank" class="c333"
-                                       title="含氨废水处理工艺研究">太阳能高效热利用技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西南宁</p>
-                    <p class="hur4">需求简介：含氨废水处理工艺研究</p>
-                </div>
-                <div class="card">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19264.html" target="_blank" class="c333"
-                                       title="降低钒钛矿高炉冶炼过程铁损的技术研究">太阳能高效热利用技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西北海</p>
-                    <p class="hur4">需求简介：降低钒钛矿高炉冶炼过程铁损的技术研究</p>
-                </div>
-                <div class="card cardon">
-                    <p class="hur1"><a href="http://www.vtitt.com/xuqiu/19/19261.html" target="_blank" class="c333"
-                                       title="硫酸法钛白副产废酸的综合利用技术">太阳能高效热利用技术</a></p>
-                    <p class="hur2">行业分类：太阳能发电</p>
-                    <p class="hur3">广西百色</p>
-                    <p class="hur4">需求简介：硫酸法钛白副产废酸的综合利用技术</p>
-                </div>
+                <?php } ?>
             </li>
         </ul>
     </div>
@@ -253,22 +173,28 @@
 
     <!--  技术专家{  -->
     <div class="n_site_g">
-        <div class="n_site_h2 n_site_h2b"><a href="http://www.vtitt.com/expert/" target="_blank">更多&gt;</a>
+        <div class="n_site_h2 n_site_h2b"><a href="specialists.php" target="_blank">更多&gt;</a>
             <h2>技术专家</h2>
         </div>
         <div class="n_site_gla">
             <ul>
-                <li><a href="http://www.vtitt.com/space/8587078/" target="_blank" class="hur1" rel="nofollow"
-                       title="赖奇"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152745069456.jpg-c100" alt="赖奇"
-                                        onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
+                <?php
+                include_once("sql/specialists.php");
+                for ($i=0; $i<5; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                ?>
+                <li><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" class="hur1" rel="nofollow"
+                       title="<?=$res->name;?>"> <img src="images/<?=$res->photo;?>" alt="<?=$res->name;?>"
+                                        onerror="this.src = <?=$res->photo;?>">
                     </a>
                     <div class="hur2">
-                        <p class="hur2a"><a href="http://www.vtitt.com/space/8587078/" target="_blank" title="赖奇">
-                                赖奇 </a></p>
-                        <p class="hur2b">从事领域：粉末冶金制备钛、钛合金及钛基复合材料</p>
+                        <p class="hur2a"><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" title="<?=$res->name;?>">
+                                <?=$res->name;?> </a></p>
+                        <p class="hur2b">从事领域：<?=$res->domain;?></p>
                     </div>
                 </li>
-                <li><a href="http://www.vtitt.com/space/8587079/" target="_blank" class="hur1" rel="nofollow"
+                <?php } ?>
+                <!--<li><a href="http://www.vtitt.com/space/8587079/" target="_blank" class="hur1" rel="nofollow"
                        title="方民宪"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152849028318.jpg-c100" alt="方民宪"
                                          onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
                     </a>
@@ -307,7 +233,7 @@
                                 王黎 </a></p>
                         <p class="hur2b">从事领域：钒钛资源</p>
                     </div>
-                </li>
+                </li>-->
             </ul>
         </div>
         <div class="n_site_h2 n_site_h2b"><a href="http://www.vtitt.com/company/" target="_blank">更多&gt;</a>

@@ -106,7 +106,7 @@ include("sql/specialistProfile.php");
 $res = $result->fetch(PDO::FETCH_OBJ);
 ?>
 <div class="space_top space_top_1">
-    <div class="space_top_photo"><img src="images/specialist_ex.jpg?random=323527528432525.24234" alt=""
+    <div class="space_top_photo"><img src="images/<?=$res->photo;?>" alt="<?=$res->photo;?>"
                                       onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"></div>
     <h1 class="name"><?=$res->name;?></h1>
     <p class="hur1"> <?=$res->title;?> </p>

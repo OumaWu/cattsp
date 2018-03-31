@@ -169,8 +169,8 @@
             ?>
             <li>
                 <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php?id=<?=$res->id;?>"> <img
-                                src="images/specialist_ex.jpg?random=323527528432525.24234" alt="<?=$res->name;?>"
-                                onerror="this.src=&#39;images/specialist_ex.jpg&#39;"> </a></div>
+                                src="images/<?=$res->photo;?>" alt="<?=$res->name;?>"
+                                onerror="this.src=images/<?=$res->photo;?>"> </a></div>
                 <div class="xc_bb">
                     <p class="hur2"><span><?=$res->location;?></span> <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank"
                                                             title="<?=$res->name;?>"> <?=$res->name;?> </a></p>
