@@ -2,17 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: SONY
- * Date: 2018/3/30
- * Time: 18:40
+ * Date: 2018/3/31
+ * Time: 2:26
  */
 include_once("connection.php");
 
-$sql = "SELECT * FROM `specialists`";
+$sql = "SELECT * FROM `company_account`,`users` WHERE `company_account`.id = `users`.id";
 try {
     $result = $pdo->prepare($sql);
     if ($result->execute()) {
     } else {
-        echo "<script> alert('提取专家列表失败！！');</script>";
+        echo "<script> alert('提取企业列表失败！！');</script>";
         echo $pdo->errorInfo();
     }
 } catch (PDOException $e) {

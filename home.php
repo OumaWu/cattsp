@@ -194,166 +194,84 @@
                     </div>
                 </li>
                 <?php } ?>
-                <!--<li><a href="http://www.vtitt.com/space/8587079/" target="_blank" class="hur1" rel="nofollow"
-                       title="方民宪"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152849028318.jpg-c100" alt="方民宪"
-                                         onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="http://www.vtitt.com/space/8587079/" target="_blank" title="方民宪">
-                                方民宪 </a></p>
-                        <p class="hur2b">从事领域：材料</p>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/space/8587078/" target="_blank" class="hur1" rel="nofollow"
-                       title="赖奇"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152745069456.jpg-c100" alt="赖奇"
-                                        onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="http://www.vtitt.com/space/8587078/" target="_blank" title="赖奇">
-                                赖奇 </a></p>
-                        <p class="hur2b">从事领域：粉末冶金制备钛、钛合金及钛基复合材料</p>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/space/8580611/" target="_blank" class="hur1" rel="nofollow"
-                       title="张伟"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426151537935229.jpg-c100" alt="张伟"
-                                        onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="http://www.vtitt.com/space/8580611/" target="_blank" title="张伟">
-                                张伟 </a></p>
-                        <p class="hur2b">从事领域：钒钛钢</p>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/space/8573754/" target="_blank" class="hur1" rel="nofollow"
-                       title="王黎"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160322144439833521.jpg-c100" alt="王黎"
-                                        onerror="this.src = &#39;http://image.1633.com/images/common/face60.png&#39;">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="http://www.vtitt.com/space/8573754/" target="_blank" title="王黎">
-                                王黎 </a></p>
-                        <p class="hur2b">从事领域：钒钛资源</p>
-                    </div>
-                </li>-->
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="http://www.vtitt.com/company/" target="_blank">更多&gt;</a>
+        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
             <h2>企业单位</h2>
         </div>
         <div class="n_site_glb">
             <ul>
+                <?php
+                include_once("sql/companyList.php");
+                for ($i=0; $i<4; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                ?>
                 <li>
-                    <p class="hur1"><a href="http://www.vtitt.com/space/8586562/" target="_blank"
-                                       title="攀枝花市三圣机械制造有限责任公司">南宁市三圣机械制造有限责任公司</a></p>
-                    <div class="hur2"><a href="http://www.vtitt.com/space/8586562/" target="_blank" class="hur2l"
-                                         rel="nofollow" title="攀枝花市三圣机械制造有限责任公司"> <img
-                                    src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160908161802726892.jpg-c100" alt=""
-                                    onerror="this.src = &#39;http://image.1633.com/market/images/yun/agency_0.jpg&#39;">
+                    <p class="hur1"><a href="#" target="_blank"
+                                       title="<?=$res->name;?>"><?=$res->name;?></a></p>
+                    <div class="hur2"><a href="#" target="_blank" class="hur2l"
+                                         rel="nofollow" title="<?=$res->name;?>"> <img
+                                    src="images/<?=$res->image;?>" alt="<?=$res->name;?>"
+                                    onerror="this.src = images/<?=$res->image;?>;">
                         </a>
-                        <p class="hur2r">简介：企业简介：南宁市三圣机械制造有限责任公司是一家…</p>
+                        <p class="hur2r">简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>…</p>
                     </div>
-                    <div class="hur3"><span class="hur3a">联系人：蒲荷梅</span> <span class="zk_followlist "
+                    <div class="hur3"><span class="hur3a">联系人：<?=$res->realname;?></span> <span class="zk_followlist "
                                                                                name="follow_8586562"><span class="gz1"
-                                                                                                           onclick="FollowObject.AddFollow(this)">+关注</span></span>
+                                                                                                           onclick="">+关注</span></span>
                     </div>
                 </li>
-                <li>
-                    <p class="hur1"><a href="http://www.vtitt.com/space/8581897/" target="_blank" title="攀钢集团钒业有限公司">柳钢集团钒业有限公司</a>
-                    </p>
-                    <div class="hur2"><a href="http://www.vtitt.com/space/8581897/" target="_blank" class="hur2l"
-                                         rel="nofollow" title="攀钢集团钒业有限公司"> <img
-                                    src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152932660303.jpg-c100" alt=""
-                                    onerror="this.src = &#39;http://image.1633.com/market/images/yun/agency_0.jpg&#39;">
-                        </a>
-                        <p class="hur2r">简介：柳钢集团钒业有限公司坐落于攀枝花市马鹿箐，占地面…</p>
-                    </div>
-                    <div class="hur3"><span class="hur3a">联系人：王英</span> <span class="zk_followlist "
-                                                                              name="follow_8581897"><span class="gz1"
-                                                                                                          onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
-                <li>
-                    <p class="hur1"><a href="http://www.vtitt.com/space/8574129/" target="_blank"
-                                       title="攀钢集团江油长城特殊钢有限公司">柳钢集团江油长城特殊钢有限公司</a></p>
-                    <div class="hur2"><a href="http://www.vtitt.com/space/8574129/" target="_blank" class="hur2l"
-                                         rel="nofollow" title="攀钢集团江油长城特殊钢有限公司"> <img
-                                    src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160324165252661859.jpg-c100" alt=""
-                                    onerror="this.src = &#39;http://image.1633.com/market/images/yun/agency_0.jpg&#39;">
-                        </a>
-                        <p class="hur2r">简介：柳钢集团江油长城特殊钢有限公司（简称：长城特钢）…</p>
-                    </div>
-                    <div class="hur3"><span class="hur3a">联系人：王怀柳</span> <span class="zk_followlist "
-                                                                               name="follow_8574129"><span class="gz1"
-                                                                                                           onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
-                <li>
-                    <p class="hur1"><a href="http://www.vtitt.com/space/8581897/" target="_blank" title="攀钢集团钒业有限公司">柳钢集团钒业有限公司</a>
-                    </p>
-                    <div class="hur2"><a href="http://www.vtitt.com/space/8581897/" target="_blank" class="hur2l"
-                                         rel="nofollow" title="攀钢集团钒业有限公司"> <img
-                                    src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160426152932660303.jpg-c100" alt=""
-                                    onerror="this.src = &#39;http://image.1633.com/market/images/yun/agency_0.jpg&#39;">
-                        </a>
-                        <p class="hur2r">简介：柳钢集团钒业有限公司坐落于攀枝花市马鹿箐，占地面…</p>
-                    </div>
-                    <div class="hur3"><span class="hur3a">联系人：王英</span> <span class="zk_followlist "
-                                                                              name="follow_8581897"><span class="gz1"
-                                                                                                          onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
+                <?php } ?>
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="http://www.vtitt.com/daxue/institude/" target="_blank">更多&gt;</a>
+        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
             <h2>研发单位</h2>
-            <a href="http://www.vtitt.com/daxue/application.html" class="hur1">我要入驻</a></div>
+        </div>
         <div class="n_site_glc">
             <ul>
-                <li><a href="http://www.vtitt.com/daxue/institude/81/8156280.html" target="_blank" class="hur1"
-                       title="四川大学"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20140422095902406.jpg-c200" alt=""> </a>
+                <li><a href="http://www.gxu.edu.cn/" target="_blank" class="hur1"
+                       title="广西大学"> <img src="images/GXU.png" alt=""> </a>
                     <div class="hur2">
-                        <p><a href="http://www.vtitt.com/daxue/institude/81/8156280.html" target="_blank" title="四川大学">广西大学</a>
+                        <p><a href="http://www.gxu.edu.cn/" target="_blank" title="广西大学">广西大学</a>
                         </p>
                         <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="FollowObject.AddFollow(this)">+关注</span></span>
+                                                                                 onclick="">+关注</span></span>
                     </div>
                 </li>
-                <li><a href="http://www.vtitt.com/daxue/institude/85/8580720.html" target="_blank" class="hur1"
-                       title="攀枝花学院"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160617151500531831.jpg-c200" alt="">
-                    </a>
+                <li><a href="http://www.gxun.edu.cn/" target="_blank" class="hur1"
+                       title="广西大民族学"> <img src="images/GXUN.png" alt=""> </a>
                     <div class="hur2">
-                        <p><a href="http://www.vtitt.com/daxue/institude/85/8580720.html" target="_blank" title="攀枝花学院">攀枝花学院</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8580720"><span class="gz1"
-                                                                                 onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/daxue/institude/85/8574388.html" target="_blank" class="hur1"
-                       title="攀钢集团研究院有限公司"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160328111406027201.jpg-c200"
-                                                 alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.vtitt.com/daxue/institude/85/8574388.html" target="_blank"
-                              title="攀钢集团研究院有限公司">攀钢集团研究院有限公司</a></p>
-                        <span class="zk_followlist " name="follow_8574388"><span class="gz1"
-                                                                                 onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/daxue/institude/81/8134233.html" target="_blank" class="hur1"
-                       title="西南民族大学"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20160226113402975378.jpg-c200" alt="">
-                    </a>
-                    <div class="hur2">
-                        <p><a href="http://www.vtitt.com/daxue/institude/81/8134233.html" target="_blank"
-                              title="西南民族大学">西南民族大学</a></p>
-                        <span class="zk_followlist " name="follow_8134233"><span class="gz1"
-                                                                                 onclick="FollowObject.AddFollow(this)">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.vtitt.com/daxue/institude/81/8156280.html" target="_blank" class="hur1"
-                       title="四川大学"> <img src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/20140422095902406.jpg-c200" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.vtitt.com/daxue/institude/81/8156280.html" target="_blank" title="四川大学">四川大学</a>
+                        <p><a href="http://www.gxun.edu.cn/" target="_blank" title="广西民族大学">广西民族大学</a>
                         </p>
                         <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="FollowObject.AddFollow(this)">+关注</span></span>
+                                                                                 onclick="">+关注</span></span>
+                    </div>
+                </li>
+                <li><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" class="hur1"
+                       title="广西财经学院"> <img src="images/GXUFE.jpg" alt=""> </a>
+                    <div class="hur2">
+                        <p><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" title="广西财经学院">广西财经学院</a>
+                        </p>
+                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
+                                                                                 onclick="">+关注</span></span>
+                    </div>
+                </li>
+                <li><a href="http://www.gxmu.edu.cn/" target="_blank" class="hur1"
+                       title="广西医科大学"> <img src="images/GXMU.jpg" alt=""> </a>
+                    <div class="hur2">
+                        <p><a href="http://www.gxmu.edu.cn/" target="_blank" title="广西医科大学">广西医科大学</a>
+                        </p>
+                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
+                                                                                 onclick="">+关注</span></span>
+                    </div>
+                </li>
+                <li><a href="http://www.gliet.edu.cn/" target="_blank" class="hur1"
+                       title="桂林电子科技大学"> <img src="images/GUET.jpg" alt=""> </a>
+                    <div class="hur2">
+                        <p><a href="http://www.gliet.edu.cn/" target="_blank" title="桂林电子科技大学">桂林电子科技大学</a>
+                        </p>
+                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
+                                                                                 onclick="">+关注</span></span>
                     </div>
                 </li>
             </ul>
