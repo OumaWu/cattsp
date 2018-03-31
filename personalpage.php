@@ -62,15 +62,15 @@
                     <h3 style="width: 200px; text-align: center;"><a href="home.php" target="_self">首页</a></h3>
                 </li>
                 <li class="nLi noclass">
-                    <h3><a href="solartech.php" target="_blank">太阳能技术</a></h3>
-                </li>
+                    <h3><a href="solartech.php" target="_blank
                 <li class="nLi noclass">
-                    <h3><a href="demands.php" target="_blank">企业需求</a></h3>
+                        <h3><a href="demands.php" target="_blank">企业需求</a></h3>
                 </li>
                 <li class="nLi noclass">
                     <h3><a href="specialists.php" target="_blank">专家咨询</a></h3>
                 </li>
-                <li class="nLi noclass">
+                <li class="nLi noclass">">太阳能技术</a></h3>
+                </li>
                     <h3><a href="information.php" target="_blank">资讯大厅</a></h3>
                 </li>
                 <li class="nLi noclass">

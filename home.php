@@ -2,6 +2,7 @@
 <!-- saved from url=(0021)http://www.vtitt.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>中国-东盟太阳能技术转移中心</title>
 
