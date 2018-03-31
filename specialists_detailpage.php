@@ -97,59 +97,46 @@
 
 <!--  首页信息板块{  -->
 <div style="width: 1180px; margin: 0 auto;">
-    <div class="xa_bread">当前位置： <a href="http://www.vtitt.com/">首页</a>&nbsp;&gt;&nbsp; <a
-                href="./（专家列表）四川钒钛产业科研技术人员_科技人才_四川技术专家平台_files/（专家列表）四川钒钛产业科研技术人员_科技人才_四川技术专家平台.html">技术专家</a></div>
+    <div class="xa_bread">当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a
+                href="#">技术专家</a></div>
 </div>
+<?php
+$id = $_GET['id'];
+include("sql/specialistProfile.php");
+$res = $result->fetch(PDO::FETCH_OBJ);
+?>
 <div class="space_top space_top_1">
-    <div class="space_top_photo"><img src="images/specialist_ex.jpg" alt="常军"
+    <div class="space_top_photo"><img src="images/specialist_ex.jpg?random=323527528432525.24234" alt=""
                                       onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"></div>
-    <h1 class="name">陈老师</h1>
-    <p class="hur1"> 香港摄影协会会长 </p>
+    <h1 class="name"><?=$res->name;?></h1>
+    <p class="hur1"> <?=$res->title;?> </p>
     <p class="hur2"><span class="zk_followlist " name="follow_8573777"><span class="gz1">+关注</span></span> <span
                 withletter="1" name="kyt_8573777" class="zk_kyt im-btn im-min-btn"><span
                     style="cursor:pointer">咨询</span></span></p>
 </div>
 <div class="main">
     <div class="space_h2 space_h2_1"><h1>基本信息</h1></div>
-    <div class="space_con clearfix">
-        <div class="space_con_al">
-            <p class="hur1"> 等级：
-                <label class="zk_expgradeicon" name="expgradeicon_8573777"><s class="lvicon s-lv-1"
-                                                                              title="lv1">&nbsp;</s></label>
-            </p>
-            <span class="hur2"> 所在地：<em>中国香港</em> </span> <span class="hur2"> 入职年份： <em> 2008 </em> </span> <span
-                    class="hur2"> 学历： <em> 本科 </em> </span> <span class="hur2"> 毕业院校： <em> 日本东京热影视学院 </em> </span></div>
-        <div class="space_con_ar">
-            <script type="text/javascript">
-                var webimurl = "http://webim.1633.com/vtitt/space/8573777";
-                if (window.applicationCache) {
-                    $('.space_con_ar').qrcode({
-                        text: webimurl, width: "147", height: "147"
-                    });
-                }
-                else {
-                    $('.space_con_ar').qrcode({
-                        render: "table",
-                        text: webimurl, width: "147", height: "147"
-                    });
-                }
-            </script>
-            <canvas width="147" height="147"></canvas>
-        </div>
+    <div class="space_con">
+        <p class="space_con_b"><span class="hur1"> 所在地</span><?=$res->location;?></p>
+        <p class="space_con_b"><span class="hur1"> 学历</span> <?=$res->degree;?></p>
+        <p class="space_con_b"><span class="hur1"> 从业时长</span><?=$res->career_age;?> 年</p>
+        <p class="space_con_b"><span class="hur1"> 毕业院校</span><?=$res->institute;?></p>
     </div>
     <div class="space_h2 space_h2_2"><h1>技术能力</h1></div>
     <div class="space_con">
-        <p class="space_con_b"><span class="hur1">从事领域</span>导演，电影制作，人体艺术摄影</p>
-        <p class="space_con_b"><span class="hur2">擅长能力</span>发现身边的美，出色的摄影能力</p>
+        <p class="space_con_b"><span class="hur1">从事领域</span><?=$res->domain;?></p>
+        <p class="space_con_b"><span class="hur2">擅长能力</span><?=$res->speciality;?></p>
     </div>
     <div class="space_h2 space_h2_3"><h1>个人简介</h1></div>
     <div class="space_con">
         <div class="space_con_p">
-            <p></p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在我的眼中，但凡著名的艺术家在早期都是穷困潦倒的，我国香港特别行政区的著名摄影艺术家陈冠希老师更是如此，陈老师早年拍摄摄影作品的时候，连一台像样的专业相机都没有，可他硬是用一部普通的拍照手机就拍出了近2000张震撼人心、享誉全球的摄影名作，且不说后无来者，恐怕前无古人这样的称号对于陈冠希老师来说是当之无愧了!
-                细观陈老师的作品，尤其是不朽名作“阿娇之媚”，在简陋而温馨的环境下，影像中人物表情彷徨、迷离，眼神里流露出对现实生活的不惑而又执着的探寻幸福的真正意义，颇有日本著名摄影师西川和久（Nishikawa
-                Kazuhisa）摄影风格的神韵。纪实主义朴素风格拍摄的作品正是弱势群体艰辛生活的真实写照，陈冠希老师硬是用他简陋的摄影器材：手机! 记录下了那一个个不朽的历史瞬间。</p>
-            <p></p>
+            <?php
+            $intro =preg_split("/[ ]+/", $res->introduction);
+            foreach ($intro as $paragraph) {
+            ?>
+            <p>&emsp;&emsp;<?=$paragraph;?></p>
+            <?php } ?>
+            <!--<p></p>-->
         </div>
         <span class="blank20"></span>
     </div>

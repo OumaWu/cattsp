@@ -163,149 +163,37 @@
     </div>
     <div class="xc_b yun_list_div">
         <ul class="clearfix">
+            <?php
+            include('sql/specialists.php');
+            while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+            ?>
             <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
+                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php?id=<?=$res->id;?>"> <img
+                                src="images/specialist_ex.jpg?random=323527528432525.24234" alt="<?=$res->name;?>"
+                                onerror="this.src=&#39;images/specialist_ex.jpg&#39;"> </a></div>
                 <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
+                    <p class="hur2"><span><?=$res->location;?></span> <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank"
+                                                            title="<?=$res->name;?>"> <?=$res->name;?> </a></p>
+                    <p class="hur1"> 从事领域：<?=$res->domain;?> </p>
+                    <p class="hur1"> 擅长能力：<?=$res->speciality;?></p>
                 </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
+                <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" rel="nofollow" class="xc_b_f"
+                   style="display: block;"></a>
             </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php"> <img
-                                src="images/specialist_ex.jpg" alt="蒋革"
-                                onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span> 中国 香港 </span> <a href="specialists_detailpage.php" target="_blank"
-                                                            title="蒋革"> 陈老师 </a></p>
-                    <p class="hur1" title="钒钛化工,钒钛新材料"> 从事领域：导演，电影制作，人体艺术摄影 </p>
-                    <p class="hur1"> 擅长能力：发现身边的美，出色的摄影能力</p>
-                </div>
-                <a href="http://www.vtitt.com/space/8568978/" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: none;"></a>
-            </li>
+            <?php } ?>
         </ul>
         <div class="h_page">
             <div id="pages_bg" class="pages"> <span class="number9"> <span title="上一页">上一页</span><span title="第 1页"
                                                                                                        class="pagelist_cur">1</span> <a
-                            href="http://www.vtitt.com/search/expert/?p=2">2</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=3">3</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=4">4</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=5">5</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=6">6</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=7">7</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=8">8</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=9">9</a> <a
-                            href="http://www.vtitt.com/search/expert/?p=2">下一页</a> 到第
+                            href="#">2</a> <a
+                            href="#">3</a> <a
+                            href="#">4</a> <a
+                            href="#">5</a> <a
+                            href="#">6</a> <a
+                            href="#">7</a> <a
+                            href="#">8</a> <a
+                            href="#">9</a> <a
+                            href="#">下一页</a> 到第
         <input id="jumppage" type="text" value="1" size="2" name="page">
         页
         <input type="button" id="bt_go"
