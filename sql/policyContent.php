@@ -1,7 +1,11 @@
 <?php
 include("connection.php");
 
-if (isset($policy_id)) {
+if (isset($_GET["policy_id"])) {
+    $policy_id = $_GET['policy_id'];
+}
+
+if (isset($policy_id) && !empty($policy_id)) {
     $sql = "SELECT * FROM `policy` WHERE id = $policy_id";
     try {
         $result = $pdo->prepare($sql);

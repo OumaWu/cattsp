@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="cache-control" content="no-cache"/>
@@ -87,13 +86,13 @@
                     <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
                         <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
                             <li style="float: left; width: 640px;"><a
-                                        href="#" title="智汇营"
-                                        target="_blank"><img src="./中国浙江网上技术市场_files/20170419120459051.jpg" title=""
+                                        href="#" title=""
+                                        target="_blank"><img src="images/solar-energy1.jpg" title=""
                                                              alt="" width="640" height="382"></a></li>
                             <li style="float: left; width: 640px;"><a
                                         href="#"
-                                        title="2017年浙江省春季科技成果竞价（拍卖）会" target="_blank"><img
-                                            src="./中国浙江网上技术市场_files/20170511170534996.jpg" title="" alt="" width="640"
+                                        title="" target="_blank"><img
+                                            src="images/solar-energy1.jpg" title="" alt="" width="640"
                                             height="382"></a></li>
                         </ul>
                     </div>
@@ -107,7 +106,7 @@
             </div>
         </div>
         <div class="wysn_news fr mt10">
-            <iframe width="540" height="382" frameborder="0" src="./中国浙江网上技术市场_files/index.html" scrolling="no"
+            <iframe width="540" height="382" frameborder="0" src="scrolling-news-titles.php" scrolling="no"
                     marginheight="0" marginwidth="0" style="display: block;"></iframe>
         </div>
         <div style="clear:both;"></div>

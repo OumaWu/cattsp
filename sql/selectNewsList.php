@@ -1,5 +1,5 @@
 <?php
-include("connection.php");
+require_once("connection.php");
 
 if (isset($_GET['category_id'])) {
     $category_id = $_GET['category_id'];

@@ -1,7 +1,11 @@
 <?php
 include("connection.php");
 
-if (isset($news_id)) {
+if (isset($_GET["news_id"])) {
+    $news_id = $_GET['news_id'];
+}
+
+if (isset($news_id) && !empty($news_id)) {
     $sql = "SELECT * FROM `news` WHERE id = $news_id";
     try {
         $result = $pdo->prepare($sql);
