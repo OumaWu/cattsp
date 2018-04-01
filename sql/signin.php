@@ -19,6 +19,7 @@ if (isset($_POST["accountname"]) && isset($_POST["password"])) {
             $res = $res = $result->fetch(PDO::FETCH_OBJ);
             $_SESSION['user'] = $res->accountname;
             $_SESSION['userid'] = $res->id;
+            $_SESSION['expiretime'] = time() + 600; // 刷新时间戳，10分钟
             echo "<script>alert('登录成功！')</script>";
             echo "<meta http-equiv=\"refresh\" content=\"0;url=$url_home\">";
         } else {
