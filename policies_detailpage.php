@@ -115,13 +115,15 @@
                 发布日期：<?php echo $res->date; ?>&nbsp;&nbsp;&nbsp;
             </p>
             <div class="xb_kc">
-                <p></p>
-                <?php echo $res->content; ?>
-                <p style="text-align: center;"><img width="564" height="284" title="7.jpg"
-                                                    style="width: 564px; height: 284px;" alt="7.jpg"
-                                                    src="子页面/（新闻页面）四川钒钛产业技术交易平台首次线下主题沙龙活动成功举办_四川钒钛产业科技动态_钒钛通_files/1144157648906.jpg">
+                <?php
+                $content =preg_split("/[\s]+/", $res->content);
+                foreach ($content as $paragraph) {
+                    ?>
+                    <p style="text-align:justify">&emsp;&emsp;<?=$paragraph;?></p>
+                <?php } ?>
+                <p style="text-align:center">
+                    <img width="564" height="284" title="7.jpg" style="width: 564px; height: 284px;" alt="7.jpg" src="images/policy-default.png">
                 </p>
-                <p></p>
             </div>
         </div>
     </div>

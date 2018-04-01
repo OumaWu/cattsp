@@ -4,7 +4,7 @@ include("connection.php");
 if (isset($_POST["accountname"]) && isset($_POST["password"]) && isset($_POST["pswconfirm"])) {
     $accountname = $_POST["accountname"];
     $password = $_POST["password"];
-    $email = isset($_POST["email"]) ? $_POST["email"] : NULL;
+    $email = empty($_POST["email"]) ? $_POST["email"] : NULL;
 
     $sql = "INSERT INTO `users` (`id`, `accountname`, `realname`, `password`, `sex`, `type`, `email`, `location`) VALUES (NULL, '$accountname', NULL, '$password', NULL, NULL, '$email', NULL)";
 
