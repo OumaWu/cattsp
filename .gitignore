@@ -5,3 +5,5 @@ dbconfig.txt
 Version_refactoring/*
 .idea
 *.ini
+.idea/*
+
