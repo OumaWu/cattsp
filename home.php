@@ -144,8 +144,8 @@
     </div>
     <!--  }技术需求  -->
 
-    <!--  技术专家{  -->
     <div class="n_site_g">
+        <!--  技术专家{  -->
         <div class="n_site_h2 n_site_h2b"><a href="specialists.php" target="_blank">更多&gt;</a>
             <h2>技术专家</h2>
         </div>
@@ -169,7 +169,10 @@
                 <?php } ?>
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
+        <!--  }技术专家  -->
+
+        <!--  企业单位{  -->
+        <div class="n_site_h2" style="background: #4cafea"><a href="#" target="_blank">更多&gt;</a>
             <h2>企业单位</h2>
         </div>
         <div class="n_site_glb">
@@ -189,68 +192,15 @@
                         </a>
                         <p class="hur2r">简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>…</p>
                     </div>
-                    <div class="hur3"><span class="hur3a">联系人：<?=$res->realname;?></span> <span class="zk_followlist "
-                                                                               name="follow_8586562"><span class="gz1"
-                                                                                                           onclick="">+关注</span></span>
+                    <div class="hur3">
+                        <span class="hur3a" style="float: right; width: auto">联系人：<?=$res->realname;?></span>
                     </div>
                 </li>
                 <?php } ?>
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
-            <h2>研发单位</h2>
-        </div>
-        <div class="n_site_glc">
-            <ul>
-                <li><a href="http://www.gxu.edu.cn/" target="_blank" class="hur1"
-                       title="广西大学"> <img src="images/GXU.png" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxu.edu.cn/" target="_blank" title="广西大学">广西大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxun.edu.cn/" target="_blank" class="hur1"
-                       title="广西大民族学"> <img src="images/GXUN.png" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxun.edu.cn/" target="_blank" title="广西民族大学">广西民族大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" class="hur1"
-                       title="广西财经学院"> <img src="images/GXUFE.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" title="广西财经学院">广西财经学院</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxmu.edu.cn/" target="_blank" class="hur1"
-                       title="广西医科大学"> <img src="images/GXMU.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxmu.edu.cn/" target="_blank" title="广西医科大学">广西医科大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gliet.edu.cn/" target="_blank" class="hur1"
-                       title="桂林电子科技大学"> <img src="images/GUET.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gliet.edu.cn/" target="_blank" title="桂林电子科技大学">桂林电子科技大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <!--  }企业单位  -->
     </div>
-    <!--  }技术专家  -->
 
     <!--  友情链接{  -->
     <div class="mod">
