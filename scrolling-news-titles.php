@@ -6,8 +6,8 @@
     <div class="slideTxtBox">
         <div class="hd">
             <ul id="tz">
-                <li class="on" id="tzgg"><a href="information.php" target="_blank">科技资讯</a></li>
-                <li id="dtxx"><a href="policies.php" target="_blank">政策法规</a></li>
+                <li class="on" id="tzgg"><a href="information.php?category_id=2" target="_blank">科技资讯</a></li>
+                <li id="dtxx"><a href="information.php?category_id=1" target="_blank">通知公告</a></li>
             </ul>
             <a class="fr" href="information.php" target="_blank">更多<b class="song">&gt;</b></a></div>
         <div class="bd">
@@ -20,7 +20,6 @@
                         <em class="fr c999"><?=date('m-d',strtotime($res->date));?></em></a>
                     </li>
                 <?php } ?>
-
             </ul>
             <ul class="list" id="list2" style="display: none;">
                 <?php
@@ -35,64 +34,96 @@
         </div>
     </div>
 </div>
+
 <!-- 滚动条代码 -->
 <script type="text/javascript">
+
+    /* 滚动函数处理 */
+    function animator(currentItem, margin_top) {
+        var distance = currentItem.height();
+        var duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
+        currentItem.animate({marginTop: -distance}, duration, "linear", function () {
+            currentItem.appendTo(currentItem.parent()).css("margin-top",0);
+            animator(currentItem.parent().children(":first"));
+        });
+    };
+
     /* 科技资讯滚动 */
     $("#list2").css("display", "none").ready(function (e) {
-        var ticker = $("#list");
-        ticker.children().filter("li").each(function () {
-            var li = $(this),
-                container = $("<div>");
-            li.next().appendTo(container);
-            li.prependTo(container);
-            container.appendTo(ticker);
-        });
-        ticker.css("overflow", "hidden");
 
-        function animator(currentItem) {
-            var distance = currentItem.height();
-            //duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
-            currentItem.animate({marginTop: -distance}, 2000, "linear", function () {
-                currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
-                animator(currentItem.parent().children(":first"));
+        var ticker = $("#list");
+
+        /* 超过14条标题才滚动 */
+        if ($("#list li").length > 14) {
+
+            ticker.children().filter("li").each(function () {
+                var li = $(this),
+                    container = $("<div>");
+
+                li.next().appendTo(container);
+                li.prependTo(container);
+                container.appendTo(ticker);
             });
-        };
-        animator(ticker.children(":first"));
-        ticker.mouseenter(function () {
-            ticker.children().stop();
-        });
-        ticker.mouseleave(function () {
-            animator(ticker.children(":first"));
-        });
+            ticker.css("overflow", "hidden");
+
+            animator(ticker.children(":first"), margin_top);
+            ticker.mouseenter(function () {
+                ticker.children().stop();
+            });
+            ticker.mouseleave(function () {
+                animator(ticker.children(":first"));
+            });
+        } else {
+            var div_height = $("div.slideTxtBox").height();
+            var title_height = $("div.hd").height();
+            var list_height = $("#list").height();
+            var distance = div_height - title_height - list_height;
+            var item_number = $("#list li").length;
+            var margin_top = distance/item_number;
+            /* 设置标题之间的距离 */
+            ticker.children().css("margin-top",margin_top);
+            ticker.css("padding",0);
+        }
     });
 
-    /* 政策法规滚动滚动 */
+    /* 通知公告滚动滚动 */
     $("#list").css("display", "none").ready(function (e) {
-        var ticker = $("#list2");
-        ticker.children().filter("li").each(function () {
-            var li = $(this),
-                container = $("<div>");
-            li.next().appendTo(container);
-            li.prependTo(container);
-            container.appendTo(ticker);
-        });
-        ticker.css("overflow", "hidden");
 
-        function animator(currentItem) {
-            var distance = currentItem.height();
-            //duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
-            currentItem.animate({marginTop: -distance}, 2000, "linear", function () {
-                currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
-                animator(currentItem.parent().children(":first"));
+        var ticker = $("#list2");
+
+        /* 超过14条标题才滚动 */
+        if ($("#list2 li").length > 14) {
+            ticker.children().filter("li").each(function () {
+                var li = $(this),
+                    container = $("<div>");
+                li.next().appendTo(container);
+                li.prependTo(container);
+                container.appendTo(ticker);
             });
-        };
-        animator(ticker.children(":first"));
-        ticker.mouseenter(function () {
-            ticker.children().stop();
-        });
-        ticker.mouseleave(function () {
+            ticker.css("overflow", "hidden");
+
             animator(ticker.children(":first"));
-        });
+            ticker.mouseenter(function () {
+                ticker.children().stop();
+            });
+            ticker.mouseleave(function () {
+                animator(ticker.children(":first"), margin_top);
+            });
+        } else {
+            var div_height = $("div.slideTxtBox").height();
+            var title_height = $("div.hd").height();
+            var list_height = $("#list2").height();
+            var distance = div_height - title_height - list_height;
+            var item_number = $("#list2 li").length;
+            var margin_top = distance/item_number;
+            /* 设置标题之间的距离 */
+            ticker.children().css("margin-top",margin_top);
+            ticker.css("padding",0);
+        }
+
+
+
+
     });
     $(".slideTxtBox").slide({trigger: "mouseover"});
 </script>
