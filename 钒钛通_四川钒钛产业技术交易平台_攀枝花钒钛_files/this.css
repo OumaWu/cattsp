@@ -889,24 +889,24 @@ html, body {
 }
 
 .n_site_f ul li .card .hur3 {
-    background: url(../images/this/ico_address.png) no-repeat 0 7px;
+    /*background: url(../images/this/ico_address.png) no-repeat 0 7px;*/
     height: 30px;
     line-height: 30px;
-    padding-left: 25px;
+    /*padding-left: 25px;*/
     color: #666
 }
 
 .n_site_f ul li .card .hur4 {
-    height: 40px;
+    height: 60px;
     line-height: 20px;
-    color: #666
+    font-family: "Microsoft YaHei"
 }
 
 .n_site_f ul li .card .hur5 {
     position: absolute;
     top: 2px;
     left: 2px;
-    background: url(../images/this/site_n_9.png) no-repeat;
+    /*background: url(../images/this/site_n_9.png) no-repeat;*/
     width: 12px;
     height: 12px
 }

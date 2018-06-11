@@ -6,28 +6,28 @@
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
 <!--    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>-->
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=1">
     <!-- }导入版头css文件 -->
 
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
+    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=1" type="text/css">
+    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css?v=1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=1">
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
     <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
     <!-- }导入钒钛通css和js文件 -->
 
@@ -110,7 +110,7 @@
                                            title="<?=$res->title;?>"><?=$res->title;?></a></p>
                         <p class="hur2">企业：<?=$res->entreprise;?></p>
                         <p class="hur3">地点：<?=$res->location;?></p>
-                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 110, "utf-8");?></p>
+                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 37, "utf-8");?>...</p>
                     </div>
                 <?php } ?>
             </li>
@@ -134,9 +134,8 @@
                 <div class="card">
                     <p class="hur1"><a href="demands_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
                                        title="<?=$res->title;?>">太阳能高效热利用技术</a></p>
-                    <p class="hur2">企业：<?=$res->entreprise;?></p>
-                    <p class="hur3">地点：<?=$res->location;?></p>
-                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 110, "utf-8");?>
+                    <p class="hur2">需求方：<?=$res->entreprise;?></p>
+                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>...</p>
                 </div>
                 <?php } ?>
             </li>
