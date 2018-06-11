@@ -39,7 +39,7 @@
 <script type="text/javascript">
 
     /* 滚动函数处理 */
-    function animator(currentItem, margin_top) {
+    function animator(currentItem) {
         var distance = currentItem.height();
         var duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
         currentItem.animate({marginTop: -distance}, duration, "linear", function () {
@@ -49,12 +49,23 @@
     };
 
     /* 科技资讯滚动 */
-    $("#list2").css("display", "none").ready(function (e) {
+    $("#list").css("display", "block").ready(function (e) {
 
         var ticker = $("#list");
 
         /* 超过14条标题才滚动 */
-        if ($("#list li").length > 14) {
+        if ($("#list li").length < 14) {
+
+            var div_height = $("div.slideTxtBox").height();
+            var title_height = $("div.hd").height();
+            var list_height = $("#list").height();
+            var distance = div_height - title_height - list_height;
+            var item_number = $("#list li").length;
+            var margin_top = distance/item_number;
+            /* 设置标题之间的距离 */
+            ticker.children().css("margin-top",margin_top);
+            ticker.css("padding",0);
+        } else {
 
             ticker.children().filter("li").each(function () {
                 var li = $(this),
@@ -66,33 +77,33 @@
             });
             ticker.css("overflow", "hidden");
 
-            animator(ticker.children(":first"), margin_top);
+            animator(ticker.children(":first"));
             ticker.mouseenter(function () {
                 ticker.children().stop();
             });
             ticker.mouseleave(function () {
                 animator(ticker.children(":first"));
             });
-        } else {
-            var div_height = $("div.slideTxtBox").height();
-            var title_height = $("div.hd").height();
-            var list_height = $("#list").height();
-            var distance = div_height - title_height - list_height;
-            var item_number = $("#list li").length;
-            var margin_top = distance/item_number;
-            /* 设置标题之间的距离 */
-            ticker.children().css("margin-top",margin_top);
-            ticker.css("padding",0);
         }
     });
 
     /* 通知公告滚动滚动 */
-    $("#list").css("display", "none").ready(function (e) {
+    $("#list2").css("display", "block").ready(function (e) {
 
         var ticker = $("#list2");
 
         /* 超过14条标题才滚动 */
-        if ($("#list2 li").length > 14) {
+        if ($("#list2 li").length < 14) {
+            var div_height = $("div.slideTxtBox").height();
+            var title_height = $("div.hd").height();
+            var list_height = $("#list2").height();
+            var distance = div_height - title_height - list_height;
+            var item_number = $("#list2 li").length;
+            var margin_top = distance/item_number;
+            /* 设置标题之间的距离 */
+            ticker.children().css("margin-top",margin_top);
+            ticker.css("padding",0);
+        } else {
             ticker.children().filter("li").each(function () {
                 var li = $(this),
                     container = $("<div>");
@@ -107,23 +118,9 @@
                 ticker.children().stop();
             });
             ticker.mouseleave(function () {
-                animator(ticker.children(":first"), margin_top);
+                animator(ticker.children(":first"));
             });
-        } else {
-            var div_height = $("div.slideTxtBox").height();
-            var title_height = $("div.hd").height();
-            var list_height = $("#list2").height();
-            var distance = div_height - title_height - list_height;
-            var item_number = $("#list2 li").length;
-            var margin_top = distance/item_number;
-            /* 设置标题之间的距离 */
-            ticker.children().css("margin-top",margin_top);
-            ticker.css("padding",0);
         }
-
-
-
-
     });
     $(".slideTxtBox").slide({trigger: "mouseover"});
 </script>

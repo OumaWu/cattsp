@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
-    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>
+<!--    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>-->
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
