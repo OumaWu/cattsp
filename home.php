@@ -6,28 +6,28 @@
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
-    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>
+<!--    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>-->
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=1">
     <!-- }导入版头css文件 -->
 
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
+    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=1" type="text/css">
+    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css?v=1" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=1">
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
     <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
     <!-- }导入钒钛通css和js文件 -->
 
@@ -45,33 +45,7 @@
     <!--  }网站横幅  -->
 
     <!--  导航栏{  -->
-    <div class="nav-wrap clearfix">
-        <div class="w1220">
-            <ul id="nav" class="nav clearfix">
-                <li class="nLi cur on" id="nav0">
-                    <h3 style="width: 200px; text-align: center;"><a href="home.php" target="_self">首页</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="solartech.php" target="_blank">太阳能技术</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="demands.php" target="_blank">企业需求</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="specialists.php" target="_blank">专家咨询</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="information.php" target="_blank">资讯大厅</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="policies.php" target="_blank">相关政策法规</a></h3>
-                </li>
-                <li class="nLi noclass">
-                    <h3><a href="aboutus.php" target="_blank">关于我们</a></h3>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <?php require_once('common/navbar.php'); ?>
     <!--  }导航栏  -->
 </div>
 <!--  }版头  -->
@@ -136,7 +110,7 @@
                                            title="<?=$res->title;?>"><?=$res->title;?></a></p>
                         <p class="hur2">企业：<?=$res->entreprise;?></p>
                         <p class="hur3">地点：<?=$res->location;?></p>
-                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 110, "utf-8");?></p>
+                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 37, "utf-8");?>...</p>
                     </div>
                 <?php } ?>
             </li>
@@ -160,9 +134,8 @@
                 <div class="card">
                     <p class="hur1"><a href="demands_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
                                        title="<?=$res->title;?>">太阳能高效热利用技术</a></p>
-                    <p class="hur2">企业：<?=$res->entreprise;?></p>
-                    <p class="hur3">地点：<?=$res->location;?></p>
-                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 110, "utf-8");?>
+                    <p class="hur2">需求方：<?=$res->entreprise;?></p>
+                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>...</p>
                 </div>
                 <?php } ?>
             </li>
@@ -170,8 +143,8 @@
     </div>
     <!--  }技术需求  -->
 
-    <!--  技术专家{  -->
     <div class="n_site_g">
+        <!--  技术专家{  -->
         <div class="n_site_h2 n_site_h2b"><a href="specialists.php" target="_blank">更多&gt;</a>
             <h2>技术专家</h2>
         </div>
@@ -195,7 +168,10 @@
                 <?php } ?>
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
+        <!--  }技术专家  -->
+
+        <!--  企业单位{  -->
+        <div class="n_site_h2" style="background: #4cafea"><a href="#" target="_blank">更多&gt;</a>
             <h2>企业单位</h2>
         </div>
         <div class="n_site_glb">
@@ -215,68 +191,15 @@
                         </a>
                         <p class="hur2r">简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>…</p>
                     </div>
-                    <div class="hur3"><span class="hur3a">联系人：<?=$res->realname;?></span> <span class="zk_followlist "
-                                                                               name="follow_8586562"><span class="gz1"
-                                                                                                           onclick="">+关注</span></span>
+                    <div class="hur3">
+                        <span class="hur3a" style="float: right; width: auto">联系人：<?=$res->realname;?></span>
                     </div>
                 </li>
                 <?php } ?>
             </ul>
         </div>
-        <div class="n_site_h2 n_site_h2b"><a href="#" target="_blank">更多&gt;</a>
-            <h2>研发单位</h2>
-        </div>
-        <div class="n_site_glc">
-            <ul>
-                <li><a href="http://www.gxu.edu.cn/" target="_blank" class="hur1"
-                       title="广西大学"> <img src="images/GXU.png" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxu.edu.cn/" target="_blank" title="广西大学">广西大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxun.edu.cn/" target="_blank" class="hur1"
-                       title="广西大民族学"> <img src="images/GXUN.png" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxun.edu.cn/" target="_blank" title="广西民族大学">广西民族大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" class="hur1"
-                       title="广西财经学院"> <img src="images/GXUFE.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxufe.edu.cn/www/myweb/home.cdi" target="_blank" title="广西财经学院">广西财经学院</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gxmu.edu.cn/" target="_blank" class="hur1"
-                       title="广西医科大学"> <img src="images/GXMU.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gxmu.edu.cn/" target="_blank" title="广西医科大学">广西医科大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-                <li><a href="http://www.gliet.edu.cn/" target="_blank" class="hur1"
-                       title="桂林电子科技大学"> <img src="images/GUET.jpg" alt=""> </a>
-                    <div class="hur2">
-                        <p><a href="http://www.gliet.edu.cn/" target="_blank" title="桂林电子科技大学">桂林电子科技大学</a>
-                        </p>
-                        <span class="zk_followlist " name="follow_8156280"><span class="gz1"
-                                                                                 onclick="">+关注</span></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <!--  }企业单位  -->
     </div>
-    <!--  }技术专家  -->
 
     <!--  友情链接{  -->
     <div class="mod">

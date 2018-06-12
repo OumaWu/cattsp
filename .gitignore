@@ -3,5 +3,6 @@
 *~
 dbconfig.txt
 Version_refactoring/*
-.idea
+.idea/
 *.ini
+

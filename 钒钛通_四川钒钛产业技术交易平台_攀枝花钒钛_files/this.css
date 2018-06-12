@@ -610,12 +610,12 @@ html, body {
     width: 78px
 }
 
-.n_site_cr {
-    background: url(../images/this/site_n_7.jpg) no-repeat;
-    width: 265px;
-    height: 180px;
-    float: right
-}
+/*.n_site_cr {*/
+    /*background: url(../images/this/site_n_7.jpg) no-repeat;*/
+    /*width: 265px;*/
+    /*height: 180px;*/
+    /*float: right*/
+/*}*/
 
 .n_site_cr a {
     display: block;
@@ -628,7 +628,7 @@ html, body {
     height: 42px;
     line-height: 40px;
     padding: 0 20px;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-bottom: 0px;
 }
 
@@ -652,6 +652,10 @@ html, body {
 
 .n_site_h2b {
     background: #ea5a4c
+}
+
+.n_site_h2d {
+    background: #4cafea
 }
 
 .n_site_h2c {
@@ -885,24 +889,24 @@ html, body {
 }
 
 .n_site_f ul li .card .hur3 {
-    background: url(../images/this/ico_address.png) no-repeat 0 7px;
+    /*background: url(../images/this/ico_address.png) no-repeat 0 7px;*/
     height: 30px;
     line-height: 30px;
-    padding-left: 25px;
+    /*padding-left: 25px;*/
     color: #666
 }
 
 .n_site_f ul li .card .hur4 {
-    height: 40px;
+    height: 60px;
     line-height: 20px;
-    color: #666
+    font-family: "Microsoft YaHei"
 }
 
 .n_site_f ul li .card .hur5 {
     position: absolute;
     top: 2px;
     left: 2px;
-    background: url(../images/this/site_n_9.png) no-repeat;
+    /*background: url(../images/this/site_n_9.png) no-repeat;*/
     width: 12px;
     height: 12px
 }
@@ -916,7 +920,7 @@ html, body {
 }
 
 .n_site_g {
-    height: 602px;
+    height: auto;
     width: 1180px;
 }
 
