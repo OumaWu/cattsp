@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="cache-control" content="no-cache"/>
@@ -7,9 +7,8 @@
 
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
+    <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
-<!--    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>-->
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
@@ -28,7 +27,6 @@
     <!-- 导入钒钛通css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
     <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
     <!-- }导入钒钛通css和js文件 -->
 
 </head>
@@ -52,25 +50,26 @@
 
 <!--  首页信息板块{  -->
 <div class="main">
+
     <!--  新闻板块{  -->
     <div class="wys_layout">
         <div class="wysn_banner fl mt10">
             <div id="slides">
+                                <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
                 <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
-                    <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
-                        <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                            <li style="float: left; width: 640px;"><a
-                                        href="#" title=""
-                                        target="_blank"><img src="images/solar-energy1.jpg" title=""
-                                                             alt="" width="640" height="382"></a></li>
-                            <li style="float: left; width: 640px;"><a
-                                        href="#"
-                                        title="" target="_blank"><img
-                                            src="images/solar-energy1.jpg" title="" alt="" width="640"
-                                            height="382"></a></li>
-                        </ul>
-                    </div>
+                    <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                        <li style="float: left; width: 640px;"><a
+                                    href="#" title=""
+                                    target="_blank"><img src="images/solar-energy1.jpg" title=""
+                                                         alt="" width="640" height="382"></a></li>
+                        <li style="float: left; width: 640px;"><a
+                                    href="#"
+                                    title="" target="_blank"><img
+                                        src="images/solar-energy1.jpg" title="" alt="" width="640"
+                                        height="382"></a></li>
+                    </ul>
                 </div>
+                                </div>
             </div>
             <div class="flip">
                 <ul>
@@ -88,9 +87,19 @@
         <div style="clear:both;"></div>
         <div class="wysn_pro mt10"></div>
     </div>
+    <!--  }新闻板块-->
+
     <!-- 图片滑动脚本{ -->
+    <script>
+        $(".wysn_banner").slide({
+            titCell: ".flip ul",
+            mainCell: "#slides ul",
+            autoPage: true,
+            effect: "left",
+            autoPlay: true
+        });
+    </script>
     <!-- }图片滑动脚本 -->
-    <!--  }新闻板块  -->
 
     <!--  专利技术{  -->
     <div class="n_site_h2 n_site_h2a"><a href="solartech.php" target="_blank">更多&gt;</a>
@@ -102,15 +111,16 @@
                 style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
                 <?php
                 include_once("sql/solarTechList.php");
-                for ($i=0; $i<4; $i++) {
+                for ($i = 0; $i < 4; $i++) {
                     $res = $result->fetch(PDO::FETCH_OBJ);
                     ?>
                     <div class="card">
-                        <p class="hur1"><a href="solartech_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
-                                           title="<?=$res->title;?>"><?=$res->title;?></a></p>
-                        <p class="hur2">企业：<?=$res->entreprise;?></p>
-                        <p class="hur3">地点：<?=$res->location;?></p>
-                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 37, "utf-8");?>...</p>
+                        <p class="hur1"><a href="solartech_detailpage.php?id=<?= $res->id; ?>" target="_blank"
+                                           class="c333"
+                                           title="<?= $res->title; ?>"><?= $res->title; ?></a></p>
+                        <p class="hur2">企业：<?= $res->entreprise; ?></p>
+                        <p class="hur3">地点：<?= $res->location; ?></p>
+                        <p class="hur4">技术简介：<?= mb_substr($res->description, 0, 37, "utf-8"); ?>...</p>
                     </div>
                 <?php } ?>
             </li>
@@ -128,15 +138,16 @@
                 style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
                 <?php
                 include_once("sql/demandList.php");
-                for ($i=0; $i<4; $i++) {
+                for ($i = 0; $i < 4; $i++) {
                     $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <div class="card">
-                    <p class="hur1"><a href="demands_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
-                                       title="<?=$res->title;?>">太阳能高效热利用技术</a></p>
-                    <p class="hur2">需求方：<?=$res->entreprise;?></p>
-                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>...</p>
-                </div>
+                    ?>
+                    <div class="card">
+                        <p class="hur1"><a href="demands_detailpage.php?id=<?= $res->id; ?>" target="_blank"
+                                           class="c333"
+                                           title="<?= $res->title; ?>">太阳能高效热利用技术</a></p>
+                        <p class="hur2">需求方：<?= $res->entreprise; ?></p>
+                        <p class="hur4">需求简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>...</p>
+                    </div>
                 <?php } ?>
             </li>
         </ul>
@@ -152,19 +163,21 @@
             <ul>
                 <?php
                 include_once("sql/specialists.php");
-                for ($i=0; $i<5; $i++) {
+                for ($i = 0; $i < 5; $i++) {
                     $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <li><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" class="hur1" rel="nofollow"
-                       title="<?=$res->name;?>"> <img src="images/<?=$res->photo;?>" alt="<?=$res->name;?>"
-                                        onerror="this.src = <?=$res->photo;?>">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" title="<?=$res->name;?>">
-                                <?=$res->name;?> </a></p>
-                        <p class="hur2b">从事领域：<?=$res->domain;?></p>
-                    </div>
-                </li>
+                    ?>
+                    <li><a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="hur1"
+                           rel="nofollow"
+                           title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>" alt="<?= $res->name; ?>"
+                                                            onerror="this.src = <?= $res->photo; ?>">
+                        </a>
+                        <div class="hur2">
+                            <p class="hur2a"><a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank"
+                                                title="<?= $res->name; ?>">
+                                    <?= $res->name; ?> </a></p>
+                            <p class="hur2b">从事领域：<?= $res->domain; ?></p>
+                        </div>
+                    </li>
                 <?php } ?>
             </ul>
         </div>
@@ -178,23 +191,23 @@
             <ul>
                 <?php
                 include_once("sql/companyList.php");
-                for ($i=0; $i<4; $i++) {
+                for ($i = 0; $i < 4; $i++) {
                     $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <li>
-                    <p class="hur1"><a href="#" target="_blank"
-                                       title="<?=$res->name;?>"><?=$res->name;?></a></p>
-                    <div class="hur2"><a href="#" target="_blank" class="hur2l"
-                                         rel="nofollow" title="<?=$res->name;?>"> <img
-                                    src="images/<?=$res->image;?>" alt="<?=$res->name;?>"
-                                    onerror="this.src = images/<?=$res->image;?>;">
-                        </a>
-                        <p class="hur2r">简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>…</p>
-                    </div>
-                    <div class="hur3">
-                        <span class="hur3a" style="float: right; width: auto">联系人：<?=$res->realname;?></span>
-                    </div>
-                </li>
+                    ?>
+                    <li>
+                        <p class="hur1"><a href="#" target="_blank"
+                                           title="<?= $res->name; ?>"><?= $res->name; ?></a></p>
+                        <div class="hur2"><a href="#" target="_blank" class="hur2l"
+                                             rel="nofollow" title="<?= $res->name; ?>"> <img
+                                        src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
+                                        onerror="this.src = images/<?= $res->image; ?>;">
+                            </a>
+                            <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                        </div>
+                        <div class="hur3">
+                            <span class="hur3a" style="float: right; width: auto">联系人：<?= $res->realname; ?></span>
+                        </div>
+                    </li>
                 <?php } ?>
             </ul>
         </div>

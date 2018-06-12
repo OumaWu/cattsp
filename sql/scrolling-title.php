@@ -8,7 +8,7 @@
 require_once("connection.php");
 
 $sql = "SELECT `title`, `id`, `date` FROM `news` LIMIT 20";
-$sql2 = "SELECT `title`, `id`, `date` FROM `policy`LIMIT 20";
+$sql2 = "SELECT `title`, `id`, `date` FROM `policy` LIMIT 20";
 try {
     $result = $pdo->prepare($sql);
     if ($result->execute()) {
