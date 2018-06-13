@@ -1,14 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
-    <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
-    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
@@ -18,8 +17,8 @@
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
     <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css/index.css?v=1" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=1" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css?v=1" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=1">
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=1">
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
@@ -28,6 +27,11 @@
     <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
     <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
     <!-- }导入钒钛通css和js文件 -->
+
+    <link href="css/wy.css?v=1" rel="stylesheet" type="text/css">
+
+    <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 
 </head>
 <body>
@@ -100,6 +104,69 @@
         });
     </script>
     <!-- }图片滑动脚本 -->
+
+    <!-- 网站板块接口{ -->
+    <div class="content2">
+        <div class="dd">
+            <div class="part1">
+                <img src="images/icons/service0.png" height="40px"><br>技术供需服务
+            </div>
+            <div class="part2">
+                <div><a href="#">技术成果</a></div>
+                <div><a href="#">发布成果</a></div>
+                <div><a href="#">技术需求</a></div>
+                <div><a href="#">发布需求</a></div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service2.png" height="40px"><br>技术交易服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">竞价大厅</a></div>
+                <div><a href="#">我要竞价</a></div>
+                <div><a href="#" target="_blank">科技商城</a></div>
+                <div><a href="#">我要入驻</a></div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service4.png" height="40px"><br>科技企业服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">企业服务</a></div>
+                <div><a href="#">我要服务</a></div>
+                <div><a href="#">服务机构</a></div>
+                <div><a href="#">机构入驻</a></div>
+            </div>
+        </div>
+
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service1.png" height="40px"><br>研发合作服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">专家咨询</a></div>
+                <div><a href="#" target="_blank">我要入驻</a></div>
+                <div><a href="#" target="_blank">技术评估</a></div>
+                <div>
+                    <a href="#">我要评估</a>
+                </div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service3.png" height="40px"><br>高校院所服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">成果公示</a></div>
+                <div><a href="#">我要公示</a></div>
+                <div><a href="#">高校院所</a></div>
+                <div><a href="#">我要入驻</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- }网站板块接口 -->
 
     <!--  专利技术{  -->
     <div class="n_site_h2 n_site_h2a"><a href="solartech.php" target="_blank">更多&gt;</a>

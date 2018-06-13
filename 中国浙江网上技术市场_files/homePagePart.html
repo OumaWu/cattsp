@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0054)http://51jishu.ancun.com/onefivejishu/homePagePart.htm -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>主平台嵌套页面</title>
+<style type="text/css">
+		blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin: 0;padding: 0;}
+		body {font-family:Microsoft Yahei,arial,verdana;}
+		a {text-decoration: none;}
+		img,input{border: none;}
+		ul{list-style:none;}
+		table {border-collapse: collapse;border-spacing: 0;width: 100%;}
+		.clearfix{zoom:1;}
+		.clearfix:after{content:".";display:block;clear:both;height:0;overflow:hidden;visibility:hidden;}
+		.hide{display: none;}
+		
+		.wysn_bid, .wysn_mall{background: #fff;width: 590px;overflow: hidden;-webkit-box-shadow: 0 2px 3px rgba(0,0,0,0.12);-moz-box-shadow: 0 2px 3px rgba(0,0,0,0.12);box-shadow: 0 2px 3px rgba(0,0,0,0.12);position: relative;margin: 0 auto;}
+		.mt20 {margin-top: 20px;}
+		.wysn_title {line-height: 40px;height: 40px;border-bottom: 1px solid #eee;padding: 0 20px;}
+		.wysn_title h3 {color: #6293f5;font-size: 16px;font-weight: bold;}
+		.ellipsis {overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+		.floormc{position: relative;overflow: hidden;background: #fff;width: 1200px;margin: 0 auto;font-size: 14px;}
+		.floormc .abtn {position:absolute; top:50%; z-index:10; display:inline-block; width:30px; height:60px; line-height:60px; margin-top:-30px; background:#d2d2d2; color:#fff; cursor:pointer; filter:alpha(opacity=70); opacity:0.7;}
+		.floormc .abtn:hover {filter:alpha(opacity=100); opacity:1;}
+		.floormc .aleft {left:0; -moz-border-radius:0 30px 30px 0;-webkit-border-radius:0 30px 30px 0;border-radius:0 30px 30px 0;}
+		.floormc .aleft i,.floormc .aright i {display:inline-block;width: 14px;height: 25px;background: url('http://51jishu.ancun.com/images/btn_arrow.png') no-repeat 0 0;margin: 17px 0 0 5px;}
+		.floormc .aright {right:0; border-radius:30px 0 0 30px;}
+		.floormc .aright i{background-position: 0 -55px;margin-left: 11px;}
+		.wys_mallmc {position:relative; width:1160px; height:215px; margin:0 auto; overflow:hidden;}
+		.wys_mallmc ul {position:absolute; left:0; top:0; width:20000px; height:215px; overflow:hidden;}
+		.wys_mallmc li {float:left; width:216px; margin:20px 20px 0 0;}
+		.wys_mallmc li:hover .img {border-color:#1963c2;}
+		.wys_mallmc li a{color: #666;}
+		.wys_mallmc li a:hover{color: #1963c2;}
+		.wys_mallmc .img {width:204px; height:134px; padding:5px; border:1px solid #ccc; background:#fff;}
+		.wys_mallmc em {display:block; height:40px; line-height:40px; text-align:center;font-style: normal;}
+		.wys_infohall .floormc {border-top:2px solid #3fb7e4;}
+		.wys_infohall .wys_fpubl {height:235px; padding-top:50px; background:#3fb7e4;}
+		.wys_infohall .wys_fpubl .img {background-position:center -105px;}
+		.wys_infohall .wys_fpubr {height:285px;}
+		.wys_infohall .fcmc {padding:15px;}
+		.wys_infohall .infolist {height:130px;}
+		.wys_infohallmc {width:492px;}
+		.wys_infohallmc dl {position:relative; padding-bottom:15px; border-bottom:1px dashed #eee;}
+		.wys_infohallmc dt {height:24px;}
+		.wys_infohallmc dt h3 {width:362px; font-size:14px;}
+		.wys_infohallmc dt span {width:100px; text-align:right;}
+		.wys_infohallmc dd {height:65px; overflow:hidden;}
+		.wys_infohallmc dd .img {width:65px; height:65px;}
+		.wys_infohallmc dd .txt {width:377px; height:40px; line-height:20px; padding:12px 0 0 20px; overflow:hidden;}
+		.wys_infohallmc .iht {height:67px; overflow:hidden;}
+		.wys_infohallmc .iht .img {width:65px; height:65px; border:1px solid #ddd;}
+		.wys_infohallmc .iht dl {width:377px; height:67px; line-height:20px; padding:0 0 0 18px; border-bottom:0 none; overflow:hidden;}
+		.wys_infohallmc .iht dt h3 {width:277px; font-size:14px;}
+		.wys_infohallmc .iht dt span {width:100px; text-align:right;}
+		.wys_infohallmc .iht dd {height:43px;}
+		.wys_infohallmc .infolist li {width:442px;}
+		.wys_infohallmc .infolist li p {width:342px;}
+		.wys_service {width:590px;}
+		.wys_service .floortit {padding-right:10px;}
+		.wys_service .floormc {border:1px solid #e5e5e5; border-top:2px solid #aaa;}
+		.wys_service .svl {width:199px; height:209px; border-right:1px solid #d4d4d4; overflow:hidden;}
+		.wys_service .svl ul {margin-right:-2px; overflow:hidden;}
+		.wys_service .svl li {float:left; width:95px; height:65px; padding:2px; border:1px dotted #d4d4d4; border-width:0 1px 1px 0; text-align:center;}
+		.wys_service .svl li img {width:65px; line-height:65px; vertical-align:middle;}
+		.wys_service .svr {width:358px; height:179px; padding:15px; overflow:hidden;}
+		.wys_service .svr .infolist {height:179px;}
+		.wys_expert .floormc {border-top:2px solid #42c2b3;}
+		.wys_expert .wys_fpubl {background:#42c2b3;}
+		.wys_expert .wys_fpubl .img {background-position:center -210px;}
+		.wys_expertmc {position:relative; height:192px; padding-top:20px; overflow:hidden;}
+		.wys_expertmc li {float:left; width:120px; margin-left:20px; text-align:center;}
+		.wys_expertmc .img {display:inline-block; width:95px; height:95px; border-radius:48px; overflow:hidden;}
+		.wys_expertmc h3,.wys_expertmc em {display:block; line-height:22px; line-height:22px;}
+		.wys_expertmc .area {display:block; height:30px; line-height:30px; border-radius:5px; background:#e6e6e6;}
+		.wys_expertmc .ellipsis {width:120px;}
+
+
+
+		.content{
+			box-sizing: border-box;
+			margin:0 auto;
+			width: 580px;
+			height: 230px;
+		}
+		.div-row{
+			box-sizing: border-box;
+			margin-bottom: 6px;
+			width: 100%;
+			height: 112px;
+			font-size: 0;
+		}
+		.div-column{
+			display: inline-block;
+			width: 190px;
+			height: 112px;
+			background-color: #f5f5f5
+		}
+		.div-column:nth-child(even){
+			margin:0 5px;
+		}
+		.div-row a{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+		.div-row a img {
+			width: 190px;
+			height: 112px;
+		}
+		.img-title{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+			margin: 5px 0;
+			padding: 0 5px;
+			width: 100%;
+			text-align: center;
+			font-size: 14px;
+			color:#f5f5f5;
+
+			overflow: hidden;
+			text-overflow:ellipsis;
+			white-space: nowrap;
+		}
+
+	</style>
+<style type="text/css" abt="234"></style><script>//console.log('a')
+</script><script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+<body marginwidth="0" marginheight="0" style="">
+	<div class="content">
+		<div class="div-row">
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4582&amp;loginMobile=" title="嵌入式多缸洗菜解除农药机" target="_blank">
+						<img src="./1501036728213_G_1501036728214.jpg">
+						<p class="img-title">嵌入式多缸洗菜解除农药机</p>
+					</a>
+				</div>
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4581&amp;loginMobile=" title="一种低震动的插秧装置" target="_blank">
+						<img src="./saved_resource">
+						<p class="img-title">一种低震动的插秧装置</p>
+					</a>
+				</div>
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4580&amp;loginMobile=" title="一种带有低噪音且自动清洁式伸缩缝装置的桥梁" target="_blank">
+						<img src="./saved_resource">
+						<p class="img-title">一种带有低噪音且自动清洁式伸缩缝装置的桥梁</p>
+					</a>
+				</div>
+			
+		</div>
+		<div class="div-row">
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4579&amp;loginMobile=" title="一种可自清洁且稳定运行的塔吊装置及其运行方法" target="_blank">
+						<img src="./saved_resource">
+						<p class="img-title">一种可自清洁且稳定运行的塔吊装置及其运行方法</p>
+					</a>
+				</div>
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4578&amp;loginMobile=" title="一种散热良好的智能化道路施工装置" target="_blank">
+						<img src="./1493092223401_G_1493092223417.png">
+						<p class="img-title">一种散热良好的智能化道路施工装置</p>
+					</a>
+				</div>
+			
+				<div class="div-column">
+					<a href="http://51jishu.ancun.com/goods.htm?catId=101&amp;goodsId=4577&amp;loginMobile=" title="轴承滚子外表面质量缺陷视觉自动检测及剔除系统装置" target="_blank">
+						<img src="./saved_resource">
+						<p class="img-title">轴承滚子外表面质量缺陷视觉自动检测及剔除系统装置</p>
+					</a>
+				</div>
+			
+		</div>
+	</div>
+
+	
+	
+	
+	
+		
+		
+		
+			
+				
+					
+						
+							
+								
+								
+							
+								
+							
+						
+						
+							
+								
+								
+							
+						
+					
+				
+			
+		
+	
+
+
+<script type="text/javascript" src="./jquery-1.10.1.min.js.下载"></script>
+<script type="text/javascript" src="./Xslider.js.下载"></script>
+<script type="text/javascript">
+$(function(){
+	$(".imgx").each(function(){scaleImg(this)});
+	
+	$(".floormc").Xslider({
+		unitdisplayed:5,
+		numtoMove:5,
+		loop:"cycle",
+		autoscroll:2000  //自动移动间隔时间
+	});
+}); 
+	
+	
+	
+	
+	function scaleImg(t){
+		var tag = $(t);
+		var width =204;
+		var height = 134;
+		
+		if(width>tag.width()&&height>tag.height())
+		{
+			tag.css("margin-top",(height-tag.height())/2+"px");
+			tag.css("margin-left",(width-tag.width())/2+"px");
+			return;
+		}
+		var scale = width/height;
+		var ts = tag.width()/tag.height();
+		
+		if(ts>scale){
+			tag.width(width);
+			tag.height(tag.height()*width/tag.width());	
+			tag.css("margin-top",(height-tag.height())/2+"px");
+			tag.css("margin-left",(width-tag.width())/2+"px");
+		}else if((ts<scale)){
+			tag.height(height);
+			tag.width(tag.width()*height/tag.height());
+			tag.css("margin-top",(height-tag.height())/2+"px");
+			tag.css("margin-left",(width-tag.width())/2+"px");
+		}else{
+			tag.width(width);
+			tag.height(height);
+		}
+		
+		
+	}
+</script>
+</body></html>

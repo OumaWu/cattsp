@@ -1,0 +1,37 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<script src="../js/jquery-1.10.1.min.js"></script>
+</head>
+<form id="epayredirect" name="epayredirect"
+	 action="http://www.51jishu.com/bsp/kjsc/P1014.do" method="post" 
+	
+>
+	<input type="hidden" name="code" value="" />
+	<input type="hidden" name="errmsg" value="" />
+	<input type="hidden" name="sdata" value="" />
+	<input type="hidden" name="timer" value="1528854576272" />
+	<input type="hidden" name="key" value="cfea633fbd124239f7838c904ba772f7" />
+	<input type="hidden" name="userid" value="" />
+	<input type="hidden" id="url" name="url" value="/Login/loginIndex2nd.htm" />
+	<input type="hidden" id="hydm" name="hydm" value="" />
+	<input type="hidden" id="logtype" name="logtype" value="kjsc" />
+	
+</form>
+<script>
+	document.forms['epayredirect'].submit();
+	<!-- action="http://127.0.0.1:8080" method="post" -->
+</script>
+<body></body>
+</html>
+

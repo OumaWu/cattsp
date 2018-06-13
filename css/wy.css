@@ -1,0 +1,46 @@
+/* 功能模块css */
+
+.content2 {
+	margin-top: 5px;
+	margin-bottom: -10px;
+	width: 1180px;
+	height: 140px;
+	/*margin: 10 auto;*/
+}
+
+.content2 .dd {
+	box-sizing: border-box;
+	width: 232px;
+	float: left;
+	height: 140px;
+	border: 1px solid #bfcac9;
+	background: #fff;
+}
+
+.content2 .dd .part1 {
+	text-align: center;
+	margin-top: 10px;
+	color: #5788F3;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.content2 img {
+	vertical-align: bottom;
+}
+
+.content2 .dd .part2 div {
+	box-sizing: border-box;
+	text-align: center;
+	margin-top: 5px;
+	float: left;
+	width: 114px;
+	height: 25px;
+	line-height: 25px;
+}
+
+.m-l-5 {
+	margin-left: 5px;
+}
+
+/* 功能模块css */
