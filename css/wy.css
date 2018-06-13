@@ -44,3 +44,144 @@
 }
 
 /* 功能模块css */
+
+/* 技术展示，需求展示模块 */
+.content3{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 10px;
+	height: 540px;
+}
+
+.content3 .title{
+	width: 580px;
+	height: 270px;
+	background: #fff;
+	margin-bottom: 10px;
+	border: gray;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.content3 .title .tt{
+
+	line-height: 40px;
+	padding: 0 20px;
+	height: 42px;
+	z-index: 999;
+	list-style: none;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.technology {
+	background: #2d7fde;
+}
+
+.demand {
+	background: #f48d07;
+}
+
+.content3 .title .tt li{
+	position: relative;
+	float: left;
+	text-align: center;
+	line-height: 28px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.content3 .title .tt li h2{
+	float: left;
+	color: #fff;
+	font-size: 18px;
+	line-height: 40px;
+	font-family: "Microsoft YaHei";
+	font-weight: 400;
+}
+.content3 .title .tt li a {
+	color: #fff;
+	float: right;
+	line-height: 40px;
+}
+
+.content3 .title .cc{
+	padding: 0;
+	background: #fff;
+	height: 30px;
+	z-index: 999;
+	list-style: none;
+}
+
+.content3 .title .cc li{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 15px;
+}
+
+.content3 .title .cc .left{
+	text-align: left;
+	float: left;
+	width: 250px;
+	font-size: 14px;
+	color: #515151;
+	letter-spacing: 0;
+}
+.content3 .title .cc .left:HOVER{
+	color: #6293f5;
+	cursor: pointer;
+}
+.content3 .title .cc .middle{
+	float: left;
+	height: 15px;
+	padding-top: 3px;
+}
+
+.content3 .title .cc .middle span{
+	color: #FFFFFF;
+	letter-spacing: 0;
+}
+
+.content3 .title .cc .right{
+	text-align: right;
+	float: right;
+}
+
+.content3 .title .cc .right .r1{
+	font-size: 14px;
+	color: #515151;
+	letter-spacing: 0;
+	line-height: 25px;
+	width:140px;
+	text-align: left;
+	height: 25px;
+}
+
+.content3 .title .cc .right .r2{
+	font-size: 12px;
+	color: #FF520B;
+	letter-spacing: 0;
+	line-height: 14px;
+	width:100px;
+	line-height: 25px;
+	margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -195,6 +195,50 @@
     </div>
     <!--  }专利技术  -->
 
+
+    <div class="content3">
+        <div class="title left">
+            <ul class="tt technology">
+                <li><h2>太阳能技术</h2></li>
+                <li style="float: right;"><a href="solartech.php" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="cc m-t-10">
+                <li>
+                    <div class="left ellipsis" title="抗血栓新药蜈蚣藻多糖"><a href="/bsp/jscg/info.do?pkid=J18061300021" target="_blank">抗血栓新药蜈蚣藻多糖</a></div>
+
+                    <div class="right">
+                        <div class="r1 ellipsis fl" title="制造业">制造业</div>
+                        <div class="r2 ellipsis fl">
+
+                            面议
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="title right">
+            <ul class="tt demand">
+                <li><h2>技术需求</h2></li>
+                <li style="float: right;"><a href="demands.php" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="cc m-t-10">
+                <li>
+                    <div class="left ellipsis" title="双相不锈钢线材品种生产工艺研究"><a href="/bsp/jsxq/info.do?pkid=J18061300006" target="_blank">双相不锈钢线材品种生产工艺研究</a></div>
+
+                    <div class="right">
+                        <div class="r1 ellipsis fl" title="制造业">制造业</div>
+                        <div class="r2 ellipsis fl">
+                            10.0万</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
     <!--  技术需求{  -->
     <div class="n_site_h2 n_site_h2c"><a href="demands.php" target="_blank">更多&gt;</a>
         <h2>技术需求</h2>
@@ -203,19 +247,7 @@
         <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
             <li class="n_site_f_li1"
                 style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
-                <?php
-                include_once("sql/demandList.php");
-                for ($i = 0; $i < 4; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                    ?>
-                    <div class="card">
-                        <p class="hur1"><a href="demands_detailpage.php?id=<?= $res->id; ?>" target="_blank"
-                                           class="c333"
-                                           title="<?= $res->title; ?>">太阳能高效热利用技术</a></p>
-                        <p class="hur2">需求方：<?= $res->entreprise; ?></p>
-                        <p class="hur4">需求简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>...</p>
-                    </div>
-                <?php } ?>
+
             </li>
         </ul>
     </div>
