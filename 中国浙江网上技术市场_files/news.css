@@ -110,8 +110,8 @@ a.c333:hover {color:#1963c2;}
 .wys_site .wys_orgbtn,.wys_site .wys_bluebtn {width:75px; height:25px; line-height:25px;}
 
 /*floor*/
-.wysn_news {width:522px; background:#fff; overflow:hidden;}
-.wysn_news .slideTxtBox {height:165px; overflow:hidden;}
+.wysn_news {width:522px; background:#fff; overflow: hidden; min-height: 100%}
+.wysn_news .slideTxtBox {height:inherit; overflow:hidden;}
 .wysn_news .slideTxtBox .hd {height:42px; border-bottom:1px solid #ddd; line-height:40px; position:relative;}
 .wysn_news .slideTxtBox .hd ul {float:left; position:absolute; left:0; top:0;}
 .wysn_news .slideTxtBox .hd li {float:left; margin-right:25px; font-size:14px; font-weight:bold;}

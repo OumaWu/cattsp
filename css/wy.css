@@ -1,8 +1,8 @@
 /* 功能模块css */
 
 .content2 {
-	margin-top: 5px;
-	margin-bottom: -10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	width: 1180px;
 	height: 140px;
 	/*margin: 10 auto;*/
@@ -48,16 +48,16 @@
 /* 技术展示，需求展示模块 */
 .content3{
 	width: 1180px;
-	margin: 0 auto;
-	margin-top: 10px;
-	height: 540px;
+	/*margin: 0 auto;*/
+	margin-top: 30px;
+	height: 300px;
+	margin-bottom: 20px;
 }
 
 .content3 .title{
 	width: 580px;
-	height: 270px;
+	height: inherit;
 	background: #fff;
-	margin-bottom: 10px;
 	border: gray;
 }
 
@@ -156,8 +156,8 @@
 	color: #515151;
 	letter-spacing: 0;
 	line-height: 25px;
-	width:140px;
-	text-align: left;
+	width: 250px;
+	text-align: right;
 	height: 25px;
 }
 
@@ -165,7 +165,6 @@
 	font-size: 12px;
 	color: #FF520B;
 	letter-spacing: 0;
-	line-height: 14px;
 	width:100px;
 	line-height: 25px;
 	margin-right: 5px;
