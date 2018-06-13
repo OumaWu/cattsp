@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php require_once("sql/scrolling-title.php"); ?>
 <link rel="stylesheet" href="中国浙江网上技术市场_files/news.css?v=<?=rand(1,10);?>">
 <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>

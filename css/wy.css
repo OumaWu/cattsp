@@ -1,3 +1,8 @@
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
 /* 功能模块css */
 
 .content2 {
@@ -20,7 +25,7 @@
 .content2 .dd .part1 {
 	text-align: center;
 	margin-top: 10px;
-	color: #5788F3;
+	color: #c55859;
 	font-weight: bold;
 	font-size: 14px;
 }

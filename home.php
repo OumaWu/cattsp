@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
@@ -266,9 +268,6 @@
                                         onerror="this.src = images/<?= $res->image; ?>;">
                             </a>
                             <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
-                        </div>
-                        <div class="hur3">
-                            <span class="hur3a" style="float: right; width: auto">联系人：<?= $res->realname; ?></span>
                         </div>
                     </li>
                 <?php } ?>
