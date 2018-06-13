@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="cache-control" content="no-cache"/>
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=<?=rand(1,10);?>">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?=rand(1,10);?>">
     <!-- }导入版头css文件 -->
 
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=1" rel="stylesheet" type="text/css">
-    <link href="css/index.css?v=1" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=1" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=1">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=<?=rand(1,10);?>">
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=<?=rand(1,10);?>" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=<?=rand(1,10);?>" id="theme2">
     <!-- }导入钒钛通css和js文件 -->
 
-    <link href="css/wy.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css/wy.css?v=<?=rand(1,10);?>" rel="stylesheet" type="text/css">
 
     <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
@@ -59,21 +59,21 @@
     <div class="wys_layout">
         <div class="wysn_banner fl mt10">
             <div id="slides">
-                                <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
                 <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
-                    <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                        <li style="float: left; width: 640px;"><a
-                                    href="#" title=""
-                                    target="_blank"><img src="images/solar-energy1.jpg" title=""
-                                                         alt="" width="640" height="382"></a></li>
-                        <li style="float: left; width: 640px;"><a
-                                    href="#"
-                                    title="" target="_blank"><img
-                                        src="images/solar-energy1.jpg" title="" alt="" width="640"
-                                        height="382"></a></li>
-                    </ul>
+                    <div class="tempWrap" style="overflow:hidden; position:relative; width:640px">
+                        <ul style="width: 1280px; left: -640px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                            <li style="float: left; width: 640px;"><a
+                                        href="#" title=""
+                                        target="_blank"><img src="images/solar-energy1.jpg" title=""
+                                                             alt="" width="640" height="382"></a></li>
+                            <li style="float: left; width: 640px;"><a
+                                        href="#"
+                                        title="" target="_blank"><img
+                                            src="images/solar-energy1.jpg" title="" alt="" width="640"
+                                            height="382"></a></li>
+                        </ul>
+                    </div>
                 </div>
-                                </div>
             </div>
             <div class="flip">
                 <ul>
@@ -86,10 +86,6 @@
             <iframe width="540" height="382" frameborder="0" src="scrolling-news-titles.php" scrolling="no"
                     marginheight="0" marginwidth="0" style="display: block;"></iframe>
         </div>
-        <div style="clear:both;"></div>
-        <div class="floormc"></div>
-        <div style="clear:both;"></div>
-        <div class="wysn_pro mt10"></div>
     </div>
     <!--  }新闻板块-->
 
@@ -168,90 +164,58 @@
     </div>
     <!-- }网站板块接口 -->
 
-    <!--  专利技术{  -->
-    <div class="n_site_h2 n_site_h2a"><a href="solartech.php" target="_blank">更多&gt;</a>
-        <h2>太阳能技术</h2>
-    </div>
-    <div class="n_site_f">
-        <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
-            <li class="n_site_f_li1"
-                style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
-                <?php
-                include_once("sql/solarTechList.php");
-                for ($i = 0; $i < 4; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                    ?>
-                    <div class="card">
-                        <p class="hur1"><a href="solartech_detailpage.php?id=<?= $res->id; ?>" target="_blank"
-                                           class="c333"
-                                           title="<?= $res->title; ?>"><?= $res->title; ?></a></p>
-                        <p class="hur2">企业：<?= $res->entreprise; ?></p>
-                        <p class="hur3">地点：<?= $res->location; ?></p>
-                        <p class="hur4">技术简介：<?= mb_substr($res->description, 0, 37, "utf-8"); ?>...</p>
-                    </div>
-                <?php } ?>
-            </li>
-        </ul>
-    </div>
-    <!--  }专利技术  -->
-
-
     <div class="content3">
+        <!--  专利技术{  -->
         <div class="title left">
             <ul class="tt technology">
-                <li><h2>太阳能技术</h2></li>
+                <li><h2>太阳能技术成果与专利</h2></li>
                 <li style="float: right;"><a href="solartech.php" target="_blank">更多&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
-                <li>
-                    <div class="left ellipsis" title="抗血栓新药蜈蚣藻多糖"><a href="/bsp/jscg/info.do?pkid=J18061300021" target="_blank">抗血栓新药蜈蚣藻多糖</a></div>
+                <?php
+                include_once("sql/solarTechList.php");
+                for ($i = 0; $i < 10; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                    ?>
+                    <li>
+                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                    href="solartech_detailpage.php?id=<?= $res->id; ?>"
+                                    target="_blank"><?= $res->title; ?></a></div>
 
-                    <div class="right">
-                        <div class="r1 ellipsis fl" title="制造业">制造业</div>
-                        <div class="r2 ellipsis fl">
-
-                            面议
+                        <div class="right">
+                                <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
                         </div>
-                    </div>
-                </li>
-
+                    </li>
+                <?php } ?>
             </ul>
         </div>
+        <!--  }专利技术  -->
 
+        <!--  技术需求{  -->
         <div class="title right">
             <ul class="tt demand">
                 <li><h2>技术需求</h2></li>
                 <li style="float: right;"><a href="demands.php" target="_blank">更多&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
+                <?php
+                include_once("sql/demandList.php");
+                for ($i = 0; $i < 10; $i++) {
+                $res = $result->fetch(PDO::FETCH_OBJ);
+                ?>
                 <li>
-                    <div class="left ellipsis" title="双相不锈钢线材品种生产工艺研究"><a href="/bsp/jsxq/info.do?pkid=J18061300006" target="_blank">双相不锈钢线材品种生产工艺研究</a></div>
+                    <div class="left ellipsis" title="<?= $res->title; ?>"><a href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                                                          target="_blank"><?= $res->title; ?></a></div>
 
                     <div class="right">
-                        <div class="r1 ellipsis fl" title="制造业">制造业</div>
-                        <div class="r2 ellipsis fl">
-                            10.0万</div>
+                        <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
                     </div>
                 </li>
+                <?php } ?>
             </ul>
         </div>
-
+        <!--  }技术需求  -->
     </div>
-
-
-    <!--  技术需求{  -->
-    <div class="n_site_h2 n_site_h2c"><a href="demands.php" target="_blank">更多&gt;</a>
-        <h2>技术需求</h2>
-    </div>
-    <div class="n_site_f">
-        <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
-            <li class="n_site_f_li1"
-                style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
-
-            </li>
-        </ul>
-    </div>
-    <!--  }技术需求  -->
 
     <div class="n_site_g">
         <!--  技术专家{  -->
