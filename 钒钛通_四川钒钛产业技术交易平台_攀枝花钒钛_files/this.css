@@ -938,9 +938,10 @@ html, body {
 
 .n_site_gla ul li {
     float: left;
-    padding: 0 11px;
-    width: 202px;
-    height: 110px;
+    display: inline;
+    padding: 0 5px;
+    width: 192px;
+    line-height: 110px;
     margin-right: 10px;
 }
 
@@ -960,7 +961,7 @@ html, body {
 
 .n_site_gla ul li .hur2 {
     float: right;
-    width: 108px;
+    width: 102px;
     margin-top: 16px
 }
 

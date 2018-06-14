@@ -55,13 +55,13 @@ header, section, footer, aside, nav, main, article, figure {
 	width: 1180px;
 	/*margin: 0 auto;*/
 	margin-top: 30px;
-	height: 300px;
-	margin-bottom: 20px;
+	height: 315px;
+	/*margin-bottom: 20px;*/
 }
 
 .content3 .title{
 	width: 580px;
-	height: inherit;
+	/*height: inherit;*/
 	background: #fff;
 	border: gray;
 }
@@ -92,6 +92,19 @@ header, section, footer, aside, nav, main, article, figure {
 	background: #f48d07;
 }
 
+.specialist {
+	background: #ea5a4c;
+}
+
+.mall {
+	background: #9bc4f0;
+}
+
+
+.content3 .title .tt li.link {
+	float: right;
+}
+
 .content3 .title .tt li{
 	position: relative;
 	float: left;
@@ -100,6 +113,7 @@ header, section, footer, aside, nav, main, article, figure {
 	font-size: 14px;
 	font-weight: bold;
 }
+
 .content3 .title .tt li h2{
 	float: left;
 	color: #fff;
@@ -176,6 +190,100 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 
+.spe {
+	width: auto;
+	height: 270px;
+	margin-bottom: 20px;
+}
+
+.spe ul {
+	height: auto;
+	z-index: 999;
+	list-style: none;
+}
+
+.spe ul li{
+	float: left;
+	display: inline;
+	width: auto;
+	line-height: 80px;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.spe ul li.photo {
+	/*float: left;*/
+	margin-top: 5px;
+}
+
+.spe ul li img{
+	width: 75px;
+	height: 75px;
+	border-radius: 40px;
+}
+
+.info {
+	float: right;
+	width: 113px;
+	margin-top: 5px
+}
+
+.info .name {
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	overflow: hidden
+}
+
+.info .domain {
+	line-height: 24px;
+	height: 48px;
+	overflow: hidden;
+}
+
+.pv {
+    margin-bottom: 20px;
+    width: inherit;
+    height: 270px;
+    z-index: 999;
+    list-style: none;
+}
+
+.pv li{
+    float: left;
+    display: inline;
+    width: auto;
+    height: 145px;
+}
+
+.pv img {
+	width: 285px;
+	height : 125px;
+}
+
+.pv li.left{
+    margin-right: 5px;
+}
+
+.pv li.right{
+    margin-left: 5px;
+}
+
+.legend {
+    width: 290px;
+	text-align: center;
+	font-size: 8px;
+	height: 8px;
+	margin-top: 2px;
+}
+
+/*.wysn_ad {*/
+    /*width: 1180px;*/
+    /*height: 120px;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    /*margin-bottom: 10px;*/
+/*}*/
 
 
 

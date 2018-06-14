@@ -3,34 +3,36 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=234">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?= rand(1, 10); ?>">
     <!-- }导入版头css文件 -->
 
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?=rand(1,10);?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?=rand(1,10);?>">
-    <link rel="stylesheet" type="text/css" href="css/index.css?v=<?=rand(1,10);?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=<?=rand(1,10);?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?=rand(1,10);?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=<?=rand(1,10);?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=<?= rand(1, 10); ?>">
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=<?=rand(1,10);?>" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=<?=rand(1,10);?>" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=<?= rand(1, 10); ?>"
+          id="theme1">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=<?= rand(1, 10); ?>"
+          id="theme2">
     <!-- }导入钒钛通css和js文件 -->
 
-    <link href="css/wy.css?v=<?=rand(1,10);?>" rel="stylesheet" type="text/css">
+    <link href="css/wy.css?v=<?= rand(1, 10); ?>" rel="stylesheet" type="text/css">
 
     <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
@@ -56,6 +58,8 @@
 
 <!--  首页信息板块{  -->
 <div class="main">
+    <div></div>
+
 
     <!--  新闻板块{  -->
     <div class="wys_layout">
@@ -171,7 +175,7 @@
         <div class="title left">
             <ul class="tt technology">
                 <li><h2>太阳能技术成果与专利</h2></li>
-                <li style="float: right;"><a href="solartech.php" target="_blank">更多&gt;</a></li>
+                <li class="link"><a href="solartech.php" target="_blank">更多&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
                 <?php
@@ -185,7 +189,7 @@
                                     target="_blank"><?= $res->title; ?></a></div>
 
                         <div class="right">
-                                <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
                         </div>
                     </li>
                 <?php } ?>
@@ -197,56 +201,147 @@
         <div class="title right">
             <ul class="tt demand">
                 <li><h2>技术需求</h2></li>
-                <li style="float: right;"><a href="demands.php" target="_blank">更多&gt;</a></li>
+                <li class="link"><a href="demands.php" target="_blank">更多&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
                 <?php
                 include_once("sql/demandList.php");
                 for ($i = 0; $i < 10; $i++) {
-                $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <li>
-                    <div class="left ellipsis" title="<?= $res->title; ?>"><a href="demands_detailpage.php?id=<?= $res->id; ?>"
-                                                                          target="_blank"><?= $res->title; ?></a></div>
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                    ?>
+                    <li>
+                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                    href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                    target="_blank"><?= $res->title; ?></a></div>
 
-                    <div class="right">
-                        <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
-                    </div>
-                </li>
+                        <div class="right">
+                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                        </div>
+                    </li>
                 <?php } ?>
             </ul>
         </div>
         <!--  }技术需求  -->
     </div>
 
-    <div class="n_site_g">
+    <div class="content3" style="margin-top: 10px; margin-bottom: 50px;">
         <!--  技术专家{  -->
-        <div class="n_site_h2 n_site_h2b"><a href="specialists.php" target="_blank">更多&gt;</a>
-            <h2>技术专家</h2>
-        </div>
-        <div class="n_site_gla">
-            <ul>
-                <?php
-                include_once("sql/specialists.php");
-                for ($i = 0; $i < 5; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                    ?>
-                    <li><a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="hur1"
-                           rel="nofollow"
-                           title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>" alt="<?= $res->name; ?>"
-                                                            onerror="this.src = <?= $res->photo; ?>">
-                        </a>
-                        <div class="hur2">
-                            <p class="hur2a"><a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank"
-                                                title="<?= $res->name; ?>">
-                                    <?= $res->name; ?> </a></p>
-                            <p class="hur2b">从事领域：<?= $res->domain; ?></p>
-                        </div>
-                    </li>
-                <?php } ?>
+        <div class="title left">
+            <ul class="tt specialist">
+                <li><h2>技术专家</h2></li>
+                <li class="link"><a href="specialists.php" target="_blank">更多&gt;</a></li>
             </ul>
+            <div class="spe">
+                <ul>
+                    <?php
+                    include_once("sql/specialists.php");
+                    for ($i = 0; $i < 9; $i++) {
+                        $res = $result->fetch(PDO::FETCH_OBJ);
+                        ?>
+                        <li>
+                            <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
+                               title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>"
+                                                                alt="<?= $res->name; ?>"
+                                                                onerror="this.src = <?= $res->photo; ?>">
+                            </a>
+
+                            <div class="info">
+                                <p class="name"><a href="specialists_detailpage.php?id=<?= $res->id; ?>"
+                                                   target="_blank"
+                                                   title="<?= $res->name; ?>">
+                                        <?= $res->name; ?> </a></p>
+                                <p class="domain">从事领域：<?= $res->domain; ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
         <!--  }技术专家  -->
+
+
+        <!--  科技商城{  -->
+        <div class="title right">
+            <ul class="tt mall">
+                <li><h2>科技商城</h2></li>
+                <li class="link"><a href="#" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="pv">
+                <li>
+                    <div class="left">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement1.jpg">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+                <li>
+                    <div class="right">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement2.png">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+                <li>
+                    <div class="left">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement3.jpg">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+                <li>
+                    <div class="right">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement4.jpg">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+            </ul>
+        </div>
+        <!--  }科技商城  -->
+    </div>
+
+    <!--  广告栏{  -->
+    <div class="wysn_ad">
+        <div id="slides3">
+            <div class="tempWrap" style="overflow:hidden; position:relative; width:1180px">
+                <ul style="width: 3540px; left: -2360px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                    <li style="float: left; width: 1180px;"><a href="#"
+                                                               target="_blank" title="">
+                            <img src="./images/main_adv/ad_1.jpg?n=4356" width="1180" height="150" alt=""></a></li>
+                    <li style="float: left; width: 1180px;"><a href="#" title=""><img
+                                    src="./images/main_adv/ad_2.png?n=4356" width="1180" height="150" alt=""></a></li>
+                    <li style="float: left; width: 1180px;"><a href="#" title=""><img
+                                    src="./images/main_adv/ad_3.jpg?n=4356" width="1180" height="150" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flip">
+            <ul>
+                <li class="">1</li>
+                <li class="">2</li>
+                <li class="on">3</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 图片滑动脚本{ -->
+    <script>
+        $(".wysn_ad").slide({
+            titCell: ".flip ul",
+            mainCell: "#slides3 ul",
+            autoPage: true,
+            effect: "left",
+            autoPlay: true
+        });
+    </script>
+    <!-- }图片滑动脚本 -->
+    <!--  }广告栏  -->
+
+    <div class="n_site_g">
 
         <!--  企业单位{  -->
         <div class="n_site_h2" style="background: #4cafea"><a href="#" target="_blank">更多&gt;</a>
