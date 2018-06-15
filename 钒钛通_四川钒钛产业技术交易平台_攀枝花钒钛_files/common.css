@@ -185,7 +185,7 @@ em, i {
 
 .main {
     width: 1180px;
-    height: auto;
+    /*height: auto;*/
     min-height: 100%;
     margin: 0 auto;
     font-size: 12px;

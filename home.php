@@ -20,9 +20,9 @@
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?= rand(1, 10); ?>">
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?= rand(1, 10); ?>">
     <link rel="stylesheet" type="text/css" href="css/index.css?v=<?= rand(1, 10); ?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css">
     <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?= rand(1, 10); ?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=<?= rand(1, 10); ?>">
+<!--    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=--><?//= rand(1, 10); ?><!--">-->
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
@@ -341,35 +341,220 @@
     <!-- }图片滑动脚本 -->
     <!--  }广告栏  -->
 
-    <div class="n_site_g">
 
-        <!--  企业单位{  -->
-        <div class="n_site_h2" style="background: #4cafea"><a href="#" target="_blank">更多&gt;</a>
-            <h2>企业单位</h2>
-        </div>
-        <div class="n_site_glb">
-            <ul>
-                <?php
-                include_once("sql/companyList.php");
-                for ($i = 0; $i < 4; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                    ?>
+    <div class="n_site_g">
+        <div class="n_site_gl">
+
+            <!--  企业单位{  -->
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
+                <h2>企业单位</h2>
+            </div>
+            <div class="n_site_glb">
+                <ul>
+                    <?php
+                    include_once("sql/companyList.php");
+                    for ($i = 0; $i < 3; $i++) {
+                        $res = $result->fetch(PDO::FETCH_OBJ);
+                        ?>
+                        <li>
+                            <p class="hur1">
+                                <a href="#" target="_blank" title="<?= $res->name; ?>"><?= $res->name; ?>
+                                </a>
+                            </p>
+                            <div class="hur2">
+
+                                <a href="#" target="_blank" class="hur2l"
+                                   rel="nofollow" title="<?= $res->name; ?>"> <img
+                                            src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
+                                            onerror="this.src = images/<?= $res->image; ?>;">
+                                </a>
+                                <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                            </div>
+
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+            <!--  }企业单位  -->
+
+            <!--  研发单位{  -->
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
+                <h2>研发单位</h2>
+            </div>
+            <div class="n_site_glc">
+                <ul>
                     <li>
-                        <p class="hur1"><a href="#" target="_blank"
-                                           title="<?= $res->name; ?>"><?= $res->name; ?></a></p>
-                        <div class="hur2"><a href="#" target="_blank" class="hur2l"
-                                             rel="nofollow" title="<?= $res->name; ?>"> <img
-                                        src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
-                                        onerror="this.src = images/<?= $res->image; ?>;">
-                            </a>
-                            <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西大学"> <img src="./images/GXU.png" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西大学">广西大学</a>
+                            </p>
                         </div>
                     </li>
-                <?php } ?>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西民族大学"> <img src="./images/GXUN.png" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西民族大学">广西民族大学</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="桂林电子科技大学"> <img src="./images/GUET.jpg" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="桂林电子科技大学">桂林电子科技大学</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西财经学院">广西财经学院</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                            <a href="#" target="_self" class="hur1"
+                               title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
+                            </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西财经学院">广西财经学院</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--  }研发单位  -->
+
+        </div>
+
+
+        <!--  政策法规{  -->
+        <div class="n_site_gra">
+            <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" title="攀钢致力突破钛产业高端技术封锁" style="">
+                        攀钢致力突破钛产业高端技术封锁
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="提高钛合金耐蚀、耐磨性的表面处理方法" style="">
+                        提高钛合金耐蚀、耐磨性的表面处理方法
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="攀钢与宝钛集团深化钛领域交流合作" style="">
+                        攀钢与宝钛集团深化钛领域交流合作
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="改善钛板表面质量及性能的的各个步骤" style="">
+                        改善钛板表面质量及性能的的各个步骤
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="中国第一卷TC4钛合金热轧带卷在中铝沈加轧制成功" style="">
+                        中国第一卷TC4钛合金热轧带卷在中铝沈…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="钛合金精密热成形技术在航空航天的应用进展" style="">
+                        钛合金精密热成形技术在航空航天的应用…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
+                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
+                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    </a>
+                </li>
             </ul>
         </div>
-        <!--  }企业单位  -->
+        <!--  }政策法规  -->
     </div>
+
+    <!--  合作单位{  -->
+    <div class="n_site_h">
+        <div class="n_site_h1 n_site_h2b">
+            <a href="#" target="_blank" class="c333">更多></a>
+            <h2>合作机构</h2>
+        </div>
+        <div class="n_site_hb">
+            <a href="#" target="_blank" class="application"></a>
+            <ul>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="四川九鼎智远知识产权运营有限公司">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工...</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  }合作单位  -->
+
 
     <!--  友情链接{  -->
     <div class="mod">

@@ -1,5 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
-    height: 100%
+    min-height: 100%;
+    /*height: 100%*/
 }
 
 .blank20 {
@@ -624,12 +629,37 @@ html, body {
 }
 
 .n_site_h2 {
-    width: 1140px;
+    width: 900px;
     height: 42px;
     line-height: 40px;
     padding: 0 20px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     margin-bottom: 0px;
+}
+
+.n_site_h1 {
+    width: 1180px;
+    height: 42px;
+    line-height: 40px;
+    padding: 0 20px;
+    /*margin-top: 30px;*/
+    margin-bottom: 0px;
+}
+
+.n_site_h1 h2 {
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.n_site_h1 a.c333 {
+    float: right;
+    /*font-family: "Microsoft YaHei";*/
+    /*font-size: 12px;*/
+    /*padding-right: 10px;*/
+    color: #fff;
+    line-height: 40px;
 }
 
 .n_site_h2 h2 {
@@ -655,7 +685,7 @@ html, body {
 }
 
 .n_site_h2d {
-    background: #4cafea
+    background: #9bc4f0
 }
 
 .n_site_h2c {
@@ -920,13 +950,16 @@ html, body {
 }
 
 .n_site_g {
-    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 400px;
     width: 1180px;
 }
 
 .n_site_gl {
-    width: 1180px;
-    float: left
+    width: 900px;
+    height: inherit;
+    float: left;
 }
 
 .n_site_gla {
@@ -984,22 +1017,24 @@ html, body {
 }
 
 .n_site_glb {
-    height: 198px;
+    width: inherit;
+    height: 170px;
     margin-bottom: 20px
 }
 
 .n_site_glb ul li {
     float: left;
-    width: 260px;
-    height: 188px;
+    width: 290px;
+    height: 170px;
     padding: 10px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .n_site_glb ul li .hur1 {
+    /*width: 80px;*/
     height: 30px;
     line-height: 30px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     overflow: hidden
 }
 
@@ -1009,18 +1044,22 @@ html, body {
 }
 
 .n_site_glb ul li .hur2 {
-    height: 108px
+    /*float: left;*/
+    /*width: inherit;*/
+    /*height: 140px;*/
+    padding-right: 20px;
 }
 
 .n_site_glb ul li .hur2l {
-    width: 100px;
-    height: 100px;
+    margin-top: 10px;
+    /*width: 80px;*/
+    /*height: 80px;*/
     float: left
 }
 
 .n_site_glb ul li .hur2l img {
-    width: 100px;
-    height: 100px
+    width: 90px;
+    height: 90px
 }
 
 .n_site_glb ul li .hur2r {
@@ -1052,16 +1091,16 @@ html, body {
 }
 
 .n_site_glc {
-    height: 80px;
-    padding: 20px 0;
+    height: 125px;
+    padding-top: 10px;
     background: #eff8fd
 }
 
 .n_site_glc ul li {
-    width: 191px;
-    padding: 0 17px 0;
     float: left;
-    margin-right: 10px;
+    display: inline;
+    width: 180px;
+    padding-left: 10px;
 }
 
 .n_site_glc ul li .hur1 {
@@ -1077,19 +1116,23 @@ html, body {
 }
 
 .n_site_glc ul li .hur2 {
-    float: right;
-    width: 96px
+    margin: 0 auto;
+    /*float: right;*/
+    text-align: center;
+    width: 80px;
+    height: 105px;
 }
 
 .n_site_glc ul li .hur2 p {
     height: 40px;
-    line-height: 40px;
-    overflow: hidden
+    width: inherit;
+    /*line-height: 40px;*/
+    /*overflow: hidden*/
 }
 
 .n_site_glc ul li .hur2 p a {
     font-family: "Microsoft YaHei";
-    font-size: 16px
+    font-size: 12px;
 }
 
 .n_site_gr {
@@ -1098,9 +1141,11 @@ html, body {
 }
 
 .n_site_gra {
-    height: 288px;
+    float: right;
+    width: 260px;
+    height: inherit;
     background: #e1f2fb;
-    margin-bottom: 12px
+    /*margin-bottom: 12px*/
 }
 
 .n_site_gra h2 {
@@ -1129,7 +1174,6 @@ html, body {
     height: 30px;
     line-height: 30px;
     overflow: hidden;
-    background: url(../images/this/ico_3.png) no-repeat 12px 14px;
     padding: 0 12px 0 22px
 }
 
@@ -1227,16 +1271,14 @@ html, body {
     float: right;
     font-family: "Microsoft YaHei";
     font-size: 12px;
-    background: url(../images/this/site_10_1.png) no-repeat right 16px;
     padding-right: 10px;
     color: #fff
 }
 
 .n_site_hb {
-    height: 202px;
+    height: 235px;
     border: 1px #ea5a4c solid;
     border-top: 0;
-    margin-top: -2px
 }
 
 .n_site_hb a.application {
@@ -1246,9 +1288,9 @@ html, body {
 
 .n_site_hb ul li {
     float: left;
-    height: 180px;
-    width: 254px;
-    padding: 20px 20px 0 20px
+    width: 294.5px;
+    height: 225px;
+    padding: 20px 20px 0 20px;
 }
 
 .n_site_hb ul li .hur1 {
@@ -1279,8 +1321,9 @@ html, body {
 
 .n_site_hb ul li .hur3 {
     line-height: 22px;
-    height: 44px;
+    /*height: 120px;*/
     overflow: hidden;
+    text-overflow: ellipsis;
     padding-top: 10px
 }
 

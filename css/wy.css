@@ -1,4 +1,8 @@
 
+* {
+	box-sizing: border-box;
+}
+
 header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
@@ -97,7 +101,7 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .mall {
-	background: #9bc4f0;
+	background: #4cafea;
 }
 
 
