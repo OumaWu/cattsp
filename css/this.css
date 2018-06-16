@@ -916,12 +916,12 @@ html, body {
 }
 
 .n_site_g {
-    height: 602px;
+    height: 100%;
     width: 1180px;
 }
 
 .n_site_gl {
-    width: 1180px;
+    width: 930px;
     float: left
 }
 

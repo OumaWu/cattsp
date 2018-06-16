@@ -1,0 +1,71 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;
+    padding:0;
+    font-family: Microsoft Yahei,arial,verdana;
+}   
+}
+ol,ul{
+    list-style:none;
+}
+fieldset,img{
+    border:0;
+}
+em ,p{ font-style: normal;}
+.expert{
+    width: 590px;
+    height: 240px;
+    background:#fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.expert li{
+    width: 50%;
+    float: left;
+    margin-top: 5px;
+    font-size: 0;
+}
+.expert_l ,.expert_r{
+    width:85px;
+    display:inline-block;
+    vertical-align: middle;
+}
+.expert_img{
+    width: 62px;
+    height: 62px;
+    border:2px solid #446ffa;
+    border-radius: 50%;
+    position: relative;
+    display:block;
+}
+.expert_l .expert_img>img{
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -29px;
+    margin-top: -29px;
+}
+.expert_r{
+    width: 199px;
+}
+.expert_r .expert_name{
+    font-size: 16px;
+    color: #515151;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: none ;
+    display:block;
+}
+.expert_r .university ,.expert_r .work{
+    font-size: 14px;
+    color: #616161;
+    margin-bottom:2px;
+}
+.expert_r .university em ,.expert_r .work em{
+    margin-right: 8px;
+}

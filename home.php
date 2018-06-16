@@ -1,35 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1">
-    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
-<!--    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>-->
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=234">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?= rand(1, 10); ?>">
     <!-- }导入版头css文件 -->
 
     <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=1" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css?v=1" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css?v=1" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=1">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=1">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css">
+    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?= rand(1, 10); ?>">
+<!--    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=--><?//= rand(1, 10); ?><!--">-->
     <!-- }导入中国-东盟技术转移中心css和js文件 -->
 
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=1" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=1" id="theme2">
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=<?= rand(1, 10); ?>"
+          id="theme1">
+    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=<?= rand(1, 10); ?>"
+          id="theme2">
     <!-- }导入钒钛通css和js文件 -->
+
+    <link href="css/wy.css?v=<?= rand(1, 10); ?>" rel="stylesheet" type="text/css">
+
+    <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 
 </head>
 <body>
@@ -52,6 +58,9 @@
 
 <!--  首页信息板块{  -->
 <div class="main">
+    <div></div>
+
+
     <!--  新闻板块{  -->
     <div class="wys_layout">
         <div class="wysn_banner fl mt10">
@@ -83,123 +92,469 @@
             <iframe width="540" height="382" frameborder="0" src="scrolling-news-titles.php" scrolling="no"
                     marginheight="0" marginwidth="0" style="display: block;"></iframe>
         </div>
-        <div style="clear:both;"></div>
-        <div class="floormc"></div>
-        <div style="clear:both;"></div>
-        <div class="wysn_pro mt10"></div>
     </div>
-    <!-- 图片滑动脚本{ -->
-    <!-- }图片滑动脚本 -->
-    <!--  }新闻板块  -->
+    <!--  }新闻板块-->
 
-    <!--  专利技术{  -->
-    <div class="n_site_h2 n_site_h2a"><a href="solartech.php" target="_blank">更多&gt;</a>
-        <h2>太阳能技术</h2>
+    <!-- 图片滑动脚本{ -->
+    <script>
+        $(".wysn_banner").slide({
+            titCell: ".flip ul",
+            mainCell: "#slides ul",
+            autoPage: true,
+            effect: "left",
+            autoPlay: true
+        });
+    </script>
+    <!-- }图片滑动脚本 -->
+
+    <!-- 网站板块接口{ -->
+    <div class="content2">
+        <div class="dd">
+            <div class="part1">
+                <img src="images/icons/service0.png" height="40px"><br>技术供需服务
+            </div>
+            <div class="part2">
+                <div><a href="#">技术成果</a></div>
+                <div><a href="#">发布成果</a></div>
+                <div><a href="#">技术需求</a></div>
+                <div><a href="#">发布需求</a></div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service2.png" height="40px"><br>技术交易服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">竞价大厅</a></div>
+                <div><a href="#">我要竞价</a></div>
+                <div><a href="#" target="_blank">科技商城</a></div>
+                <div><a href="#">我要入驻</a></div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service4.png" height="40px"><br>科技企业服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">企业服务</a></div>
+                <div><a href="#">我要服务</a></div>
+                <div><a href="#">服务机构</a></div>
+                <div><a href="#">机构入驻</a></div>
+            </div>
+        </div>
+
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service1.png" height="40px"><br>研发合作服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">专家咨询</a></div>
+                <div><a href="#" target="_blank">我要入驻</a></div>
+                <div><a href="#" target="_blank">技术评估</a></div>
+                <div>
+                    <a href="#">我要评估</a>
+                </div>
+            </div>
+        </div>
+        <div class="dd m-l-5">
+            <div class="part1">
+                <img src="images/icons/service3.png" height="40px"><br>高校院所服务
+            </div>
+            <div class="part2">
+                <div><a href="#" target="_blank">成果公示</a></div>
+                <div><a href="#">我要公示</a></div>
+                <div><a href="#">高校院所</a></div>
+                <div><a href="#">我要入驻</a></div>
+            </div>
+        </div>
     </div>
-    <div class="n_site_f">
-        <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
-            <li class="n_site_f_li1"
-                style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
+    <!-- }网站板块接口 -->
+
+    <div class="content3">
+        <!--  专利技术{  -->
+        <div class="title left">
+            <ul class="tt technology">
+                <li><h2>太阳能技术成果与专利</h2></li>
+                <li class="link"><a href="solartech.php" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="cc m-t-10">
                 <?php
                 include_once("sql/solarTechList.php");
-                for ($i=0; $i<4; $i++) {
+                for ($i = 0; $i < 10; $i++) {
                     $res = $result->fetch(PDO::FETCH_OBJ);
                     ?>
-                    <div class="card">
-                        <p class="hur1"><a href="solartech_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
-                                           title="<?=$res->title;?>"><?=$res->title;?></a></p>
-                        <p class="hur2">企业：<?=$res->entreprise;?></p>
-                        <p class="hur3">地点：<?=$res->location;?></p>
-                        <p class="hur4">技术简介：<?=mb_substr($res->description, 0, 37, "utf-8");?>...</p>
-                    </div>
-                <?php } ?>
-            </li>
-        </ul>
-    </div>
-    <!--  }专利技术  -->
+                    <li>
+                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                    href="solartech_detailpage.php?id=<?= $res->id; ?>"
+                                    target="_blank"><?= $res->title; ?></a></div>
 
-    <!--  技术需求{  -->
-    <div class="n_site_h2 n_site_h2c"><a href="demands.php" target="_blank">更多&gt;</a>
-        <h2>技术需求</h2>
-    </div>
-    <div class="n_site_f">
-        <ul class="n_site_f_ul" style="position: relative; width: 1180px; height: 166px;">
-            <li class="n_site_f_li1"
-                style="position: absolute; width: 1180px; left: 0px; top: 0px; display: list-item;">
-                <?php
-                include_once("sql/demandList.php");
-                for ($i=0; $i<4; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <div class="card">
-                    <p class="hur1"><a href="demands_detailpage.php?id=<?=$res->id;?>" target="_blank" class="c333"
-                                       title="<?=$res->title;?>">太阳能高效热利用技术</a></p>
-                    <p class="hur2">需求方：<?=$res->entreprise;?></p>
-                    <p class="hur4">需求简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>...</p>
-                </div>
-                <?php } ?>
-            </li>
-        </ul>
-    </div>
-    <!--  }技术需求  -->
-
-    <div class="n_site_g">
-        <!--  技术专家{  -->
-        <div class="n_site_h2 n_site_h2b"><a href="specialists.php" target="_blank">更多&gt;</a>
-            <h2>技术专家</h2>
-        </div>
-        <div class="n_site_gla">
-            <ul>
-                <?php
-                include_once("sql/specialists.php");
-                for ($i=0; $i<5; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
-                <li><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" class="hur1" rel="nofollow"
-                       title="<?=$res->name;?>"> <img src="images/<?=$res->photo;?>" alt="<?=$res->name;?>"
-                                        onerror="this.src = <?=$res->photo;?>">
-                    </a>
-                    <div class="hur2">
-                        <p class="hur2a"><a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" title="<?=$res->name;?>">
-                                <?=$res->name;?> </a></p>
-                        <p class="hur2b">从事领域：<?=$res->domain;?></p>
-                    </div>
-                </li>
+                        <div class="right">
+                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                        </div>
+                    </li>
                 <?php } ?>
             </ul>
+        </div>
+        <!--  }专利技术  -->
+
+        <!--  技术需求{  -->
+        <div class="title right">
+            <ul class="tt demand">
+                <li><h2>技术需求</h2></li>
+                <li class="link"><a href="demands.php" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="cc m-t-10">
+                <?php
+                include_once("sql/demandList.php");
+                for ($i = 0; $i < 10; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                    ?>
+                    <li>
+                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                    href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                    target="_blank"><?= $res->title; ?></a></div>
+
+                        <div class="right">
+                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                        </div>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <!--  }技术需求  -->
+    </div>
+
+    <div class="content3" style="margin-top: 10px; margin-bottom: 50px;">
+        <!--  技术专家{  -->
+        <div class="title left">
+            <ul class="tt specialist">
+                <li><h2>技术专家</h2></li>
+                <li class="link"><a href="specialists.php" target="_blank">更多&gt;</a></li>
+            </ul>
+            <div class="spe">
+                <ul>
+                    <?php
+                    include_once("sql/specialists.php");
+                    for ($i = 0; $i < 9; $i++) {
+                        $res = $result->fetch(PDO::FETCH_OBJ);
+                        ?>
+                        <li>
+                            <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
+                               title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>"
+                                                                alt="<?= $res->name; ?>"
+                                                                onerror="this.src = <?= $res->photo; ?>">
+                            </a>
+
+                            <div class="info">
+                                <p class="name"><a href="specialists_detailpage.php?id=<?= $res->id; ?>"
+                                                   target="_blank"
+                                                   title="<?= $res->name; ?>">
+                                        <?= $res->name; ?> </a></p>
+                                <p class="domain">从事领域：<?= $res->domain; ?></p>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
         </div>
         <!--  }技术专家  -->
 
-        <!--  企业单位{  -->
-        <div class="n_site_h2" style="background: #4cafea"><a href="#" target="_blank">更多&gt;</a>
-            <h2>企业单位</h2>
-        </div>
-        <div class="n_site_glb">
-            <ul>
-                <?php
-                include_once("sql/companyList.php");
-                for ($i=0; $i<4; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
-                ?>
+
+        <!--  科技商城{  -->
+        <div class="title right">
+            <ul class="tt mall">
+                <li><h2>科技商城</h2></li>
+                <li class="link"><a href="#" target="_blank">更多&gt;</a></li>
+            </ul>
+            <ul class="pv">
                 <li>
-                    <p class="hur1"><a href="#" target="_blank"
-                                       title="<?=$res->name;?>"><?=$res->name;?></a></p>
-                    <div class="hur2"><a href="#" target="_blank" class="hur2l"
-                                         rel="nofollow" title="<?=$res->name;?>"> <img
-                                    src="images/<?=$res->image;?>" alt="<?=$res->name;?>"
-                                    onerror="this.src = images/<?=$res->image;?>;">
+                    <div class="left">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement1.jpg">
                         </a>
-                        <p class="hur2r">简介：<?=mb_substr($res->description, 0, 50, "utf-8");?>…</p>
                     </div>
-                    <div class="hur3">
-                        <span class="hur3a" style="float: right; width: auto">联系人：<?=$res->realname;?></span>
-                    </div>
+                    <div class="legend">光伏设备</div>
                 </li>
-                <?php } ?>
+                <li>
+                    <div class="right">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement2.png">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+                <li>
+                    <div class="left">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement3.jpg">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
+                <li>
+                    <div class="right">
+                        <a href="#" target="_blank">
+                            <img src="images/pvequipement4.jpg">
+                        </a>
+                    </div>
+                    <div class="legend">光伏设备</div>
+                </li>
             </ul>
         </div>
-        <!--  }企业单位  -->
+        <!--  }科技商城  -->
     </div>
+
+    <!--  广告栏{  -->
+    <div class="wysn_ad">
+        <div id="slides3">
+            <div class="tempWrap" style="overflow:hidden; position:relative; width:1180px">
+                <ul style="width: 3540px; left: -2360px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                    <li style="float: left; width: 1180px;"><a href="#"
+                                                               target="_blank" title="">
+                            <img src="./images/main_adv/ad_1.jpg?n=4356" width="1180" height="150" alt=""></a></li>
+                    <li style="float: left; width: 1180px;"><a href="#" title=""><img
+                                    src="./images/main_adv/ad_2.png?n=4356" width="1180" height="150" alt=""></a></li>
+                    <li style="float: left; width: 1180px;"><a href="#" title=""><img
+                                    src="./images/main_adv/ad_3.jpg?n=4356" width="1180" height="150" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flip">
+            <ul>
+                <li class="">1</li>
+                <li class="">2</li>
+                <li class="on">3</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 图片滑动脚本{ -->
+    <script>
+        $(".wysn_ad").slide({
+            titCell: ".flip ul",
+            mainCell: "#slides3 ul",
+            autoPage: true,
+            effect: "left",
+            autoPlay: true
+        });
+    </script>
+    <!-- }图片滑动脚本 -->
+    <!--  }广告栏  -->
+
+
+    <div class="n_site_g">
+        <div class="n_site_gl">
+
+            <!--  企业单位{  -->
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
+                <h2>企业单位</h2>
+            </div>
+            <div class="n_site_glb">
+                <ul>
+                    <?php
+                    include_once("sql/companyList.php");
+                    for ($i = 0; $i < 3; $i++) {
+                        $res = $result->fetch(PDO::FETCH_OBJ);
+                        ?>
+                        <li>
+                            <p class="hur1">
+                                <a href="#" target="_blank" title="<?= $res->name; ?>"><?= $res->name; ?>
+                                </a>
+                            </p>
+                            <div class="hur2">
+
+                                <a href="#" target="_blank" class="hur2l"
+                                   rel="nofollow" title="<?= $res->name; ?>"> <img
+                                            src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
+                                            onerror="this.src = images/<?= $res->image; ?>;">
+                                </a>
+                                <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                            </div>
+
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+            <!--  }企业单位  -->
+
+            <!--  研发单位{  -->
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
+                <h2>研发单位</h2>
+            </div>
+            <div class="n_site_glc">
+                <ul>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西大学"> <img src="./images/GXU.png" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西大学">广西大学</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西民族大学"> <img src="./images/GXUN.png" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西民族大学">广西民族大学</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="桂林电子科技大学"> <img src="./images/GUET.jpg" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="桂林电子科技大学">桂林电子科技大学</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                        <a href="#" target="_self" class="hur1"
+                           title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
+                        </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西财经学院">广西财经学院</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hur2">
+                            <a href="#" target="_self" class="hur1"
+                               title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
+                            </a>
+                            <p><a href="#" target="_blank"
+                                  title="广西财经学院">广西财经学院</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--  }研发单位  -->
+
+        </div>
+
+
+        <!--  政策法规{  -->
+        <div class="n_site_gra">
+            <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
+            <ul>
+                <li>
+                    <a href="#" target="_blank" title="攀钢致力突破钛产业高端技术封锁" style="">
+                        攀钢致力突破钛产业高端技术封锁
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="提高钛合金耐蚀、耐磨性的表面处理方法" style="">
+                        提高钛合金耐蚀、耐磨性的表面处理方法
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="攀钢与宝钛集团深化钛领域交流合作" style="">
+                        攀钢与宝钛集团深化钛领域交流合作
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="改善钛板表面质量及性能的的各个步骤" style="">
+                        改善钛板表面质量及性能的的各个步骤
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="中国第一卷TC4钛合金热轧带卷在中铝沈加轧制成功" style="">
+                        中国第一卷TC4钛合金热轧带卷在中铝沈…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="钛合金精密热成形技术在航空航天的应用进展" style="">
+                        钛合金精密热成形技术在航空航天的应用…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
+                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
+                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--  }政策法规  -->
+    </div>
+
+    <!--  合作单位{  -->
+    <div class="n_site_h">
+        <div class="n_site_h1 n_site_h2b">
+            <a href="#" target="_blank" class="c333">更多></a>
+            <h2>合作机构</h2>
+        </div>
+        <div class="n_site_hb">
+            <a href="#" target="_blank" class="application"></a>
+            <ul>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="四川九鼎智远知识产权运营有限公司">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工...</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西科学院</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/kxylogo.jpg"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--  }合作单位  -->
+
 
     <!--  友情链接{  -->
     <div class="mod">

@@ -311,6 +311,7 @@ a.c333:hover {
     margin: 0 auto;
     padding: 0;
     height: inherit;
+    /*margin-top: 5px;*/
 }
 
 .wysh1 {
@@ -6982,7 +6983,7 @@ a:hover {
 }
 
 .wysn_ad {
-    width: 1200px;
+    width: 1180px;
     height: 120px;
     overflow: hidden;
     position: relative;

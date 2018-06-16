@@ -36,9 +36,6 @@ body {
     clear: both
 }
 
-* html .container {
-    /*height: 1%*/
-}
 
 .clear {
     display: block;
@@ -188,7 +185,7 @@ em, i {
 
 .main {
     width: 1180px;
-    height: auto;
+    /*height: auto;*/
     min-height: 100%;
     margin: 0 auto;
     font-size: 12px;
@@ -521,7 +518,7 @@ a.c333:hover {
     left: 0;
     top: 35px;
     width: 215px;
-    -moz-border-radius: 5px
+    border-radius: 5px
 }
 
 .Praise .z_box i {
@@ -545,7 +542,7 @@ a.c333:hover {
     width: 30px;
     height: 30px;
     margin: 5px 2px 0 2px;
-    -moz-border-radius: 50px
+    border-radius: 50px
 }
 
 .Praise .z_box .z_01 {
@@ -585,7 +582,7 @@ a.c333:hover {
     background: #fff;
     z-index: 9999;
     border: 1px solid #becddb;
-    -moz-border-radius: 5px
+    border-radius: 5px
 }
 
 .collect i {
@@ -604,7 +601,7 @@ a.c333:hover {
     text-align: center;
     text-decoration: none;
     padding: 0 15px;
-    -moz-border-radius: 3px
+    border-radius: 3px
 }
 
 .gz1:hover {
@@ -630,7 +627,7 @@ a.c333:hover {
     text-align: center;
     /*background: url(http://image.1633.com/images/common/sprites.png) #199edf no-repeat 72px -1392px;*/
     color: #fff;
-    -moz-border-radius: 3px;
+    border-radius: 3px;
     cursor: pointer;
     width: 75px;
     padding-right: 10px
@@ -5186,7 +5183,7 @@ a.c333:hover {
     top: -50px;
     z-index: 10;
     color: #2d64b3;
-    -moz-border-radius: 5px
+    border-radius: 5px
 }
 
 .xb_gab .fw_ts2 i {
@@ -10346,7 +10343,7 @@ a.c333:hover {
     background: #fff;
     z-index: 8888;
     border: 1px solid #becddb;
-    -moz-border-radius: 5px;
+    border-radius: 5px;
     position: fixed;
     top: 10%;
     _position: absolute;
@@ -10554,7 +10551,7 @@ a.c333:hover {
     background: #e65c17;
     padding: 0 20px;
     color: #fff;
-    -moz-border-radius: 3px;
+    border-radius: 3px;
     border: 0
 }
 
@@ -10565,7 +10562,7 @@ a.c333:hover {
     line-height: 26px;
     padding: 0 20px;
     border: 1px solid #ccc;
-    -moz-border-radius: 3px
+    border-radius: 3px
 }
 
 .btn_3 {
@@ -10576,7 +10573,7 @@ a.c333:hover {
     background: #199edf;
     padding: 0 20px;
     color: #fff;
-    -moz-border-radius: 3px;
+    border-radius: 3px;
     border: 0
 }
 

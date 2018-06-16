@@ -91,9 +91,9 @@ body {
     visibility: hidden;
 }
 
-* html .clearfix {
-    height: 1%;
-}
+/** html .clearfix {*/
+    /*height: 1%;*/
+/*}*/
 
 /*Btn Style*/
 .btn {
