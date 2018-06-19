@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="./css/base.css">
+<link rel="stylesheet" type="text/css" href="./css/index.css">
+<link rel="stylesheet" type="text/css" href="./css/global.css">
 <div id="footer" class="bottomwrapper">
     <div class="contact">
         <div class="contact_info">
@@ -13,7 +16,7 @@
                 <dt>邮箱</dt>
                 <dd><a href="mailto:iap@gxas.cn">iap@gxas.cn</a></dd>
                 <dt>网址</dt>
-                <dd><a href="http://www.gxas.cn">http://www.gxas.cn</a></dd>
+                <dd><a href="http://www.gxas.cn/Gxas/unit.aspx?id=16">http://www.gxas.cn/Gxas/unit.aspx?id=16</a></dd>
             </dl>
         </div>
         <div class="follow">
@@ -30,11 +33,11 @@
     </div>
     <div class="copyright">
         <ul class="container">
-            <li class="fl">Copyright © 2018 中国-东盟太阳能技术转移中心，All Rights Reserved</li>
+            <li class="fl">Copyright © 2018 广西科学院-应用物理研究所，All Rights Reserved</li>
             <li class="fl" style="margin-left:20px"></li>
             <li class="fr"><a target="_blank"
                               href="#"><img
-                            src="./中国-东盟技术转移中心CATTC官方网站_files/20161226175731482.png" style="margin:0px 5px 0 0">桂公网安备 号</a>
+                            src="./images/police_logo.png" style="margin:0px 5px 0 0">桂公网安备 号</a>
                 | <a href="http://www.miitbeian.gov.cn/" target="_blank">桂ICP备18005539号</a></li>
         </ul>
     </div>

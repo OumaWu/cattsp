@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php require_once("sql/scrolling-title.php"); ?>
-<link rel="stylesheet" href="中国浙江网上技术市场_files/news.css?v=<?=rand(1,10);?>">
-<script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
-<script type="text/javascript" src="中国浙江网上技术市场_files/jquery.SuperSlide.2.1.1.js.下载"></script>
+<link rel="stylesheet" href="./css/news.css?v=<?=rand(1,10);?>">
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./js/jquery.SuperSlide.2.1.1.js"></script>
 
 <!-- 新闻标题 -->
 <div class="wysn_news fr">

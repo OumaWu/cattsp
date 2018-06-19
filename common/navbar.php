@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/jquery-1.7.min.js.下载"></script>
+<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
 <div class="nav-wrap clearfix">
     <div class="w1220">
         <ul id="nav" class="nav clearfix">

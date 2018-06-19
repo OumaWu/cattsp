@@ -8,34 +8,26 @@
     <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
 
-    <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=234">
-    <!-- }导入新闻展示模块css文件 -->
-
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?= rand(1, 10); ?>">
     <!-- }导入版头css文件 -->
 
-    <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css?v=<?= rand(1, 10); ?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/base.css?v=<?= rand(1, 10); ?>">
-    <link rel="stylesheet" type="text/css" href="css/index.css?v=<?= rand(1, 10); ?>">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css?v=<?= rand(1, 10); ?>">
-<!--    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css?v=--><?//= rand(1, 10); ?><!--">-->
-    <!-- }导入中国-东盟技术转移中心css和js文件 -->
+    <!-- 导入新闻展示模块css{ -->
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css">
+    <!-- }导入新闻展示模块css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css?v=<?= rand(1, 10); ?>"
+    <!-- 导入其他模块css文件{ -->
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=<?= rand(1, 10); ?>"
           id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css?v=<?= rand(1, 10); ?>"
+    <link rel="stylesheet" type="text/css" href="./css/home.css"
           id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <link href="css/wy.css" rel="stylesheet" type="text/css">
+    <!-- }导入其他模块css文件 -->
 
-    <link href="css/wy.css?v=<?= rand(1, 10); ?>" rel="stylesheet" type="text/css">
-
-    <script src="中国浙江网上技术市场_files/jquery-1.8.3.min.js.下载"></script>
+    <!-- 导入js文件{ -->
+    <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <!-- }导入js文件 -->
 
 </head>
 <body>
@@ -445,43 +437,58 @@
             <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
             <ul>
                 <li>
-                    <a href="#" target="_blank" title="攀钢致力突破钛产业高端技术封锁" style="">
-                        攀钢致力突破钛产业高端技术封锁
+                    <a href="#" target="_blank" title="" style="">
+                        广西象州县光伏扶贫项目实施方案有关意见 建设分布式光伏3000千瓦 帮扶4883户
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="提高钛合金耐蚀、耐磨性的表面处理方法" style="">
-                        提高钛合金耐蚀、耐磨性的表面处理方法
+                    <a href="#" target="_blank" title="" style="">
+                        贵州组织申报光伏发电项目“三年滚动计划”
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="攀钢与宝钛集团深化钛领域交流合作" style="">
-                        攀钢与宝钛集团深化钛领域交流合作
+                    <a href="#" target="_blank" title="" style="">
+                        青海省开展省内光伏外送陕西挂牌交易（附光伏项目名单）
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="改善钛板表面质量及性能的的各个步骤" style="">
-                        改善钛板表面质量及性能的的各个步骤
+                    <a href="#" target="_blank" title="" style="">
+                        安徽合肥开展2018第一批光伏产品推广发布申报工作
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="中国第一卷TC4钛合金热轧带卷在中铝沈加轧制成功" style="">
-                        中国第一卷TC4钛合金热轧带卷在中铝沈…
+                    <a href="#" target="_blank" title="" style="">
+                        严格规范光伏用地！宁夏发布关于规范光伏发电产业发展有关事项的通知
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="钛合金精密热成形技术在航空航天的应用进展" style="">
-                        钛合金精密热成形技术在航空航天的应用…
+                    <a href="#" target="_blank" title="" style="">
+                        详看领跑者用地政策——2018年2月份光伏政策大汇总
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
-                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    <a href="#" target="_blank" title="" style="">
+                        湖北开展光伏发电专项监管工作
                     </a>
                 </li>
                 <li>
-                    <a href="#" target="_blank" title="宝钛集团钛合金石林峡钛合金飞碟玻璃观景台震撼落成" style="">
-                        宝钛集团钛合金石林峡钛合金飞碟玻璃观…
+                    <a href="#" target="_blank" title="" style="">
+                        浙江宁波光伏发电补贴资金扶持项目公示（第四批）
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="" style="">
+                        市补0.3元/度 连补5年：北京印发“阳光富民工程”实施方案（试行）(征求意见稿)
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="" style="">
+                        海南省发改革委《关于发布光伏发电项目建设风险预警的紧急通知》
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" title="" style="">
+                        江西3地 安徽16地！两省纳入国家补助目录光伏扶贫项目情况公示
                     </a>
                 </li>
             </ul>
@@ -563,52 +570,52 @@
             <span class="pa divide"></span></div>
         <ul class="f_links">
             <li><a href="http://www.most.gov.cn/index.htm" target="_blank"><img alt=""
-                                                                                src="./中国-东盟技术转移中心CATTC官方网站_files/2015060209074428.png">中华人民共和国科技部</a>
+                                                                                src="./images/relative_links/2015060209074428.png">中华人民共和国科技部</a>
             </li>
             <li><a href="http://www.most.go.th/main/th/" target="_blank"><img alt=""
-                                                                              src="./中国-东盟技术转移中心CATTC官方网站_files/2015060209351878.png">泰国科技部</a>
+                                                                              src="./images/relative_links/2015060209351878.png">泰国科技部</a>
             </li>
             <li><a href="http://www.itb-china.org/" target="_blank"><img alt=""
-                                                                         src="./中国-东盟技术转移中心CATTC官方网站_files/20161008160912784.png">泰国国际贸易商会</a>
+                                                                         src="./images/relative_links/20161008160912784.png">泰国国际贸易商会</a>
             </li>
             <li><a href="http://www.a-star.edu.sg/" target="_blank"><img alt=""
-                                                                         src="./中国-东盟技术转移中心CATTC官方网站_files/2015042416241440.png">新加坡科技研究局</a>
+                                                                         src="./images/relative_links/2015042416241440.png">新加坡科技研究局</a>
             </li>
             <li><a href="http://www.asean.org/asean/asean-secretariat" target="_blank"><img alt=""
-                                                                                            src="./中国-东盟技术转移中心CATTC官方网站_files/2015060209391443.png">东盟秘书处</a>
+                                                                                            src="./images/relative_links/2015060209391443.png">东盟秘书处</a>
             </li>
             <li><a href="http://www.mofcom.gov.cn/" target="_blank"><img alt=""
-                                                                         src="./中国-东盟技术转移中心CATTC官方网站_files/20161008160943891.jpg">中华人民共和国商务部</a>
+                                                                         src="./images/relative_links/20161008160943891.jpg">中华人民共和国商务部</a>
             </li>
             <li><a href="http://www.tysp.org/" target="_blank"><img alt=""
-                                                                    src="./中国-东盟技术转移中心CATTC官方网站_files/2015060211272176.png">杰出青年科学家来华工作计划</a>
+                                                                    src="./images/relative_links/2015060211272176.png">杰出青年科学家来华工作计划</a>
             </li>
             <li><a href="http://www.china-asean-step.com/" target="_blank"><img alt=""
-                                                                                src="./中国-东盟技术转移中心CATTC官方网站_files/2015060209263602.png">中国—东盟科技伙伴计划</a>
+                                                                                src="./images/relative_links/2015060209263602.png">中国—东盟科技伙伴计划</a>
             </li>
             <li><a href="http://www.caexpo.org/" target="_blank"><img alt=""
-                                                                      src="./中国-东盟技术转移中心CATTC官方网站_files/2015032714175691.png">中国-东盟博览会官方网站</a>
+                                                                      src="./images/relative_links/2015032714175691.png">中国-东盟博览会官方网站</a>
             </li>
             <li><a href="http://www.cime.org.cn/" target="_blank"><img alt=""
-                                                                       src="./中国-东盟技术转移中心CATTC官方网站_files/20151231115845323.png">CIME国际海洋科技展</a>
+                                                                       src="./images/relative_links/20151231115845323.png">CIME国际海洋科技展</a>
             </li>
             <li><a href="http://www.gei.com.cn/" target="_blank"><img alt=""
-                                                                      src="./中国-东盟技术转移中心CATTC官方网站_files/20161008161224384.png">长城战略咨询</a>
+                                                                      src="./images/relative_links/20161008161224384.png">长城战略咨询</a>
             </li>
             <li><a href="http://www.imindsoft.com/zh/Default.aspx" target="_blank"><img alt=""
-                                                                                        src="./中国-东盟技术转移中心CATTC官方网站_files/20161008164224143.png">一铭软件</a>
+                                                                                        src="./images/relative_links/20161008164224143.png">一铭软件</a>
             </li>
             <li><a href="http://www.caexpo.com/" target="_blank"><img alt=""
-                                                                      src="./中国-东盟技术转移中心CATTC官方网站_files/20161008161628774.png">南博网</a>
+                                                                      src="./images/relative_links/20161008161628774.png">南博网</a>
             </li>
             <li><a href="http://www.cgfh.com.cn/" target="_blank"><img alt=""
-                                                                       src="./中国-东盟技术转移中心CATTC官方网站_files/2015042417313713.png">国家科技成果转化（南宁）综合信息服务平台</a>
+                                                                       src="./images/relative_links/2015042417313713.png">国家科技成果转化（南宁）综合信息服务平台</a>
             </li>
             <li><a href="http://www.gxst.gov.cn/" target="_blank"><img alt=""
-                                                                       src="./中国-东盟技术转移中心CATTC官方网站_files/2015032615335993.png">广西科技信息网</a>
+                                                                       src="./images/relative_links/2015032615335993.png">广西科技信息网</a>
             </li>
             <li><a href="http://www.cattc.org.cn/www.gxpc.org.cn" target="_blank"><img alt=""
-                                                                                       src="./中国-东盟技术转移中心CATTC官方网站_files/2015042417292040.png">广西科技情报研究所</a>
+                                                                                       src="./images/relative_links/2015042417292040.png">广西科技情报研究所</a>
             </li>
         </ul>
     </div>

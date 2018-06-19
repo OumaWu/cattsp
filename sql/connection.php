@@ -15,7 +15,7 @@ if(isset($_SESSION['expiretime'])) {
 /* read db info from config file into an array */
 $path =  dirname(__DIR__);
 $db = parse_ini_file($path . DIRECTORY_SEPARATOR . "dbconfig.ini", true);
-$server = "Aliyun";
+$server = "local";
 
 /* assign array values to variables */
 $type = $db[$server]["type"];
