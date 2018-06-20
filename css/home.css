@@ -1058,16 +1058,16 @@ html, body {
 }
 
 .n_site_glb ul li .hur2l img {
-    width: 90px;
-    height: 90px
+    width: 245px;
+    height: 40px
 }
 
 .n_site_glb ul li .hur2r {
-    width: 146px;
-    height: 100px;
+    width: 275px;
+    /*height: 100px;*/
     line-height: 20px;
     overflow: hidden;
-    float: right
+    /*float: right*/
 }
 
 .n_site_glb ul li .hur3 {
@@ -1176,10 +1176,12 @@ html, body {
     height: 30px;
     line-height: 30px;
     overflow: hidden;
-    padding: 0 12px 0 22px
+    padding: 0 15px;
+    text-overflow: ellipsis;
 }
 
 .n_site_gra ul li a {
+    text-overflow: ellipsis;
     font-family: "Microsoft YaHei";
     font-size: 14px;
     color: #333

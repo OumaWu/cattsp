@@ -195,13 +195,15 @@ header, section, footer, aside, nav, main, article, figure {
 
 
 .spe {
-	width: auto;
-	height: 270px;
+	width: 580px;
+	height: 300px;
+    overflow: hidden;
 	margin-bottom: 20px;
 }
 
 .spe ul {
-	height: auto;
+	height: inherit;
+    overflow: inherit;
 	z-index: 999;
 	list-style: none;
 }
@@ -209,10 +211,12 @@ header, section, footer, aside, nav, main, article, figure {
 .spe ul li{
 	float: left;
 	display: inline;
-	width: auto;
-	line-height: 80px;
-	margin-right: 5px;
-	margin-top: 10px;
+	width: 290px;
+    height: 100px;
+    padding: 5px 10px;
+	/*line-height: 80px;*/
+	/*margin-right: 5px;*/
+	/*margin-top: 10px;*/
 }
 
 .spe ul li.photo {
@@ -221,15 +225,15 @@ header, section, footer, aside, nav, main, article, figure {
 }
 
 .spe ul li img{
-	width: 75px;
-	height: 75px;
+	width: 85px;
+	height: 85px;
 	border-radius: 40px;
 }
 
 .info {
 	float: right;
-	width: 113px;
-	margin-top: 5px
+	width: 170px;
+	margin-top: 10px
 }
 
 .info .name {
@@ -241,14 +245,20 @@ header, section, footer, aside, nav, main, article, figure {
 
 .info .domain {
 	line-height: 24px;
-	height: 48px;
+	/*height: 24px;*/
 	overflow: hidden;
+}
+
+.info .institute {
+    line-height: 24px;
+    /*height: 24px;*/
+    overflow: hidden;
 }
 
 .pv {
     margin-bottom: 20px;
     width: inherit;
-    height: 270px;
+    height: 300px;
     z-index: 999;
     list-style: none;
 }
@@ -256,8 +266,9 @@ header, section, footer, aside, nav, main, article, figure {
 .pv li{
     float: left;
     display: inline;
-    width: auto;
-    height: 145px;
+    width: 290px;
+    height: 150px;
+    padding-top: 10px;
 }
 
 .pv img {
