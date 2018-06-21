@@ -11,6 +11,9 @@
             <li class="nLi" id="demands">
                 <h3><a href="demands.php" target="_blank">企业需求</a></h3>
             </li>
+            <li class="nLi" id="entreprise">
+                <h3><a href="#" target="_blank">企业信息</a></h3>
+            </li>
             <li class="nLi" id="specialists">
                 <h3><a href="specialists.php" target="_blank">专家咨询</a></h3>
             </li>
@@ -43,8 +46,8 @@
         case "demands.php" :
             changeClass("demands");
             break;
-        case "solartech.php" :
-            changeClass("solartech");
+        case "entreprise.php" :
+            changeClass("entreprise");
             break;
         case "specialists.php" :
             changeClass("specialists");
