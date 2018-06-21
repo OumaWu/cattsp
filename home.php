@@ -9,7 +9,7 @@
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入版头css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/header.css?v=<?= rand(1, 10); ?>">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
 
     <!-- 导入新闻展示模块css{ -->
@@ -17,17 +17,12 @@
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他模块css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css?v=<?= rand(1, 10); ?>"
+    <link rel="stylesheet" type="text/css" href="./css/common.css"
           id="theme1">
-    <link rel="stylesheet" type="text/css" href="./css/home.css"
+    <link rel="stylesheet" type="text/css" href="./css/home.css?v=2"
           id="theme2">
-    <link href="css/wy.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/wy.css?v">
     <!-- }导入其他模块css文件 -->
-
-    <!-- 导入js文件{ -->
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
-    <!-- }导入js文件 -->
 
 </head>
 <body>
@@ -47,6 +42,11 @@
     <!--  }导航栏  -->
 </div>
 <!--  }版头  -->
+
+<!-- 导入js文件{ -->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<!-- }导入js文件 -->
 
 <!--  首页信息板块{  -->
 <div class="main">
@@ -234,7 +234,7 @@
                             <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
                                title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>"
                                                                 alt="<?= $res->name; ?>"
-                                                                onerror="this.src = <?= $res->photo; ?>">
+                                                                onerror="this.src = 'images/profile-default-male.png'">
                             </a>
 
                             <div class="info">
@@ -434,7 +434,7 @@
 
         <!--  政策法规{  -->
         <div class="n_site_gra">
-            <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
+            <h2><a href="#" target="_blank">更多&gt;</a>相关政策法规</h2>
             <ul>
                 <li>
                     <a href="#" target="_blank" title="" style="">
@@ -509,19 +509,6 @@
                     <p class="hur1">
                         <a href="#" target="_blank" title="">广西科学院</a>
                     </p>
-                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="四川九鼎智远知识产权运营有限公司">
-
-                        <img src="images/kxylogo.jpg"
-                             alt=""
-                             onerror="this.src = 'images/entreprise-default.png'">
-
-                    </a>
-                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
-                </li>
-                <li>
-                    <p class="hur1">
-                        <a href="#" target="_blank" title="">广西科学院</a>
-                    </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
                         <img src="images/kxylogo.jpg"
@@ -529,33 +516,46 @@
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工...</p>
+                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工625人，科研人员为494人，占职工总数的79%。其中高级职称人员176...</p>
                 </li>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">广西科学院</a>
+                        <a href="#" target="_blank" title="">广西科技厅</a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
-                        <img src="images/kxylogo.jpg"
+                        <img src="images/kjtlogo.png"
                              alt=""
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                    <p class="hur3">广西壮族自治区科学技术厅，根据《自治区党委、自治区人民政府关于自治区人民政府机构设置的通知》（桂委会〔2009〕235号），设立自治区科学技术厅，为自治区人民政府组成部门。</p>
                 </li>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">广西科学院</a>
+                        <a href="#" target="_blank" title="">南宁迅尔迪电子科技有限公司</a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
-                        <img src="images/kxylogo.jpg"
+                        <img src="images/xunerdi.png"
                              alt=""
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工</p>
+                    <p class="hur3">广西科学院应用物理研究所的全资子公司。公司科技应用研发推广团队实力强大，主要从事新能源、电子、自动化、光电、能源工程等方向的研发与推广工作。企业经营范围包括：新材料...</p>
+                </li>
+                <li>
+                    <p class="hur1">
+                        <a href="#" target="_blank" title="">广西大美能投资有限公司</a>
+                    </p>
+                    <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
+
+                        <img src="images/dameineng.png"
+                             alt=""
+                             onerror="this.src = 'images/entreprise-default.png'">
+
+                    </a>
+                    <p class="hur3">广西大美能源投资有限公司是一家集太阳能产业研发、生产、销售、服务、集贸易、集热工程、新能源投资开发利用一体的高新技术企业，已经入选为中国太阳能热利用产业协会理事单位...</p>
                 </li>
             </ul>
         </div>
