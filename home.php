@@ -377,9 +377,9 @@
                 <ul>
                     <li>
                         <div class="hur2">
-                        <a href="#" target="_self" class="hur1"
-                           title="广西大学"> <img src="./images/GXU.png" alt="">
-                        </a>
+                            <a href="#" target="_self" class="hur1"
+                               title="广西大学"> <img src="./images/GXU.png" alt="">
+                            </a>
                             <p><a href="#" target="_blank"
                                   title="广西大学">广西大学</a>
                             </p>
@@ -387,9 +387,9 @@
                     </li>
                     <li>
                         <div class="hur2">
-                        <a href="#" target="_self" class="hur1"
-                           title="广西民族大学"> <img src="./images/GXUN.png" alt="">
-                        </a>
+                            <a href="#" target="_self" class="hur1"
+                               title="广西民族大学"> <img src="./images/GXUN.png" alt="">
+                            </a>
                             <p><a href="#" target="_blank"
                                   title="广西民族大学">广西民族大学</a>
                             </p>
@@ -397,9 +397,9 @@
                     </li>
                     <li>
                         <div class="hur2">
-                        <a href="#" target="_self" class="hur1"
-                           title="桂林电子科技大学"> <img src="./images/GUET.jpg" alt="">
-                        </a>
+                            <a href="#" target="_self" class="hur1"
+                               title="桂林电子科技大学"> <img src="./images/GUET.jpg" alt="">
+                            </a>
                             <p><a href="#" target="_blank"
                                   title="桂林电子科技大学">桂林电子科技大学</a>
                             </p>
@@ -407,21 +407,21 @@
                     </li>
                     <li>
                         <div class="hur2">
-                        <a href="#" target="_self" class="hur1"
-                           title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
-                        </a>
+                            <a href="#" target="_self" class="hur1"
+                               title="桂林理工大学"> <img src="./images/GUT.jpg" alt="">
+                            </a>
                             <p><a href="#" target="_blank"
-                                  title="广西财经学院">广西财经学院</a>
+                                  title="桂林理工大学">桂林理工大学</a>
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="广西财经学院"> <img src="./images/GXUFE.jpg" alt="">
+                               title="广西科技大学"> <img src="./images/GXUST.jpg" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="广西财经学院">广西财经学院</a>
+                                  title="广西科技大学">广西科技大学</a>
                             </p>
                         </div>
                     </li>

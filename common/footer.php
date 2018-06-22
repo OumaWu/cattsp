@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="./css/base.css">
 <link rel="stylesheet" type="text/css" href="./css/index.css">
-<link rel="stylesheet" type="text/css" href="./css/global.css">
+<link rel="stylesheet" type="text/css" href="./css/global.css?v">
 <div id="footer" class="bottomwrapper">
     <div class="contact">
         <div class="contact_info">

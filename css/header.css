@@ -673,7 +673,8 @@ textarea {
 }
 
 .nav-wrap {
-    background: #005bac
+    background: #005bac;
+    height: 40px;
 }
 
 .nav {
