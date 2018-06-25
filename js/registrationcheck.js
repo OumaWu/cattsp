@@ -1,18 +1,24 @@
 // JavaScript Document
+var loginCheck = null;
+
 function checkLogin(login) {
     if (login == "") {
         alert("用户名不能为空！");
         return false;
     }
 
-    else if (login.length < 6) {
+    else if (login.length < 3) {
         alert("用户名长度过短！");
         return false;
     }
+    else  {
+        checkDuplicate(login);
+        if (loginCheck == false) {
+            alert("用户名已被使用！");
+        }
 
-    else checkDuplicate(login);
-
-    return true;
+        return loginCheck;
+    }
 }
 
 function resetDiv() {
@@ -40,19 +46,19 @@ function checkDuplicate(login) {
 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            if (xmlhttp.responseText == 0) {
-                return true;
+            if (xmlhttp.responseText == 1) {
+                loginCheck = true;
             }
             else {
-                alert("此用户名已被使用！");
-                return false;
+                loginCheck = false;
             }
         }
     }
 }
 
-function checkPsw(psw) {
-    if (psw != document.getElementById("password").value) {
+function checkPsw(psw, pswc) {
+
+    if (psw != pswc) {
         alert("两次输入的密码不一致！");
         return false;
     }
@@ -60,19 +66,21 @@ function checkPsw(psw) {
 }
 
 function checkAll() {
-    var form = document.getElementById("gform");
-    /*if (!checkLogin(form.accountname)) {
-        alert("请仔细填写注册信息！");
-        return false;
-    }
-    
-    else */
-    /*if(!checkPsw(form.pswconfirm)) {
-        alert("请仔细填写注册信息！");
-        return false;
-    }
-    else*/
-    form.submit();
-} 
 
+    var form = document.getElementById("gform");
+    var psw = document.getElementById("password").value;
+    var pswc = document.getElementById("pswconfirm").value;
+    var login = document.getElementById("accountname").value;
+
+    // alert(checkLogin(login));
+    // alert(checkPsw(psw, pswc));
+
+    if (!checkLogin(login) || !checkPsw(psw, pswc)) {
+        alert("请仔细填写注册信息！");
+    }
+
+    else {
+        form.submit();
+    }
+}
 

@@ -10,11 +10,16 @@ if (isset($_GET['login'])) {
         $result = $pdo->prepare($sql);
         $result->execute();
         $rows = $result->rowCount();
-        echo $rows;
+        if ($rows == 0) {
+            echo "1";
+        }
+        else {
+            echo "0";
+        }
 
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
     }
 } else echo "没有接收到用户名！！！";
-return false;
+
 ?>

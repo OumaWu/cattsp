@@ -1485,6 +1485,7 @@ a.c333:hover {
 }
 
 .wys_regbox .regbtn .wys_bluebtn {
+    border: none;
     width: 320px;
     height: 40px;
     line-height: 40px;
