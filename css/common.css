@@ -1,4 +1,8 @@
-﻿ins {
+﻿*{
+    box-sizing: border-box;
+}
+
+ins {
     z-index: 98 !important
 }
 
@@ -4907,7 +4911,7 @@ a.c333:hover {
     padding: 15px;
     margin-bottom: 15px;
     float: right;
-    height: 347px;
+    height: 367px;
     width: 725px;
     border: #ccc 1px solid;
     overflow: hidden;
@@ -4959,7 +4963,7 @@ a.c333:hover {
 
 #preview {
     float: left;
-    width: 377px
+    width: 400px
 }
 
 #spec-n5 {

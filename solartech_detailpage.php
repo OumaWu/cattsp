@@ -1,55 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
-    <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css">
-    <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
 
-    <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
-    <!-- }导入中国-东盟技术转移中心css和js文件 -->
+    <!-- 导入新闻展示模块css{ -->
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css">
+    <!-- }导入新闻展示模块css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/wap.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/1633-domain.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/yun-plugins.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/login.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/posconfig.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery.qrcode.min.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/dialog1633.js"></script>
-    <!--jjky/common/header.htm-->
-    <script src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery.superslide.2.1.1.js" type="text/javascript"></script>
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- 导入其他css和js文件{ -->
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/solartech.css">
+    <!-- }导入其他css和js文件 -->
+
+    <!-- 导入bootstrap -->
+<!--    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-combined.min.css">
 
 </head>
 <body>
-<div class="ie7_ts"><em onclick="$(&#39;.ie7_ts&#39;).hide();">X</em>为了获得更好的用户体验，请使用火狐、谷歌、360浏览器极速模式或IE8及以上版本的浏览器</div>
-<script type="text/javascript">
-    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
-        $('.ie7_ts').show();
-    }
-    else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {
-        $('.ie7_ts').show();
-    }
-</script>
-
 <!--  版头{  -->
 <div class="header clearfix" id="header">
 
@@ -77,33 +55,69 @@
     $res = $result->fetch(PDO::FETCH_OBJ);
     ?>
     <div class="xb_ga clearfix">
+
         <div id="preview">
-            <div class="jqzoom" id="spec-n1"><img alt="专利申请书图片"
-                                                  src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/20170315192430117523.jpg-800"
-                                                  jqimg="http://upload.1633.com/upload/users/8594931/tec/20170315192430117523.jpg-800"
-                                                  onerror="this.src=&#39;http://image.1633.com/images/common/default.jpg_180x120.jpg&#39;">
-            </div>
-            <div id="spec-n5">
-                <div id="spec-left"><img src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/left.gif"></div>
-                <div id="spec-list">
-                    <ul style="width: 120px; overflow: hidden;">
-                        <li class="on"><img alt="专利申请书图片"
-                                            src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/20170315192414102846.jpg-800"
-                                            onerror="this.src=&#39;http://image.1633.com/images/common/default.jpg_180x120.jpg&#39;">
-                        </li>
-                        <li class=""><img alt="技术图纸"
-                                          src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/20170315192430117523.jpg-800"
-                                          onerror="this.src=&#39;http://image.1633.com/images/common/default.jpg_180x120.jpg&#39;">
-                        </li>
-                    </ul>
+            <div class="carousel slide" id="carousel-14768">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carousel-14768"></li>
+                    <li data-slide-to="1" data-target="#carousel-14768" class=""></li>
+                    <li data-slide-to="2" data-target="#carousel-14768" class=""></li>
+                    <li data-slide-to="3" data-target="#carousel-14768" class=""></li>
+                    <li data-slide-to="4" data-target="#carousel-14768" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image1;?>"
+                                                  onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
+                                                  onmouseout="this.style.cursor='default'" onclick="showimage(this);"
+                                                  onerror="this.src = 'images/default.jpg'">
+                    </div>
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image2;?>"
+                                           onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
+                                           onmouseout="this.style.cursor='default'" onclick="showimage(this);"
+                                           onerror="this.src = 'images/default.jpg'">
+                    </div>
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image3;?>"
+                                           onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
+                                           onmouseout="this.style.cursor='default'" onclick="showimage(this);"
+                                           onerror="this.src = 'images/default.jpg'">
+                    </div>
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image4;?>"
+                                           onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
+                                           onmouseout="this.style.cursor='default'" onclick="showimage(this);"
+                                           onerror="this.src = 'images/default.jpg'">
+                    </div>
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image5;?>"
+                                           onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
+                                           onmouseout="this.style.cursor='default'" onclick="showimage(this);"
+                                           onerror="this.src = 'images/default.jpg'">
+                    </div>
                 </div>
-                <div id="spec-right"><img src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/right.gif"></div>
+                <a data-slide="prev" href="#carousel-14768" class="left carousel-control">‹</a> <a data-slide="next"
+                                                                                                   href="#carousel-14768"
+                                                                                                   class="right carousel-control">›</a>
+            </div>
+
+            <!-- 模态框（Modal） -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                ×
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="img_show">
+                            </div>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
             </div>
         </div>
-        <script src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/switch_1.js" type="text/javascript"></script>
-        <script src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/switch_2.js" type="text/javascript"></script>
-        <script src="./（技术页面）一种单手操作伸缩式杆杖的锁紧机构_四川钒钛产业技术交易平台_钒钛通_files/switch_3.js" type="text/javascript"></script>
+
     </div>
+
     <div class="xb_gb clearfix">
         <div class="xb_gaa">
             <h1 class="dx_Dla"><span>[<?php echo $res->id; ?>]</span><?php echo $res->title; ?></h1>
@@ -130,5 +144,17 @@
 <!-- }信息板块  -->
 
 <?php require_once('common/footer.php'); ?>
+
+<!-- 导入js文件 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- 图片放大脚本 -->
+<script>
+    function showimage(source) {
+        var img = $(source).attr("src");
+        $("#myModal").find("#img_show").html("<image src='" + img + "' class='carousel-inner img-responsive img-rounded' />");
+        $("#myModal").modal('show');
+    }
+</script>
 </body>
 </html>
