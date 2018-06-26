@@ -24,7 +24,7 @@ if (isset($_POST["accountname"]) && isset($_POST["password"])) {
                 session_start();
                 $_SESSION['user'] = $res->accountname;
                 $_SESSION['userid'] = $res->id;
-                $_SESSION['expiretime'] = time() + 600; // 刷新时间戳，10分钟
+                $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
                 echo "<script>alert('登录成功！')</script>";
                 echo "<meta http-equiv=\"refresh\" content=\"0;url=$url_home\">";
             }

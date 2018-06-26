@@ -10,7 +10,7 @@ if(isset($_SESSION['expiretime'])) {
         header("Location: sql/logout.php?timeout");
         exit(0);
     } else {
-        $_SESSION['expiretime'] = time() + 600; // 刷新时间戳，10分钟
+        $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
     }
 }
 ?>
