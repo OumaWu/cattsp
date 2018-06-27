@@ -80,7 +80,10 @@
                 </div>
                 <div class="content">
                     <div style="height: 10px;"></div>
-                    <form id="tech" action="sql/insertTech.php?userid=<?php echo $_SESSION['userid']; ?>" method="post">
+                    <!--                    <form id="tech" action="sql/insertTech.php?userid=-->
+                    <?php //echo $_SESSION['userid']; ?><!--" method="post" enctype="multipart/form-data">-->
+                    <form id="tech" action="test.php" method="post"
+                          enctype="multipart/form-data">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
@@ -97,11 +100,13 @@
                                                   placeholder="填写技术详细介绍"></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
-                                <td><input type="file" id="image1"/>
-                                    <input type="file" id="image2"/>
-                                    <input type="file" id="image3"/>
+                                <td><input type="file" name="img1" id="img1"/>
+                                    <input type="file" name="img2" id="img2"/>
+                                    <input type="file" name="img3" id="img3"/>
+                                    <input type="file" name="img4" id="img4"/>
+                                    <input type="file" name="img5" id="img5"/>
                                     <br/>
-                                    <label>(最多可选3张图片)</label></td>
+                                    <label>(最多可选5张图片)</label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>发布人：</th>

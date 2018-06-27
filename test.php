@@ -1,22 +1,45 @@
 <?php
-require_once('sql/connection.php');
 
-$login = "test";
-$sql = "SELECT * FROM `users` WHERE `accountname` LIKE '$login'";
+define('FILE_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . "/cattsp/user_files/");
 
-try {
-    $result = $pdo->prepare($sql);
-    $result->execute();
-    $rows = $result->fetchColumn();
-    if ($rows != 0)
-        echo "$login : 此用户名已有人使用！！！<br>";
-    else
-        echo "此用户名可以使用！！！<br>";
-    echo "login : $login<br>";
-    echo "rows : $rows<br>";
+if (!empty($_POST)) {
 
-} catch (PDOException $e) {
-    die("错误!!: " . $e->getMessage() . "<br>");
+    // Would have to sanitize and filter the $_POST array.
+    if (!empty($_FILES['img1']['name'])) {
+        echo (string) $_FILES['img1']['name'];
+//        $productArray['image1'] = (string) $_FILES['image1']['name'];
+//        $originalImage = FILE_UPLOAD_PATH . (string) $_POST['imageoriginal'];
+    } else {
+//        $productArray['image1'] = (string) $_POST['imageoriginal'];
+    }
+//    $filePath = FILE_UPLOAD_PATH . $productArray['image1'];
+//    if(file_exists($originalImage)) {
+//        unlink($originalImage);
+//    }
+//    if(file_exists($filePath)) {
+//        unlink($filePath);
+//    }
+//    if(move_uploaded_file($_FILES["image"]["tmp_name"], $filePath)) {
+//        if ($this->crudProducts->update($productArray)) {
+//            $this->view['saved'] = 1;
+//        }
+//        else {
+//            $this->view['error'] = 1;
+//        }
+//    }
+//    else {
+//        $this->view['error'] = 1;
+//    }
+//} else {
+//    $results = $this->readProducts();
+//    if (is_object($results)) {
+//        $results = [$this->hydrateArray($results)];
+//    } else {
+//        for ($i = 0; $i < count($results); $i++) {
+//            $results[$i] = $this->hydrateArray($results[$i]);
+//        }
+//    }
+//    $this->view['results'] = $results;
 }
 
 ?>
