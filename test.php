@@ -1,45 +1,39 @@
 <?php
 
-define('FILE_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . "/cattsp/user_files/");
+//定义图片上传路径
+//define('FILE_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . "/cattsp/user_files/");
+define('FILE_UPLOAD_PATH', "./user_files/solartech/testUpload/");
 
 if (!empty($_POST)) {
 
-    // Would have to sanitize and filter the $_POST array.
-    if (!empty($_FILES['img1']['name'])) {
-        echo (string) $_FILES['img1']['name'];
-//        $productArray['image1'] = (string) $_FILES['image1']['name'];
-//        $originalImage = FILE_UPLOAD_PATH . (string) $_POST['imageoriginal'];
-    } else {
-//        $productArray['image1'] = (string) $_POST['imageoriginal'];
+    // 从$_FILES数组里提取图片信息
+    $image = [
+        (string)$_FILES['img1']['name'],
+        (string)$_FILES['img2']['name'],
+        (string)$_FILES['img3']['name'],
+        (string)$_FILES['img4']['name'],
+        (string)$_FILES['img5']['name']
+    ];
+
+    // 给图片名前添加上传路径，并上传
+    foreach ($_FILES as $file) {
+        //如果文件名不为空，则加上上传路径
+        if($file['name'] != null) {
+            $file_path = FILE_UPLOAD_PATH . $file['name'];
+
+            echo $file_path . "<br>";
+
+            //如果图片不存在，则上传
+            if (!file_exists($file_path)) {
+                if (move_uploaded_file($file["tmp_name"], $file_path)) {
+                    echo "图片".$file_path."上传成功！！". "<br>";
+                }
+            }
+        }
     }
-//    $filePath = FILE_UPLOAD_PATH . $productArray['image1'];
-//    if(file_exists($originalImage)) {
-//        unlink($originalImage);
-//    }
-//    if(file_exists($filePath)) {
-//        unlink($filePath);
-//    }
-//    if(move_uploaded_file($_FILES["image"]["tmp_name"], $filePath)) {
-//        if ($this->crudProducts->update($productArray)) {
-//            $this->view['saved'] = 1;
-//        }
-//        else {
-//            $this->view['error'] = 1;
-//        }
-//    }
-//    else {
-//        $this->view['error'] = 1;
-//    }
-//} else {
-//    $results = $this->readProducts();
-//    if (is_object($results)) {
-//        $results = [$this->hydrateArray($results)];
-//    } else {
-//        for ($i = 0; $i < count($results); $i++) {
-//            $results[$i] = $this->hydrateArray($results[$i]);
-//        }
-//    }
-//    $this->view['results'] = $results;
+
+
+
 }
 
 ?>

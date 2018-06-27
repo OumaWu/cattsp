@@ -80,9 +80,7 @@
                 </div>
                 <div class="content">
                     <div style="height: 10px;"></div>
-                    <!--                    <form id="tech" action="sql/insertTech.php?userid=-->
-                    <?php //echo $_SESSION['userid']; ?><!--" method="post" enctype="multipart/form-data">-->
-                    <form id="tech" action="test.php" method="post"
+                    <form id="tech" action="sql/insertTech.php?userid=<?php echo $_SESSION['userid']; ?>" method="post"
                           enctype="multipart/form-data">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
