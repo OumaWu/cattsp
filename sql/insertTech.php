@@ -1,4 +1,5 @@
 <?php
+define('FILE_UPLOAD_PATH', "../user_files/solartech/testUpload/");
 include("connection.php");
 $url = "../mytech.php";
 $url2 = "../publishtech.php";
@@ -12,14 +13,14 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["l
     $userid = $_GET["userid"];
 
     //接收图片
-    $image1 = $_POST["img1"];
-    $image2 = $_POST["img2"];
-    $image3 = $_POST["img3"];
-    $image4 = $_POST["img4"];
-    $image5 = $_POST["img5"];
+    $image1 = (string)$_FILES['img1']['name'];
+    $image2 = (string)$_FILES['img2']['name'];
+    $image3 = (string)$_FILES['img3']['name'];
+    $image4 = (string)$_FILES['img4']['name'];
+    $image5 = (string)$_FILES['img5']['name'];
 
     $sql = "INSERT INTO `solar_technologies` (`id`, `title`, `entreprise`, `location`, `email`, `description`, `date`, `image1`, `image2`, `image3`, `image4`, `image5`, `userid`)"
-        ."VALUES (NULL, '$title', '$entreprise', '$location', '$email', '$description', now(), '$image1', $image2, $image3, $image4, $image5, '$userid')";
+        ." VALUES (NULL, '$title', '$entreprise', '$location', '$email', '$description', now(), '$image1', '$image2', '$image3', '$image4', '$image5', '$userid')";
 
     try {
         $pdo->beginTransaction();
@@ -30,14 +31,14 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["l
         } else {
             echo "<script> alert('发布太阳能技术失败！！');</script>";
             echo $pdo->errorInfo();
-            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
         }
         $pdo->commit();
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
         $pdo->rollBack();
     }
-    echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
+    echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
 } else {
     echo "<script> alert('请填必填信息！！');</script>";
     echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";

@@ -1,17 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
-    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
-    <script src="./中国浙江网上技术市场_files/hm.js.下载"></script>
-    <script src="./中国浙江网上技术市场_files/jquery-1.7.min.js.下载" type="text/javascript"></script>
-    <script src="./中国浙江网上技术市场_files/WdatePicker.js.下载" type="text/javascript"></script>
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
@@ -20,28 +19,18 @@
 
     <!-- 导入个人页面css文件{ -->
     <link rel="stylesheet" type="text/css"
-          href="./（个人信息页面）中国第一家交易链共享平台最大的技术交易平台技大大_专利技术_全部科技成果_技术交易转让_files/member.css">
+          href="./css/member.css">
     <link rel="stylesheet" type="text/css"
-          href="./（个人信息页面）中国第一家交易链共享平台最大的技术交易平台技大大_专利技术_全部科技成果_技术交易转让_files/mystyle.css">
+          href="./css/mystyle.css">
     <!-- }导入个人页面css文件 -->
 
     <!-- 导入我的需求css文件{ -->
     <link rel="stylesheet" type="text/css" href="css/mydemands.css">
     <!-- }导入我的需求css文件 -->
 
-    <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
-    <!-- }导入中国-东盟技术转移中心css和js文件 -->
-
     <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <!-- }导入钒钛通css和js文件 -->
 
 </head>
@@ -114,7 +103,7 @@
                                     <td><?php echo $res->date; ?></td>
                                     <td><?php echo $res->entreprise; ?></td>
                                     <td>审核中</td>
-                                    <td><a style="color: rgb(0, 148, 255);" href="/pub_qiu/fabu_js.aspx?id=34590">编辑</a>&nbsp;|&nbsp;<a
+                                    <td><a style="color: rgb(0, 148, 255);" href="#">编辑</a>&nbsp;|&nbsp;<a
                                                 id="rpList_ctl00_lbtnDel" style="color: rgb(0, 148, 255);"
                                                 href="sql/deleteTech.php?id=<?php echo $res->id; ?>">删 除</a></td>
                                 </tr>
