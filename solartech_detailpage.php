@@ -66,27 +66,27 @@
                     <li data-slide-to="4" data-target="#carousel-14768" class=""></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image1;?>"
+                    <div class="item active"><img class="solartech-img" alt="" src="user_files/<?=$res->userid;?>/solartech/<?=$res->id;?>/<?=$res->image1;?>"
                                                   onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                                   onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                                   onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image2;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->userid;?>/solartech/<?=$res->id;?>/<?=$res->image2;?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image3;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->userid;?>/solartech/<?=$res->id;?>/<?=$res->image3;?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image4;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->userid;?>/solartech/<?=$res->id;?>/<?=$res->image4;?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/solartech/example/<?=$res->image5;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->userid;?>/solartech/<?=$res->id;?>/<?=$res->image5;?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
