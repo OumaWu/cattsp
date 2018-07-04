@@ -24,7 +24,7 @@ if(isset($_SESSION['expiretime'])) {
             <?php } else { ?>
                 <span id="header_header_top_Login"> 欢迎，<?php echo $_SESSION['user']; ?>&nbsp;&nbsp;</span>
                 <span id="header_header_top_Login">
-    	<a href="personalpage.php?id=<?php echo $_SESSION['userid']; ?>" class="clr mr15">个人页面</a>
+    	<a href="personalpage.php?id=<?php echo $_SESSION['userid']; ?>" class="clr mr15">用户中心</a>
    		<a href="./sql/logout.php" class="clr mr15">注销</a>
     </span><?php } ?>
         </div>

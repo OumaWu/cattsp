@@ -1,7 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>中国-东盟太阳能技术转移中心</title>
@@ -80,8 +78,8 @@
                 </div>
                 <div class="content">
                     <div style="height: 10px;"></div>
-                    <form id="tech" action="sql/insertTech.php?userid=<?php echo $_SESSION['userid']; ?>" method="post"
-                          enctype="multipart/form-data">
+
+                    <form id="tech" action="sql/insertTech.php" method="post" enctype="multipart/form-data">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
