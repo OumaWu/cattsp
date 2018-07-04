@@ -41,19 +41,17 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["l
             else {
                 $pdo->rollBack();
                 echo "<script> alert('发布太阳能技术失败！！');</script>";
-                echo $pdo->errorInfo();
-//                echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
+                echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
             }
 
         } else {
             echo "<script> alert('发布太阳能技术失败！！');</script>";
             echo $pdo->errorInfo();
-//            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
         }
 
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
-        $pdo->rollBack();
     }
 } else {
     echo "<script> alert('请填必填信息！！');</script>";
@@ -64,19 +62,17 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["l
 function uploadImg($userid, $last_id) {
 
     $success = false;
+    $path = FILE_UPLOAD_PATH . $userid . "/solartech/" . $last_id . "/";
+
+    //如果文件夹不存在则创建它
+    if (!file_exists($path)){
+        mkdir ($path,0777,true);
+    }
 
     // 给图片名前添加上传路径，并上传
     foreach ($_FILES as $file) {
         //如果文件名不为空，则加上上传路径
         if($file['name'] != null) {
-
-            $path = FILE_UPLOAD_PATH . $userid . "/solartech/" . $last_id . "/";
-
-//            echo $file_path . "<br>";
-            //如果文件夹不存在则创建它
-            if (!file_exists($path)){
-                mkdir ($path,0777,true);
-            }
 
             $file_path = $path . $file['name'];
 
