@@ -20,6 +20,7 @@ if (!empty($id) && !empty($user_id)) {
             $dir = FILE_UPLOAD_PATH . $user_id ."/solartech/" . $id;
 
             //然后删除用户对应的图片文件目录
+
             if(is_dir($dir)) {
                 $files = array_diff(scandir($dir), array('.','..'));
 
@@ -38,14 +39,14 @@ if (!empty($id) && !empty($user_id)) {
                 else {
                     $pdo->rollBack();
                     echo "<script> alert('删除失败！！');</script>";
-//                    echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
+                    echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
                 }
             }
 
         } else {
             echo "<script> alert('删除失败！！');</script>";
             echo $pdo->errorInfo();
-//            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
         }
 
     } catch (PDOException $e) {
