@@ -1,13 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="pragma" content="no-cache"/>
-    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate"/>
-    <meta http-equiv="expires" content="Wed,26 Feb 1997 08:21:57 GMT"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
+
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1234">
     <!-- }导入新闻展示模块css文件 -->
@@ -16,19 +16,9 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
 
-    <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
-    <!-- }导入中国-东盟技术转移中心css和js文件 -->
-
-    <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- 导入其他css和js文件{ -->
+    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <!-- }导入其他css和js文件 -->
 
 </head>
 <body>

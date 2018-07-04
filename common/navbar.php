@@ -1,4 +1,9 @@
 <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+<!--<style>-->
+<!--    .nav a {-->
+<!--        line-height: 40px;-->
+<!--    }-->
+<!--</style>-->
 <div class="nav-wrap clearfix">
     <div class="w1220">
         <ul id="nav" class="nav clearfix">

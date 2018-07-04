@@ -1,16 +1,4 @@
 <?php
-/*
- * 检查session是否已过期
- */
-session_start();
-if(isset($_SESSION['expiretime'])) {
-    if($_SESSION['expiretime'] < time()){
-        unset($_SESSION["expiretime"]);
-        //redirect if the page is inactive for 10 minutes
-        header("Location: logout.php?timeout");
-        exit(0);
-    }
-}
 @header("Content-Type:text/html;charset=utf-8");
 /* read db info from config file into an array */
 $path =  dirname(__DIR__);

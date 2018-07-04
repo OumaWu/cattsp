@@ -8,20 +8,31 @@ if (isset($_POST["accountname"]) && isset($_POST["password"])) {
     $accountname = $_POST["accountname"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM `users` WHERE `password` = '$password' AND `accountname` = '$accountname'";
+    $sql = "SELECT * FROM `users` WHERE `accountname` = '$accountname'";
 
     try {
         $result = $pdo->prepare($sql);
         $result->execute();
         $rows = $result->rowCount();
+
         if ($rows > 0) {
-            session_start();
-            $res = $res = $result->fetch(PDO::FETCH_OBJ);
-            $_SESSION['user'] = $res->accountname;
-            $_SESSION['userid'] = $res->id;
-            $_SESSION['expiretime'] = time() + 600; // 刷新时间戳，10分钟
-            echo "<script>alert('登录成功！')</script>";
-            echo "<meta http-equiv=\"refresh\" content=\"0;url=$url_home\">";
+
+            $res = $result->fetch(PDO::FETCH_OBJ);
+            $password_hash = $res->password;
+
+            if(password_verify($password, $password_hash)) {
+                session_start();
+                $_SESSION['user'] = $res->accountname;
+                $_SESSION['userid'] = $res->id;
+                $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
+                echo "<script>alert('登录成功！')</script>";
+                echo "<meta http-equiv=\"refresh\" content=\"0;url=$url_home\">";
+            }
+            else {
+                echo "<script>alert('用户名或密码错误，请重新输入！')</script>";
+                echo "<meta http-equiv=\"refresh\" content=\"0;url=$url\">";
+            }
+
         } else {
             echo "<script>alert('用户名或密码错误，请重新输入！')</script>";
             echo "<meta http-equiv=\"refresh\" content=\"0;url=$url\">";
