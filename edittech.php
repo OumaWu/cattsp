@@ -101,7 +101,15 @@
                                                   placeholder="填写技术详细介绍"><?=$res->description;?></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
-                                <td><input type="file" name="img1" id="img1"/>
+                                <td>
+                                    <!-- 原来已有的图 -->
+                                    <input type="hidden" name="o_img1" value="<?=$res->image1;?>" />
+                                    <input type="hidden" name="o_img2" value="<?=$res->image2;?>" />
+                                    <input type="hidden" name="o_img3" value="<?=$res->image3;?>" />
+                                    <input type="hidden" name="o_img4" value="<?=$res->image4;?>" />
+                                    <input type="hidden" name="o_img5" value="<?=$res->image5;?>" />
+
+                                    <input type="file" name="img1" id="img1"/>
                                     <input type="file" name="img2" id="img2"/>
                                     <input type="file" name="img3" id="img3"/>
                                     <input type="file" name="img4" id="img4"/>
