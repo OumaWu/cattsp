@@ -109,10 +109,20 @@
                                     <input type="hidden" name="o_img4" value="<?=$res->image4;?>" />
                                     <input type="hidden" name="o_img5" value="<?=$res->image5;?>" />
 
+                                    <img src="./user_files/<?=$res->image1;?>" alt="<?=$res->image1;?>" height="246" width="100"
+                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
                                     <input type="file" name="img1" id="img1"/>
+                                    <img src="./user_files/<?=$res->image2;?>" alt="<?=$res->image2;?>" height="246" width="100"
+                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
                                     <input type="file" name="img2" id="img2"/>
+                                    <img src="./user_files/<?=$res->image3;?>" alt="<?=$res->image3;?>" height="246" width="100"
+                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
                                     <input type="file" name="img3" id="img3"/>
+                                    <img src="./user_files/<?=$res->image4;?>" alt="<?=$res->image4;?>" height="246" width="100"
+                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
                                     <input type="file" name="img4" id="img4"/>
+                                    <img src="./user_files/<?=$res->image5;?>" alt="<?=$res->image5;?>" height="246" width="100"
+                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
                                     <input type="file" name="img5" id="img5"/>
                                     <br/>
                                     <label>(最多可选5张图片)</label></td>
