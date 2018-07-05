@@ -79,7 +79,12 @@
                 <div class="content">
                     <div style="height: 10px;"></div>
 
-                    <form id="tech" action="sql/insertTech.php" method="post" enctype="multipart/form-data">
+                    <?php
+                    $id = $_GET['id'];
+                    include("sql/solarTechContent.php");
+                    $res = $result->fetch(PDO::FETCH_OBJ);
+                    ?>
+                    <form id="tech" action="sql/updateTech.php?id=<?=$id;?>" method="post" enctype="multipart/form-data">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
@@ -87,13 +92,13 @@
                                     <th><i></i>技术名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt" name="title" id="title" maxlength="50"
-                                                   warning="请填写技术名称">
+                                                   warning="请填写技术名称" value="<?=$res->title;?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>技术介绍：</th>
                                     <td><textarea class="d6_tarea" id="description" name="description" warning="请填写技术简介"
-                                                  placeholder="填写技术详细介绍"></textarea></td>
+                                                  placeholder="填写技术详细介绍"><?=$res->description;?></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
                                 <td><input type="file" name="img1" id="img1"/>
@@ -107,20 +112,20 @@
                                 <tr>
                                     <th><i></i>发布人：</th>
                                     <td><label>
-                                            <input type="text" class="d6_idtxt2" name="publisher" value="">
+                                            <input type="text" class="d6_idtxt2" name="publisher" value="<?=$res->publisher?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>电子邮箱：</th>
                                     <td><label>
-                                            <input type="text" class="d6_idtxt2" name="email" id="email" value="">
+                                            <input type="text" class="d6_idtxt2" name="email" id="email" value="<?=$res->email;?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>单位名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt2" name="entreprise" maxlength="50"
-                                                   value="">
+                                                   value="<?=$res->entreprise;?>">
                                         </label></td>
                                 </tr>
                                 <tr>
@@ -147,21 +152,21 @@
                                                 <option value="湖北省">湖北省</option>
                                                 <option value="湖南省">湖南省</option>
                                                 <option value="广东省">广东省</option>
-                                                <option value="广  西">广 西</option>
+                                                <option value="广西省">广 西</option>
                                                 <option value="海南省">海南省</option>
                                                 <option value="重庆市">重庆市</option>
                                                 <option value="四川省">四川省</option>
                                                 <option value="贵州省">贵州省</option>
                                                 <option value="云南省">云南省</option>
-                                                <option value="西  藏">西 藏</option>
+                                                <option value="西藏">西 藏</option>
                                                 <option value="陕西省">陕西省</option>
                                                 <option value="甘肃省">甘肃省</option>
                                                 <option value="青海省">青海省</option>
-                                                <option value="宁  夏">宁 夏</option>
-                                                <option value="新  疆">新 疆</option>
+                                                <option value="宁夏省">宁 夏</option>
+                                                <option value="新疆">新 疆</option>
                                                 <option value="台湾省">台湾省</option>
-                                                <option value="香  港">香 港</option>
-                                                <option value="澳  门">澳 门</option>
+                                                <option value="香港">香港</option>
+                                                <option value="澳门">澳门</option>
                                                 <option value="国外">国外</option>
                                             </select>
                                         </label></td>
@@ -170,7 +175,7 @@
 
                             </table>
                             <div class="d6_xqbm">
-                                <input type="button" class="d6_xqbta" id="btnSave" value="提交" onclick="Submit();">
+                                <input type="button" class="d6_xqbta" id="btnSave" value="提交" onclick="Submit();" onkeydown="Submit">
                             </div>
                         </div>
                     </form>
@@ -180,6 +185,9 @@
     </div>
 </div>
 <script>
+    //设置所在地选中
+    $("#location").val("<?php echo $res->location;?>");
+
     function Submit() {
         document.getElementById("tech").submit();
     }

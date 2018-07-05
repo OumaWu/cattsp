@@ -76,7 +76,23 @@
     function Submit() {
         document.getElementById("gform").submit();
     }
+    $("#gform").bind("keydown",function(e){
+
+        // 兼容FF和IE和Opera
+
+        var theEvent = e || window.event;
+
+        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
+
+        if (code == 13) {
+
+            //回车执行查询
+            $("#loginBt").click();
+        }
+
+    });
 </script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <!-- }信息板块  -->
 
 <?php require_once('common/footer.php'); ?>

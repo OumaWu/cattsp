@@ -5,17 +5,18 @@ include("connection.php");
 $url = "../mytech.php";
 $url2 = "../publishtech.php";
 
-if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["location"]) && !empty($_POST["entreprise"])) {
+if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["publisher"]) && !empty($_POST["location"]) && !empty($_POST["entreprise"])) {
     $title = $_POST["title"];
     $description = $_POST["description"];
     $email = $_POST["email"];
     $location = $_POST["location"];
     $entreprise = $_POST["entreprise"];
+    $publisher = $_POST["publisher"];
     $userid = $_SESSION["userid"];
     $user = $_SESSION["user"];
 
-    $sql = "INSERT INTO `solar_technologies` (`id`, `title`, `entreprise`, `location`, `email`, `description`, `date`, `userid`)"
-        . " VALUES (NULL, '$title', '$entreprise', '$location', '$email', '$description', now(), '$userid')";
+    $sql = "INSERT INTO `solar_technologies` (`id`, `title`, `entreprise`, `publisher`, `location`, `email`, `description`, `date`, `userid`)"
+        . " VALUES (NULL, '$title', '$entreprise', '$publisher', '$location', '$email', '$description', now(), '$userid')";
 
     try {
 
@@ -66,7 +67,7 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["l
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
     }
-
+    echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url2}\">";
 } else {
     echo "<script> alert('请填必填信息！！');</script>";
     echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
