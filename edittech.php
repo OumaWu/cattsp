@@ -23,11 +23,12 @@
     <link href="./css/frame.css" rel="stylesheet" type="text/css">
     <!-- }导入技术发布页面css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
+    <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- }导入其他css和js文件 -->
 
+    <link rel="stylesheet" type="text/css" href="./css/edit-tech.css">
 </head>
 <body>
 <!--  版头{  -->
@@ -84,7 +85,8 @@
                     include("sql/solarTechContent.php");
                     $res = $result->fetch(PDO::FETCH_OBJ);
                     ?>
-                    <form id="tech" action="sql/updateTech.php?id=<?=$id;?>" method="post" enctype="multipart/form-data">
+                    <form id="tech" action="sql/updateTech.php?id=<?= $id; ?>" method="post"
+                          enctype="multipart/form-data">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
@@ -92,58 +94,72 @@
                                     <th><i></i>技术名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt" name="title" id="title" maxlength="50"
-                                                   warning="请填写技术名称" value="<?=$res->title;?>">
+                                                   warning="请填写技术名称" value="<?= $res->title; ?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>技术介绍：</th>
                                     <td><textarea class="d6_tarea" id="description" name="description" warning="请填写技术简介"
-                                                  placeholder="填写技术详细介绍"><?=$res->description;?></textarea></td>
+                                                  placeholder="填写技术详细介绍"><?= $res->description; ?></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
                                 <td>
                                     <!-- 原来已有的图 -->
-                                    <input type="hidden" name="o_img1" value="<?=$res->image1;?>" />
-                                    <input type="hidden" name="o_img2" value="<?=$res->image2;?>" />
-                                    <input type="hidden" name="o_img3" value="<?=$res->image3;?>" />
-                                    <input type="hidden" name="o_img4" value="<?=$res->image4;?>" />
-                                    <input type="hidden" name="o_img5" value="<?=$res->image5;?>" />
+                                    <input type="hidden" name="o_img1" value="<?= $res->image1; ?>"/>
+                                    <input type="hidden" name="o_img2" value="<?= $res->image2; ?>"/>
+                                    <input type="hidden" name="o_img3" value="<?= $res->image3; ?>"/>
+                                    <input type="hidden" name="o_img4" value="<?= $res->image4; ?>"/>
+                                    <input type="hidden" name="o_img5" value="<?= $res->image5; ?>"/>
 
-                                    <img src="./user_files/<?=$res->image1;?>" alt="<?=$res->image1;?>" height="246" width="100"
-                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
-                                    <input type="file" name="img1" id="img1"/>
-                                    <img src="./user_files/<?=$res->image2;?>" alt="<?=$res->image2;?>" height="246" width="100"
-                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
-                                    <input type="file" name="img2" id="img2"/>
-                                    <img src="./user_files/<?=$res->image3;?>" alt="<?=$res->image3;?>" height="246" width="100"
-                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
-                                    <input type="file" name="img3" id="img3"/>
-                                    <img src="./user_files/<?=$res->image4;?>" alt="<?=$res->image4;?>" height="246" width="100"
-                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
-                                    <input type="file" name="img4" id="img4"/>
-                                    <img src="./user_files/<?=$res->image5;?>" alt="<?=$res->image5;?>" height="246" width="100"
-                                         onerror="this.onerror=null;this.src='./images/default.jpg';" />
-                                    <input type="file" name="img5" id="img5"/>
+                                    <ul class="img-upload">
+                                        <li>
+                                            <img  id="preview1" src="./user_files/<?= $res->image1; ?>" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img1" id="img1"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview2" src="./user_files/<?= $res->image2; ?>" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img2" id="img2"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview3" src="./user_files/<?= $res->image3; ?>" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img3" id="img3"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview4" src="./user_files/<?= $res->image4; ?>" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img4" id="img4"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview5" src="./user_files/<?= $res->image5; ?>" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img5" id="img5"/>
+                                        </li>
+                                    </ul>
                                     <br/>
                                     <label>(最多可选5张图片)</label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>发布人：</th>
                                     <td><label>
-                                            <input type="text" class="d6_idtxt2" name="publisher" value="<?=$res->publisher?>">
+                                            <input type="text" class="d6_idtxt2" name="publisher"
+                                                   value="<?= $res->publisher ?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>电子邮箱：</th>
                                     <td><label>
-                                            <input type="text" class="d6_idtxt2" name="email" id="email" value="<?=$res->email;?>">
+                                            <input type="text" class="d6_idtxt2" name="email" id="email"
+                                                   value="<?= $res->email; ?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>单位名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt2" name="entreprise" maxlength="50"
-                                                   value="<?=$res->entreprise;?>">
+                                                   value="<?= $res->entreprise; ?>">
                                         </label></td>
                                 </tr>
                                 <tr>
@@ -193,7 +209,8 @@
 
                             </table>
                             <div class="d6_xqbm">
-                                <input type="button" class="d6_xqbta" id="btnSave" value="提交" onclick="Submit();" onkeydown="Submit">
+                                <input type="button" class="d6_xqbta" id="btnSave" value="提交" onclick="Submit();"
+                                       onkeydown="Submit">
                             </div>
                         </div>
                     </form>
@@ -202,29 +219,7 @@
         </div>
     </div>
 </div>
-<script>
-    //设置所在地选中
-    $("#location").val("<?php echo $res->location;?>");
-
-    function Submit() {
-        document.getElementById("tech").submit();
-    }
-    $("#tech").bind("keydown",function(e){
-
-        // 兼容FF和IE和Opera
-
-        var theEvent = e || window.event;
-
-        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
-
-        if (code == 13) {
-
-            //回车执行查询
-            $("#btnSave").click();
-        }
-
-    });
-</script>
+<script type="text/javascript" src="js/edit-tech.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <!-- }首页信息板块  -->
 

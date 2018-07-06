@@ -23,11 +23,12 @@
     <link href="./css/frame.css" rel="stylesheet" type="text/css">
     <!-- }导入技术发布页面css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
+    <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- }导入其他css和js文件 -->
 
+    <link rel="stylesheet" type="text/css" href="./css/edit-tech.css">
 </head>
 <body>
 <!--  版头{  -->
@@ -96,13 +97,37 @@
                                                   placeholder="填写技术详细介绍"></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
-                                <td><input type="file" name="img1" id="img1"/>
-                                    <input type="file" name="img2" id="img2"/>
-                                    <input type="file" name="img3" id="img3"/>
-                                    <input type="file" name="img4" id="img4"/>
-                                    <input type="file" name="img5" id="img5"/>
+                                <td>
+                                    <ul class="img-upload">
+                                        <li>
+                                            <img id="preview1" src="./images/default.jpg" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img1" id="img1"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview2" src="./images/default.jpg" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img2" id="img2"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview3" src="./images/default.jpg" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img3" id="img3"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview4" src="./images/default.jpg" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img4" id="img4"/>
+                                        </li>
+                                        <li>
+                                            <img id="preview5" src="./images/default.jpg" alt="预览"
+                                                 onerror="this.onerror=null;this.src='./images/default.jpg';"/>
+                                            <input type="file" name="img5" id="img5"/>
+                                        </li>
+                                    </ul>
                                     <br/>
-                                    <label>(最多可选5张图片)</label></td>
+                                    <label>(最多可选5张图片)</label>
+                                </td>
                                 </tr>
                                 <tr>
                                     <th><i></i>发布人：</th>
@@ -179,26 +204,7 @@
         </div>
     </div>
 </div>
-<script>
-    function Submit() {
-        document.getElementById("tech").submit();
-    }
-    $("#tech").bind("keydown",function(e){
-
-        // 兼容FF和IE和Opera
-
-        var theEvent = e || window.event;
-
-        var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
-
-        if (code == 13) {
-
-            //回车执行查询
-            $("#btnSave").click();
-        }
-
-    });
-</script>
+<script type="text/javascript" src="js/edit-tech.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <!-- }首页信息板块  -->
 

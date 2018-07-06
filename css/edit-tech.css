@@ -1,0 +1,16 @@
+.img-upload {
+    list-style: none;
+    width: inherit;
+}
+
+.img-upload li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 246px;
+    display: inline-block;
+}
+
+.img-upload img {
+    height: 200px;
+    width: 246px;
+}

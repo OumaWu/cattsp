@@ -67,7 +67,6 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["p
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
     }
-    echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url2}\">";
 } else {
     echo "<script> alert('请填必填信息！！');</script>";
     echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url2\">";
@@ -99,9 +98,9 @@ function uploadImg($user, $last_id, &$images)
     $path = FILE_UPLOAD_PATH;
 
     //如果文件夹不存在则创建它
-    if (!file_exists($path)) {
-        mkdir($path, 0777, true);
-    }
+//    if (!file_exists($path)) {
+//        mkdir($path, 0777, true);
+//    }
 
     // 给图片名前添加上传路径，并上传
     foreach ($_FILES as $file) {
