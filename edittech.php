@@ -113,7 +113,7 @@
 
                                     <ul class="img-upload">
                                         <li>
-                                            <img  id="preview1" src="./user_files/<?= $res->image1; ?>" alt="预览"
+                                            <img id="preview1" src="./user_files/<?= $res->image1; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
                                             <input type="file" name="img1" id="img1"/>
                                         </li>
@@ -219,6 +219,9 @@
         </div>
     </div>
 </div>
+<script>
+    $("#location").val("<?=$res->location;?>");
+</script>
 <script type="text/javascript" src="js/edit-tech.js"></script>
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <!-- }首页信息板块  -->

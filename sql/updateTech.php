@@ -24,30 +24,55 @@ if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["p
     include("connection.php");
 
     $old_images = array($_POST['o_img1'], $_POST['o_img2'], $_POST['o_img3'], $_POST['o_img4'], $_POST['o_img5']);
-    $new_images = array($_FILES['img1']['name'], $_FILES['img2']['name'], $_FILES['img3']['name'], $_FILES['img4']['name'], $_FILES['img5']['name']);
+    $new_images = array();
+    $delete_images = array();
 
-    // 给图片名前添加上传路径，并上传
-    for ($i = 0; $i < count($new_images); $i++) {
-        //如果是空的，则把旧的文件名传给它
-        if (!empty($new_images[i])) {
+    $count = 0;
+    // 上传修改的图片
+    foreach ($_FILES as $file) {
 
+        //如果文件名不为空，则加密文件名
+        if ($file['name'] != null) {
+
+            //获取后缀名
+            $img_ext = substr($file['name'], strrpos($file['name'], '.'));
+
+            // 加密图片名
+            $file['name'] =  $user . $id . hash_file('md5', $file["tmp_name"]) .$img_ext;
+
+            // 将加密后的图片名添加至数组中
+            array_push($new_images, $file['name']);
+            // 将要删除的旧图片名加入删除数组中
+            array_push($delete_images, $old_images[$count]);
+
+            // 添加上传路径
+            $file_path = FILE_UPLOAD_PATH .$file['name'];
+
+            // 上传新图片
+            if (!file_exists($file_path)) {
+                if (move_uploaded_file($file["tmp_name"],  $file_path));
+//                    echo "图片" . $file_path . "上传成功！！" . "<br>";
+
+            }
+        }
+        else {
+            // 如果是空的，则把旧的文件名传给它
+            array_push($new_images, $old_images[$count] ? $old_images[$count] : null);
+        }
+        $count++;
+    }
+
+    // 删除旧图片
+    foreach ($delete_images as $images) {
+        $path = FILE_UPLOAD_PATH . $images;
+        if (file_exists($path)) {
+            unlink($path);
         }
     }
 
-//    if (!empty($_FILES['image']['name'])) {
-//        $productArray['image'] = (string)$_FILES['image']['name'];
-//        $originalImage = FILE_UPLOAD_PATH . (string)$_POST['imageoriginal'];
-//    } else {
-//        $productArray['image'] = (string)$_POST['imageoriginal'];
-//    }
-//    $filePath = FILE_UPLOAD_PATH . $productArray['image'];
-//    if (file_exists($originalImage)) {
-//        unlink($originalImage);
-//    }
-
     $sql = "UPDATE `solar_technologies`"
         . " SET `title` = '{$title}', `entreprise` = '{$entreprise}', `publisher` = '{$publisher}', `location` = '{$location}', `email` = '{$email}'"
-//        ." ,`image1` = '', `image2` = '', `image3` = '', `image4` = '', `image5` = ''"
+        ." ,`image1` = '{$new_images[0]}', `image2` = '{$new_images[1]}', `image3` = '{$new_images[2]}', `image4` = '{$new_images[3]}', `image5` = '{$new_images[4]}'"
         . " WHERE `solar_technologies`.`id` = {$id}";
     try {
         $pdo->beginTransaction();

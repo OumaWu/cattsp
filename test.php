@@ -1,7 +1,7 @@
 <?php
 
 //定义图片上传路径
-define('FILE_UPLOAD_PATH', "./user_files/solartech/example/");
+define('FILE_UPLOAD_PATH', "./user_files/solartech/");
 
 //$dir = FILE_UPLOAD_PATH;
 //
@@ -21,9 +21,9 @@ define('FILE_UPLOAD_PATH', "./user_files/solartech/example/");
 //
 //$user = $_SESSION['user'];
 //
-//if (!empty($_POST)) {
-//
-//    // 从$_FILES数组里提取图片信息
+if (!empty($_POST)) {
+
+    // 从$_FILES数组里提取图片信息
 //    $image = [
 //        (string)$_FILES['img1']['name'],
 //        (string)$_FILES['img2']['name'],
@@ -31,53 +31,61 @@ define('FILE_UPLOAD_PATH', "./user_files/solartech/example/");
 //        (string)$_FILES['img4']['name'],
 //        (string)$_FILES['img5']['name']
 //    ];
-//
-//    echo "User : " .$user . "<br>";
-//
-//    // 给图片名前添加上传路径，并上传
+
+//    print_r($_FILES);
+    echo "<pre>";
+    var_dump($_FILES);
+
+    // 给图片名前添加上传路径，并上传
 //    foreach ($_FILES as $file) {
 //
-//        //如果文件名不为空，则加上上传路径
-//        if($file['name'] != null) {
-//            $file_path = FILE_UPLOAD_PATH . $file['name'];
+//        //如果文件名不为空，则加密文件名
+//        if ($file['name'] != null) {
 //
-//            $file_hash_name = $user .hash_file('md5', $file_path);
+//            //获取后缀名
+//            $img_ext = substr($file['name'], strrpos($file['name'], '.'));
 //
-//            echo $file['name'] ." : " . $file_hash_name . "<br>";
-
-            //如果图片不存在，则上传
+//            //加密图片名
+//            $file_hash_name = hash_file('md5', $file["tmp_name"]);
+//
+//            echo $file['tmp_name'] . " : " . $file_hash_name . "<br>";
+//
+//            //加上后缀
+//            $file_path = FILE_UPLOAD_PATH . $file_hash_name . $img_ext;
+//
+//            //如果图片不存在，则上传
 //            if (!file_exists($file_path)) {
 //                if (move_uploaded_file($file["tmp_name"], $file_path)) {
-//                    echo "图片".$file_path."上传成功！！". "<br>";
+//                    echo "图片" . $file_path . "上传成功！！" . "<br>";
 //                }
 //            }
 //        }
 //    }
-//
-//}
+
+}
 
 ?>
 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>md5加密</title>
-    <script type="text/ecmascript" src="js/md5.js"></script>
-    <script type="text/javascript">
-        var h1 = hex_md5("heater1.jpg");
-        var h2 = hex_md5("heater2.jpg");
-        var h3 = hex_md5("heater3.jpg");
-        var h4 = hex_md5("heater4.jpg");
-        var h5 = hex_md5("heater5.jpg");
-        document.writeln(h1);
-        document.writeln(h2);
-        document.writeln(h3);
-        document.writeln(h4);
-        document.writeln(h5);
-    </script>
-</head>
-
-<body>
-</body>
-</html>
+<!--<!DOCTYPE HTML>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <title>md5加密</title>-->
+<!--    <script type="text/ecmascript" src="js/md5.js"></script>-->
+<!--    <script type="text/javascript">-->
+<!--        var h1 = hex_md5("heater1.jpg");-->
+<!--        var h2 = hex_md5("heater2.jpg");-->
+<!--        var h3 = hex_md5("heater3.jpg");-->
+<!--        var h4 = hex_md5("heater4.jpg");-->
+<!--        var h5 = hex_md5("heater5.jpg");-->
+<!--        document.writeln(h1);-->
+<!--        document.writeln(h2);-->
+<!--        document.writeln(h3);-->
+<!--        document.writeln(h4);-->
+<!--        document.writeln(h5);-->
+<!--    </script>-->
+<!--</head>-->
+<!---->
+<!--<body>-->
+<!--</body>-->
+<!--</html>-->
