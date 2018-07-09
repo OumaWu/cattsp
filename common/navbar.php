@@ -32,7 +32,7 @@
                 <h3><a href="information.php?category_id=1" target="_blank">通知公告</a></h3>
             </li>
             <li class="nLi" id="policies">
-                <h3><a href="#" target="_blank">政策法规</a></h3>
+                <h3><a href="policies.php" target="_blank">政策法规</a></h3>
             </li>
             <li class="nLi" id="aboutus">
                 <h3><a href="aboutus.php" target="_blank">关于我们</a></h3>
