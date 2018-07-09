@@ -1,9 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0021)http://www.vtitt.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
     <title>中国-东盟太阳能技术转移中心</title>
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
@@ -13,42 +15,13 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
 
-    <!-- 导入中国-东盟技术转移中心css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/jquery-ui.css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/base.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./中国-东盟技术转移中心CATTC官方网站_files/global.css" type="text/css">
-    <link href="./中国-东盟技术转移中心CATTC官方网站_files/index.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/recet.css">
-    <link rel="stylesheet" type="text/css" href="./中国-东盟技术转移中心CATTC官方网站_files/common.css">
-    <!-- }导入中国-东盟技术转移中心css和js文件 -->
-
-    <!-- 导入钒钛通css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/this.css" id="theme2">
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/wap.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/1633-domain.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/yun-plugins.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/login.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/common.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/posconfig.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery.qrcode.min.js"></script>
-    <script type="text/javascript" src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/dialog1633.js"></script>
-    <!--jjky/common/header.htm-->
-    <script src="./钒钛通_四川钒钛产业技术交易平台_攀枝花钒钛_files/jquery.superslide.2.1.1.js" type="text/javascript"></script>
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- 导入其他css和js文件{ -->
+    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <!-- }导入其他css和js文件 -->
 
 </head>
 <body>
-<div class="ie7_ts"><em onclick="$(&#39;.ie7_ts&#39;).hide();">X</em>为了获得更好的用户体验，请使用火狐、谷歌、360浏览器极速模式或IE8及以上版本的浏览器</div>
-<script type="text/javascript">
-    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {
-        $('.ie7_ts').show();
-    }
-    else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {
-        $('.ie7_ts').show();
-    }
-</script>
 
 <!--  版头{  -->
 
@@ -81,7 +54,7 @@ $res = $result->fetch(PDO::FETCH_OBJ);
 ?>
 <div class="space_top space_top_1">
     <div class="space_top_photo"><img src="images/<?=$res->photo;?>" alt="<?=$res->photo;?>"
-                                      onerror="this.src=&#39;http://image.1633.com/images/common/face60.png&#39;"></div>
+                                      onerror="this.src='images/profile-default-male.png'"></div>
     <h1 class="name"><?=$res->name;?></h1>
     <p class="hur1"> <?=$res->title;?> </p>
     <p class="hur2"><span class="zk_followlist " name="follow_8573777"><span class="gz1">+关注</span></span> <span
