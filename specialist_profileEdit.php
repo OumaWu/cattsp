@@ -50,22 +50,15 @@
         <div class="w1220">
             <div class="member-sidebar fl">
                 <div class="item">
-                    <div class="m-title">会员中心</div>
+                    <div class="m-title">专家用户中心</div>
                     <ul>
-                        <li><a href="personalpage.html" class="on">基本信息</a></li>
+                        <li><a href="#" class="on">基本信息</a></li>
                     </ul>
                 </div>
                 <div class="item">
-                    <div class="m-title">太阳能技术管理</div>
+                    <div class="m-title">用户答疑中心</div>
                     <ul>
-                        <li><a href="publishtech.php" class="">发布技术</a> <a href="mytech.php" class="">我的技术</a></li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <div class="m-title">需求管理</div>
-                    <ul>
-                        <li><a href="publishdemands.php" class="">发布需求</a> <a href="mydemands.php" class="">我的需求</a>
-                        </li>
+                        <li><a href="#" class="">我的留言</a></li>
                     </ul>
                 </div>
             </div>

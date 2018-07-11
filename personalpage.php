@@ -52,7 +52,7 @@
                 <div class="item">
                     <div class="m-title">会员中心</div>
                     <ul>
-                        <li><a href="personalpage.html" class="on">基本信息</a></li>
+                        <li><a href="#" class="on">基本信息</a></li>
                     </ul>
                 </div>
                 <div class="item">
