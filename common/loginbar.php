@@ -3,8 +3,8 @@ session_start();
 /*
  * 检查session是否已过期
  */
-if(isset($_SESSION['expiretime'])) {
-    if($_SESSION['expiretime'] < time()){
+if (isset($_SESSION['expiretime'])) {
+    if ($_SESSION['expiretime'] < time()) {
         unset($_SESSION["expiretime"]);
         //redirect if the page is inactive for 10 minutes
         header("Location: sql/logout.php?timeout");
@@ -20,13 +20,24 @@ if(isset($_SESSION['expiretime'])) {
         </div>
         <div class="top-right fr">
             <?php if (!isset($_SESSION['user']) || empty($_SESSION['user'])) { ?>
-                        <span id="header_header_top_noLogin"> <a href="login.php" class="clr mr15">登录</a> <a href="register.php" class="mr5">免费注册</a></span>
-            <?php } else { ?>
-                <span id="header_header_top_Login"> 欢迎，<?php echo $_SESSION['user']; ?>&nbsp;&nbsp;</span>
+                <span id="header_header_top_noLogin"> <a href="login.php" class="clr mr15">登录</a> <a href="register.php"
+                                                                                                     class="mr5">免费注册</a></span>
+            <?php } else {
+            if (isset($_SESSION['mode']) && $_SESSION['mode'] == "expert") { ?>
+
+            <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>&nbsp;专家&nbsp;&nbsp;</span>
+            <span id="header_header_top_Login">
+    	    <a href="specialist_profile.php" class="clr mr15">用户中心</a>
+
+                <?php } else { ?>
+
+                <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>&nbsp;&nbsp;</span>
                 <span id="header_header_top_Login">
-    	<a href="personalpage.php?id=<?php echo $_SESSION['userid']; ?>" class="clr mr15">用户中心</a>
-   		<a href="./sql/logout.php" class="clr mr15">注销</a>
-    </span><?php } ?>
+    	        <a href="personalpage.php" class="clr mr15">用户中心</a>
+
+                    <?php } ?>
+                    <a href="./sql/logout.php" class="clr mr15">注销</a></span>
+                <?php } ?>
         </div>
     </div>
 </div>

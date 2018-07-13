@@ -9,7 +9,7 @@
     <title>中国-东盟太阳能技术转移中心</title>
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v=1234">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入版头css文件{ -->
@@ -46,8 +46,16 @@
         <div class="wys_loginwrap">
             <div class="wys_layout bg">
                 <div class="wys_loginbox">
-                    <p class="tit">欢迎登录网上技术平台</p>
+                    <p class="tit" style="padding-left: 0!important;">欢迎登录网上技术平台</p>
                     <form id="gform" name="gform" action="sql/signin.php" method="post">
+
+                        <div style="margin-left: 30px; width: 200px; font-size: 15px">
+                            <input name="type" type="radio" value="company" id="company" checked="checked"/>
+                            <label for="company">企业账号</label>&emsp;&emsp;
+                            <input name="type" type="radio" value="specialist" id="specialist" />
+                            <label for="specialist">专家账号</label>
+                        </div>
+
                         <div class="cont">
                             <ul>
                                 <li>

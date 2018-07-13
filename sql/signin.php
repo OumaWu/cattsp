@@ -3,12 +3,15 @@ include("connection.php");
 $url_home = "../home.php";
 $url = "../login.php";
 
-if (isset($_POST["accountname"]) && isset($_POST["password"])) {
+if (isset($_POST["accountname"]) && isset($_POST["password"]) && isset($_POST["type"])) {
 
     $accountname = $_POST["accountname"];
     $password = $_POST["password"];
+    $type = $_POST["type"];
 
-    $sql = "SELECT * FROM `users` WHERE `accountname` = '$accountname'";
+    if ($type == "company")
+        $sql = "SELECT * FROM `users` WHERE `accountname` = '$accountname'";
+    else $sql = "SELECT * FROM `specialists` WHERE `accountname` = '$accountname'";
 
     try {
         $result = $pdo->prepare($sql);
@@ -22,6 +25,11 @@ if (isset($_POST["accountname"]) && isset($_POST["password"])) {
 
             if(password_verify($password, $password_hash)) {
                 session_start();
+
+                //专家账号登录模式
+                if ($type == "specialist")
+                    $_SESSION['mode'] = "expert";
+
                 $_SESSION['user'] = $res->accountname;
                 $_SESSION['userid'] = $res->id;
                 $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟

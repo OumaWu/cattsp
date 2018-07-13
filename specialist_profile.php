@@ -17,7 +17,7 @@
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入个人页面css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/member.css">
+    <link rel="stylesheet" type="text/css" href="./css/member.css?v">
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
     <!-- }导入个人页面css文件 -->
 
@@ -59,7 +59,7 @@
                 <div class="item">
                     <div class="m-title">答疑中心</div>
                     <ul>
-                        <li><a href="#" class="">用户提问</a></li>
+                        <li><a href="specialist_userQuestions.php" class="">用户提问</a></li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <div class="clearfix">
                         <?php
                         $user_id = $_SESSION['userid'];
-                        include("sql/userPage.php");
+                        include("sql/specialistPage.php");
                         $res = $result->fetch(PDO::FETCH_OBJ);
                         ?>
                         <div class="post-pic txc fl"><a class="m_img"> <img
@@ -102,53 +102,53 @@
                                 <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
                                 <div class="p-label fl">姓名<font color="red"><b>*</b></font></div>
                                 <div class="p-input fl">
-                                    <input name="accountname" type="text" id="accountname"
-                                           value="<?php echo $res->accountname; ?>" class="i-input"
+                                    <input name="name" type="text" id="name"
+                                           value="<?php echo $res->name; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                                 <div class="p-label fl">职位/头衔<font color="red"><b>*</b></font></div>
                                 <div class="p-input fl">
-                                    <input name="realname" type="text" id="realname"
-                                           value="<?php echo $res->realname; ?>" class="i-input"
+                                    <input name="title" type="text" id="title"
+                                           value="<?php echo $res->title; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">从业时长(年)<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="tel" type="text" id="tel"
-                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                        <input name="career_age" type="text" id="career_age"
+                                               value="<?php echo $res->career_age; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">学历<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="tel" type="text" id="tel"
-                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                        <input name="degree" type="text" id="degree"
+                                               value="<?php echo $res->degree; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">毕业院校<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="tel" type="text" id="tel"
-                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                        <input name="institute" type="text" id="institute"
+                                               value="<?php echo $res->institute; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">从事领域<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="tel" type="text" id="tel"
-                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                        <input name="domain" type="text" id="domain"
+                                               value="<?php echo $res->domain; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">擅长专业<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-                                        <input name="email" type="text" id="email" class="i-input"
-                                               value="<?php echo $res->email; ?>"
+                                        <input name="speciality" type="text" id="speciality" class="i-input"
+                                               value="<?php echo $res->speciality; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -165,8 +165,10 @@
                                     <div class="p-input fl">
 <!--                                        <textarea class="d6_tarea" id="description" name="description" warning="请填写技术简介"-->
 <!--                                                  placeholder="填写技术详细介绍" style="width: 350px; height: 300px"></textarea>-->
-                                        <textarea name="description" id="description" class="i-input"
-                                                  style="width: 350px; height: 300px;" placeholder="填写专家个人简介"></textarea>
+                                        <textarea name="introduction" id="introduction" class="i-input"
+                                                  style="width: 350px; height: 300px;" placeholder="填写专家个人简介">
+                                            <?=$res->introduction;?>
+                                        </textarea>
                                     </div>
                                 </div>
                                 <div class="p-item mb40 clearfix">

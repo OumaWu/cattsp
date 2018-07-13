@@ -4969,9 +4969,10 @@ i.wys_numicon em {
 .wys_loginbox {
     float: right;
     width: 380px;
-    height: 400px;
+    height: 350px;
     background-color: #fff;
     margin: 50px 50px 0 0;
+    padding: 20px 0 30px 0;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -4983,7 +4984,7 @@ i.wys_numicon em {
 .wys_loginbox .tit {
     line-height: 55px;
     background-color: #f5f5f5;
-    font-size: 18px;
+    font-size: 25px;
     color: #2a94c5;
     text-align: center;
     -moz-border-radius: 5px 5px 0 0;
@@ -4992,18 +4993,19 @@ i.wys_numicon em {
 }
 
 .wys_loginbox .cont {
-    padding: 30px;
+    padding: 15px 30px;
 }
 
 .wys_loginbox .cont li {
-    height: 40px;
-    padding-bottom: 20px;
+    /*height: 40px;*/
+    margin-bottom: 5px;
+    /*padding-bottom: 20px;*/
 }
 
 .wys_loginbox .cont .inp {
-    width: 298px;
-    height: 32px;
-    line-height: 32px;
+    width: 320px;
+    height: 45px;
+    line-height: 45px;
     border: 1px #ddd solid;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;

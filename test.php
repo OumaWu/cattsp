@@ -1,7 +1,57 @@
 <?php
 
+include("sql/connection.php");
+$url_home = "./home.php";
+$url = "./login.php";
+
+if (isset($_POST["accountname"]) && isset($_POST["password"])) {
+
+    $accountname = $_POST["accountname"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT * FROM `specialists` WHERE `accountname` = '$accountname'";
+
+    try {
+        $result = $pdo->prepare($sql);
+        $result->execute();
+        $rows = $result->rowCount();
+
+        if ($rows > 0) {
+
+            $res = $result->fetch(PDO::FETCH_OBJ);
+            $password_hash = $res->password;
+
+            if(password_verify($password, $password_hash)) {
+                session_start();
+                //专家账号登录模式
+                $_SESSION['mode'] = "expert";
+
+                $_SESSION['user'] = $res->accountname;
+                $_SESSION['userid'] = $res->id;
+                $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
+                echo "<script>alert('登录成功！')</script>";
+                echo "<meta http-equiv=\"refresh\" content=\"0;url=$url_home\">";
+            }
+            else {
+                echo "<script>alert('用户名或密码错误，请重新输入！')</script>";
+                echo "<meta http-equiv=\"refresh\" content=\"0;url=$url\">";
+            }
+
+        } else {
+            echo "<script>alert('用户名或密码错误，请重新输入！')</script>";
+            echo "<meta http-equiv=\"refresh\" content=\"0;url=$url\">";
+        }
+
+    } catch (PDOException $e) {
+        die("错误!!: " . $e->getMessage() . "<br>");
+    }
+} else {
+    echo "<script>alert('请输入用户名或密码！')</script>";
+    echo "<meta http-equiv=\"refresh\" content=\"0;url=$url\">";
+}
+
 //定义图片上传路径
-define('FILE_UPLOAD_PATH', "./user_files/solartech/");
+//define('FILE_UPLOAD_PATH', "./user_files/solartech/");
 
 //$dir = FILE_UPLOAD_PATH;
 //
@@ -21,7 +71,7 @@ define('FILE_UPLOAD_PATH', "./user_files/solartech/");
 //
 //$user = $_SESSION['user'];
 //
-if (!empty($_POST)) {
+//if (!empty($_POST)) {
 
     // 从$_FILES数组里提取图片信息
 //    $image = [
@@ -33,8 +83,8 @@ if (!empty($_POST)) {
 //    ];
 
 //    print_r($_FILES);
-    echo "<pre>";
-    var_dump($_FILES);
+//    echo "<pre>";
+//    var_dump($_POST);
 
     // 给图片名前添加上传路径，并上传
 //    foreach ($_FILES as $file) {
@@ -61,8 +111,8 @@ if (!empty($_POST)) {
 //            }
 //        }
 //    }
-
-}
+//
+//}
 
 ?>
 
