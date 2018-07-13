@@ -7,7 +7,7 @@
  */
 include("connection.php");
 $userid = $_POST["userid"];
-$url = "../personalpage.php?id={$userid}";
+$url = "../personalpage.php";
 $accountname = $_POST["accountname"];
 $realname = $_POST["realname"];
 $sex = $_POST["sex"];
@@ -39,24 +39,24 @@ $address = $_POST["address"];
 if (!empty($accountname) && !empty($realname) && isset($sex) && !empty($type)
     && !empty($tel) && !empty($email) && !empty($location) && !empty($address)) {
 
-    $sql = "UPDATE `users` 
-            SET `accountname` = '$accountname', `realname` = '$realname', `sex` = '$sex', `type` = '$type', `tel` = '$tel', `email` = '$email', `location` = '$location', `address` = '$address'
-            WHERE `users`.`id` = $userid";
+    $sql = "UPDATE `users`"
+            ." SET `accountname` = '$accountname', `realname` = '$realname', `sex` = '$sex', `type` = '$type', `tel` = '$tel', `email` = '$email', `location` = '$location', `address` = '$address'"
+            ." WHERE `users`.`id` = $userid";
     try {
         $pdo->beginTransaction();
         $result = $pdo->prepare($sql);
         if ($result->execute()) {
+            $pdo->commit();
             echo "<script> alert('你的资料更新成功！！');</script>";
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         } else {
+            $pdo->rollBack();
             echo "<script> alert('你的资料更新失败！！');</script>";
             echo $pdo->errorInfo();
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         }
-        $pdo->commit();
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");
-        $pdo->rollBack();
     }
     echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
 } else {

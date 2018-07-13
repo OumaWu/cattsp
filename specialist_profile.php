@@ -96,7 +96,7 @@
                             </div>
                             <p class="mb10">支持JPG,JPEG,GIF,PNG,BMP,且小于2M</p>
                         </div>
-                        <form action="sql/updateUser.php" method="post">
+                        <form action="sql/updateExpert.php" method="post">
                         <div class="fl user-form">
                             <div class="p-item clearfix">
                                 <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
