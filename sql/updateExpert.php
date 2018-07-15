@@ -23,7 +23,6 @@ if (!empty($name) && !empty($title) && isset($career_age) && !empty($degree)
     include("connection.php");
 
     // 上传修改的图片
-
     //如果文件名不为空，则加密文件名
     if ($new_images != null) {
 

@@ -24,16 +24,6 @@
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <!-- }导入其他css和js文件 -->
-<style>
-    #intro {
-        /*height: 50px;*/
-        width: 350px;
-        height: 100%;
-        line-height: 50px;
-        padding-left: 20px;
-        color: #005bac;
-    }
-</style>
 </head>
 <body>
 <!--  版头{  -->
@@ -80,7 +70,6 @@
                         <span style="color: #fa9800;">&nbsp;&nbsp;&nbsp;&nbsp;30%</span></div>
                     <div class="clearfix">
                         <?php
-                        $user_id = $_SESSION['userid'];
                         include("sql/specialistPage.php");
                         $res = $result->fetch(PDO::FETCH_OBJ);
                         ?>
@@ -191,7 +180,7 @@
                                 </div>
                             </div>
                         </div>
-                            <input type="hidden" name="userid" id="userid" value="<?=$user_id;?>"/>
+                            <input type="hidden" name="userid" id="userid" value="<?=$_SESSION['userid'];?>"/>
                             <input type="hidden" name="user" id="user" value="<?=$_SESSION['user'];?>">
                         </form>
                     </div>

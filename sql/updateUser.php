@@ -5,17 +5,18 @@
  * Date: 2018/3/29
  * Time: 2:43
  */
-include("connection.php");
+define('FILE_UPLOAD_PATH', "../user_files/avatar/");
 $userid = $_POST["userid"];
+$user = $_POST["user"];
 $url = "../personalpage.php";
-$accountname = $_POST["accountname"];
 $realname = $_POST["realname"];
 $sex = $_POST["sex"];
-$type = $_POST["type"];
 $tel = $_POST["tel"];
 $email = $_POST["email"];
 $location = $_POST["location"];
 $address = $_POST["address"];
+$new_images = (string)$_FILES['photo']['name'];
+$old_images = (string)$_POST['o_photo'];
 
 /*
  *  无法接受用户id，导致无法更新用户信息，to be fixed
@@ -36,11 +37,46 @@ $address = $_POST["address"];
  *
  * */
 
-if (!empty($accountname) && !empty($realname) && isset($sex) && !empty($type)
-    && !empty($tel) && !empty($email) && !empty($location) && !empty($address)) {
+if (!empty($realname) && isset($sex) && !empty($tel)
+    && !empty($email) && !empty($location) && !empty($address)) {
+
+    include("connection.php");
+
+    // 上传修改的图片
+    //如果文件名不为空，则加密文件名
+    if ($new_images != null) {
+
+        //获取后缀名
+        $img_ext = substr($new_images, strrpos($new_images, '.'));
+
+        // 加密图片名
+        $new_images =  $user . hash_file('md5', $_FILES['photo']["tmp_name"]) .$img_ext;
+
+        // 添加上传路径
+        $file_path = FILE_UPLOAD_PATH .$new_images;
+
+        // 上传新图片
+        if (!file_exists($file_path)) {
+            if (move_uploaded_file($_FILES['photo']["tmp_name"],  $file_path)) {
+
+                echo "图片" . $file_path . "上传成功！！" . "<br>";
+
+                // 删除旧图片
+                $path = FILE_UPLOAD_PATH . $old_images;
+                if (file_exists($path)) {
+                    unlink($path);
+                }
+            }
+        }
+    }
+    else {
+        // 如果是空的，则把旧的文件名传给它
+        $new_images = $old_images;
+    }
 
     $sql = "UPDATE `users`"
-            ." SET `accountname` = '$accountname', `realname` = '$realname', `sex` = '$sex', `type` = '$type', `tel` = '$tel', `email` = '$email', `location` = '$location', `address` = '$address'"
+            ." SET `realname` = '$realname', `sex` = '$sex', `tel` = '$tel',"
+            ." `email` = '$email', `location` = '$location', `address` = '$address', `photo` = '{$new_images}'"
             ." WHERE `users`.`id` = $userid";
     try {
         $pdo->beginTransaction();

@@ -78,12 +78,12 @@
                         <span style="color: #fa9800;">&nbsp;&nbsp;&nbsp;&nbsp;30%</span></div>
                     <div class="clearfix">
                         <?php
-                        $user_id = $_SESSION['userid'];
                         include("sql/userPage.php");
                         $res = $result->fetch(PDO::FETCH_OBJ);
                         ?>
+                        <form action="sql/updateUser.php" method="post" enctype="multipart/form-data">
                         <div class="post-pic txc fl"><a class="m_img"> <img
-                                        src="./images/default.png"
+                                        src="./user_files/avatar/<?=$res->photo;?>"
                                         id="headimg" alt=""
                                         onerror="this.src = 'images/default.png'"> </a>
                             <div class="m100">
@@ -92,31 +92,33 @@
                                         <div class="webuploader-pick">上传头像</div>
                                         <div id="rt_rt_1bhetsb50ubhbb9mk61n3v1lv71"
                                              style="position: absolute; top: 0px; left: 0px; width: 108px; height: 34px; overflow: hidden; bottom: auto; right: auto;">
-                                            <input type="file" name="file" class="webuploader-element-invisible"
-                                                   accept="">
-                                            <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+                                            <input type="file" id="photo" name="photo" class="webuploader-element-invisible"
+                                                   accept="image/*">
+                                            <label for="photo" style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
                                         </div>
                                     </div>
                                 </div>
-                                <input type="hidden" name="hfImg" id="hfImg" value="/images/m_default.jpg">
+                                <input type="hidden" name="o_photo" id="o_photo" value="./user_files/avatar/<?=$res->photo;?>">
                             </div>
                             <p class="mb10">支持JPG,JPEG,GIF,PNG,BMP,且小于2M</p>
                         </div>
-                        <form action="sql/updateUser.php" method="post">
+
                         <div class="fl user-form">
                             <div class="p-item clearfix">
                                 <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
-                                <div class="p-label fl">用户名<font color="red"><b>*</b></font></div>
-                                <div class="p-input fl">
-                                    <input name="accountname" type="text" id="accountname"
-                                           value="<?php echo $res->accountname; ?>" class="i-input"
-                                           style="width: 350px;">
-                                </div>
-                                <div class="p-label fl">真实姓名<font color="red"><b>*</b></font></div>
-                                <div class="p-input fl">
-                                    <input name="realname" type="text" id="realname"
-                                           value="<?php echo $res->realname; ?>" class="i-input"
-                                           style="width: 350px;">
+<!--                                <div class="p-label fl">用户名<font color="red"><b>*</b></font></div>-->
+<!--                                <div class="p-input fl">-->
+<!--                                    <input name="accountname" type="text" id="accountname"-->
+<!--                                           value="--><?php //echo $res->accountname; ?><!--" class="i-input"-->
+<!--                                           style="width: 350px;">-->
+<!--                                </div>-->
+                                <div class="p-item clearfix">
+                                    <div class="p-label fl">真实姓名<font color="red"><b>*</b></font></div>
+                                    <div class="p-input fl">
+                                        <input name="realname" type="text" id="realname"
+                                               value="<?php echo $res->realname; ?>" class="i-input"
+                                               style="width: 350px;">
+                                    </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">性别<font color="red"><b>*</b></font></div>
@@ -131,17 +133,17 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="p-item clearfix">
-                                    <div class="p-label fl">账户类型<font color="red"><b>*</b></font></div>
-                                    <div class="p-input fl">
-                                        <input id="personal" type="radio" name="type"
-                                               value="个人" <?php echo $res->type=="个人" ? 'checked="checked"' : ""; ?>
-                                        <label for="personal">个人</label>
-                                        <input id="company" type="radio" name="type"
-                                               value="企业" <?php echo $res->type=="企业" ? 'checked="checked"' : ""; ?>
-                                        <label for="company">企业</label>
-                                    </div>
-                                </div>
+<!--                                <div class="p-item clearfix">-->
+<!--                                    <div class="p-label fl">账户类型<font color="red"><b>*</b></font></div>-->
+<!--                                    <div class="p-input fl">-->
+<!--                                        <input id="personal" type="radio" name="type"-->
+<!--                                               value="个人" --><?php //echo $res->type=="个人" ? 'checked="checked"' : ""; ?>
+<!--                                        <label for="personal">个人</label>-->
+<!--                                        <input id="company" type="radio" name="type"-->
+<!--                                               value="企业" --><?php //echo $res->type=="企业" ? 'checked="checked"' : ""; ?>
+<!--                                        <label for="company">企业</label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">手机号码<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
@@ -183,7 +185,8 @@
                                 </div>
                             </div>
                         </div>
-                            <input type="hidden" name="userid" id="userid" value="<?=$user_id;?>"/>
+                            <input type="hidden" name="userid" id="userid" value="<?=$_SESSION['userid'];?>"/>
+                            <input type="hidden" name="user" id="user" value="<?=$_SESSION['user'];?>">
                         </form>
                     </div>
                 </div>
@@ -194,5 +197,19 @@
 <!-- }首页信息板块  -->
 
 <?php require_once('common/footer.php'); ?>
+<script>
+    // 获取图片上传对象
+    var photo = document.getElementById("photo");
+
+    // 获取图片对象
+    var headImg = document.getElementById("headimg");
+
+    // 绑定预览上传事件和预览功能
+    photo.onchange = function(){
+
+        // 获取input上传的图片数据，得到bolb对象路径，可当成普通的文件路径一样使用，赋值给src;
+        headImg.src = window.URL.createObjectURL(this.files[0]) ;
+    }
+</script>
 </body>
 </html>
