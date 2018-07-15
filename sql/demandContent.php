@@ -14,5 +14,5 @@ if (isset($id)) {
         die("错误!!: " . $e->getMessage() . "<br>");
     }
 } else
-    echo "没有接收到太阳能技术id！";
+    echo "没有接收到需求id！";
 ?>

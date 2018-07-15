@@ -106,12 +106,6 @@
                         <div class="fl user-form">
                             <div class="p-item clearfix">
                                 <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
-<!--                                <div class="p-label fl">用户名<font color="red"><b>*</b></font></div>-->
-<!--                                <div class="p-input fl">-->
-<!--                                    <input name="accountname" type="text" id="accountname"-->
-<!--                                           value="--><?php //echo $res->accountname; ?><!--" class="i-input"-->
-<!--                                           style="width: 350px;">-->
-<!--                                </div>-->
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">真实姓名<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
@@ -133,17 +127,6 @@
                                         </span>
                                     </div>
                                 </div>
-<!--                                <div class="p-item clearfix">-->
-<!--                                    <div class="p-label fl">账户类型<font color="red"><b>*</b></font></div>-->
-<!--                                    <div class="p-input fl">-->
-<!--                                        <input id="personal" type="radio" name="type"-->
-<!--                                               value="个人" --><?php //echo $res->type=="个人" ? 'checked="checked"' : ""; ?>
-<!--                                        <label for="personal">个人</label>-->
-<!--                                        <input id="company" type="radio" name="type"-->
-<!--                                               value="企业" --><?php //echo $res->type=="企业" ? 'checked="checked"' : ""; ?>
-<!--                                        <label for="company">企业</label>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">手机号码<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">

@@ -1,29 +1,34 @@
 <?php
-include("connection.php");
-$url = "../mydemands.php";
-$url2 = "../publishdemands.php";
 
-if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["location"]) && !empty($_POST["entreprise"])) {
+if (!empty($_POST["title"]) && !empty($_POST["description"]) && !empty($_POST["email"])
+    && !empty($_POST["location"]) && !empty($_POST["entreprise"])) {
+
+    include("connection.php");
+
     $title = $_POST["title"];
     $description = $_POST["description"];
-    $email = isset($_POST["email"]) ? $_POST["email"] : NULL;
+    $email = $_POST["email"];
     $location = $_POST["location"];
     $entreprise = $_POST["entreprise"];
-    $userid = $_GET["userid"];
+    $id = $_POST["id"];
+    $url = "../mydemands.php";
+    $url2 = "../editdemand.php?id={$id}";
 
-    $sql = "INSERT INTO `demands` (`id`, `title`, `entreprise`, `location`, `email`, `description`, `date`, `userid`) "
-        ."VALUES (NULL, '$title', '$entreprise', '$location', '$email', '$description', now(), '$userid')";
+    $sql = "UPDATE `demands`"
+        ." SET `title` = '$title', `entreprise` = '$entreprise', `description` = '$description',"
+        ." `email` = '$email', `location` = '$location'"
+        ." WHERE `demands`.`id` = $id";
 
     try {
         $pdo->beginTransaction();
         $result = $pdo->prepare($sql);
         if ($result->execute()) {
             $pdo->commit();
-            echo "<script> alert('发布需求成功！！');</script>";
+            echo "<script> alert('更新需求成功！！');</script>";
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
         } else {
             $pdo->rollBack();
-            echo "<script> alert('发布需求失败！！');</script>";
+            echo "<script> alert('更新需求失败！！');</script>";
             echo $pdo->errorInfo();
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url=$url\">";
         }

@@ -100,7 +100,7 @@
                                     <td><?php echo $res->date; ?></td>
                                     <td><?php echo $res->entreprise; ?></td>
                                     <td>审核中</td>
-                                    <td><a style="color: rgb(0, 148, 255);" href="/pub_qiu/fabu_js.aspx?id=34590">编辑</a>&nbsp;|&nbsp;<a
+                                    <td><a style="color: rgb(0, 148, 255);" href="editdemand.php?id=<?=$res->id;?>">编辑</a>&nbsp;|&nbsp;<a
                                                 id="rpList_ctl00_lbtnDel" style="color: rgb(0, 148, 255);"
                                                 href="sql/deleteDemand.php?id=<?php echo $res->id; ?>">删 除</a></td>
                                 </tr>

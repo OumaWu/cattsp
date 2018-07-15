@@ -96,12 +96,12 @@
                                     <td><textarea class="d6_tarea" id="description" name="description" warning="请填写需求简介"
                                                   placeholder="请填写需求简介"></textarea></td>
                                 </tr>
-                                <tr>
-                                    <th><i></i>联系人：</th>
-                                    <td><label>
-                                            <input type="text" class="d6_idtxt2" name="truename" value="">
-                                        </label></td>
-                                </tr>
+<!--                                <tr>-->
+<!--                                    <th><i></i>联系人：</th>-->
+<!--                                    <td><label>-->
+<!--                                            <input type="text" class="d6_idtxt2" name="truename" value="">-->
+<!--                                        </label></td>-->
+<!--                                </tr>-->
                                 <tr>
                                     <th><i></i>电子邮箱：</th>
                                     <td><label>
