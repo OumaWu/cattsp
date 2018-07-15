@@ -204,12 +204,12 @@
 }
 
 .p-input {
-    height: 50px;
+    /*height: 50px;*/
     line-height: 50px;
     padding-left: 20px;
     color: #005bac;
-    width: 100%;
-    width: 480px;
+    /*width: 100%;*/
+    width: 500px;
 }
 
 .p-input textarea.txt {

@@ -21,11 +21,19 @@
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
     <!-- }导入个人页面css文件 -->
 
-
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <!-- }导入其他css和js文件 -->
-
+<style>
+    #intro {
+        /*height: 50px;*/
+        width: 350px;
+        height: 100%;
+        line-height: 50px;
+        padding-left: 20px;
+        color: #005bac;
+    }
+</style>
 </head>
 <body>
 <!--  版头{  -->
@@ -76,8 +84,9 @@
                         include("sql/specialistPage.php");
                         $res = $result->fetch(PDO::FETCH_OBJ);
                         ?>
+                        <form action="sql/updateExpert.php" method="post" enctype="multipart/form-data">
                         <div class="post-pic txc fl"><a class="m_img"> <img
-                                        src="./images/default.png"
+                                        src="./user_files/expert/<?=$res->photo;?>"
                                         id="headimg" alt=""
                                         onerror="this.src = 'images/default.png'"> </a>
                             <div class="m100">
@@ -86,17 +95,17 @@
                                         <div class="webuploader-pick">上传头像</div>
                                         <div id="rt_rt_1bhetsb50ubhbb9mk61n3v1lv71"
                                              style="position: absolute; top: 0px; left: 0px; width: 108px; height: 34px; overflow: hidden; bottom: auto; right: auto;">
-                                            <input type="file" name="file" class="webuploader-element-invisible"
-                                                   accept="">
-                                            <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+                                            <input type="file" name="photo" id="photo" class="webuploader-element-invisible"
+                                                   accept="image/*">
+                                            <label for="photo" style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
                                         </div>
                                     </div>
                                 </div>
-                                <input type="hidden" name="hfImg" id="hfImg" value="/images/m_default.jpg">
+                                <input type="hidden" name="o_photo" id="o_photo" value="./user_files/expert/<?=$res->photo;?>">
                             </div>
                             <p class="mb10">支持JPG,JPEG,GIF,PNG,BMP,且小于2M</p>
                         </div>
-                        <form action="sql/updateExpert.php" method="post">
+
                         <div class="fl user-form">
                             <div class="p-item clearfix">
                                 <h2 align="center" style="margin-bottom: 15px;"><font color="red"><b>*</b></font>为必填选项</h2>
@@ -106,11 +115,13 @@
                                            value="<?php echo $res->name; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
-                                <div class="p-label fl">职位/头衔<font color="red"><b>*</b></font></div>
-                                <div class="p-input fl">
-                                    <input name="title" type="text" id="title"
-                                           value="<?php echo $res->title; ?>" class="i-input"
-                                           style="width: 350px;">
+                                <div class="p-item clearfix">
+                                    <div class="p-label fl">职位/头衔<font color="red"><b>*</b></font></div>
+                                    <div class="p-input fl">
+                                        <input name="title" type="text" id="title"
+                                               value="<?php echo $res->title; ?>" class="i-input"
+                                               style="width: 350px;">
+                                    </div>
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">从业时长(年)<font color="red"><b>*</b></font></div>
@@ -181,6 +192,7 @@
                             </div>
                         </div>
                             <input type="hidden" name="userid" id="userid" value="<?=$user_id;?>"/>
+                            <input type="hidden" name="user" id="user" value="<?=$_SESSION['user'];?>">
                         </form>
                     </div>
                 </div>
@@ -191,5 +203,19 @@
 <!-- }首页信息板块  -->
 
 <?php require_once('common/footer.php'); ?>
+<script>
+    // 获取图片上传对象
+    var photo = document.getElementById("photo");
+
+    // 获取图片对象
+    var headImg = document.getElementById("headimg");
+
+    // 绑定预览上传事件和预览功能
+    photo.onchange = function(){
+
+        // 获取input上传的图片数据，得到bolb对象路径，可当成普通的文件路径一样使用，赋值给src;
+        headImg.src = window.URL.createObjectURL(this.files[0]) ;
+    }
+</script>
 </body>
 </html>

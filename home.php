@@ -232,7 +232,7 @@
                         ?>
                         <li>
                             <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
-                               title="<?= $res->name; ?>"> <img src="images/<?= $res->photo; ?>"
+                               title="<?= $res->name; ?>"> <img src="./user_files/expert/<?= $res->photo; ?>"
                                                                 alt="<?= $res->name; ?>"
                                                                 onerror="this.src = 'images/profile-default-male.png'">
                             </a>

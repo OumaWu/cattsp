@@ -115,27 +115,27 @@
                                         <li>
                                             <img id="preview1" src="./user_files/<?= $res->image1; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
-                                            <input type="file" name="img1" id="img1"/>
+                                            <input type="file" name="img1" id="img1" accept="image/*"/>
                                         </li>
                                         <li>
                                             <img id="preview2" src="./user_files/<?= $res->image2; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
-                                            <input type="file" name="img2" id="img2"/>
+                                            <input type="file" name="img2" id="img2" accept="image/*"/>
                                         </li>
                                         <li>
                                             <img id="preview3" src="./user_files/<?= $res->image3; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
-                                            <input type="file" name="img3" id="img3"/>
+                                            <input type="file" name="img3" id="img3" accept="image/*"/>
                                         </li>
                                         <li>
                                             <img id="preview4" src="./user_files/<?= $res->image4; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
-                                            <input type="file" name="img4" id="img4"/>
+                                            <input type="file" name="img4" id="img4" accept="image/*"/>
                                         </li>
                                         <li>
                                             <img id="preview5" src="./user_files/<?= $res->image5; ?>" alt="预览"
                                                  onerror="this.onerror=null;this.src='./images/default.jpg';"/>
-                                            <input type="file" name="img5" id="img5"/>
+                                            <input type="file" name="img5" id="img5" accept="image/*"/>
                                         </li>
                                     </ul>
                                     <br/>

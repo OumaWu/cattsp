@@ -53,7 +53,7 @@ include("sql/specialistProfile.php");
 $res = $result->fetch(PDO::FETCH_OBJ);
 ?>
 <div class="space_top space_top_1">
-    <div class="space_top_photo"><img src="images/<?=$res->photo;?>" alt="<?=$res->photo;?>"
+    <div class="space_top_photo"><img src="./user_files/expert/<?=$res->photo;?>" alt="<?=$res->photo;?>"
                                       onerror="this.src='images/profile-default-male.png'"></div>
     <h1 class="name"><?=$res->name;?></h1>
     <p class="hur1"> <?=$res->title;?> </p>

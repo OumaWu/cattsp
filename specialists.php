@@ -116,7 +116,7 @@
             ?>
             <li>
                 <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php?id=<?=$res->id;?>"> <img
-                                src="images/<?=$res->photo;?>" alt="<?=$res->name;?>"
+                                src="./user_files/expert/<?=$res->photo;?>" alt="<?=$res->name;?>"
                                 onerror="this.src=images/<?=$res->photo;?>"> </a></div>
                 <div class="xc_bb">
                     <p class="hur2"><span><?=$res->location;?></span> <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank"
