@@ -28,10 +28,10 @@
     <link rel="stylesheet" type="text/css" href="css/mydemands.css">
     <!-- }导入我的需求css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
+    <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <!-- }导入其他css和js文件 -->
 
 </head>
 <body>
@@ -73,6 +73,13 @@
                     <div class="m-title">需求管理</div>
                     <ul>
                         <li><a href="publishdemands.php" class="">发布需求</a> <a href="mydemands.php" class="">我的需求</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="m-title">专家咨询</div>
+                    <ul>
+                        <li><a href="myquestions.php" class="">我的提问</a>
                         </li>
                     </ul>
                 </div>

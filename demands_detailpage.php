@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -16,10 +16,11 @@
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <!-- }导入新闻展示模块css文件 -->
 
-    <!-- 导入钒钛通css和js文件{ -->
+    <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/home.css" id="theme2">
-    <!-- }导入钒钛通css和js文件 -->
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme1">
+    <!-- }导入其他css和js文件 -->
 
 </head>
 <body>
