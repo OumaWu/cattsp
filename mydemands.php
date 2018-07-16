@@ -73,6 +73,13 @@
                         </li>
                     </ul>
                 </div>
+                <div class="item">
+                    <div class="m-title">专家咨询</div>
+                    <ul>
+                        <li><a href="myquestions.php" class="">我的提问</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
