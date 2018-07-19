@@ -15,8 +15,6 @@ $introduction = $_POST["introduction"];
 $new_images = (string)$_FILES['photo']['name'];
 $old_images = (string)$_POST['o_photo'];
 
-var_dump($_FILES, $new_images, $old_images);
-
 if (!empty($name) && !empty($title) && isset($career_age) && !empty($degree)
     && !empty($institute) && !empty($domain) && !empty($speciality) && !empty($location) && !empty($introduction)) {
 
@@ -64,12 +62,12 @@ if (!empty($name) && !empty($title) && isset($career_age) && !empty($degree)
         if ($result->execute()) {
             $pdo->commit();
             echo "<script> alert('你的资料更新成功！！');</script>";
-//            echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         } else {
             $pdo->rollBack();
             echo "<script> alert('你的资料更新失败！！');</script>";
             echo $pdo->errorInfo();
-//            echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
+            echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         }
     } catch (PDOException $e) {
         die("错误!!: " . $e->getMessage() . "<br>");

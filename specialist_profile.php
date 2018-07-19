@@ -90,7 +90,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="hidden" name="o_photo" id="o_photo" value="./user_files/expert/<?=$res->photo;?>">
+                                <input type="hidden" name="o_photo" id="o_photo" value="<?=$res->photo;?>">
                             </div>
                             <p class="mb10">支持JPG,JPEG,GIF,PNG,BMP,且小于2M</p>
                         </div>
