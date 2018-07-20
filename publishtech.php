@@ -143,7 +143,7 @@
                                 <tr>
                                     <th><i></i>发布人：</th>
                                     <td><label>
-                                            <input type="text" class="d6_idtxt2" name="publisher" value="">
+                                            <input type="text" class="d6_idtxt2" name="publisher" id="publisher" value="">
                                         </label></td>
                                 </tr>
                                 <tr>
@@ -156,7 +156,7 @@
                                     <th><i></i>单位名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt2" name="entreprise" maxlength="50"
-                                                   value="">
+                                                   id="entreprise" value="">
                                         </label></td>
                                 </tr>
                                 <tr>
