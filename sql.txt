@@ -1,0 +1,1 @@
+CREATE VIEW reply_view AS SELECT q.id, r.content, r.s_type sender, r.time, u.realname user, s.name expert FROM question q, reply r, users u, specialists s WHERE r.u_id = u.id AND r.spe_id = s.id ORDER BY r.`time` DESC

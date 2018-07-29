@@ -24,7 +24,7 @@
     <!-- }导入个人页面css文件 -->
 
     <!-- 导入技术发布页面css文件{ -->
-    <link href="./css/frame.css" rel="stylesheet" type="text/css">
+    <link href="./css/frame.css?v" rel="stylesheet" type="text/css">
     <!-- }导入技术发布页面css文件 -->
 
     <!-- 导入其他css和js文件{ -->

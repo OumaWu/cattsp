@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -16,18 +15,18 @@
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <!-- }导入新闻展示模块css文件 -->
 
-    <!--    <link rel="stylesheet" type="text/css" href="css/chat.css"/>-->
-
     <!-- 导入个人页面css文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/member.css?v">
+    <link rel="stylesheet" type="text/css" href="./css/member.css">
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
     <!-- }导入个人页面css文件 -->
 
+
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-
     <!-- }导入其他css和js文件 -->
+
 </head>
 <body>
 <!--  版头{  -->
@@ -53,22 +52,35 @@
         <div class="w1220">
             <div class="member-sidebar fl">
                 <div class="item">
-                    <div class="m-title">专家用户中心</div>
+                    <div class="m-title">会员中心</div>
                     <ul>
-                        <li><a href="specialist_profile.php" class="">基本信息</a></li>
+                        <li><a href="personalpage.php">基本信息</a></li>
                     </ul>
                 </div>
                 <div class="item">
-                    <div class="m-title">答疑中心</div>
+                    <div class="m-title">太阳能技术管理</div>
                     <ul>
-                        <li><a href="#" class="on">用户提问</a></li>
+                        <li><a href="publishtech.php" class="">发布技术</a> <a href="mytech.php" class="">我的技术</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="m-title">需求管理</div>
+                    <ul>
+                        <li><a href="publishdemands.php" class="">发布需求</a> <a href="mydemands.php" class="">我的需求</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <div class="m-title">专家咨询</div>
+                    <ul>
+                        <li><a href="myquestions.php" class="on">我的提问</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
-                    <div class="member-title mb30">用户问题答疑</div>
-
+                    <div class="member-title mb30">我的提问</div>
                     <div class="info-state fz14 mb100" style="border: 1px solid #ddd;">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover table-bordered">
@@ -88,7 +100,7 @@
                                     <td>123</td>
                                     <td>123</td>
                                     <td>123</td>
-                                    <td><a href="specialist_questionDetail.php" class="btn btn-default">查看</a>
+                                    <td><a href="myquestions_detail.php?q_id=1" class="btn btn-default">查看</a>
                                     </td>
                                     <td><a href="" class="btn btn-primary"
                                            onclick="if(!confirm('确定要删除吗？')) return false;">删除</a></td>
@@ -97,24 +109,13 @@
                             </table>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-
-
     </div>
-</div>
-</div>
-</div>
 </div>
 <!-- }首页信息板块  -->
 
 <?php require_once('common/footer.php'); ?>
-
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/templatemo_script.js"></script>
 </body>
 </html>
