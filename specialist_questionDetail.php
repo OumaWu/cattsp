@@ -26,7 +26,7 @@
 
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
-    <!--    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">-->
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -54,36 +54,22 @@
         <div class="w1220">
             <div class="member-sidebar fl">
                 <div class="item">
-                    <div class="m-title">会员中心</div>
+                    <div class="m-title">专家用户中心</div>
                     <ul>
-                        <li><a href="personalpage.php" class="">基本信息</a></li>
+                        <li><a href="specialist_profile.php" class="">基本信息</a></li>
                     </ul>
                 </div>
                 <div class="item">
-                    <div class="m-title">太阳能技术管理</div>
+                    <div class="m-title">答疑中心</div>
                     <ul>
-                        <li><a href="publishtech.php" class="">发布技术</a> <a href="mytech.php" class="">我的技术</a></li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <div class="m-title">需求管理</div>
-                    <ul>
-                        <li><a href="publishdemands.php" class="">发布需求</a> <a href="mydemands.php" class="">我的需求</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <div class="m-title">专家咨询</div>
-                    <ul>
-                        <li><a href="myquestions.php" class="on">我的提问</a>
-                        </li>
+                        <li><a href="#" class="on">用户提问</a></li>
                     </ul>
                 </div>
             </div>
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
                     <div class="member-title mb30">问题详情
-                        <a href="specialist_userQuestions.php" style="float: right;">返回</a>
+                        <a href="specialist_userQuestions.php" style="float: right;">[返回]</a>
                     </div>
                 </div>
                 <?php
@@ -94,14 +80,14 @@
                     <div style="height: 10px;"></div>
                     <form id="question" action="sql/insertReply.php"
                           method="post">
-                        <input type="hidden" name="q_id" id="q_id" value="<?=$_GET['q_id'];?>">
+                        <input type="hidden" name="q_id" id="q_id" value="<?= $_GET['q_id']; ?>">
                         <input type="hidden" name="sender" id="sender" value="1">
                         <div class="wrap1 d6_xqc">
-                            <h1 style="text-align: center">用户<?=$ques->user;?>的提问</h1>
+                            <h1 style="text-align: center"><?= $ques->user; ?>的提问</h1>
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tbody>
-                                <input type="hidden" name="u_id" id="u_id" value="<?=$ques->u_id;?>">
-                                <input type="hidden" name="spe_id" id="spe_id" value="<?=$ques->spe_id;?>">
+                                <input type="hidden" name="u_id" id="u_id" value="<?= $ques->u_id; ?>">
+                                <input type="hidden" name="spe_id" id="spe_id" value="<?= $ques->spe_id; ?>">
                                 <tr>
                                     <th><i></i>问题名称：</th>
                                     <td>
@@ -125,7 +111,7 @@
                                 while ($res = $result->fetch(PDO::FETCH_OBJ)) { ?>
 
                                     <tr>
-                                        <th><h2><?= $res->sender ? $res->expert : $res->user; ?>：</h2></th>
+                                        <th><h2><?= $res->sender ? "我" : $res->user; ?>：</h2></th>
                                         <td>
                                             <?= $res->time; ?>
                                             <p><?= $res->content; ?></p>

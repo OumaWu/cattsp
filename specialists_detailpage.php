@@ -53,35 +53,40 @@ include("sql/specialistProfile.php");
 $res = $result->fetch(PDO::FETCH_OBJ);
 ?>
 <div class="space_top space_top_1">
-    <div class="space_top_photo"><img src="./user_files/expert/<?=$res->photo;?>" alt="<?=$res->photo;?>"
+    <div class="space_top_photo"><img src="./user_files/expert/<?= $res->photo; ?>" alt="<?= $res->photo; ?>"
                                       onerror="this.src='images/profile-default-male.png'"></div>
-    <h1 class="name"><?=$res->name;?></h1>
-    <p class="hur1"> <?=$res->title;?> </p>
-    <p class="hur2"><span class="zk_followlist " name="follow_8573777"><span class="gz1">+关注</span></span> <span
-                withletter="1" name="kyt_8573777" class="zk_kyt im-btn im-min-btn"><span
-                    style="cursor:pointer">咨询</span></span></p>
+    <h1 class="name"><?= $res->name; ?></h1>
+    <p class="hur1"> <?= $res->title; ?> </p>
+    <?php if (!isset($_SESSION["mode"]) || $_SESSION["mode"] != "expert") { ?>
+        <p class="hur2">
+        <span class="gz1">
+                <a href="askQuestion.php?spe_id=<?= $res->id; ?>&expert=<?= $res->name; ?>"
+                   style="color: white;">向TA咨询</a>
+        </span>
+        </p>
+    <?php } ?>
 </div>
 <div class="main">
     <div class="space_h2 space_h2_1"><h1>基本信息</h1></div>
     <div class="space_con">
-        <p class="space_con_b"><span class="hur1"> 所在地</span><?=$res->location;?></p>
-        <p class="space_con_b"><span class="hur1"> 学历</span> <?=$res->degree;?></p>
-        <p class="space_con_b"><span class="hur1"> 从业时长</span><?=$res->career_age;?> 年</p>
-        <p class="space_con_b"><span class="hur1"> 毕业院校</span><?=$res->institute;?></p>
+        <p class="space_con_b"><span class="hur1"> 所在地</span><?= $res->location; ?></p>
+        <p class="space_con_b"><span class="hur1"> 学历</span> <?= $res->degree; ?></p>
+        <p class="space_con_b"><span class="hur1"> 从业时长</span><?= $res->career_age; ?> 年</p>
+        <p class="space_con_b"><span class="hur1"> 毕业院校</span><?= $res->institute; ?></p>
     </div>
     <div class="space_h2 space_h2_2"><h1>技术能力</h1></div>
     <div class="space_con">
-        <p class="space_con_b"><span class="hur1">从事领域</span><?=$res->domain;?></p>
-        <p class="space_con_b"><span class="hur2">擅长能力</span><?=$res->speciality;?></p>
+        <p class="space_con_b"><span class="hur1">从事领域</span><?= $res->domain; ?></p>
+        <p class="space_con_b"><span class="hur2">擅长能力</span><?= $res->speciality; ?></p>
     </div>
     <div class="space_h2 space_h2_3"><h1>个人简介</h1></div>
     <div class="space_con">
         <div class="space_con_p">
             <?php
-            $intro =preg_split("/[ ]+/", $res->introduction);
+            $intro = preg_split("/[ ]+/", $res->introduction);
             foreach ($intro as $paragraph) {
-            ?>
-            <p>&emsp;&emsp;<?=$paragraph;?></p>
+                ?>
+                <p>&emsp;&emsp;<?= $paragraph; ?></p>
             <?php } ?>
             <!--<p></p>-->
         </div>

@@ -1,4 +1,8 @@
-CREATE VIEW reply_view AS SELECT q.id, r.content, r.s_type sender, r.time, u.realname user, s.name expert FROM question q, reply r, users u, specialists s WHERE r.u_id = u.id AND r.spe_id = s.id ORDER BY r.`time` DESC
+CREATE VIEW reply_view AS
+select `q`.`id` AS `q_id`,`r`.`content` AS `content`,`r`.`s_type` AS `sender`,`r`.`time` AS `time`,`u`.`realname` AS `user`,`s`.`name` AS `expert`
+from (((`casttp`.`question` `q` join `casttp`.`reply` `r`) join `casttp`.`users` `u`) join `casttp`.`specialists` `s`)
+where ((`r`.`q_id` = `q`.`id`) and (`r`.`u_id` = `u`.`id`) and (`r`.`spe_id` = `s`.`id`))
+order by `r`.`time` desc
 
 CREATE VIEW `question_view` AS
 select `q`.`id` AS `q_id`,`q`.`title` AS `title`, `q`.`content` AS `content`,`u`.`id` AS `u_id`,`u`.`accountname` AS `u_account`,`u`.`realname` AS `user`,`s`.`id` AS `spe_id`,`s`.`accountname` AS `spe_account`,`s`.`name` AS `expert`,`q`.`time` AS `time`

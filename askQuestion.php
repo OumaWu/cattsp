@@ -83,62 +83,38 @@
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
                     <div class="member-title mb30">问题详情
-                        <a href="myquestions.php" style="float: right;">[返回]</a>
+                        <a href="myquestions.php" style="float: right;">返回</a>
                     </div>
                 </div>
                 <?php
-                require_once('./sql/selectQuestion.php');
-                $ques = $result->fetch(PDO::FETCH_OBJ);
+                    $spe_id = $_GET["spe_id"];
+                    $expert = $_GET["expert"];
+                    $user_id = $_SESSION["userid"];
+
                 ?>
                 <div class="content">
                     <div style="height: 10px;"></div>
-                    <form id="question" action="sql/insertReply.php"
+                    <form id="question" action="sql/insertQuestion.php"
                           method="post">
-                        <input type="hidden" name="q_id" id="q_id" value="<?= $_GET['q_id']; ?>">
-                        <input type="hidden" name="sender" id="sender" value="0">
                         <div class="wrap1 d6_xqc">
-                            <h1 style="text-align: center">向<?= $ques->expert; ?>专家咨询</h1>
+                            <h1 style="text-align: center">向<?=$expert;?>专家咨询</h1>
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
 
                                 <tbody>
-                                <input type="hidden" name="u_id" id="u_id" value="<?= $ques->u_id; ?>">
-                                <input type="hidden" name="spe_id" id="spe_id" value="<?= $ques->spe_id; ?>">
+                                <input type="hidden" name="u_id" id="u_id" value="<?=$user_id;?>">
+                                <input type="hidden" name="spe_id" id="spe_id" value="<?=$spe_id;?>">
                                 <tr>
-                                    <th><i></i>问题名称：</th>
-                                    <td>
-                                        <h1><?= $ques->title; ?></h1>
-                                    </td>
+                                    <th><span style="color: red">*</span>问题名称：</th>
+                                    <td><label>
+                                            <input type="text" class="d6_idtxt" name="title" id="title" maxlength="50"
+                                                   placeholder="请填写问题名称">
+                                        </label></td>
                                 </tr>
                                 <tr>
-                                    <th><i></i>详细描述：</th>
-                                    <td>
-                                        <h2><?= $ques->content; ?></h2>
-                                    </td>
+                                    <th><span style="color: red">*</span>详细描述：</th>
+                                    <td><textarea class="d6_tarea" id="content" name="content"
+                                                  placeholder="请填写问题详细描述"></textarea></td>
                                 </tr>
-                                <tr>
-                                    <th><i></i>提问时间：</th>
-                                    <td>
-                                        <p><?= $ques->time; ?></p>
-                                    </td>
-                                </tr>
-                                <?php
-                                require_once('./sql/selectReply.php');
-                                while ($res = $result->fetch(PDO::FETCH_OBJ)) { ?>
-
-                                    <tr>
-                                        <th><h2><?= $res->sender ? $res->expert : "我"; ?>：</h2></th>
-                                        <td>
-                                            <?= $res->time; ?>
-                                            <p><?= $res->content; ?></p>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                                <tr>
-                                    <th><i></i>填写回复：</th>
-                                    <td><textarea class="d6_tarea" id="content" name="content" warning="请填写回复"
-                                                  placeholder="请填写回复"></textarea></td>
-                                </tr>
-
                                 </tbody>
                             </table>
                             <div class="d6_xqbm">

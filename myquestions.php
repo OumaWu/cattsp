@@ -80,7 +80,9 @@
             </div>
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
-                    <div class="member-title mb30">我的提问</div>
+                    <div class="member-title mb30">我的提问
+                        <a href="specialists.php" style="float: right;">去向专家提问 ></a>
+                    </div>
                     <div class="info-state fz14 mb100" style="border: 1px solid #ddd;">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover table-bordered">

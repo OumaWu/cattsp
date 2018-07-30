@@ -16,8 +16,6 @@
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <!-- }导入新闻展示模块css文件 -->
 
-    <!--    <link rel="stylesheet" type="text/css" href="css/chat.css"/>-->
-
     <!-- 导入个人页面css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/member.css?v">
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
@@ -25,6 +23,7 @@
 
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 
     <!-- }导入其他css和js文件 -->

@@ -87,8 +87,7 @@ if (!empty($realname) && isset($sex) && !empty($tel)
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         } else {
             $pdo->rollBack();
-            echo "<script> alert('你的资料更新失败！！');</script>";
-            echo $pdo->errorInfo();
+            echo "<script> alert('你的资料更新失败！！\\n{$pdo->errorInfo()}');</script>";
             echo "<meta http-equiv=\"refresh\" content=\"0.5;url={$url}\">";
         }
     } catch (PDOException $e) {

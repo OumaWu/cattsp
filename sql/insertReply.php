@@ -2,7 +2,7 @@
 include("connection.php");
 $url = $_SERVER["HTTP_REFERER"];
 
-if (!empty($_POST["q_id"]) && !empty($_POST["content"]) &&!empty($_POST["sender"])
+if (!empty($_POST["q_id"]) && !empty($_POST["content"]) && isset($_POST["sender"])
     && !empty($_POST["u_id"]) && !empty($_POST["spe_id"])) {
     $q_id = $_POST["q_id"];
     $sender = $_POST["sender"];
