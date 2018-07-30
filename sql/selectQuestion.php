@@ -6,7 +6,7 @@ $url = $_SERVER["HTTP_REFERER"];
 if (isset($_GET['q_id'])) {
     $id = $_GET['q_id'];
 
-    $sql = "SELECT * FROM `question` WHERE `id` = {$id}";
+    $sql = "SELECT * FROM `question_view` WHERE `q_id` = {$id}";
     try {
         $result = $pdo->prepare($sql);
         if ($result->execute()) {

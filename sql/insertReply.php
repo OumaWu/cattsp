@@ -2,15 +2,16 @@
 include("connection.php");
 $url = $_SERVER["HTTP_REFERER"];
 
-if (!empty($_POST["q_id"]) && !empty($_POST["content"])
+if (!empty($_POST["q_id"]) && !empty($_POST["content"]) &&!empty($_POST["sender"])
     && !empty($_POST["u_id"]) && !empty($_POST["spe_id"])) {
     $q_id = $_POST["q_id"];
+    $sender = $_POST["sender"];
     $content = $_POST["content"];
     $u_id = $_POST["u_id"];
     $spe_id = $_POST["spe_id"];
 
     $sql = "INSERT INTO `reply` (`id`, `content`, `u_id`, `spe_id`, `s_type`, `time`, `q_id`) "
-        ."VALUES (NULL, '{$content}', '{$u_id}', '{$spe_id}', '0', CURRENT_TIMESTAMP, '{$q_id}')";
+        ."VALUES (NULL, '{$content}', '{$u_id}', '{$spe_id}', '{$sender}', CURRENT_TIMESTAMP, '{$q_id}')";
 
     try {
         $pdo->beginTransaction();

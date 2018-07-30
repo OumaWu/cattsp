@@ -83,16 +83,20 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <?php
+                                require_once('./sql/selectQuestions.php');
+                                while ($res = $result->fetch(PDO::FETCH_OBJ)) { ?>
                                 <tr>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td>123</td>
-                                    <td><a href="specialist_questionDetail.php" class="btn btn-default">查看</a>
+                                    <td><?= $res->q_id; ?></td>
+                                    <td><?= $res->title; ?></td>
+                                    <td><?= $res->user; ?></td>
+                                    <td><?= $res->time; ?></td>
+                                    <td><a href="specialist_questionDetail.php?q_id=<?= $res->q_id; ?>" class="btn btn-default">查看</a>
                                     </td>
                                     <td><a href="" class="btn btn-primary"
                                            onclick="if(!confirm('确定要删除吗？')) return false;">删除</a></td>
                                 </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>

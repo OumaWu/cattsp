@@ -83,21 +83,22 @@
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
                     <div class="member-title mb30">问题详情
-                        <a href="myquestions.php" style="float: right;">返回</a>
+                        <a href="specialist_userQuestions.php" style="float: right;">返回</a>
                     </div>
                 </div>
+                <?php
+                require_once('./sql/selectQuestion.php');
+                $ques = $result->fetch(PDO::FETCH_OBJ);
+                ?>
                 <div class="content">
                     <div style="height: 10px;"></div>
                     <form id="question" action="sql/insertReply.php"
                           method="post">
                         <input type="hidden" name="q_id" id="q_id" value="<?=$_GET['q_id'];?>">
-                        <input type="hidden" name="sender" id="sender" value="0">
+                        <input type="hidden" name="sender" id="sender" value="1">
                         <div class="wrap1 d6_xqc">
+                            <h1 style="text-align: center">用户<?=$ques->user;?>的提问</h1>
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <?php
-                                require_once('./sql/selectQuestion.php');
-                                $ques = $result->fetch(PDO::FETCH_OBJ);
-                                ?>
                                 <tbody>
                                 <input type="hidden" name="u_id" id="u_id" value="<?=$ques->u_id;?>">
                                 <input type="hidden" name="spe_id" id="spe_id" value="<?=$ques->spe_id;?>">
