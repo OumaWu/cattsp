@@ -58,12 +58,7 @@
                 发布日期：<?php echo $res->date; ?>&nbsp;&nbsp;&nbsp;
             </p>
             <div class="xb_kc">
-                <?php
-                $content =preg_split("/[\s]+/", $res->content);
-                foreach ($content as $paragraph) {
-                    ?>
-                    <p style="text-align:justify">&emsp;&emsp;<?=$paragraph;?></p>
-                <?php } ?>
+                <?= $res->content; ?>
             </div>
         </div>
     </div>
