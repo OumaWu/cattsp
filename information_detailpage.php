@@ -64,9 +64,6 @@
                     ?>
                     <p style="text-align:justify">&emsp;&emsp;<?=$paragraph;?></p>
                 <?php } ?>
-                <p style="text-align:center">
-                    <img title="7.jpg" alt="7.jpg" src="images/news-default.jpg?324142">
-                </p>
             </div>
         </div>
     </div>

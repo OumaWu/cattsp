@@ -64,9 +64,6 @@
                     ?>
                     <p style="text-align:justify">&emsp;&emsp;<?=$paragraph;?></p>
                 <?php } ?>
-                <p style="text-align:center">
-                    <img width="564" height="284" title="7.jpg" style="width: 564px; height: 284px;" alt="7.jpg" src="images/policy-default.png">
-                </p>
             </div>
         </div>
     </div>
