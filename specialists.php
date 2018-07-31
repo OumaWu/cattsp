@@ -16,7 +16,7 @@
     <!-- }导入版头css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <!-- }导入其他css和js文件 -->
 
@@ -113,20 +113,23 @@
             <?php
             include('sql/specialists.php');
             while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-            ?>
-            <li>
-                <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php?id=<?=$res->id;?>"> <img
-                                src="./user_files/expert/<?=$res->photo;?>" alt="<?=$res->name;?>"
-                                onerror="this.src=images/<?=$res->photo;?>"> </a></div>
-                <div class="xc_bb">
-                    <p class="hur2"><span><?=$res->location;?></span> <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank"
-                                                            title="<?=$res->name;?>"> <?=$res->name;?> </a></p>
-                    <p class="hur1"> 从事领域：<?=$res->domain;?> </p>
-                    <p class="hur1"> 擅长能力：<?=$res->speciality;?></p>
-                </div>
-                <a href="specialists_detailpage.php?id=<?=$res->id;?>" target="_blank" rel="nofollow" class="xc_b_f"
-                   style="display: block;"></a>
-            </li>
+                ?>
+                <li>
+                    <div class="xc_ba"><a target="_blank" href="specialists_detailpage.php?id=<?= $res->id; ?>"> <img
+                                    src="./user_files/expert/<?= $res->photo; ?>" alt="<?= $res->name; ?>"
+                                    onerror="this.src='images/profile-default-male.png'"> </a>
+                    </div>
+                    <div class="xc_bb">
+                        <p class="hur2"><span><?= $res->location; ?></span> <a
+                                    href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank"
+                                    title="<?= $res->name; ?>"> <?= $res->name; ?> </a></p>
+                        <p class="hur1"> 从事领域：<?= $res->domain; ?> </p>
+                        <p class="hur1"> 擅长能力：<?= $res->speciality; ?></p>
+                    </div>
+                    <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" rel="nofollow"
+                       class="xc_b_f"
+                       style="display: block;"></a>
+                </li>
             <?php } ?>
         </ul>
         <div class="h_page">
@@ -144,7 +147,6 @@
         <input id="jumppage" type="text" value="1" size="2" name="page">
         页
         <input type="button" id="bt_go"
-               onclick="javascript:var page=document.getElementById(&#39;jumppage&#39;);var p=page.value;var reg = new RegExp(&#39;^[0-9]*$&#39;);if(!reg.test(p)){alert(&#39;请输入数字!&#39;);p=&#39;1&#39;;return false;}if (p==&#39;&#39;){alert(&#39;请输入页码!&#39;);page.focus();p=&#39;1&#39;;return false;}if(p&lt;1){p=&#39;1&#39;;}if(p&gt;9){p=&#39;9&#39;;}var test=&#39;/search/expert/?p=[$$page]&#39;;test=test.replace(&#39;[$$page]&#39;,p);window.location.href=test;"
                value="确认" name="TopSkyLib_GoPage_Bnt">
         </span></div>
         </div>

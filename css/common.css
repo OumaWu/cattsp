@@ -5342,7 +5342,7 @@ a.c333:hover {
 
 .yun_xuqiu_list ul li {
     padding: 10px 10px 15px;
-    height: 105px;
+    min-height: 100%;
     float: left;
     width: 568px;
     border-bottom: 1px #ccc solid;
@@ -8786,10 +8786,9 @@ a.c333:hover {
 	margin-right:0;
 }*/
 .xc_b ul li {
-    padding: 20px 36px;
-    height: 110px;
+    padding: 10px 20px;
     float: left;
-    width: 506px;
+    width: 580px;
     border: 1px #ccc solid;
     margin-left: 20px;
     margin-bottom: 15px;
@@ -8802,25 +8801,25 @@ a.c333:hover {
 
 .xc_b_f {
     /*background: url(/market/images/expert_list_1.png) no-repeat;*/
-    width: 592px;
-    height: 162px;
+    min-width: 100%;
+    min-height: 100%;
     position: absolute;
     top: -5px;
-    left: -6px;
+    left: -10px;
     display: none
 }
 
 .xc_ba {
     float: left;
-    width: 100px;
     text-align: center;
-    padding-top: 8px
+    margin-top: 15px;
+    /*margin-right: 10px;*/
 }
 
 .xc_ba img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px
+    width: 110px;
+    height: 110px;
+    border-radius: 60px
 }
 
 .xc_ba p {

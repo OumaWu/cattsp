@@ -17,21 +17,12 @@
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <!-- }导入其他css和js文件 -->
 
 </head>
 <body>
-<!--<div class="ie7_ts"><em onclick="$(&#39;.ie7_ts&#39;).hide();">X</em>为了获得更好的用户体验，请使用火狐、谷歌、360浏览器极速模式或IE8及以上版本的浏览器</div>-->
-<!--<script type="text/javascript">-->
-<!--    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0") {-->
-<!--        $('.ie7_ts').show();-->
-<!--    }-->
-<!--    else if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0") {-->
-<!--        $('.ie7_ts').show();-->
-<!--    }-->
-<!--</script>-->
 
 <!--  版头{  -->
 
@@ -60,11 +51,11 @@
             while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                 ?>
                 <li>
-                    <p class="hur1"><a href="demands_detailpage.php?id=<?php echo $res->id; ?>"
-                                       target="_blank"> <?php echo $res->title; ?> </a></p>
-                    <p class="hur2"><span>联系人：XXX经理</span> <span>发布时间：<?php echo $res->date; ?> </span>
-                        <span>需求企业：<?php echo $res->entreprise; ?> </span>
-                        <span>地点：<?php echo $res->location; ?> </span></p>
+                    <p class="hur1"><a href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                       target="_blank"> <?= $res->title; ?> </a></p>
+                    <p class="hur2"><span>地点：<?= $res->location; ?> </span><span>发布时间：<?= $res->date; ?> </span>
+                        <span>需求企业：<?= $res->entreprise; ?> </span>
+                        <span>联系邮箱：<?= $res->email; ?></span> </p>
                 </li>
             <?php } ?>
         </ul>

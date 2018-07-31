@@ -53,7 +53,7 @@
                     <div class="xb_bba">
                         <p class="title"><b> <a href="solartech_detailpage.php?id=<?php echo $res->id; ?>"
                                                 target="_blank"> <?php echo $res->title; ?> </a> </b></p>
-                        <span class="name">专利持有人：<em>XXX先生</em> </span> <br/>
+                        <span class="name">专利持有人：<em><?= $res->publisher; ?></em> </span> <br/>
                         <span class="jishuleixing_str"> 专利所属地：<em><?php echo $res->location; ?></em> </span><br/>
                         <span> 企业名称：<em><?php echo $res->entreprise; ?></em> </span></div>
                     <p class="hur2"><b>技术简介：</b> <em> <?php echo mb_substr($res->description, 0, 62, "utf-8"); ?>

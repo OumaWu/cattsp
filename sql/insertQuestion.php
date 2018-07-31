@@ -1,6 +1,6 @@
 <?php
 include("connection.php");
-$url = "myquestions.php";
+$url = "../myquestions.php";
 $url2 = $_SERVER["HTTP_REFERER"];
 
 if (!empty($_POST["title"]) && !empty($_POST["content"])
