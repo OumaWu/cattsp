@@ -113,6 +113,10 @@
                                 <?php } ?>
                                 </tbody>
                             </table>
+                            <div class="h_page">
+                                <!-- 分页链接 -->
+                                <?= $page->displayPages(); ?>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -28,6 +28,7 @@
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -114,6 +115,10 @@
                             <?php } ?>
                             </tbody>
                         </table>
+                        <div class="h_page">
+                            <!-- 分页链接 -->
+                            <?= $page->displayPages(); ?>
+                        </div>
                     </div>
                 </div>
             </div>

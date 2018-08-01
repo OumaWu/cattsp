@@ -19,6 +19,7 @@
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -51,7 +52,7 @@
         <div class="xb_lb">
             <ul>
                 <?php
-                $column_id = 1;
+                $category_id = 1;
                 include("sql/selectPolicyList.php");
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
@@ -61,12 +62,23 @@
                 <?php } ?>
             </ul>
             <div class="h_page">
-                <div id="pages_bg" class="pages"> <span class="number9"> <span title="第 1页"
-                                                                               class="pagelist_cur">1</span> 到第
-          <input id="jumppage" type="text" value="1" size="2" name="page">
-          页
-          <input type="button" id="bt_go" value="确认" name="TopSkyLib_GoPage_Bnt">
-          </span></div>
+                <!-- 分页链接 -->
+                <ul class="pagination">
+
+                    <?php if ($page->currentPage != 1) { ?>
+                        <li><a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p=1";?>">&laquo;</a></li>
+                    <?php } ?>
+
+                    <?php for ($i = $page->startPage; $i <= $page->endPage; $i++) { ?>
+                        <li <?php if ($i == $page->currentPage) { ?>class="active"<?php } ?>>
+                            <a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p={$i}";?>"><?=$i;?><span class="sr-only">(current)</span></a>
+                        </li>
+                    <?php } ?>
+
+                    <?php if ($page->currentPage != $page->pageCount && $page->pageCount > 1) { ?>
+                        <li><a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p={$page->pageCount}";?>">&raquo;</a></li>
+                    <?php } ?>
+                </ul>
             </div>
         </div>
     </div>

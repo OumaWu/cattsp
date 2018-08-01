@@ -27,6 +27,7 @@
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -119,6 +120,28 @@
                                         </td>
                                     </tr>
                                 <?php } ?>
+                                <tr>
+                                    <th><i></i>页数：</th>
+                                    <td>
+                                        <!-- 分页链接 -->
+                                        <ul class="pagination">
+
+                                            <?php if ($page->currentPage != 1) { ?>
+                                                <li><a href="<?="{$_SERVER["PHP_SELF"]}?q_id={$q_id}&p=1";?>">&laquo;</a></li>
+                                            <?php } ?>
+
+                                            <?php for ($i = $page->startPage; $i <= $page->endPage; $i++) { ?>
+                                                <li <?php if ($i == $page->currentPage) { ?>class="active"<?php } ?>>
+                                                    <a href="<?="{$_SERVER["PHP_SELF"]}?q_id={$q_id}&p={$i}";?>"><?=$i;?><span class="sr-only">(current)</span></a>
+                                                </li>
+                                            <?php } ?>
+
+                                            <?php if ($page->currentPage != $page->pageCount && $page->pageCount > 1) { ?>
+                                                <li><a href="<?="{$_SERVER["PHP_SELF"]}?q_id={$q_id}&p={$page->pageCount}";?>">&raquo;</a></li>
+                                            <?php } ?>
+                                        </ul>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th><i></i>填写回复：</th>
                                     <td><textarea class="d6_tarea" id="content" name="content" warning="请填写回复"

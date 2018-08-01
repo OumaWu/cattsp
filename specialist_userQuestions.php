@@ -85,28 +85,29 @@
                                 <?php
                                 require_once('./sql/selectQuestions.php');
                                 while ($res = $result->fetch(PDO::FETCH_OBJ)) { ?>
-                                <tr>
-                                    <td><?= $res->q_id; ?></td>
-                                    <td><?= $res->title; ?></td>
-                                    <td><?= $res->user; ?></td>
-                                    <td><?= $res->time; ?></td>
-                                    <td><a href="specialist_questionDetail.php?q_id=<?= $res->q_id; ?>" class="btn btn-default">查看</a>
-                                    </td>
-                                    <td><a href="" class="btn btn-primary"
-                                           onclick="if(!confirm('确定要删除吗？')) return false;">删除</a></td>
-                                </tr>
+                                    <tr>
+                                        <td><?= $res->q_id; ?></td>
+                                        <td><?= $res->title; ?></td>
+                                        <td><?= $res->user; ?></td>
+                                        <td><?= $res->time; ?></td>
+                                        <td><a href="specialist_questionDetail.php?q_id=<?= $res->q_id; ?>"
+                                               class="btn btn-default">查看</a>
+                                        </td>
+                                        <td><a href="" class="btn btn-primary"
+                                               onclick="if(!confirm('确定要删除吗？')) return false;">删除</a></td>
+                                    </tr>
                                 <?php } ?>
                                 </tbody>
                             </table>
+                            <div class="h_page">
+                                <!-- 分页链接 -->
+                                <?= $page->displayPages(); ?>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
 </div>

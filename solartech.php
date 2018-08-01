@@ -19,6 +19,7 @@
     <!-- 导入其他模块css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他模块css和js文件 -->
 
 </head>
@@ -64,16 +65,24 @@
         </ul>
     </div>
     <div class="clear"></div>
+
     <div class="h_page">
-        <div id="pages_bg" class="pages"> <span class="number9"> <span title="上一页">上一页</span><span title="第 1页"
-                                                                                                   class="pagelist_cur">1</span> <a
-                        href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a
-                        href="#">7</a> <span class="more">...</span> <a
-                        href="http://www.vtitt.com/tec/list_2.html">下一页</a> 到第
-      <input id="jumppage" type="text" value="1" size="2" name="page">
-      页
-      <input type="button" id="bt_go" value="确认" name="TopSkyLib_GoPage_Bnt">
-      </span></div>
+        <!-- 分页链接 -->
+        <?= $page->displayPages(); ?>
+<!--        <div id="pages_bg" class="pages">-->
+<!--            <span class="number9">-->
+<!--                <span title="上一页">上一页</span>-->
+<!--                <span title="第1页" class="pagelist_cur">1</span>-->
+<!--                <a href="#">2</a>-->
+<!--                <a href="#">3</a>-->
+<!--                <a href="#">4</a>-->
+<!--                <a href="#">5</a>-->
+<!--                <a href="#">6</a>-->
+<!--                <a href="#">7</a>-->
+<!--                <span class="more">...</span>-->
+<!--                <a href="">最后一页</a>-->
+<!--            </span>-->
+<!--        </div>-->
     </div>
     <span class="blank10"></span></div>
 </div>
