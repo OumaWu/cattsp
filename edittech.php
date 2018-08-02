@@ -72,6 +72,13 @@
                         </li>
                     </ul>
                 </div>
+                <div class="item">
+                    <div class="m-title">专家咨询</div>
+                    <ul>
+                        <li><a href="myquestions.php" class="">我的提问</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="member-main fr">
                 <div class="m-box m-info-detial mb30">
@@ -186,18 +193,18 @@
                                                 <option value="湖北省">湖北省</option>
                                                 <option value="湖南省">湖南省</option>
                                                 <option value="广东省">广东省</option>
-                                                <option value="广西省">广 西</option>
+                                                <option value="广西省">广西省</option>
                                                 <option value="海南省">海南省</option>
                                                 <option value="重庆市">重庆市</option>
                                                 <option value="四川省">四川省</option>
                                                 <option value="贵州省">贵州省</option>
                                                 <option value="云南省">云南省</option>
-                                                <option value="西藏">西 藏</option>
+                                                <option value="西藏">西藏</option>
                                                 <option value="陕西省">陕西省</option>
                                                 <option value="甘肃省">甘肃省</option>
                                                 <option value="青海省">青海省</option>
-                                                <option value="宁夏省">宁 夏</option>
-                                                <option value="新疆">新 疆</option>
+                                                <option value="宁夏省">宁夏省</option>
+                                                <option value="新疆">新疆</option>
                                                 <option value="台湾省">台湾省</option>
                                                 <option value="香港">香港</option>
                                                 <option value="澳门">澳门</option>

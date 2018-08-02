@@ -120,13 +120,12 @@
 
     <div class="xb_gb clearfix">
         <div class="xb_gaa">
-            <h1 class="dx_Dla"><span>[<?php echo $res->id; ?>]</span><?php echo $res->title; ?></h1>
+            <h1 class="dx_Dla"><span>[<?= $res->id; ?>]</span><?= $res->title; ?></h1>
             <div class="dx_DlbR">
-                <p><b>企业名称：</b> <?php echo $res->entreprise; ?> </p>
-                <p><b>专利所属地：</b><?php echo $res->location; ?></p>
-                <p><b>专利号：</b>201720065898X</p>
-                <p><b>技术持有人：</b>XXX先生</p>
-                <p><b>联系邮箱：</b><?php echo $res->email; ?></p>
+                <p><b>企业名称：</b> <?= $res->entreprise; ?> </p>
+                <p><b>成果所属地：</b><?= $res->location; ?></p>
+                <p><b>技术发布人：</b><?= $res->publisher; ?></p>
+                <p><b>联系邮箱：</b><?= $res->email; ?></p>
             </div>
         </div>
     </div>
@@ -136,7 +135,7 @@
             <h2>技术详细介绍</h2>
         </div>
         <div class="dx_Dlc" style="word-break:break-all;word-wrap:break-word;">
-            <p><?php echo $res->description; ?></p>
+            <p><?= $res->description; ?></p>
         </div>
     </div>
 </div>

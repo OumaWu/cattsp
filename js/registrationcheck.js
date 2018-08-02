@@ -1,5 +1,5 @@
 // JavaScript Document
-var loginCheck = null;
+var loginCheck = false;
 
 function checkLogin(login) {
     if (login == "") {
@@ -56,6 +56,14 @@ function checkDuplicate(login) {
     }
 }
 
+function checkEmail(email) {
+    if (email == null) {
+        alert("请填邮箱！！");
+        return false;
+    }
+    return true;
+}
+
 function checkPsw(psw, pswc) {
 
     if (psw != pswc) {
@@ -71,11 +79,10 @@ function checkAll() {
     var psw = document.getElementById("password").value;
     var pswc = document.getElementById("pswconfirm").value;
     var login = document.getElementById("accountname").value;
+    var email = document.getElementById("email").value;
 
-    // alert(checkLogin(login));
-    // alert(checkPsw(psw, pswc));
 
-    if (!checkLogin(login) || !checkPsw(psw, pswc)) {
+    if (!checkLogin(login) || !checkPsw(psw, pswc) || !checkEmail(email)) {
         alert("请仔细填写注册信息！");
     }
 

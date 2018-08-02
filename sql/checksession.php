@@ -11,8 +11,10 @@ session_start();
 if(isset($_SESSION['expiretime'])) {
     if($_SESSION['expiretime'] < time()){
         unset($_SESSION["expiretime"]);
-        //redirect if the page is inactive for 10 minutes
-        header("Location: logout.php?timeout");
+        header("Location: ./sql/logout.php?timeout");
         exit(0);
     }
+} else {
+    header("Location: ./sql/logout.php?nologin");
+    exit(0);
 }

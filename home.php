@@ -106,10 +106,10 @@
                 <img src="images/icons/service0.png" height="40px"><br>技术供需服务
             </div>
             <div class="part2">
-                <div><a href="#">技术成果</a></div>
-                <div><a href="#">发布成果</a></div>
-                <div><a href="#">技术需求</a></div>
-                <div><a href="#">发布需求</a></div>
+                <div><a href="solartech.php">技术成果</a></div>
+                <div><a href="publishtech.php">发布成果</a></div>
+                <div><a href="demands.php">技术需求</a></div>
+                <div><a href="publishdemands.php">发布需求</a></div>
             </div>
         </div>
         <div class="dd m-l-5">
@@ -117,9 +117,9 @@
                 <img src="images/icons/service2.png" height="40px"><br>技术交易服务
             </div>
             <div class="part2">
-                <div><a href="#" target="_blank">竞价大厅</a></div>
+                <div><a href="#">竞价大厅</a></div>
                 <div><a href="#">我要竞价</a></div>
-                <div><a href="#" target="_blank">科技商城</a></div>
+                <div><a href="#">科技商城</a></div>
                 <div><a href="#">我要入驻</a></div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                 <img src="images/icons/service4.png" height="40px"><br>科技企业服务
             </div>
             <div class="part2">
-                <div><a href="#" target="_blank">企业服务</a></div>
+                <div><a href="#">企业服务</a></div>
                 <div><a href="#">我要服务</a></div>
                 <div><a href="#">服务机构</a></div>
                 <div><a href="#">机构入驻</a></div>
@@ -140,9 +140,9 @@
                 <img src="images/icons/service1.png" height="40px"><br>研发合作服务
             </div>
             <div class="part2">
-                <div><a href="#" target="_blank">专家咨询</a></div>
-                <div><a href="#" target="_blank">我要入驻</a></div>
-                <div><a href="#" target="_blank">技术评估</a></div>
+                <div><a href="specialists.php">专家咨询</a></div>
+                <div><a href="#">我要入驻</a></div>
+                <div><a href="#">技术评估</a></div>
                 <div>
                     <a href="#">我要评估</a>
                 </div>
@@ -153,7 +153,7 @@
                 <img src="images/icons/service3.png" height="40px"><br>高校院所服务
             </div>
             <div class="part2">
-                <div><a href="#" target="_blank">成果公示</a></div>
+                <div><a href="#">成果公示</a></div>
                 <div><a href="#">我要公示</a></div>
                 <div><a href="#">高校院所</a></div>
                 <div><a href="#">我要入驻</a></div>
@@ -431,66 +431,20 @@
 
         </div>
 
-
+        <?php require_once("./sql/homePolicyList.php"); ?>
         <!--  政策法规{  -->
         <div class="n_site_gra">
-            <h2><a href="#" target="_blank">更多&gt;</a>相关政策法规</h2>
+            <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
             <ul>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        广西象州县光伏扶贫项目实施方案有关意见 建设分布式光伏3000千瓦 帮扶4883户
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        贵州组织申报光伏发电项目“三年滚动计划”
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        青海省开展省内光伏外送陕西挂牌交易（附光伏项目名单）
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        安徽合肥开展2018第一批光伏产品推广发布申报工作
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        严格规范光伏用地！宁夏发布关于规范光伏发电产业发展有关事项的通知
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        详看领跑者用地政策——2018年2月份光伏政策大汇总
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        湖北开展光伏发电专项监管工作
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        浙江宁波光伏发电补贴资金扶持项目公示（第四批）
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        市补0.3元/度 连补5年：北京印发“阳光富民工程”实施方案（试行）(征求意见稿)
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        海南省发改革委《关于发布光伏发电项目建设风险预警的紧急通知》
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" title="" style="">
-                        江西3地 安徽16地！两省纳入国家补助目录光伏扶贫项目情况公示
-                    </a>
-                </li>
+                <?php
+                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+                    ?>
+                    <li>
+                        <a href="policies_detailpage.php?policy_id=<?= $res->id; ?>" target="_blank">
+                            <?= $res->title; ?>
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
         <!--  }政策法规  -->

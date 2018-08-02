@@ -1382,8 +1382,8 @@ html, body {
 
 .this_about_b {
     margin-left: 255px;
-    border: 1px #ccc solid;
-    padding: 10px
+    /*border: 1px #ccc solid;*/
+    /*padding: 10px*/
 }
 
 .this_about_ba {

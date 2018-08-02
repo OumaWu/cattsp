@@ -54,8 +54,8 @@
     <div class="yun_xuqiu_det_a">
         <h1><?=$res->title; ?></h1>
         <div class="yun_xuqiu_det_aa">
-            <div class="yun_xuqiu_det_aal"><span>发布时间：<?=$res->date; ?></span> <span>联系人：XXX经理</span> <br/>
-                <span> 需求企业：<?=$res->entreprise; ?> </span> <span>需求地点：<?=$res->location; ?></span>
+            <div class="yun_xuqiu_det_aal"><span>发布时间：<?=$res->date; ?></span> <span>需求地点：<?=$res->location; ?></span> <br/>
+                <span> 需求企业：<?=$res->entreprise; ?> </span> <span>联系邮箱：<?=$res->email; ?></span>
             </div>
         </div>
     </div>

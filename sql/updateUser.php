@@ -59,8 +59,6 @@ if (!empty($realname) && isset($sex) && !empty($tel)
         if (!file_exists($file_path)) {
             if (move_uploaded_file($_FILES['photo']["tmp_name"],  $file_path)) {
 
-                echo "图片" . $file_path . "上传成功！！" . "<br>";
-
                 // 删除旧图片
                 $path = FILE_UPLOAD_PATH . $old_images;
                 if (file_exists($path)) {

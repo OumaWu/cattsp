@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -20,7 +20,7 @@
 
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
-    <link rel="stylesheet" type="text/css" href="./css/this.css?v=1234" id="theme2">
+    <link rel="stylesheet" type="text/css" href="./css/list.css?v" id="theme2">
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -50,45 +50,6 @@
         <div class="this_about_c"><a href="#" class="on">关于我们</a></div>
         <div class="this_about_b">
             <div class="this_about_ba">
-                <div class="main_head">
-                    <div><strong>公司档案</strong></div>
-                </div>
-                <div class="main_body">
-                    <div class="px13 lh18">
-                        <table width="98%" cellpadding="3" cellspacing="1" align="center">
-                            <tbody>
-                            <tr>
-                                <td width="90" class="f_b">公司名称：</td>
-                                <td width="260"> 广西科学院应用物理研究所</td>
-                                <td width="90" class="f_b">公司类型：</td>
-                                <td width="260">
-                                    有限责任公司
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="f_b">所 在 地：</td>
-                                <td>南宁</td>
-                                <td class="f_b">公司规模：</td>
-                                <td> 0-50人</td>
-                            </tr>
-                            <tr>
-                                <td class="f_b">注册资本：</td>
-                                <td>143万</td>
-                                <td class="f_b">注册年份：</td>
-                                <td>1985</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <table width="98%" cellpadding="3" cellspacing="1" align="center">
-                            <tbody>
-                            <tr>
-                                <td class="f_b">销售的产品：</td>
-                                <td>研究物理学理论;促进科技发展。光学研究、无线电物理研究。</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
                 <div class="main_head">
                     <div><strong>公司介绍</strong></div>
                 </div>

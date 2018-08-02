@@ -1,3 +1,4 @@
+<?php require_once('./sql/checksession.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +64,7 @@
                 <div class="item">
                     <div class="m-title">答疑中心</div>
                     <ul>
-                        <li><a href="#" class="on">用户提问</a></li>
+                        <li><a href="specialist_userQuestions.php" class="on">用户提问</a></li>
                     </ul>
                 </div>
             </div>

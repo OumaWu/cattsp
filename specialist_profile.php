@@ -1,3 +1,4 @@
+<?php require_once('./sql/checksession.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,12 +164,8 @@
                                 <div class="p-item mb40 clearfix" style="height: 100%;">
                                     <div class="p-label fl">个人简介<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
-<!--                                        <textarea class="d6_tarea" id="description" name="description" warning="请填写技术简介"-->
-<!--                                                  placeholder="填写技术详细介绍" style="width: 350px; height: 300px"></textarea>-->
                                         <textarea name="introduction" id="introduction" class="i-input"
-                                                  style="width: 350px; height: 300px;" placeholder="填写专家个人简介">
-                                            <?=$res->introduction;?>
-                                        </textarea>
+                                                  style="width: 350px; height: 300px;" placeholder="填写专家个人简介"><?=$res->introduction;?></textarea>
                                     </div>
                                 </div>
                                 <div class="p-item mb40 clearfix">

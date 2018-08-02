@@ -1,3 +1,4 @@
+<?php require_once('./sql/checksession.php'); ?>
 <!DOCTYPE html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>

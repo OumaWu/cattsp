@@ -13,15 +13,13 @@ try {
     $result = $pdo->prepare($sql);
     if ($result->execute()) {
     } else {
-        echo "提取新闻列表失败！！" . "</br>";
-        echo $pdo->errorInfo();
+        echo "<script>alert('提取新闻列表失败！！\\n{$pdo->errorInfo()}')";
     }
 
     $result2 = $pdo->prepare($sql2);
     if ($result2->execute()) {
     } else {
-        echo "提取政策列表失败！！" . "</br>";
-        echo $pdo->errorInfo();
+        echo "<script>alert('提取新闻列表失败！！\\n{$pdo->errorInfo()}')";
     }
 } catch (PDOException $e) {
     die("错误!!: " . $e->getMessage() . "<br>");

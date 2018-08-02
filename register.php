@@ -90,7 +90,7 @@
 <?php require_once('common/footer.php'); ?>
 
 <!-- 导入检输入信息查js{ -->
-<script type="text/javascript" src="js/registrationcheck.js"></script>
+<script type="text/javascript" src="js/registrationcheck.js?v"></script>
 <!-- }导入检查输入信息js -->
 </body>
 </html>
