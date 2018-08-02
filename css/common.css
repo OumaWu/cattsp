@@ -1,4 +1,18 @@
-﻿*{
+﻿.xb_la a {
+    display: block;
+    height: 50px;
+    line-height: 48px;
+    border-left: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+    text-indent: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.xb_la a.on {
+    border-left: 2px #f60 solid;
+}
+
+*{
     box-sizing: border-box;
 }
 
@@ -3970,6 +3984,10 @@ a.c333:hover {
     overflow: hidden;
     border-bottom: 1px #ccc dotted;
     font-size: 16px
+}
+
+.xb_lb ul li.active {
+    border-bottom: none!important;
 }
 
 .xb_lb ul li span {

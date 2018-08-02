@@ -12,8 +12,17 @@ if ($type == "news") {
     <?php
     while ($res = $result->fetch(PDO::FETCH_OBJ)) {
         ?>
-
-        <h2 class=""><a href="<?php echo $page . "?category_id=" . $res->id; ?>"><?php echo $res->title; ?></a></h2>
-
+         <a href="<?php echo $page . "?category_id=" . $res->id; ?>"
+             <?php
+             if ($_GET["category_id"]!= null) {
+                 if ($res->id == $_GET["category_id"]) {
+                     echo "class=\"on\"";
+                 }
+             }
+             else if ($res->id == $category_id) {
+                 echo "class=\"on\"";
+             }
+             ?>><?php echo $res->title; ?>
+         </a>
     <?php } ?>
 </div>

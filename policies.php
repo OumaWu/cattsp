@@ -17,7 +17,7 @@
     <!-- }导入版头css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=2314" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他css和js文件 -->
@@ -46,13 +46,13 @@
     <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="#">相关政策法规</a></div>
     <div class="xb_l clearfix">
         <?php
+        $category_id = 1;
         $type = "policy";
         require_once('common/sidebar.php');
         ?>
         <div class="xb_lb">
             <ul>
                 <?php
-                $category_id = 1;
                 include("sql/selectPolicyList.php");
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>

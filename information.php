@@ -16,7 +16,7 @@
     <!-- }导入版头css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=123" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- }导入其他css和js文件 -->
@@ -45,19 +45,22 @@
     <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="#">咨询大厅</a></div>
     <div class="xb_l clearfix">
         <?php
+        $category_id = 2;
         $type = "news";
         require_once('common/sidebar.php');
         ?>
         <div class="xb_lb">
             <ul>
                 <?php
-                $category_id = 1;
                 include("sql/selectNewsList.php");
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
-                    <li><span><?php echo $res->date; ?></span> <a
-                                href="information_detailpage.php?news_id=<?php echo $res->id; ?>" target="_blank"
-                                class=" chu"> <?php echo $res->title; ?></a></li>
+                    <li><span><?php echo $res->date; ?></span>
+                        <a href="information_detailpage.php?news_id=<?php echo $res->id; ?>" target="_blank"
+                                class="chu">
+                            <?php echo $res->title; ?>
+                        </a>
+                    </li>
                 <?php } ?>
             </ul>
             <div class="h_page">

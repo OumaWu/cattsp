@@ -26,10 +26,7 @@
                 <h3><a href="#" target="_blank">科技商城</a></h3>
             </li>
             <li class="nLi" id="information">
-                <h3><a href="information.php?category_id=2" target="_blank">资讯大厅</a></h3>
-            </li>
-            <li class="nLi" id="notification">
-                <h3><a href="information.php?category_id=1" target="_blank">通知公告</a></h3>
+                <h3><a href="information.php" target="_blank">资讯大厅</a></h3>
             </li>
             <li class="nLi" id="policies">
                 <h3><a href="policies.php" target="_blank">政策法规</a></h3>
@@ -42,7 +39,7 @@
 </div>
 
 <script>
-    var href = window.location.href;
+    var href = window.location.pathname;
     var pageName = href.substring(href.lastIndexOf("/") + 1);
     switch (pageName) {
         case "solartech.php" :
@@ -57,11 +54,11 @@
         case "specialists.php" :
             changeClass("specialists");
             break;
-        case "information.php?category_id=2" :
+        case "information.php" :
             changeClass("information");
             break;
-        case "information.php?category_id=1" :
-            changeClass("notification");
+        case "policies.php" :
+            changeClass("policies");
             break;
         case "aboutus.php" :
             changeClass("aboutus");
