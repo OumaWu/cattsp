@@ -12,7 +12,7 @@ function checkLogin(login) {
         return false;
     }
     else  {
-        checkDuplicate(login);
+        checkDuplicate(login , loginCheck);
         if (loginCheck == false) {
             alert("用户名已被使用！");
         }
@@ -32,7 +32,7 @@ function resetDiv2() {
     document.getElementById("pswnotequal").style.display = "none";
 }
 
-function checkDuplicate(login) {
+function checkDuplicate(login , loginCheck) {
     var xmlhttp;
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -83,7 +83,7 @@ function checkAll() {
 
 
     if (!checkLogin(login) || !checkPsw(psw, pswc) || !checkEmail(email)) {
-        alert("请仔细填写注册信息！");
+        // alert("请仔细填写注册信息！");
     }
 
     else {

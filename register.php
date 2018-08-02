@@ -18,6 +18,7 @@
 
     <!-- 导入其他css和js文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <script src="./js/jquery-3.3.1.min.js"></script>
     <!-- }导入其他css和js文件 -->
 
 </head>
@@ -51,34 +52,36 @@
                     <div class="left">
                         <ul class="register">
                             <li>
-                                <label><span class="cf50">*</span><b>用户名：</b></label>
-                                <input class="reginp" type="text" name="accountname" id="accountname" value=""
-                                       maxlength="15" onchange="checkLogin(this.value);"
-                                       placeholder="请输入用户名，应为3-15位的英文或数字"/>
+                                <label for="accountname"><span class="cf50">*</span><b>用户名：</b></label>
+                                <input class="reginp" type="text" name="accountname" id="accountname"
+                                       maxlength="15" placeholder="请输入用户名"
+                                       onblur="checkLogin();"/>
                             </li>
                             <li>
-                                <label><span class="cf50">*</span><b>密码：</b></label>
-                                <input class="reginp" type="password" name="password" id="password" value=""
-                                       maxlength="20" placeholder="请输入密码">
+                                <label for="password"><span class="cf50">*</span><b>密码：</b></label>
+                                <input class="reginp" type="password" name="password" id="password"
+                                       maxlength="20" placeholder="请输入密码"
+                                       onblur="checkPwd();">
                             </li>
                             <li>
-                                <label><span class="cf50">*</span><b>确认密码：</b></label>
-                                <input class="reginp" type="password" name="pswconfirm" id="pswconfirm" value=""
-                                       maxlength="20" onchange="checkPsw(document.getElementById('password').value, this.value);">
+                                <label for="pswconfirm"><span class="cf50">*</span><b>确认密码：</b></label>
+                                <input class="reginp" type="password" name="pswconfirm" id="pswconfirm"
+                                       maxlength="20"
+                                       onblur="checkPwdConfirm();">
                             </li>
                             <li>
-                                <label><span class="cf50">*</span><b>电子邮箱：</b></label>
-                                <input class="reginp" type="text" name="email" id="email" value="" maxlength="30">
+                                <label for="email"><span class="cf50">*</span><b>电子邮箱：</b></label>
+                                <input class="reginp" type="text" name="email" id="email" maxlength="30"
+                                       onblur="checkEmail();">
                             </li>
                         </ul>
-                        <div class="agree">
-                            <label>
-                                <input id="" type="checkbox" checked="checked">
-                                <b>我已阅读并同意</b><a class="c1963c2" href="javascript:void(0);"><b>《用户注册协议》</b></a></label>
-                        </div>
                         <div class="regbtn">
-                            <button type="button" onclick="checkAll()" class="wys_bluebtn saveClass">立即注册</button>
+                            <label for="btn-submit"></label>
+                            <button type="button" id="btn-submit" class="wys_bluebtn saveClass"
+                                    onclick="checkForm();">立即注册
+                            </button>
                         </div>
+                        <div class="agree" style="height: 40px;"></div>
                     </div>
                 </div>
             </div>
@@ -88,9 +91,123 @@
 <!-- }信息板块  -->
 
 <?php require_once('common/footer.php'); ?>
+<!-- 检查输入信息js{ -->
+<script>
+    var checkList = {
+        "loginCheck": false,
+        "checkDuplicate": false,
+        "checkPsw": false,
+        "checkPswConfirm": false,
+        "checkEmail": false
+    };
 
-<!-- 导入检输入信息查js{ -->
-<script type="text/javascript" src="js/registrationcheck.js?v"></script>
-<!-- }导入检查输入信息js -->
+    //检查用户名
+    function checkLogin() {
+        var login = $("#accountname").val();
+        if (login === "") {
+            alert("用户名不能为空！！");
+            checkList.loginCheck = false;
+        }
+        else {
+            checkList.loginCheck = true;
+            checkDuplicate(login);
+        }
+    }
+
+    //检查密码
+    function checkPwd() {
+        if ($("#password").val() === "") {
+            alert("密码不能为空！");
+            checkList.checkPsw = false;
+        }
+        else {
+            checkList.checkPsw = true;
+        }
+    }
+
+    //检查确认密码
+    function checkPwdConfirm() {
+
+        if ($("#password").val() !== $("#pswconfirm").val()) {
+            alert("两次输入的密码不一致！");
+            checkList.checkPswConfirm = false;
+        }
+        else {
+            checkList.checkPswConfirm = true;
+        }
+    }
+
+    //检查email
+    function checkEmail() {
+        if ($("#email").val() === "") {
+            alert("请填邮箱！！");
+            checkList.checkEmail = false;
+        }
+        else {
+            checkList.checkEmail = true;
+        }
+    }
+
+    //检查表单
+    function checkForm() {
+        if (checkList.loginCheck === false
+            || checkList.checkDuplicate === false
+            || checkList.checkPsw === false
+            || checkList.checkPswConfirm === false
+            || checkList.checkEmail === false) {
+            alert("请填必填信息！");
+            return false;
+        }
+        else {
+            $("#gform").submit();
+            return true;
+        }
+    }
+
+    function checkDuplicate(login) {
+
+
+        $.ajax(
+            {
+                url: "./sql/checklogin.php",
+                data: {"login": login},
+                type: "POST",
+                dataType: "JSON",
+                success: function (result) {
+                    if (result === 1) {
+                        checkList.checkDuplicate = true;
+                    }
+                    else if (result === 0) {
+                        alert("用户名已被注册！");
+                        checkList.checkDuplicate = false;
+                    }
+                },
+            });
+
+        // var xmlhttp;
+        // if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+        //     xmlhttp = new XMLHttpRequest();
+        // }
+        // else {// code for IE6, IE5
+        //     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        // }
+        //
+        // xmlhttp.open("GET", "./sql/checklogin.php?login=" + login, true);
+        // xmlhttp.send(null);
+        //
+        // xmlhttp.onreadystatechange = function () {
+        //     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        //         if (xmlhttp.responseText === 1) {
+        //             this.checkList.checkDuplicate = true;
+        //         }
+        //         else {
+        //             this.checkList.checkDuplicate = false;
+        //         }
+        //     }
+        // }
+    }
+
+</script>
+<!-- }检查输入信息js -->
 </body>
 </html>
