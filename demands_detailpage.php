@@ -1,3 +1,4 @@
+<?php include_once "./sql/countVisit.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
