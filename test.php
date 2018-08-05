@@ -1,12 +1,7 @@
 <?php
 //include "./sql/VisitorInfo.class.php";
 
-$url = $_SERVER["REQUEST_URI"];
-
-$url_info = parse_url($url);
-
-$a = explode("/", $url_info["path"]);
-echo end($a);
+echo date("Y-m-d");
 
 //parse_url();
 

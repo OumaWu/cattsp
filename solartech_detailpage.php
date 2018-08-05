@@ -1,4 +1,12 @@
-<?php include_once "./sql/countVisit.php"; ?>
+<?php
+
+$id = $_GET['id'];
+
+//如果技术成果的id未存入cookie则引入统计脚本
+if (!isset($_COOKIE["tech"][$id])) {
+    include_once "./sql/countVisit.php";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +32,7 @@
     <!-- }导入其他css和js文件 -->
 
     <!-- 导入bootstrap -->
-<!--    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-combined.min.css">
 
 </head>
@@ -51,7 +59,6 @@
     <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="solartech.php">科技成果</a> &nbsp;&gt;&nbsp;详细页
     </div>
     <?php
-    $id = $_GET['id'];
     include("sql/solarTechContent.php");
     $res = $result->fetch(PDO::FETCH_OBJ);
     ?>
@@ -67,27 +74,27 @@
                     <li data-slide-to="4" data-target="#carousel-14768" class=""></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active"><img class="solartech-img" alt="" src="user_files/<?=$res->image1;?>"
+                    <div class="item active"><img class="solartech-img" alt="" src="user_files/<?= $res->image1; ?>"
                                                   onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                                   onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                                   onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->image2;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?= $res->image2; ?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->image3;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?= $res->image3; ?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->image4;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?= $res->image4; ?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">
                     </div>
-                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?=$res->image5;?>"
+                    <div class="item"><img class="solartech-img" alt="" src="user_files/<?= $res->image5; ?>"
                                            onmouseover="this.style.cursor='pointer';this.style.cursor='hand'"
                                            onmouseout="this.style.cursor='default'" onclick="showimage(this);"
                                            onerror="this.src = 'images/default.jpg'">

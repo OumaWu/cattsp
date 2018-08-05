@@ -9,7 +9,12 @@
 //访客信息统计类
 class VisitorInfo
 {
-//获取访客ip
+    //将ip存入cookie
+    public static function saveIpIntoCookie($cookie, $ip, $time) {
+        setcookie($cookie, $ip, $time); //每天每个ip只能访问一次
+    }
+
+    //获取访客ip
     public static function getIp()
     {
         $unknown = 'unknown';
@@ -46,18 +51,18 @@ class VisitorInfo
 //        return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
     }
 
-    //根据ip获取城市、网络运营商等信息
-    public static function findCityByIp($ip)
-    {
-        $data = file_get_contents('http://ip.taobao.com/service/getIpInfo.php?ip=' . $ip);
-        $data = json_decode($data, true);
-        return $data;
-    }
-
-    //获取访问ip城市
-    public static function findCurrentCity()
-    {
-        $data = self::findCityByIp(self::getIp());
-        return $data["data"]["city"];
-    }
+//    //根据ip获取城市、网络运营商等信息
+//    public static function findCityByIp($ip)
+//    {
+//        $data = file_get_contents('http://ip.taobao.com/service/getIpInfo.php?ip=' . $ip);
+//        $data = json_decode($data, true);
+//        return $data;
+//    }
+//
+//    //获取访问ip城市
+//    public static function findCurrentCity()
+//    {
+//        $data = self::findCityByIp(self::getIp());
+//        return $data["data"]["city"];
+//    }
 }
