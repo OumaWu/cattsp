@@ -17,13 +17,13 @@
                 <h3><a href="demands.php" target="_blank">企业需求</a></h3>
             </li>
             <li class="nLi" id="entreprise">
-                <h3><a href="#" target="_blank">企业信息</a></h3>
+                <h3><a href="home.php" target="_blank">企业信息</a></h3>
             </li>
             <li class="nLi" id="specialists">
                 <h3><a href="specialists.php" target="_blank">专家咨询</a></h3>
             </li>
             <li class="nLi" id="mall">
-                <h3><a href="#" target="_blank">科技商城</a></h3>
+                <h3><a href="home.php" target="_blank">科技商城</a></h3>
             </li>
             <li class="nLi" id="information">
                 <h3><a href="information.php" target="_blank">资讯大厅</a></h3>
