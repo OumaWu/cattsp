@@ -18,3 +18,4 @@ if(isset($_SESSION['expiretime'])) {
     header("Location: ./sql/logout.php?nologin");
     exit(0);
 }
+?>

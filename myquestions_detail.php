@@ -175,11 +175,6 @@
         </div>
     </div>
 </div>
-<!--<script>-->
-<!--    function Submit() {-->
-<!--        document.getElementById("question").submit();-->
-<!--    }-->
-<!--</script>-->
 <!-- }首页信息板块  -->
 
 <?php require_once('common/footer.php'); ?>

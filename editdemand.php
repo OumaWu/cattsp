@@ -99,12 +99,12 @@
                                     <th><i></i>需求名称：</th>
                                     <td><label>
                                             <input type="text" class="d6_idtxt" name="title" id="title" maxlength="50"
-                                                  value="<?=$res->title; ?>" warning="请填写需求名称">
+                                                  value="<?=$res->title; ?>">
                                         </label></td>
                                 </tr>
                                 <tr>
                                     <th><i></i>需求介绍：</th>
-                                    <td><textarea class="d6_tarea" id="description" name="description" warning="请填写需求简介"
+                                    <td><textarea class="d6_tarea" id="description" name="description"
                                                   placeholder="请填写需求简介"><?=$res->description; ?></textarea></td>
                                 </tr>
                                 <tr>

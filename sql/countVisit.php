@@ -49,3 +49,4 @@ if (!empty($id)) {
         die("错误!!: " . $e->getMessage() . "<br>");
     }
 }
+?>

@@ -1,5 +1,4 @@
 <?php
-//include "./sql/VisitorInfo.class.php";
 
 echo date("Y-m-d");
 

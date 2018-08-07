@@ -106,7 +106,7 @@
                                 </tr>
                                 <tr>
                                     <th><i></i>技术介绍：</th>
-                                    <td><textarea class="d6_tarea" id="description" name="description" warning="请填写技术简介"
+                                    <td><textarea class="d6_tarea" id="description" name="description"
                                                   placeholder="填写技术详细介绍"><?= $res->description; ?></textarea></td>
                                 </tr>
                                 <th><i></i>技术图片：</th>
