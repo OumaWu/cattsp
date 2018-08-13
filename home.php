@@ -69,6 +69,21 @@
                                         title="" target="_blank"><img
                                             src="images/solar-energy2.jpg" title="" alt="" width="640"
                                             height="382"></a></li>
+                            <li style="float: left; width: 640px;"><a
+                                        href="#"
+                                        title="" target="_blank"><img
+                                            src="images/solar-energy3.jpg" title="" alt="" width="640"
+                                            height="382"></a></li>
+                            <li style="float: left; width: 640px;"><a
+                                        href="#"
+                                        title="" target="_blank"><img
+                                            src="images/solar-energy4.jpg" title="" alt="" width="640"
+                                            height="382"></a></li>
+                            <li style="float: left; width: 640px;"><a
+                                        href="#"
+                                        title="" target="_blank"><img
+                                            src="images/solar-energy5.jpg" title="" alt="" width="640"
+                                            height="382"></a></li>
                         </ul>
                     </div>
                 </div>
