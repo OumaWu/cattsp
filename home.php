@@ -375,7 +375,7 @@
                                             src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
                                             onerror="this.src = images/<?= $res->image; ?>;">
                                 </a>
-                                <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                                <p class="hur2r"><?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
                             </div>
 
                         </li>

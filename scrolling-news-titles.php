@@ -12,7 +12,7 @@
                 <li class="on" id="tzgg"><a href="information.php?category_id=2" target="_blank">科技资讯</a></li>
                 <li id="dtxx"><a href="information.php?category_id=1" target="_blank">通知公告</a></li>
             </ul>
-            <a class="fr" href="information.php" target="_blank">更多<b class="song">&gt;</b></a></div>
+            <a class="fr" href="information.php" target="_blank">更多&nbsp;&gt;</a></div>
         <div class="bd">
             <ul class="list" id="list">
                 <?php

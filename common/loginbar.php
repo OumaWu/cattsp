@@ -32,7 +32,7 @@ if (isset($_SESSION['expiretime'])) {
             <?php } else {
             if (isset($_SESSION['mode']) && $_SESSION['mode'] == "expert") { ?>
 
-            <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>&nbsp;专家&nbsp;&nbsp;</span>
+            <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>（专家账号）</span>
             <span id="header_header_top_Login">
     	    <a href="specialist_profile.php" class="clr mr15">用户中心</a>
 

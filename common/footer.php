@@ -16,7 +16,7 @@
                 <dt>邮箱</dt>
                 <dd><a href="mailto:iap@gxas.cn">iap@gxas.cn</a></dd>
                 <dt>网址</dt>
-                <dd><a href="http://www.gxas.cn/Gxas/unit.aspx?id=16">http://www.gxas.cn/Gxas/unit.aspx?id=16</a></dd>
+                <dd><a href="http://www.gxas.cn/zjjg/jags/ysdw/201911/t20191101_2036.html">http://www.gxas.cn/zjjg/jags/ysdw/201911/t20191101_2036.html</a></dd>
             </dl>
         </div>
         <div class="follow">
@@ -37,7 +37,7 @@
             <li class="fl" style="margin-left:20px"></li>
             <li class="fr"><a target="_blank"
                               href="#"><img
-                            src="./images/police_logo.png" style="margin:0px 5px 0 0">桂公网安备 号</a>
+                            src="./images/police_logo.png" style="margin:0px 5px 0 0">桂公网安备 45010702000139号</a>
                 | <a href="http://www.miitbeian.gov.cn/" target="_blank">桂ICP备18005539号</a></li>
         </ul>
     </div>
