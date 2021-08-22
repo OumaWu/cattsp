@@ -4,4 +4,4 @@
 dbconfig.txt
 Version_refactoring/*
 .idea/
-*.ini
+dbconfig.ini
