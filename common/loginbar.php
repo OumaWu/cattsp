@@ -13,43 +13,52 @@ if (isset($_SESSION['expiretime'])) {
         $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
     }
 }
+$LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
 ?>
 <div class="top clearfix sim">
     <div class="w1220">
-        <div class="top-left fl"> Hi，欢迎来到中国-东盟太阳能技术转移平台！
-        </div>
+        <div class="top-left fl"> <?= $LOGIN_BAR["greeting_msg"]; ?></div>
         <div class="top-right fr">
-            <span>请选择语言：</span>
-            <select class="mr10" onchange="changeLanguage(this.value)">
-                <option value="zh_CN">中文</option>
-                <option value="en_US">English</a></option>
-<!--                <option value="vn_VI">Vietnam</a></option>-->
-<!--                <option value="th_TH">泰语</option>-->
-            </select>
+            <span><?= $LOGIN_BAR["select_lang"]; ?></span>
+            <label>
+                <select class="mr10" id="lang" name="lang" onchange="changeLanguage(this.value)">
+                    <option value="zh_CN">中文</option>
+                    <option value="en_US">English</option>
+                    <!--                <option value="vn_VI">Vietnam</a></option>-->
+                    <!--                <option value="th_TH">泰语</option>-->
+                </select>
+            </label>
             <?php if (!isset($_SESSION['user']) || empty($_SESSION['user'])) { ?>
-                <span id="header_header_top_noLogin"> <a href="login.php" class="clr mr15">登录</a> <a href="register.php"
-                                                                                                     class="mr5">免费注册</a></span>
+                <span id="header_header_top_noLogin"> <a href="login.php"
+                                                         class="clr mr15"><?= $LOGIN_BAR["login_button"]; ?></a> <a
+                            href="register.php"
+                            class="mr5"><?= $LOGIN_BAR["reg_option"]; ?></a></span>
             <?php } else {
             if (isset($_SESSION['mode']) && $_SESSION['mode'] == "expert") { ?>
 
-            <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>（专家账号）</span>
+            <span id="header_header_top_Login"> <?= $LOGIN_BAR["welcome_msg"]; ?><?= $_SESSION['user']; ?><?= $LOGIN_BAR["expert_account"]; ?></span>
             <span id="header_header_top_Login">
-    	    <a href="specialist_profile.php" class="clr mr15">用户中心</a>
+    	    <a href="specialist_profile.php" class="clr mr15"><?= $LOGIN_BAR["profile"]; ?></a>
 
                 <?php } else { ?>
 
-                <span id="header_header_top_Login"> 欢迎，<?= $_SESSION['user']; ?>&nbsp;&nbsp;</span>
+                <span id="header_header_top_Login"><?= $LOGIN_BAR["welcome_msg"]; ?><?= $_SESSION['user']; ?>&nbsp;&nbsp;</span>
                 <span id="header_header_top_Login">
-    	        <a href="personalpage.php" class="clr mr15">用户中心</a>
+    	        <a href="personalpage.php" class="clr mr15"><?= $LOGIN_BAR["profile"]; ?></a>
 
                     <?php } ?>
-                    <a href="./sql/logout.php" class="clr mr15">注销</a></span>
+                    <a href="./sql/logout.php" class="clr mr15"><?= $LOGIN_BAR["logout"]; ?></a></span>
                 <?php } ?>
         </div>
     </div>
 </div>
 <script>
+    let lang = location.href.split("=").pop(); // 分成两个数组后取最后一个值
+    if (lang !== "") {
+        document.getElementById("lang").value = lang;
+    }
+
     function changeLanguage(lang) {
-        alert("语言换为" + lang)
+        window.location.href = "home.php?lang=" + lang;
     }
 </script>

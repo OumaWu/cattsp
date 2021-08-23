@@ -25,4 +25,3 @@ try {
     print_r($e);
     echo "</pre>";
 }
-?>

@@ -1092,7 +1092,7 @@ html, body {
 
 .n_site_glc {
     height: 125px;
-    padding-top: 10px;
+    padding-top: 5px;
     background: #eff8fd
 }
 
@@ -1106,6 +1106,7 @@ html, body {
 .n_site_glc ul li .hur1 {
     float: left;
     width: 78px;
+    margin: 0px 45px 5px 45px;
     height: 78px;
     border: 1px #ccc solid
 }
@@ -1119,13 +1120,13 @@ html, body {
     margin: 0 auto;
     /*float: right;*/
     text-align: center;
-    width: 80px;
+    width: 168px;
     height: 105px;
 }
 
 .n_site_glc ul li .hur2 p {
     height: 40px;
-    width: inherit;
+    width: 100%;
     /*line-height: 40px;*/
     /*overflow: hidden*/
 }
@@ -1133,6 +1134,7 @@ html, body {
 .n_site_glc ul li .hur2 p a {
     font-family: "Microsoft YaHei";
     font-size: 12px;
+    width: 100%;
 }
 
 .n_site_gr {
@@ -1300,10 +1302,10 @@ html, body {
 .n_site_hb ul li .hur1 {
     height: 20px;
     line-height: 20px;
-    overflow: hidden;
+    overflow: visible;
+    text-align: center;
     margin-bottom: 10px;
-    background: url(../images/this/ico_3.png) no-repeat 0 9px;
-    padding-left: 10px
+    /*background: url(../images/this/ico_3.png) no-repeat 0 9px;*/
 }
 
 .n_site_hb ul li .hur1 a {
@@ -1325,9 +1327,12 @@ html, body {
 
 .n_site_hb ul li .hur3 {
     line-height: 22px;
-    /*height: 120px;*/
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* 限制在一个块元素显示的文本的行数 */
+    -webkit-box-orient: vertical; /* 垂直排列 */
+    word-break: break-all;  /* 内容自动换行 */
     padding-top: 10px
 }
 
