@@ -24,8 +24,8 @@ $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
                 <select class="mr10" id="lang" name="lang" onchange="changeLanguage(this.value)">
                     <option value="zh_CN">中文</option>
                     <option value="en_US">English</option>
-                    <!--                <option value="vn_VI">Vietnam</a></option>-->
-                    <!--                <option value="th_TH">泰语</option>-->
+                    <option value="vn_VI">Tiếng Việt</a></option>
+                    <option value="th_TH">ภาษาไทย</option>
                 </select>
             </label>
             <?php if (!isset($_SESSION['user']) || empty($_SESSION['user'])) { ?>
@@ -59,6 +59,7 @@ $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
     }
 
     function changeLanguage(lang) {
-        window.location.href = "home.php?lang=" + lang;
+        const href = window.location.pathname;
+        window.location.href = href +"?lang=" + lang;
     }
 </script>

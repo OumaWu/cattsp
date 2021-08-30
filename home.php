@@ -182,7 +182,7 @@ $HOME = $_SESSION["LANG"]["home"];
     <!-- }网站板块接口 -->
 
     <div class="content3">
-        <!--  专利技术{  -->
+        <!--  太阳能技术成果与专利{  -->
         <div class="title left">
             <ul class="tt technology">
                 <li><h2><?= $HOME["solar_tech_title"]; ?></h2></li>
@@ -190,9 +190,8 @@ $HOME = $_SESSION["LANG"]["home"];
             </ul>
             <ul class="cc m-t-10">
                 <?php
-                include_once("sql/solarTechList.php");
-                for ($i = 0; $i < 10; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
+                include_once("sql/homeSolarTechList.php");
+                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
                     <li>
                         <div class="left ellipsis" title="<?= $res->title; ?>"><a
@@ -206,7 +205,7 @@ $HOME = $_SESSION["LANG"]["home"];
                 <?php } ?>
             </ul>
         </div>
-        <!--  }专利技术  -->
+        <!--  }太阳能技术成果与专利  -->
 
         <!--  技术需求{  -->
         <div class="title right">
@@ -216,9 +215,8 @@ $HOME = $_SESSION["LANG"]["home"];
             </ul>
             <ul class="cc m-t-10">
                 <?php
-                include_once("sql/demandList.php");
-                for ($i = 0; $i < 10; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
+                include_once("sql/homeDemandList.php");
+                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
                     <li>
                         <div class="left ellipsis" title="<?= $res->title; ?>"><a
@@ -364,8 +362,7 @@ $HOME = $_SESSION["LANG"]["home"];
                 <ul>
                     <?php
                     include_once("sql/companyList.php");
-                    for ($i = 0; $i < 3; $i++) {
-                        $res = $result->fetch(PDO::FETCH_OBJ);
+                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                         ?>
                         <li>
                             <p class="hur1">
@@ -379,7 +376,7 @@ $HOME = $_SESSION["LANG"]["home"];
                                             src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
                                             onerror="this.src = images/<?= $res->image; ?>;">
                                 </a>
-                                <p class="hur2r"><?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                                <p class="hur2r"><?= mb_substr($res->description, 0, 160, "utf-8"); ?>…</p>
                             </div>
 
                         </li>
@@ -451,7 +448,7 @@ $HOME = $_SESSION["LANG"]["home"];
         </div>
 
         <?php require_once("./sql/homePolicyList.php"); ?>
-        <!--  政策法规{  -->
+        <!--  相关政策法规{  -->
         <div class="n_site_gra">
             <h2><a href="policies.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a><?= $HOME["policy"]; ?></h2>
             <ul>
@@ -466,7 +463,7 @@ $HOME = $_SESSION["LANG"]["home"];
                 <?php } ?>
             </ul>
         </div>
-        <!--  }政策法规  -->
+        <!--  }相关政策法规  -->
     </div>
 
     <!--  合作单位{  -->

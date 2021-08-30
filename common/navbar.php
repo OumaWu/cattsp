@@ -12,7 +12,7 @@ $NAVBAR = $_SESSION["LANG"]["navbar"];
     <div class="w1220">
         <ul id="nav" class="nav clearfix">
             <li class="nLi cur on" id="home">
-                <h3 style="width: 100px; text-align: center;"><a href="home.php" target="_self"><?= $NAVBAR["home_url"]; ?></a></h3>
+                <h3><a href="home.php" target="_blank"><?= $NAVBAR["home_url"]; ?></a></h3>
             </li>
             <li class="nLi" id="solartech">
                 <h3><a href="solartech.php" target="_blank"><?= $NAVBAR["tech_url"]; ?></a></h3>

@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * User: Derek
+ * User: Wjh
  * Date: 2018/8/1
  * Time: 0:14
  */
@@ -18,6 +18,7 @@ class Page
     public $startPage;      //起始页
     public $endPage;        //中止页
     private $pdo;           //PDO实例
+
 
     //返回分页后展示的链接展示块
     public function displayPages()
@@ -129,9 +130,10 @@ class Page
     private function connect()
     {
         /* read db info from config file into an array */
-        $path = dirname(".");
+        $path = dirname(__DIR__);
         $db = parse_ini_file($path . DIRECTORY_SEPARATOR . "dbconfig.ini", true);
-        $server = "Aliyun";
+        require_once($path . DIRECTORY_SEPARATOR . "config" . DIRECTORY_SEPARATOR . "database.php");
+        $server = SERVER;
 
         /* assign array values to variables */
         $type = $db[$server]["type"];
