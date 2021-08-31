@@ -13,7 +13,7 @@ header, section, footer, aside, nav, main, article, figure {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 1180px;
-	height: 140px;
+	min-height: 160px;
 	/*margin: 10 auto;*/
 }
 
@@ -21,7 +21,7 @@ header, section, footer, aside, nav, main, article, figure {
 	box-sizing: border-box;
 	width: 232px;
 	float: left;
-	height: 140px;
+	min-height: inherit;
 	border: 1px solid #bfcac9;
 	background: #fff;
 }
@@ -41,11 +41,11 @@ header, section, footer, aside, nav, main, article, figure {
 .content2 .dd .part2 div {
 	box-sizing: border-box;
 	text-align: center;
-	margin-top: 5px;
 	float: left;
 	width: 114px;
-	height: 25px;
+	height: 49px;
 	line-height: 25px;
+	padding-top: 10px;
 }
 
 .m-l-5 {

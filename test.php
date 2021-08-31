@@ -1,6 +1,10 @@
 <?php
 
-echo date("Y-m-d");
+$config = require_once ('./config/database.php');
+print_r($config);
+echo '</br>'.$config['database'];
+
+//echo date("Y-m-d");
 
 //parse_url();
 

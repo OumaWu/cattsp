@@ -869,12 +869,13 @@ form {
 
 .contact_info {
     float: left;
-    width: 400px;
+    min-width: 600px;
     overflow: hidden;
 }
 
 .contact_info dt {
     float: left;
+    width: 60px;
 }
 
 .contact_info dd {

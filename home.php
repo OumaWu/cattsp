@@ -1,3 +1,9 @@
+<?php
+// 获取语言包
+require_once('./languages/init_lang.php');
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$HOME = $_SESSION["LANG"]["home"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +12,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>中国-东盟太阳能技术转移中心</title>
+    <title><?=$HTTP_HEADER["title"]?></title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -19,9 +25,9 @@
     <!-- 导入其他模块css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/common.css"
           id="theme1">
-    <link rel="stylesheet" type="text/css" href="./css/home.css?v=2"
+    <link rel="stylesheet" type="text/css" href="./css/home.css?v=1"
           id="theme2">
-    <link rel="stylesheet" type="text/css" href="css/wy.css?v">
+    <link rel="stylesheet" type="text/css" href="css/wy.css?v=2">
     <!-- }导入其他模块css文件 -->
 
 </head>
@@ -29,17 +35,15 @@
 <!--  版头{  -->
 <div class="header clearfix" id="header">
 
-    <!--  登录模块{  -->
-    <?php require_once('common/loginbar.php'); ?>
-    <!--  }登录模块  -->
-
-    <!--  网站横幅{  -->
-    <?php require_once('common/banner.php'); ?>
-    <!--  }网站横幅  -->
-
-    <!--  导航栏{  -->
-    <?php require_once('common/navbar.php'); ?>
-    <!--  }导航栏  -->
+    <!--  导入框架  -->
+    <?php
+    // 登录模块
+    require_once('common/loginbar.php');
+    // 网站横幅
+    require_once('common/banner.php');
+    // 导航栏
+    require_once('common/navbar.php');
+    ?>
 </div>
 <!--  }版头  -->
 
@@ -118,77 +122,76 @@
     <div class="content2">
         <div class="dd">
             <div class="part1">
-                <img src="images/icons/service0.png" height="40px"><br>技术供需服务
+                <img src="images/icons/service0.png" height="40px"><br><?= $HOME["tech_title"]; ?>
             </div>
             <div class="part2">
-                <div><a href="solartech.php">技术成果</a></div>
-                <div><a href="publishtech.php">发布成果</a></div>
-                <div><a href="demands.php">技术需求</a></div>
-                <div><a href="publishdemands.php">发布需求</a></div>
+                <div><a href="solartech.php"><?= $HOME["tech_product"]; ?></a></div>
+                <div><a href="publishtech.php"><?= $HOME["publish_tech"]; ?></a></div>
+                <div><a href="demands.php"><?= $HOME["demand"]; ?></a></div>
+                <div><a href="publishdemands.php"><?= $HOME["publish_demand"]; ?></a></div>
             </div>
         </div>
         <div class="dd m-l-5">
             <div class="part1">
-                <img src="images/icons/service2.png" height="40px"><br>技术交易服务
+                <img src="images/icons/service2.png" height="40px"><br><?= $HOME["trade_title"]; ?>
             </div>
             <div class="part2">
-                <div><a href="#">竞价大厅</a></div>
-                <div><a href="#">我要竞价</a></div>
-                <div><a href="#">科技商城</a></div>
-                <div><a href="#">我要入驻</a></div>
+                <div><a href="#"><?= $HOME["hall"]; ?></a></div>
+                <div><a href="#"><?= $HOME["bid"]; ?></a></div>
+                <div><a href="#"><?= $HOME["mall"]; ?></a></div>
+                <div><a href="#"><?= $HOME["register"]; ?></a></div>
             </div>
         </div>
         <div class="dd m-l-5">
             <div class="part1">
-                <img src="images/icons/service4.png" height="40px"><br>科技企业服务
+                <img src="images/icons/service4.png" height="40px"><br><?= $HOME["service_title"]; ?>
             </div>
             <div class="part2">
-                <div><a href="#">企业服务</a></div>
-                <div><a href="#">我要服务</a></div>
-                <div><a href="#">服务机构</a></div>
-                <div><a href="#">机构入驻</a></div>
+                <div><a href="#"><?= $HOME["company_service"]; ?></a></div>
+                <div><a href="#"><?= $HOME["in_register"]; ?></a></div>
+                <div><a href="#"><?= $HOME["institute"]; ?></a></div>
+                <div><a href="#"><?= $HOME["ask_service"]; ?></a></div>
             </div>
         </div>
 
         <div class="dd m-l-5">
             <div class="part1">
-                <img src="images/icons/service1.png" height="40px"><br>研发合作服务
+                <img src="images/icons/service1.png" height="40px"><br><?= $HOME["corp_service"]; ?>
             </div>
             <div class="part2">
-                <div><a href="specialists.php">专家咨询</a></div>
-                <div><a href="#">我要入驻</a></div>
-                <div><a href="#">技术评估</a></div>
+                <div><a href="specialists.php"><?= $NAVBAR["expert_url"]; ?></a></div>
+                <div><a href="#"><?= $HOME["register"]; ?></a></div>
+                <div><a href="#"><?= $HOME["tech_eval"]; ?></a></div>
                 <div>
-                    <a href="#">我要评估</a>
+                    <a href="#"><?= $HOME["i_eval"]; ?></a>
                 </div>
             </div>
         </div>
         <div class="dd m-l-5">
             <div class="part1">
-                <img src="images/icons/service3.png" height="40px"><br>高校院所服务
+                <img src="images/icons/service3.png" height="40px"><br><?= $HOME["college_service"]; ?>
             </div>
             <div class="part2">
-                <div><a href="#">成果公示</a></div>
-                <div><a href="#">我要公示</a></div>
-                <div><a href="#">高校院所</a></div>
-                <div><a href="#">我要入驻</a></div>
+                <div><a href="#"><?= $HOME["publicity"]; ?></a></div>
+                <div><a href="#"><?= $HOME["i_publish"]; ?></a></div>
+                <div><a href="#"><?= $HOME["college"]; ?></a></div>
+                <div><a href="#"><?= $HOME["register"]; ?></a></div>
             </div>
         </div>
     </div>
     <!-- }网站板块接口 -->
 
     <div class="content3">
-        <!--  专利技术{  -->
+        <!--  太阳能技术成果与专利{  -->
         <div class="title left">
             <ul class="tt technology">
-                <li><h2>太阳能技术成果与专利</h2></li>
-                <li class="link"><a href="solartech.php" target="_blank">更多&gt;</a></li>
+                <li><h2><?= $HOME["solar_tech_title"]; ?></h2></li>
+                <li class="link"><a href="solartech.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
                 <?php
-                include_once("sql/solarTechList.php");
-                for ($i = 0; $i < 10; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
+                include_once("sql/homeSolarTechList.php");
+                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
                     <li>
                         <div class="left ellipsis" title="<?= $res->title; ?>"><a
@@ -202,19 +205,18 @@
                 <?php } ?>
             </ul>
         </div>
-        <!--  }专利技术  -->
+        <!--  }太阳能技术成果与专利  -->
 
         <!--  技术需求{  -->
         <div class="title right">
             <ul class="tt demand">
-                <li><h2>技术需求</h2></li>
-                <li class="link"><a href="demands.php" target="_blank">更多&gt;</a></li>
+                <li><h2><?= $HOME["home_demand_title"]; ?></h2></li>
+                <li class="link"><a href="demands.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a></li>
             </ul>
             <ul class="cc m-t-10">
                 <?php
-                include_once("sql/demandList.php");
-                for ($i = 0; $i < 10; $i++) {
-                    $res = $result->fetch(PDO::FETCH_OBJ);
+                include_once("sql/homeDemandList.php");
+                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
                     <li>
                         <div class="left ellipsis" title="<?= $res->title; ?>"><a
@@ -235,8 +237,8 @@
         <!--  技术专家{  -->
         <div class="title left">
             <ul class="tt specialist">
-                <li><h2>技术专家</h2></li>
-                <li class="link"><a href="specialists.php" target="_blank">更多&gt;</a></li>
+                <li><h2><?= $HOME["home_expert_title"]; ?></h2></li>
+                <li class="link"><a href="specialists.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a></li>
             </ul>
             <div class="spe">
                 <ul>
@@ -257,7 +259,7 @@
                                                    target="_blank"
                                                    title="<?= $res->name; ?>">
                                         <?= $res->name; ?> </a></p>
-                                <p class="domain">从事领域：<?= $res->domain; ?></p>
+                                <p class="domain"><?= $HOME["home_domain_title"]; ?><?= $res->domain; ?></p>
                             </div>
                         </li>
                     <?php } ?>
@@ -270,8 +272,8 @@
         <!--  科技商城{  -->
         <div class="title right">
             <ul class="tt mall">
-                <li><h2>科技商城</h2></li>
-                <li class="link"><a href="#" target="_blank">更多&gt;</a></li>
+                <li><h2><?= $HOME["home_mall_title"]; ?></h2></li>
+                <li class="link"><a href="#" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a></li>
             </ul>
             <ul class="pv">
                 <li>
@@ -280,7 +282,7 @@
                             <img src="images/pvequipement1.jpg">
                         </a>
                     </div>
-                    <div class="legend">光伏设备</div>
+                    <div class="legend"><?= $HOME["mall_item"]; ?></div>
                 </li>
                 <li>
                     <div class="right">
@@ -288,7 +290,7 @@
                             <img src="images/pvequipement2.png">
                         </a>
                     </div>
-                    <div class="legend">光伏设备</div>
+                    <div class="legend"><?= $HOME["mall_item"]; ?></div>
                 </li>
                 <li>
                     <div class="left">
@@ -296,7 +298,7 @@
                             <img src="images/pvequipement3.jpg">
                         </a>
                     </div>
-                    <div class="legend">光伏设备</div>
+                    <div class="legend"><?= $HOME["mall_item"]; ?></div>
                 </li>
                 <li>
                     <div class="right">
@@ -304,7 +306,7 @@
                             <img src="images/pvequipement4.jpg">
                         </a>
                     </div>
-                    <div class="legend">光伏设备</div>
+                    <div class="legend"><?= $HOME["mall_item"]; ?></div>
                 </li>
             </ul>
         </div>
@@ -353,15 +355,14 @@
         <div class="n_site_gl">
 
             <!--  企业单位{  -->
-            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
-                <h2>企业单位</h2>
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a>
+                <h2><?= $HOME["company"]; ?></h2>
             </div>
             <div class="n_site_glb">
                 <ul>
                     <?php
                     include_once("sql/companyList.php");
-                    for ($i = 0; $i < 3; $i++) {
-                        $res = $result->fetch(PDO::FETCH_OBJ);
+                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                         ?>
                         <li>
                             <p class="hur1">
@@ -375,7 +376,7 @@
                                             src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
                                             onerror="this.src = images/<?= $res->image; ?>;">
                                 </a>
-                                <p class="hur2r">简介：<?= mb_substr($res->description, 0, 50, "utf-8"); ?>…</p>
+                                <p class="hur2r"><?= mb_substr($res->description, 0, 160, "utf-8"); ?>…</p>
                             </div>
 
                         </li>
@@ -385,58 +386,58 @@
             <!--  }企业单位  -->
 
             <!--  研发单位{  -->
-            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank">更多&gt;</a>
-                <h2>研发单位</h2>
+            <div class="n_site_h2 n_site_h2d"><a href="#" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a>
+                <h2><?= $HOME["research_in"]; ?></h2>
             </div>
             <div class="n_site_glc">
                 <ul>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="广西大学"> <img src="./images/GXU.png" alt="">
+                               title="<?= $HOME["gxu"]; ?>"> <img src="./images/GXU.png" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="广西大学">广西大学</a>
+                                  title="<?= $HOME["gxu"]; ?>"><?= $HOME["gxu"]; ?></a>
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="广西民族大学"> <img src="./images/GXUN.png" alt="">
+                               title="<?= $HOME["gxmzu"]; ?>"> <img src="./images/GXUN.png" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="广西民族大学">广西民族大学</a>
+                                  title="<?= $HOME["gxmzu"]; ?>"><?= $HOME["gxmzu"]; ?></a>
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="桂林电子科技大学"> <img src="./images/GUET.jpg" alt="">
+                               title="<?= $HOME["gldz"]; ?>"> <img src="./images/GUET.jpg" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="桂林电子科技大学">桂林电子科技大学</a>
+                                  title="<?= $HOME["gldz"]; ?>"><?= $HOME["gldz"]; ?></a>
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="桂林理工大学"> <img src="./images/GUT.jpg" alt="">
+                               title="<?= $HOME["gllg"]; ?>"> <img src="./images/GUT.jpg" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="桂林理工大学">桂林理工大学</a>
+                                  title="<?= $HOME["gllg"]; ?>"><?= $HOME["gllg"]; ?></a>
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="hur2">
                             <a href="#" target="_self" class="hur1"
-                               title="广西科技大学"> <img src="./images/GXUST.jpg" alt="">
+                               title="<?= $HOME["gxkxu"]; ?>"> <img src="./images/GXUST.jpg" alt="">
                             </a>
                             <p><a href="#" target="_blank"
-                                  title="广西科技大学">广西科技大学</a>
+                                  title="<?= $HOME["gxkxu"]; ?>"><?= $HOME["gxkxu"]; ?></a>
                             </p>
                         </div>
                     </li>
@@ -447,9 +448,9 @@
         </div>
 
         <?php require_once("./sql/homePolicyList.php"); ?>
-        <!--  政策法规{  -->
+        <!--  相关政策法规{  -->
         <div class="n_site_gra">
-            <h2><a href="policies.php" target="_blank">更多&gt;</a>相关政策法规</h2>
+            <h2><a href="policies.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a><?= $HOME["policy"]; ?></h2>
             <ul>
                 <?php
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
@@ -462,21 +463,21 @@
                 <?php } ?>
             </ul>
         </div>
-        <!--  }政策法规  -->
+        <!--  }相关政策法规  -->
     </div>
 
     <!--  合作单位{  -->
     <div class="n_site_h">
         <div class="n_site_h1 n_site_h2b">
-            <a href="#" target="_blank" class="c333">更多></a>
-            <h2>合作机构</h2>
+            <a href="#" target="_blank" class="c333"><?= $HOME["more_url"]; ?>></a>
+            <h2><?= $HOME["corp_assoc"]; ?></h2>
         </div>
         <div class="n_site_hb">
             <a href="#" target="_blank" class="application"></a>
             <ul>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">广西科学院</a>
+                        <a href="#" target="_blank" title=""><?= $HOME["gxaos"]; ?></a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
@@ -485,11 +486,11 @@
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西科学院成立于1980年，是直属广西壮族自治区人民政府的正厅级综合性自然科学研究机构。全院在职职工625人，科研人员为494人，占职工总数的79%。其中高级职称人员176...</p>
+                    <p class="hur3" style="overflow:hidden;"><?= $HOME["gxaos_desc"]; ?></p>
                 </li>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">广西科技厅</a>
+                        <a href="#" target="_blank" title=""><?= $HOME["gxkjt"]; ?></a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
@@ -498,11 +499,11 @@
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西壮族自治区科学技术厅，根据《自治区党委、自治区人民政府关于自治区人民政府机构设置的通知》（桂委会〔2009〕235号），设立自治区科学技术厅，为自治区人民政府组成部门。</p>
+                    <p class="hur3"><?= $HOME["gxkjt_desc"]; ?></p>
                 </li>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">南宁迅尔迪电子科技有限公司</a>
+                        <a href="#" target="_blank" title=""><?= $HOME["nnxed"]; ?></a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
@@ -511,11 +512,11 @@
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西科学院应用物理研究所的全资子公司。公司科技应用研发推广团队实力强大，主要从事新能源、电子、自动化、光电、能源工程等方向的研发与推广工作。企业经营范围包括：新材料...</p>
+                    <p class="hur3"><?= $HOME["nnxed_desc"]; ?></p>
                 </li>
                 <li>
                     <p class="hur1">
-                        <a href="#" target="_blank" title="">广西大美能投资有限公司</a>
+                        <a href="#" target="_blank" title=""><?= $HOME["gxdm"]; ?></a>
                     </p>
                     <a href="#" target="_blank" rel="nofollow" class="hur2" title="">
 
@@ -524,7 +525,7 @@
                              onerror="this.src = 'images/entreprise-default.png'">
 
                     </a>
-                    <p class="hur3">广西大美能源投资有限公司是一家集太阳能产业研发、生产、销售、服务、集贸易、集热工程、新能源投资开发利用一体的高新技术企业，已经入选为中国太阳能热利用产业协会理事单位...</p>
+                    <p class="hur3"><?= $HOME["gxdm_desc"]; ?></p>
                 </li>
             </ul>
         </div>
@@ -535,56 +536,56 @@
     <!--  友情链接{  -->
     <div class="mod">
         <div class="headline pr">
-            <h2><a href="http://www.cattc.org.cn/frindlinklist.aspx">友情链接</a></h2>
+            <h2><a href="http://www.cattc.org.cn/frindlinklist.aspx"><?= $HOME["relative_url"]; ?></a></h2>
             <span class="pa divide"></span></div>
         <ul class="f_links">
             <li><a href="http://www.most.gov.cn/index.htm" target="_blank"><img alt=""
-                                                                                src="./images/relative_links/2015060209074428.png">中华人民共和国科技部</a>
+                                                                                src="./images/relative_links/2015060209074428.png"><?= $HOME["most_cn"]; ?></a>
             </li>
             <li><a href="http://www.most.go.th/main/th/" target="_blank"><img alt=""
-                                                                              src="./images/relative_links/2015060209351878.png">泰国科技部</a>
+                                                                              src="./images/relative_links/2015060209351878.png"><?= $HOME["most_th"]; ?></a>
             </li>
             <li><a href="http://www.itb-china.org/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/20161008160912784.png">泰国国际贸易商会</a>
+                                                                         src="./images/relative_links/20161008160912784.png"><?= $HOME["itb_china"]; ?></a>
             </li>
             <li><a href="http://www.a-star.edu.sg/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/2015042416241440.png">新加坡科技研究局</a>
+                                                                         src="./images/relative_links/2015042416241440.png"><?= $HOME["a_star"]; ?></a>
             </li>
             <li><a href="http://www.asean.org/asean/asean-secretariat" target="_blank"><img alt=""
-                                                                                            src="./images/relative_links/2015060209391443.png">东盟秘书处</a>
+                                                                                            src="./images/relative_links/2015060209391443.png"><?= $HOME["asean_scrt"]; ?></a>
             </li>
             <li><a href="http://www.mofcom.gov.cn/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/20161008160943891.jpg">中华人民共和国商务部</a>
+                                                                         src="./images/relative_links/20161008160943891.jpg"><?= $HOME["mofcom"]; ?></a>
             </li>
             <li><a href="http://www.tysp.org/" target="_blank"><img alt=""
-                                                                    src="./images/relative_links/2015060211272176.png">杰出青年科学家来华工作计划</a>
+                                                                    src="./images/relative_links/2015060211272176.png"><?= $HOME["tysp"]; ?></a>
             </li>
             <li><a href="http://www.china-asean-step.com/" target="_blank"><img alt=""
-                                                                                src="./images/relative_links/2015060209263602.png">中国—东盟科技伙伴计划</a>
+                                                                                src="./images/relative_links/2015060209263602.png"><?= $HOME["cn_asean_step"]; ?></a>
             </li>
             <li><a href="http://www.caexpo.org/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/2015032714175691.png">中国-东盟博览会官方网站</a>
+                                                                      src="./images/relative_links/2015032714175691.png"><?= $HOME["caexpo"]; ?></a>
             </li>
             <li><a href="http://www.cime.org.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/20151231115845323.png">CIME国际海洋科技展</a>
+                                                                       src="./images/relative_links/20151231115845323.png"><?= $HOME["cime"]; ?></a>
             </li>
             <li><a href="http://www.gei.com.cn/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/20161008161224384.png">长城战略咨询</a>
+                                                                      src="./images/relative_links/20161008161224384.png"><?= $HOME["gei"]; ?></a>
             </li>
             <li><a href="http://www.imindsoft.com/zh/Default.aspx" target="_blank"><img alt=""
-                                                                                        src="./images/relative_links/20161008164224143.png">一铭软件</a>
+                                                                                        src="./images/relative_links/20161008164224143.png"><?= $HOME["imindsoft"]; ?></a>
             </li>
             <li><a href="http://www.caexpo.com/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/20161008161628774.png">南博网</a>
+                                                                      src="./images/relative_links/20161008161628774.png"><?= $HOME["nbw"]; ?></a>
             </li>
             <li><a href="http://www.cgfh.com.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/2015042417313713.png">国家科技成果转化（南宁）综合信息服务平台</a>
+                                                                       src="./images/relative_links/2015042417313713.png"><?= $HOME["cgfh"]; ?></a>
             </li>
             <li><a href="http://www.gxst.gov.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/2015032615335993.png">广西科技信息网</a>
+                                                                       src="./images/relative_links/2015032615335993.png"><?= $HOME["gxst"]; ?></a>
             </li>
             <li><a href="http://www.cattc.org.cn/www.gxpc.org.cn" target="_blank"><img alt=""
-                                                                                       src="./images/relative_links/2015042417292040.png">广西科技情报研究所</a>
+                                                                                       src="./images/relative_links/2015042417292040.png"><?= $HOME["cattc"]; ?></a>
             </li>
         </ul>
     </div>

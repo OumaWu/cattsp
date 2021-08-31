@@ -2,17 +2,23 @@
 <link rel="stylesheet" href="./css/news.css">
 <script src="./js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="./js/jquery.SuperSlide.2.1.1.js"></script>
-<?php require_once("sql/scrolling-title.php"); ?>
+<?php
+session_start();
+require_once("sql/scrolling-title.php");
+$HOME = $_SESSION["LANG"]["home"];
+?>
 
 <!-- 新闻标题 -->
 <div class="wysn_news fr">
     <div class="slideTxtBox">
         <div class="hd">
             <ul id="tz">
-                <li class="on" id="tzgg"><a href="information.php?category_id=2" target="_blank">科技资讯</a></li>
-                <li id="dtxx"><a href="information.php?category_id=1" target="_blank">通知公告</a></li>
+                <li class="on" id="tzgg"><a href="information.php?category_id=2"
+                                            target="_blank"><?= $HOME["tech_news_url"]; ?></a></li>
+                <li id="dtxx"><a href="information.php?category_id=1" target="_blank"><?= $HOME["notice_url"]; ?></a>
+                </li>
             </ul>
-            <a class="fr" href="information.php" target="_blank">更多<b class="song">&gt;</b></a></div>
+            <a class="fr" href="information.php" target="_blank"><?= $HOME["more_url"]; ?>&nbsp;&gt;</a></div>
         <div class="bd">
             <ul class="list" id="list">
                 <?php
