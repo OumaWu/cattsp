@@ -1,6 +1,7 @@
 <?php
 // 获取语言包
-require_once('./languages/init_lang.php');
+require_once (__DIR__.'/languages/init_lang.php');
+session_start();
 $HTTP_HEADER = $_SESSION["LANG"]["http_header"];
 $HOME = $_SESSION["LANG"]["home"];
 ?>

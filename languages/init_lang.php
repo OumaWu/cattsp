@@ -1,6 +1,5 @@
 <?php
 session_start();
-$path = dirname(__DIR__.DIRECTORY_SEPARATOR.'languages');
 $lang_file = "chinese";
 $_SESSION["LANG_CODE"] = "zh_CN";
 if (isset($_GET["lang"])) {
@@ -20,4 +19,4 @@ if (isset($_GET["lang"])) {
             $lang_file = "thai";
     }
 }
-$_SESSION["LANG"] = parse_ini_file($path . DIRECTORY_SEPARATOR .$lang_file. ".ini", true);
+$_SESSION["LANG"] =  parse_ini_file(__DIR__.'/'.$lang_file. ".ini", true);
