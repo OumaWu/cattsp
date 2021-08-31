@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: SONY
+ * User: Wjh
  * Date: 2018/3/29
  * Time: 2:43
  */
@@ -20,18 +20,18 @@ $old_images = (string)$_POST['o_photo'];
 
 /*
  *  无法接受用户id，导致无法更新用户信息，to be fixed
- *  - derek, 3:40 March 29
+ *  - Wjh, 3:40 March 29
  *
  * （已解决）原因：没有开启会话(session_start())导致session数组为空
  *  方案一：开启session
  *  方案二：用hidden传值用户id
- *  - derek, 15:56 March 29
+ *  - Wjh, 15:56 March 29
  *
  * */
 
 /*
  * 无法更新用户信息，to be fixed
- * - derek 16:24 March 29
+ * - Wjh 16:24 March 29
  *
  * 原因：sex为布尔值，当传过来的值为0时empty为true
  *

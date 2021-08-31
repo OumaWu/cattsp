@@ -1,44 +1,45 @@
+<?php $FOOTER = $_SESSION["LANG"]["footer"]; ?>
 <link rel="stylesheet" type="text/css" href="./css/base.css">
 <link rel="stylesheet" type="text/css" href="./css/index.css">
-<link rel="stylesheet" type="text/css" href="./css/global.css?v">
+<link rel="stylesheet" type="text/css" href="./css/global.css?v=2">
 <div id="footer" class="bottomwrapper">
     <div class="contact">
         <div class="contact_info">
             <dl>
-                <dt>地址</dt>
-                <dd>中国广西南宁市大岭路98号</dd>
-                <dt>邮编</dt>
+                <dt><?= $FOOTER["adress_title"]; ?></dt>
+                <dd><?= $FOOTER["adress"]; ?></dd>
+                <dt><?= $FOOTER["postcode_title"]; ?></dt>
                 <dd>530022</dd>
-                <dt>电话</dt>
+                <dt><?= $FOOTER["phone_title"]; ?></dt>
                 <dd>（86）771 2799300/2799388</dd>
-                <dt>传真</dt>
+                <dt><?= $FOOTER["fax_title"]; ?></dt>
                 <dd>+86 771 2799 300</dd>
-                <dt>邮箱</dt>
+                <dt><?= $FOOTER["email_title"]; ?></dt>
                 <dd><a href="mailto:iap@gxas.cn">iap@gxas.cn</a></dd>
-                <dt>网址</dt>
-                <dd><a href="http://www.gxas.cn/Gxas/unit.aspx?id=16">http://www.gxas.cn/Gxas/unit.aspx?id=16</a></dd>
+                <dt><?= $FOOTER["website_title"]; ?></dt>
+                <dd><a href="http://www.gxas.cn/zjjg/jags/ysdw/201911/t20191101_2036.html">http://www.gxas.cn/zjjg/jags/ysdw/201911/t20191101_2036.html</a></dd>
             </dl>
         </div>
         <div class="follow">
             <dl>
-                <dt>关注IAP</dt>
+                <dt><?= $FOOTER["follow"]; ?></dt>
                 <dd><a class="ic_follow_tweibo" title="腾讯微博" href="#" target="_blank"></a></dd>
                 <dd><a class="ic_follow_sweibo" title="新浪微博" href="#" target="_blank"></a></dd>
             </dl>
             <ul class="">
-                <li><a href="aboutus.php" target="_blank">网站地图</a></li>
-                <li><a href="aboutus.php" target="_blank">关于我们</a></li>
+                <li><a href="aboutus.php" target="_blank"><?= $FOOTER["site_map"]; ?></a></li>
+                <li><a href="aboutus.php" target="_blank"><?= $NAVBAR["about_url"]; ?></a></li>
             </ul>
         </div>
     </div>
     <div class="copyright">
         <ul class="container">
-            <li class="fl">Copyright © 2018 广西科学院-应用物理研究所，All Rights Reserved</li>
+            <li class="fl"><?= $FOOTER["copyright"]; ?></li>
             <li class="fl" style="margin-left:20px"></li>
             <li class="fr"><a target="_blank"
                               href="#"><img
-                            src="./images/police_logo.png" style="margin:0px 5px 0 0">桂公网安备 号</a>
-                | <a href="http://www.miitbeian.gov.cn/" target="_blank">桂ICP备18005539号</a></li>
+                            src="./images/police_logo.png" style="margin:0px 5px 0 0"><?= $FOOTER["police_record"]; ?></a>
+                | <a href="http://www.miitbeian.gov.cn/" target="_blank"><?= $FOOTER["icp_num"]; ?></a></li>
         </ul>
     </div>
 </div>

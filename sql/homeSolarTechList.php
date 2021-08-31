@@ -1,15 +1,10 @@
 <?php
-
-require_once ("./sql/Page.class.php");
-
-$p = empty($_GET["p"]) ? 1 : $_GET["p"];
-$page = new Page("solar_technologies", "id", 10, $p);
-
+session_start();
 include("connection.php");
 
-$sql = "SELECT * FROM `solar_technologies` AS `st`";
+$sql = "SELECT `st`.`id`, `st`.`title`, `st`.`entreprise` FROM `solar_technologies` AS `st`, `language` WHERE `st`.`lang_id` = `language`.`id` AND `language`.`code` = '{$_SESSION['LANG_CODE']}' LIMIT 10";
 try {
-    $result = $pdo->prepare($page->getOffsetAdded($sql));
+    $result = $pdo->prepare($sql);
     if ($result->execute()) {
     } else {
         echo "<script> alert('提取太阳能技术列表失败！！\\n{$pdo->errorInfo()}');</script>";
@@ -17,5 +12,3 @@ try {
 } catch (PDOException $e) {
     die("错误!!: " . $e->getMessage() . "<br>");
 }
-
-?>

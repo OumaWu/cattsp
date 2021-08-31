@@ -24,4 +24,3 @@ else {
     echo "<script>alert('注销成功！！')</script>";
     echo "<meta http-equiv=\"refresh\" content=\"0.1;url=$url_home\">";
 }
-?>
