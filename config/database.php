@@ -2,4 +2,4 @@
 /**
  * 数据库配置文件
  */
-const SERVER = 'Aliyun';
+const SERVER = 'local';
