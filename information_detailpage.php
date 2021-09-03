@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>中国-东盟太阳能技术转移中心</title>
+    <title>中国-东盟光电子信息技术转移服务平台</title>
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <!-- }导入新闻展示模块css文件 -->

@@ -7,7 +7,7 @@
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>中国-东盟太阳能技术转移中心</title>
+    <title>中国-东盟光电子信息技术转移服务平台</title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
