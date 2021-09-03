@@ -39,11 +39,11 @@ $HOME = $_SESSION["LANG"]["home"];
     <!--  导入框架  -->
     <?php
     // 登录模块
-    require_once('common/loginbar.php');
+    include_once('common/loginbar.php');
     // 网站横幅
-    require_once('common/banner.php');
+    include_once('common/banner.php');
     // 导航栏
-    require_once('common/navbar.php');
+    include_once('common/navbar.php');
     ?>
 </div>
 <!--  }版头  -->

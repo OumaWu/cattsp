@@ -5,3 +5,4 @@ dbconfig.txt
 Version_refactoring/*
 .idea/
 dbconfig.ini
+test.php
