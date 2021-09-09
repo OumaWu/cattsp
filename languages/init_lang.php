@@ -1,22 +1,14 @@
 <?php
 session_start();
-$lang_file = "chinese";
-$_SESSION["LANG_CODE"] = "zh_CN";
-if (isset($_GET["lang"])) {
-    $lang = $_GET["lang"];
-    $_SESSION["LANG_CODE"] = $lang;
-    switch ($lang) {
-        case "zh_CN" :
-            $lang_file = "chinese";
-            break;
-        case "en_US":
-            $lang_file = "english";
-            break;
-        case "vn_VI":
-            $lang_file = "vietnamese";
-            break;
-        case "th_TH":
-            $lang_file = "thai";
-    }
+
+// 刚进入网站初始化语言编号为中文
+if (!isset($_SESSION["LANG_CODE"])) {
+    $_SESSION["LANG_CODE"] = "zh_CN";
 }
-$_SESSION["LANG"] =  parse_ini_file(__DIR__.'/'.$lang_file. ".ini", true);
+
+// 如果有语言编号传参且与当前语言不相等则变换语言包
+if (isset($_GET["lang"]) && $_GET["lang"] != $_SESSION["LANG_CODE"]) {
+    $_SESSION["LANG_CODE"] = $_GET["lang"];
+}
+$_SESSION["LANG"] = parse_ini_file(__DIR__ . '/' . $_SESSION["LANG_CODE"] . ".ini", true);
+

@@ -4,6 +4,7 @@ require_once (__DIR__.'/languages/init_lang.php');
 session_start();
 $HTTP_HEADER = $_SESSION["LANG"]["http_header"];
 $ABOUT_US = $_SESSION["LANG"]["about_us"];
+$LABEL = $_SESSION["LANG"]["common"]
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,9 +53,9 @@ $ABOUT_US = $_SESSION["LANG"]["about_us"];
 <!--  首页信息板块{  -->
 <div class="main">
     <div class="this_about">
-        <div class="xa_bread"><?=$ABOUT_US["current_pos"]?><a href="home.php"><?=$ABOUT_US["home_label"]?></a>&nbsp;&gt;&nbsp;<a href="#"><?=$ABOUT_US["about_us_label"]?></a>
+        <div class="xa_bread"><?=$LABEL["current_pos"]?><a href="home.php"><?=$LABEL["home_label"]?></a>&nbsp;&gt;&nbsp;<a href="#"><?=$LABEL["about_us_label"]?></a>
         </div>
-        <div class="this_about_c"><a href="#" class="on"><?=$ABOUT_US["about_us_label"]?></a></div>
+        <div class="this_about_c"><a href="#" class="on"><?=$LABEL["about_us_label"]?></a></div>
         <div class="this_about_b">
             <div class="this_about_ba">
                 <div class="main_head">
