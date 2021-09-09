@@ -1,5 +1,6 @@
 <?php
 // 获取语言包
+session_start();
 $NAVBAR = $_SESSION["LANG"]["navbar"];
 ?>
 <script type="text/javascript" src="js/jquery-1.7.min.js"></script>

@@ -1,4 +1,7 @@
-<?php $FOOTER = $_SESSION["LANG"]["footer"]; ?>
+<?php
+session_start();
+$FOOTER = $_SESSION["LANG"]["footer"];
+?>
 <link rel="stylesheet" type="text/css" href="./css/base.css">
 <link rel="stylesheet" type="text/css" href="./css/index.css">
 <link rel="stylesheet" type="text/css" href="./css/global.css?v=2">
