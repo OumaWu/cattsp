@@ -13,7 +13,7 @@ if (isset($_SESSION['expiretime'])) {
         $_SESSION['expiretime'] = time() + 6000; // 刷新时间戳，1小时40分钟
     }
 }
-require_once (dirname(dirname(__FILE__)) .'/languages/init_lang.php');
+require_once(dirname(__FILE__, 2) . '/languages/init_lang.php');
 $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
 ?>
 <div class="top clearfix sim">
@@ -61,6 +61,6 @@ $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
 
     function changeLanguage(lang) {
         const href = window.location.pathname;
-        window.location.href = href +"?lang=" + lang;
+        window.location.href = href + "?lang=" + lang;
     }
 </script>

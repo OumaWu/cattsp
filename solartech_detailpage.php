@@ -1,7 +1,12 @@
 <?php
-
+// 获取语言包
+require_once(__DIR__ . '/languages/init_lang.php');
+session_start();
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$LABEL = $_SESSION["LANG"]["common"];
+$SOLAR_TECH = $_SESSION["LANG"]["solar_tech"];
+// 获取技术成果id
 $id = $_GET['id'];
-
 //如果技术成果的id未存入cookie则引入统计脚本
 if (!isset($_COOKIE["tech"][$id])) {
     include_once "./sql/countVisit.php";
@@ -15,7 +20,7 @@ if (!isset($_COOKIE["tech"][$id])) {
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>中国-东盟光电子信息技术转移服务平台</title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -26,7 +31,7 @@ if (!isset($_COOKIE["tech"][$id])) {
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css?v" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v=1" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/solartech.css">
     <!-- }导入其他css和js文件 -->
@@ -56,7 +61,7 @@ if (!isset($_COOKIE["tech"][$id])) {
 
 <!--  信息板块{  -->
 <div class="main">
-    <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="solartech.php">科技成果</a> &nbsp;&gt;&nbsp;详细页
+    <div class="xa_bread"> <?= $LABEL["current_pos"] ?> <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp; <a href="solartech.php"><?= $LABEL["tech_label"] ?></a> &nbsp;&gt;&nbsp;<?= $LABEL["detail_page_label"] ?>
     </div>
     <?php
     include("sql/solarTechContent.php");
@@ -130,17 +135,17 @@ if (!isset($_COOKIE["tech"][$id])) {
         <div class="xb_gaa">
             <h1 class="dx_Dla"><span>[<?= $res->id; ?>]</span><?= $res->title; ?></h1>
             <div class="dx_DlbR">
-                <p><b>企业名称：</b> <?= $res->entreprise; ?> </p>
-                <p><b>成果所属地：</b><?= $res->location; ?></p>
-                <p><b>技术发布人：</b><?= $res->publisher; ?></p>
-                <p><b>联系邮箱：</b><?= $res->email; ?></p>
+                <p><b><?= $SOLAR_TECH["company_title"] ?></b> <?= $res->entreprise; ?> </p>
+                <p><b><?= $SOLAR_TECH["tech_location"] ?></b><?= $res->location; ?></p>
+                <p><b><?= $SOLAR_TECH["tech_publisher"] ?></b><?= $res->publisher; ?></p>
+                <p><b><?= $SOLAR_TECH["contact_email"] ?></b><?= $res->email; ?></p>
             </div>
         </div>
     </div>
     <span class="blank10"></span>
     <div class="dx_Dlak">
         <div class="xb_ae">
-            <h2>技术详细介绍</h2>
+            <h2><?= $SOLAR_TECH["detailed_intro"] ?></h2>
         </div>
         <div class="dx_Dlc" style="word-break:break-all;word-wrap:break-word;">
             <p><?= $res->description; ?></p>
