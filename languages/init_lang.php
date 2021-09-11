@@ -7,8 +7,8 @@ if (!isset($_SESSION["LANG_CODE"])) {
 }
 
 // 如果有语言编号传参且与当前语言不相等则变换语言包
-if (isset($_GET["lang"]) && $_GET["lang"] != $_SESSION["LANG_CODE"]) {
-    $_SESSION["LANG_CODE"] = $_GET["lang"];
+if (isset($_POST["lang"]) && $_POST["lang"] != $_SESSION["LANG_CODE"]) {
+    $_SESSION["LANG_CODE"] = $_POST["lang"];
 }
 $_SESSION["LANG"] = parse_ini_file(__DIR__ . '/' . $_SESSION["LANG_CODE"] . ".ini", true);
 

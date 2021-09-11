@@ -22,6 +22,10 @@ if (!isset($_COOKIE["tech"][$id])) {
     <meta http-equiv="Expires" content="0"/>
     <title><?= $HTTP_HEADER["title"] ?></title>
 
+    <!-- 导入bootstrap -->
+    <!--    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap-combined.min.css?v">
+
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
@@ -31,14 +35,10 @@ if (!isset($_COOKIE["tech"][$id])) {
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css?v=1" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?v" id="theme1">
     <link rel="stylesheet" type="text/css" href="./css/list.css" id="theme2">
     <link rel="stylesheet" type="text/css" href="./css/solartech.css">
     <!-- }导入其他css和js文件 -->
-
-    <!-- 导入bootstrap -->
-    <!--    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">-->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap-combined.min.css">
 
 </head>
 <body>

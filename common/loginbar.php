@@ -54,13 +54,26 @@ $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
     </div>
 </div>
 <script>
-    let lang = location.href.split("=").pop(); // 分成两个数组后取最后一个值
-    if (lang !== "") {
+    // 读取存储里的语言代码
+    let lang = window.localStorage.getItem('lang_code');
+    // 如果为空则设为中文
+    if (lang === "") {
+        document.getElementById("lang").value = 'zh_CN';
+    } else { // 不为空则设为当前语言
         document.getElementById("lang").value = lang;
     }
 
     function changeLanguage(lang) {
-        const href = window.location.pathname;
-        window.location.href = href + "?lang=" + lang;
+        // 将选择的语言代码写入浏览器存储
+        window.localStorage.setItem('lang_code', lang);
+        // 将语言代码向当前链接发送post请求
+        let form = $("<form method='post'></form>");
+        let input = $("<input type='hidden'>");
+        form.attr({"action": window.location.href});
+        input.attr({"name": 'lang'});
+        input.val(lang);
+        form.append(input);
+        $("body").append(form);
+        form.submit();
     }
 </script>
