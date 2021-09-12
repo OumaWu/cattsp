@@ -55,10 +55,10 @@
                 include("sql/selectNewsList.php");
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
-                    <li><span><?php echo $res->date; ?></span>
-                        <a href="information_detailpage.php?news_id=<?php echo $res->id; ?>" target="_blank"
+                    <li><span><?= $res->date; ?></span>
+                        <a href="information_detailpage.php?news_id=<?= $res->id; ?>" target="_blank"
                                 class="chu">
-                            <?php echo $res->title; ?>
+                            <?= $res->title; ?>
                         </a>
                     </li>
                 <?php } ?>

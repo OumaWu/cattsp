@@ -119,7 +119,7 @@
                                     <div class="p-label fl">真实姓名<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="realname" type="text" id="realname"
-                                               value="<?php echo $res->realname; ?>" class="i-input"
+                                               value="<?= $res->realname; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -128,10 +128,10 @@
                                     <div class="p-input fl">
                                         <span id="rblSex">
                                             <input id="male" type="radio" name="sex"
-                                                value="1" <?php echo $res->sex ? 'checked="checked"' : ""; ?>
+                                                value="1" <?= $res->sex ? 'checked="checked"' : ""; ?>
                                             <label for="male">先生</label>
                                             <input id="female" type="radio" name="sex"
-                                                value="0" <?php echo !$res->sex ? 'checked="checked"' : ""; ?>
+                                                value="0" <?= !$res->sex ? 'checked="checked"' : ""; ?>
                                             <label for="female">女士</label>
                                         </span>
                                     </div>
@@ -140,7 +140,7 @@
                                     <div class="p-label fl">手机号码<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="tel" type="text" id="tel"
-                                               value="<?php echo $res->tel; ?>" class="i-input"
+                                               value="<?= $res->tel; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -148,7 +148,7 @@
                                     <div class="p-label fl">邮箱<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="email" type="text" id="email" class="i-input"
-                                               value="<?php echo $res->email; ?>"
+                                               value="<?= $res->email; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -156,7 +156,7 @@
                                     <div class="p-label fl">所在地<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input type="text" name="location" id="location" class="i-input"
-                                               value="<?php echo $res->location; ?>"
+                                               value="<?= $res->location; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@
                                     <div class="p-label fl">联系地址<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="address" type="text" id="address" class="i-input"
-                                               value="<?php echo $res->address; ?>"
+                                               value="<?= $res->address; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>

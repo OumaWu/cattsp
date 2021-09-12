@@ -1,6 +1,6 @@
 <?php
 // 获取语言包
-require_once (__DIR__.'/languages/init_lang.php');
+require_once(__DIR__ . '/languages/init_lang.php');
 session_start();
 $HTTP_HEADER = $_SESSION["LANG"]["http_header"];
 $HOME = $_SESSION["LANG"]["home"];
@@ -13,7 +13,7 @@ $HOME = $_SESSION["LANG"]["home"];
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title><?=$HTTP_HEADER["title"]?></title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -192,18 +192,20 @@ $HOME = $_SESSION["LANG"]["home"];
             <ul class="cc m-t-10">
                 <?php
                 include_once("sql/homeSolarTechList.php");
-                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                    ?>
-                    <li>
-                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
-                                    href="solartech_detailpage.php?id=<?= $res->id; ?>"
-                                    target="_blank"><?= $res->title; ?></a></div>
+                if (!empty($result)) {
+                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                        <li>
+                            <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                        href="solartech_detailpage.php?id=<?= $res->id; ?>"
+                                        target="_blank"><?= $res->title; ?></a></div>
 
-                        <div class="right">
-                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
-                        </div>
-                    </li>
-                <?php } ?>
+                            <div class="right">
+                                <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                            </div>
+                        </li>
+                    <?php }
+                } ?>
             </ul>
         </div>
         <!--  }太阳能技术成果与专利  -->
@@ -217,18 +219,20 @@ $HOME = $_SESSION["LANG"]["home"];
             <ul class="cc m-t-10">
                 <?php
                 include_once("sql/homeDemandList.php");
-                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                    ?>
-                    <li>
-                        <div class="left ellipsis" title="<?= $res->title; ?>"><a
-                                    href="demands_detailpage.php?id=<?= $res->id; ?>"
-                                    target="_blank"><?= $res->title; ?></a></div>
+                if (!empty($result)) {
+                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                        <li>
+                            <div class="left ellipsis" title="<?= $res->title; ?>"><a
+                                        href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                        target="_blank"><?= $res->title; ?></a></div>
 
-                        <div class="right">
-                            <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
-                        </div>
-                    </li>
-                <?php } ?>
+                            <div class="right">
+                                <div class="r1 ellipsis fl" title="企业"><?= $res->entreprise; ?></div>
+                            </div>
+                        </li>
+                    <?php }
+                } ?>
             </ul>
         </div>
         <!--  }技术需求  -->
@@ -245,25 +249,27 @@ $HOME = $_SESSION["LANG"]["home"];
                 <ul>
                     <?php
                     include_once("sql/specialists.php");
-                    for ($i = 0; $i < 9; $i++) {
-                        $res = $result->fetch(PDO::FETCH_OBJ);
-                        ?>
-                        <li>
-                            <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
-                               title="<?= $res->name; ?>"> <img src="./user_files/expert/<?= $res->photo; ?>"
-                                                                alt="<?= $res->name; ?>"
-                                                                onerror="this.src = 'images/profile-default-male.png'">
-                            </a>
+                    if (!empty($result)) {
+                        for ($i = 0; $i < 9; $i++) {
+                            $res = $result->fetch(PDO::FETCH_OBJ);
+                            ?>
+                            <li>
+                                <a href="specialists_detailpage.php?id=<?= $res->id; ?>" target="_blank" class="photo"
+                                   title="<?= $res->name; ?>"> <img src="./user_files/expert/<?= $res->photo; ?>"
+                                                                    alt="<?= $res->name; ?>"
+                                                                    onerror="this.src = 'images/profile-default-male.png'">
+                                </a>
 
-                            <div class="info">
-                                <p class="name"><a href="specialists_detailpage.php?id=<?= $res->id; ?>"
-                                                   target="_blank"
-                                                   title="<?= $res->name; ?>">
-                                        <?= $res->name; ?> </a></p>
-                                <p class="domain"><?= $HOME["home_domain_title"]; ?><?= $res->domain; ?></p>
-                            </div>
-                        </li>
-                    <?php } ?>
+                                <div class="info">
+                                    <p class="name"><a href="specialists_detailpage.php?id=<?= $res->id; ?>"
+                                                       target="_blank"
+                                                       title="<?= $res->name; ?>">
+                                            <?= $res->name; ?> </a></p>
+                                    <p class="domain"><?= $HOME["home_domain_title"]; ?><?= $res->domain; ?></p>
+                                </div>
+                            </li>
+                        <?php }
+                    } ?>
                 </ul>
             </div>
         </div>
@@ -363,25 +369,27 @@ $HOME = $_SESSION["LANG"]["home"];
                 <ul>
                     <?php
                     include_once("sql/companyList.php");
-                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                        ?>
-                        <li>
-                            <p class="hur1">
-                                <a href="#" target="_blank" title="<?= $res->name; ?>"><?= $res->name; ?>
-                                </a>
-                            </p>
-                            <div class="hur2">
+                    if (!empty($result)) {
+                        while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+                            ?>
+                            <li>
+                                <p class="hur1">
+                                    <a href="#" target="_blank" title="<?= $res->name; ?>"><?= $res->name; ?>
+                                    </a>
+                                </p>
+                                <div class="hur2">
 
-                                <a href="#" target="_blank" class="hur2l"
-                                   rel="nofollow" title="<?= $res->name; ?>"> <img
-                                            src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
-                                            onerror="this.src = images/<?= $res->image; ?>;">
-                                </a>
-                                <p class="hur2r"><?= mb_substr($res->description, 0, 160, "utf-8"); ?>…</p>
-                            </div>
+                                    <a href="#" target="_blank" class="hur2l"
+                                       rel="nofollow" title="<?= $res->name; ?>"> <img
+                                                src="images/<?= $res->image; ?>" alt="<?= $res->name; ?>"
+                                                onerror="this.src = images/<?= $res->image; ?>;">
+                                    </a>
+                                    <p class="hur2r"><?= mb_substr($res->description, 0, 160, "utf-8"); ?>…</p>
+                                </div>
 
-                        </li>
-                    <?php } ?>
+                            </li>
+                        <?php }
+                    } ?>
                 </ul>
             </div>
             <!--  }企业单位  -->
@@ -454,14 +462,16 @@ $HOME = $_SESSION["LANG"]["home"];
             <h2><a href="policies.php" target="_blank"><?= $HOME["more_url"]; ?>&gt;</a><?= $HOME["policy"]; ?></h2>
             <ul>
                 <?php
-                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                    ?>
-                    <li>
-                        <a href="policies_detailpage.php?policy_id=<?= $res->id; ?>" target="_blank">
-                            <?= $res->title; ?>
-                        </a>
-                    </li>
-                <?php } ?>
+                if (!empty($result)) {
+                    while ($res = $result->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                        <li>
+                            <a href="policies_detailpage.php?policy_id=<?= $res->id; ?>" target="_blank">
+                                <?= $res->title; ?>
+                            </a>
+                        </li>
+                    <?php }
+                } ?>
             </ul>
         </div>
         <!--  }相关政策法规  -->
@@ -541,52 +551,68 @@ $HOME = $_SESSION["LANG"]["home"];
             <span class="pa divide"></span></div>
         <ul class="f_links">
             <li><a href="http://www.most.gov.cn/index.htm" target="_blank"><img alt=""
-                                                                                src="./images/relative_links/2015060209074428.png"><?= $HOME["most_cn"]; ?></a>
+                                                                                src="./images/relative_links/2015060209074428.png"><?= $HOME["most_cn"]; ?>
+                </a>
             </li>
             <li><a href="http://www.most.go.th/main/th/" target="_blank"><img alt=""
-                                                                              src="./images/relative_links/2015060209351878.png"><?= $HOME["most_th"]; ?></a>
+                                                                              src="./images/relative_links/2015060209351878.png"><?= $HOME["most_th"]; ?>
+                </a>
             </li>
             <li><a href="http://www.itb-china.org/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/20161008160912784.png"><?= $HOME["itb_china"]; ?></a>
+                                                                         src="./images/relative_links/20161008160912784.png"><?= $HOME["itb_china"]; ?>
+                </a>
             </li>
             <li><a href="http://www.a-star.edu.sg/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/2015042416241440.png"><?= $HOME["a_star"]; ?></a>
+                                                                         src="./images/relative_links/2015042416241440.png"><?= $HOME["a_star"]; ?>
+                </a>
             </li>
             <li><a href="http://www.asean.org/asean/asean-secretariat" target="_blank"><img alt=""
-                                                                                            src="./images/relative_links/2015060209391443.png"><?= $HOME["asean_scrt"]; ?></a>
+                                                                                            src="./images/relative_links/2015060209391443.png"><?= $HOME["asean_scrt"]; ?>
+                </a>
             </li>
             <li><a href="http://www.mofcom.gov.cn/" target="_blank"><img alt=""
-                                                                         src="./images/relative_links/20161008160943891.jpg"><?= $HOME["mofcom"]; ?></a>
+                                                                         src="./images/relative_links/20161008160943891.jpg"><?= $HOME["mofcom"]; ?>
+                </a>
             </li>
             <li><a href="http://www.tysp.org/" target="_blank"><img alt=""
-                                                                    src="./images/relative_links/2015060211272176.png"><?= $HOME["tysp"]; ?></a>
+                                                                    src="./images/relative_links/2015060211272176.png"><?= $HOME["tysp"]; ?>
+                </a>
             </li>
             <li><a href="http://www.china-asean-step.com/" target="_blank"><img alt=""
-                                                                                src="./images/relative_links/2015060209263602.png"><?= $HOME["cn_asean_step"]; ?></a>
+                                                                                src="./images/relative_links/2015060209263602.png"><?= $HOME["cn_asean_step"]; ?>
+                </a>
             </li>
             <li><a href="http://www.caexpo.org/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/2015032714175691.png"><?= $HOME["caexpo"]; ?></a>
+                                                                      src="./images/relative_links/2015032714175691.png"><?= $HOME["caexpo"]; ?>
+                </a>
             </li>
             <li><a href="http://www.cime.org.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/20151231115845323.png"><?= $HOME["cime"]; ?></a>
+                                                                       src="./images/relative_links/20151231115845323.png"><?= $HOME["cime"]; ?>
+                </a>
             </li>
             <li><a href="http://www.gei.com.cn/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/20161008161224384.png"><?= $HOME["gei"]; ?></a>
+                                                                      src="./images/relative_links/20161008161224384.png"><?= $HOME["gei"]; ?>
+                </a>
             </li>
             <li><a href="http://www.imindsoft.com/zh/Default.aspx" target="_blank"><img alt=""
-                                                                                        src="./images/relative_links/20161008164224143.png"><?= $HOME["imindsoft"]; ?></a>
+                                                                                        src="./images/relative_links/20161008164224143.png"><?= $HOME["imindsoft"]; ?>
+                </a>
             </li>
             <li><a href="http://www.caexpo.com/" target="_blank"><img alt=""
-                                                                      src="./images/relative_links/20161008161628774.png"><?= $HOME["nbw"]; ?></a>
+                                                                      src="./images/relative_links/20161008161628774.png"><?= $HOME["nbw"]; ?>
+                </a>
             </li>
             <li><a href="http://www.cgfh.com.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/2015042417313713.png"><?= $HOME["cgfh"]; ?></a>
+                                                                       src="./images/relative_links/2015042417313713.png"><?= $HOME["cgfh"]; ?>
+                </a>
             </li>
             <li><a href="http://www.gxst.gov.cn/" target="_blank"><img alt=""
-                                                                       src="./images/relative_links/2015032615335993.png"><?= $HOME["gxst"]; ?></a>
+                                                                       src="./images/relative_links/2015032615335993.png"><?= $HOME["gxst"]; ?>
+                </a>
             </li>
             <li><a href="http://www.cattc.org.cn/www.gxpc.org.cn" target="_blank"><img alt=""
-                                                                                       src="./images/relative_links/2015042417292040.png"><?= $HOME["cattc"]; ?></a>
+                                                                                       src="./images/relative_links/2015042417292040.png"><?= $HOME["cattc"]; ?>
+                </a>
             </li>
         </ul>
     </div>

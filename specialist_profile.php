@@ -102,14 +102,14 @@
                                 <div class="p-label fl">姓名<font color="red"><b>*</b></font></div>
                                 <div class="p-input fl">
                                     <input name="name" type="text" id="name"
-                                           value="<?php echo $res->name; ?>" class="i-input"
+                                           value="<?= $res->name; ?>" class="i-input"
                                            style="width: 350px;">
                                 </div>
                                 <div class="p-item clearfix">
                                     <div class="p-label fl">职位/头衔<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="title" type="text" id="title"
-                                               value="<?php echo $res->title; ?>" class="i-input"
+                                               value="<?= $res->title; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                     <div class="p-label fl">从业时长(年)<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="career_age" type="text" id="career_age"
-                                               value="<?php echo $res->career_age; ?>" class="i-input"
+                                               value="<?= $res->career_age; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                     <div class="p-label fl">学历<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="degree" type="text" id="degree"
-                                               value="<?php echo $res->degree; ?>" class="i-input"
+                                               value="<?= $res->degree; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                     <div class="p-label fl">毕业院校<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="institute" type="text" id="institute"
-                                               value="<?php echo $res->institute; ?>" class="i-input"
+                                               value="<?= $res->institute; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -141,7 +141,7 @@
                                     <div class="p-label fl">从事领域<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="domain" type="text" id="domain"
-                                               value="<?php echo $res->domain; ?>" class="i-input"
+                                               value="<?= $res->domain; ?>" class="i-input"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                     <div class="p-label fl">擅长专业<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input name="speciality" type="text" id="speciality" class="i-input"
-                                               value="<?php echo $res->speciality; ?>"
+                                               value="<?= $res->speciality; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@
                                     <div class="p-label fl">所在地<font color="red"><b>*</b></font></div>
                                     <div class="p-input fl">
                                         <input type="text" name="location" id="location" class="i-input"
-                                               value="<?php echo $res->location; ?>"
+                                               value="<?= $res->location; ?>"
                                                style="width: 350px;">
                                     </div>
                                 </div>

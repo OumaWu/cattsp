@@ -53,9 +53,9 @@
         $res = $result->fetch(PDO::FETCH_OBJ);
         ?>
         <div class="xb_lb">
-            <h1 class="xb_ka"><?php echo $res->title; ?></h1>
+            <h1 class="xb_ka"><?= $res->title; ?></h1>
             <p class="xb_kb">
-                发布日期：<?php echo $res->date; ?>&nbsp;&nbsp;&nbsp;
+                发布日期：<?= $res->date; ?>&nbsp;&nbsp;&nbsp;
             </p>
             <div class="xb_kc">
                 <?= $res->content; ?>

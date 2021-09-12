@@ -69,7 +69,8 @@ $LOGIN_BAR = $_SESSION["LANG"]["loginbar"];
         // 将语言代码向当前链接发送post请求
         let form = $("<form method='post'></form>");
         let input = $("<input type='hidden'>");
-        form.attr({"action": window.location.href});
+        let url = window.location.href.split('?').shift(); // 转换语言前清空url参数
+        form.attr({"action": url});
         input.attr({"name": 'lang'});
         input.val(lang);
         form.append(input);

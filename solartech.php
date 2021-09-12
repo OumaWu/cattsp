@@ -59,19 +59,19 @@ $SOLAR_TECH = $_SESSION["LANG"]["solar_tech"];
         <ul>
             <?php
             include('sql/solarTechList.php');
-            while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                ?>
+            if (!empty($resultSet)) {
+            while ($res = $resultSet["result"]->fetch(PDO::FETCH_OBJ)) { ?>
                 <li>
                     <div class="xb_bba">
-                        <p class="title"><b> <a href="solartech_detailpage.php?id=<?php echo $res->id; ?>"
-                                                target="_blank"> <?php echo $res->title; ?> </a> </b></p>
+                        <p class="title"><b> <a href="solartech_detailpage.php?id=<?= $res->id; ?>"
+                                                target="_blank"> <?= $res->title; ?> </a> </b></p>
                         <span class="name"><?= $SOLAR_TECH["tech_publisher"] ?><em><?= $res->publisher; ?></em> </span>
                         <br/>
-                        <span class="jishuleixing_str"><?= $SOLAR_TECH["tech_location"] ?><em><?php echo $res->location; ?></em> </span><br/>
-                        <span><?= $SOLAR_TECH["company_title"] ?><em><?php echo $res->entreprise; ?></em> </span></div>
+                        <span class="jishuleixing_str"><?= $SOLAR_TECH["tech_location"] ?><em><?= $res->location; ?></em> </span><br/>
+                        <span><?= $SOLAR_TECH["company_title"] ?><em><?= $res->entreprise; ?></em> </span></div>
                     <p class="hur2"><strong><?= $SOLAR_TECH["brief_intro"] ?></strong>
-                        <em> <?php echo mb_substr($res->description, 0, 62, "utf-8"); ?>
-                            ... </em> <a rel="nofollow" href="solartech_detailpage.php?id=<?php echo $res->id; ?>"
+                        <em> <?= mb_substr($res->description, 0, 62, "utf-8"); ?>
+                            ... </em> <a rel="nofollow" href="solartech_detailpage.php?id=<?= $res->id; ?>"
                                          _blank"><?= $SOLAR_TECH["view_detail"] ?> &gt;</a> </p>
                 </li>
             <?php } ?>
@@ -81,21 +81,8 @@ $SOLAR_TECH = $_SESSION["LANG"]["solar_tech"];
 
     <div class="h_page">
         <!-- 分页链接 -->
-        <?= $page->displayPages(); ?>
-        <!--        <div id="pages_bg" class="pages">-->
-        <!--            <span class="number9">-->
-        <!--                <span title="上一页">上一页</span>-->
-        <!--                <span title="第1页" class="pagelist_cur">1</span>-->
-        <!--                <a href="#">2</a>-->
-        <!--                <a href="#">3</a>-->
-        <!--                <a href="#">4</a>-->
-        <!--                <a href="#">5</a>-->
-        <!--                <a href="#">6</a>-->
-        <!--                <a href="#">7</a>-->
-        <!--                <span class="more">...</span>-->
-        <!--                <a href="">最后一页</a>-->
-        <!--            </span>-->
-        <!--        </div>-->
+        <?= $resultSet["page"]->displayPages();
+        } ?>
     </div>
     <span class="blank10"></span></div>
 </div>

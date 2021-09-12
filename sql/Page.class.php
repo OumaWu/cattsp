@@ -53,7 +53,7 @@ class Page
     }
 
     //传入一个表以及它的primary key名字，定义的分页参数，用来计算偏移量，行数以及页数
-    public function __construct($table, $id_name, $pageSize, $currentPage, $where = "")
+    public function __construct($table, $id_name, $pageSize, $currentPage, $where = [])
     {
         $this->maxShowPage = 5; //默认最大显示页数为5
         $this->pageSize = $pageSize;
@@ -87,7 +87,10 @@ class Page
                 $this->endPage = $this->pageCount;
             }
         }
+    }
 
+    public function getPDO() {
+        return $this->pdo;
     }
 
     public function getOffsetAdded($sql)
@@ -105,9 +108,17 @@ class Page
 
         $sqlCount = "SELECT COUNT({$id_name}) AS num FROM `{$table}`";
 
-        if(!empty($where)) {
-            $sqlCount .= " " .$where;
+        // 如果where数组不为空则将where列表里的条件依次拼接进语句
+        if (!empty($where)) {
+            $sqlCount .= " WHERE ";
+            foreach ($where as $cond) {
+                $sqlCount .= ($cond . " AND ");
+            }
+            // 最后加上1中和最后一个AND
+            $sqlCount .= '1';
         }
+
+//        echo "<script>alert('sqlCount : {$sqlCount}');</script>";
 
         try {
 
@@ -127,7 +138,7 @@ class Page
     }
 
     //连接数据库函数
-    private function connect()
+    public function connect()
     {
         /* read db info from config file into an array */
         $path = dirname(__DIR__);
@@ -165,4 +176,4 @@ class Page
     {
     }
 }
-?>
+

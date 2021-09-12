@@ -1,3 +1,13 @@
+<?php
+// 获取语言包
+require_once(__DIR__ . '/languages/init_lang.php');
+session_start();
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$LABEL = $_SESSION["LANG"]["common"];
+$DEMAND = $_SESSION["LANG"]["demand"];
+// 获取企业需求id
+$id = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>中国-东盟光电子信息技术转移服务平台</title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
@@ -44,29 +54,36 @@
 
 <!--  信息板块{  -->
 <div class="main">
-    <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="demands.php">企业需求</a> &nbsp;&gt;&nbsp;详细页
+    <div class="xa_bread"> <?= $LABEL["current_pos"] ?> <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp; <a href="demands.php"><?= $LABEL["demand_label"] ?></a> &nbsp;&gt;&nbsp;<?= $LABEL["detail_page_label"] ?>
     </div>
     <?php
-    $id = $_GET['id'];
     include("sql/demandContent.php");
+    if (!empty($result)) {
     $res = $result->fetch(PDO::FETCH_OBJ);
     ?>
     <div class="yun_xuqiu_det_a">
-        <h1><?=$res->title; ?></h1>
+        <h1><?= $res->title; ?></h1>
         <div class="yun_xuqiu_det_aa">
-            <div class="yun_xuqiu_det_aal"><span>发布时间：<?=$res->date; ?></span> <span>需求地点：<?=$res->location; ?></span> <br/>
-                <span> 需求企业：<?=$res->entreprise; ?> </span> <span>联系邮箱：<?=$res->email; ?></span>
+            <div class="yun_xuqiu_det_aal"><span><?= $DEMAND["publish_time"] ?><?= $res->date; ?></span> <span><?= $DEMAND["demand_location"] ?><?= $res->location; ?></span>
+                <br/>
+                <span> <?= $DEMAND["demand_company"] ?><?= $res->entreprise; ?> </span> <span><?= $DEMAND["contact_email"] ?><?= $res->email; ?></span>
             </div>
         </div>
     </div>
     <div class="yun_xuqiu_det_b">
-        <h2>需求简介</h2>
-        <div class="hur1" style="word-break:break-all;word-wrap:break-word;"> <?=$res->description; ?></div>
-        <p class="hur2">相关需求信息</p>
+        <h2><?= $DEMAND["brief_intro"] ?></h2>
+        <div class="hur1" style="word-break:break-all;word-wrap:break-word;"> <?= $res->description; ?></div>
+        <?php } ?>
+        <p class="hur2"><?= $DEMAND["related_demand"] ?></p>
         <div class="hur3">
-            <p><a href="#" target="_blank">太阳能即热器与高层建筑一体化应用技术</a> <span>2016-09-21</span></p>
-            <p><a href="#" target="_blank">太阳能热泵一体机技术</a> <span>2016-05-18</span></p>
-            <p><a href="#" target="_blank">太阳能空调热泵三合一技术</a> <span>2016-05-18</span></p>
+            <?php
+            include("sql/homeDemandList.php");
+            if (!empty($result)) {
+                for ($i = 0; $i < 3; $i++) {
+                    $res = $result->fetch(PDO::FETCH_OBJ); ?>
+                    <p><a href="demands_detailpage.php?id=<?= $res->id; ?>" target="_blank"><?= $res->title; ?></a> <span><?= $DEMAND["publish_time"] ?><?= $res->date; ?></span></p>
+                <?php }
+            } ?>
         </div>
     </div>
 </div>

@@ -87,7 +87,7 @@
                 </div>
                 <div class="content">
                     <div style="height: 10px;"></div>
-                    <form id="demand" action="sql/insertDemand.php?userid=<?php echo $_SESSION['userid']; ?>"
+                    <form id="demand" action="sql/insertDemand.php?userid=<?= $_SESSION['userid']; ?>"
                           method="post">
                         <div class="wrap1 d6_xqc">
                             <table class="d6xq_tb" width="100%" border="0" cellspacing="0" cellpadding="0">

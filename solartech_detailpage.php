@@ -65,7 +65,9 @@ if (!isset($_COOKIE["tech"][$id])) {
     </div>
     <?php
     include("sql/solarTechContent.php");
-    $res = $result->fetch(PDO::FETCH_OBJ);
+    if (!empty($result)) {
+        $res = $result->fetch(PDO::FETCH_OBJ);
+    }
     ?>
     <div class="xb_ga clearfix">
 

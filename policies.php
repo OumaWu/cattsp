@@ -56,9 +56,9 @@
                 include("sql/selectPolicyList.php");
                 while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                     ?>
-                    <li><span><?php echo $res->date; ?></span> <a
-                                href="policies_detailpage.php?policy_id=<?php echo $res->id; ?>" target="_blank"
-                                class=" chu"> <?php echo $res->title; ?></a></li>
+                    <li><span><?= $res->date; ?></span> <a
+                                href="policies_detailpage.php?policy_id=<?= $res->id; ?>" target="_blank"
+                                class=" chu"> <?= $res->title; ?></a></li>
                 <?php } ?>
             </ul>
             <div class="h_page">

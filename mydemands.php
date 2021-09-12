@@ -104,14 +104,14 @@
                             while ($res = $result->fetch(PDO::FETCH_OBJ)) {
                                 ?>
                                 <tr>
-                                    <td><a href="demands_detailpage.php?id=<?php echo $res->id; ?>"
-                                           target="_blank"><?php echo $res->title; ?></a></td>
-                                    <td><?php echo $res->date; ?></td>
-                                    <td><?php echo $res->entreprise; ?></td>
+                                    <td><a href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                           target="_blank"><?= $res->title; ?></a></td>
+                                    <td><?= $res->date; ?></td>
+                                    <td><?= $res->entreprise; ?></td>
                                     <td>审核中</td>
                                     <td><a style="color: rgb(0, 148, 255);" href="editdemand.php?id=<?=$res->id;?>">编辑</a>&nbsp;|&nbsp;<a
                                                 id="rpList_ctl00_lbtnDel" style="color: rgb(0, 148, 255);"
-                                                href="sql/deleteDemand.php?id=<?php echo $res->id; ?>">删 除</a></td>
+                                                href="sql/deleteDemand.php?id=<?= $res->id; ?>">删 除</a></td>
                                 </tr>
                             <?php } ?>
                             </tbody>
