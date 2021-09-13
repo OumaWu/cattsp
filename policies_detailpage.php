@@ -1,8 +1,18 @@
+<?php
+// 获取语言包
+require_once(__DIR__ . '/languages/init_lang.php');
+session_start();
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$LABEL = $_SESSION["LANG"]["common"];
+$ARTICLE = $_SESSION["LANG"]["article"];
+$category_type = "policy";
+$category_id = $_GET["category_id"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>中国-东盟光电子信息技术转移服务平台</title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
     <!-- }导入新闻展示模块css文件 -->
@@ -23,55 +33,47 @@
 <div class="header clearfix" id="header">
 
     <!--  登录模块{  -->
-    <?php require_once('common/loginbar.php'); ?>
+    <?php require_once(__DIR__ . '/common/loginbar.php'); ?>
     <!--  }登录模块  -->
 
     <!--  网站横幅{  -->
-    <?php require_once('common/banner.php'); ?>
+    <?php require_once(__DIR__ . '/common/banner.php'); ?>
     <!--  }网站横幅  -->
 
     <!--  导航栏{  -->
-    <?php require_once('common/navbar.php'); ?>
+    <?php require_once(__DIR__ . '/common/navbar.php'); ?>
     <!--  }导航栏  -->
 </div>
 <!--  }版头  -->
 
 <!--  信息板块{  -->
 <div class="main">
-    <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="information.php">咨询大厅</a>&nbsp;&gt;&nbsp;
-        <span>详细页</span>
+    <div class="xa_bread"> <?= $LABEL["current_pos"] ?>
+        <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp;
+        <a href="policies.php"><?= $LABEL["policy_label"] ?></a>&nbsp;&gt;&nbsp;
+        <span><?= $LABEL["detail_page_label"] ?></span>
     </div>
     <div class="xb_l clearfix">
         <?php
-        $type = "policy";
-        require_once('common/sidebar.php');
-        ?>
-
-        <?php
-        $policy_id = $_GET['policy_id'];
-        include("sql/policyContent.php");
-        $res = $result->fetch(PDO::FETCH_OBJ);
-        ?>
-        <div class="xb_lb">
-            <h1 class="xb_ka"><?= $res->title; ?></h1>
-            <p class="xb_kb">
-                发布日期：<?= $res->date; ?>&nbsp;&nbsp;&nbsp;
-            </p>
-            <div class="xb_kc">
-<!--                --><?php
-//                $content =preg_split("/[\s]+/", $res->content);
-//                foreach ($content as $paragraph) {
-//                    ?>
-<!--                    <p style="text-align:justify">&emsp;&emsp;--><?//=$paragraph;?><!--</p>-->
-<!--                --><?php //} ?>
-
-                <?= $res->content; ?>
+        require_once(__DIR__ . '/common/sidebar.php');
+        include_once(__DIR__ . '/sql/policyContent.php');
+        if (!empty($result)) {
+            $res = $result->fetch(PDO::FETCH_OBJ);
+            ?>
+            <div class="xb_lb">
+                <h1 class="xb_ka"><?= $res->title; ?></h1>
+                <p class="xb_kb">
+                    <?= $ARTICLE["publish_time"] ?><?= $res->date; ?>&nbsp;&nbsp;&nbsp;
+                </p>
+                <div class="xb_kc">
+                    <?= $res->content; ?>
+                </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
     <span class="blank10"></span></div>
 <!-- }信息板块  -->
 
-<?php require_once('common/footer.php'); ?>
+<?php require_once(__DIR__ . '/common/footer.php'); ?>
 </body>
 </html>

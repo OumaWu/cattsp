@@ -1,8 +1,6 @@
 <?php
 
-$config = require_once ('./config/database.php');
-print_r($config);
-echo '</br>'.$config['database'];
+echo $_SERVER['PHP_SELF'];
 
 //echo date("Y-m-d");
 

@@ -2,7 +2,7 @@
 
 session_start();
 //require_once ("./sql/Page.class.php");
-require_once ("./sql/Language.class.php");
+require_once (__DIR__ ."/Language.class.php");
 $lang_code = $_SESSION["LANG_CODE"];
 $table = "solar_technologies";
 $p = empty($_GET["p"]) ? 1 : $_GET["p"];
@@ -20,6 +20,6 @@ $p = empty($_GET["p"]) ? 1 : $_GET["p"];
 //    die("错误!!: " . $e->getMessage() . "<br>");
 //}
 
-$resultSet = Language::getListByLang($lang_code, "solar_technologies", "id", 10, $p);
+$resultSet = Language::getListByLang($lang_code, $table, "id", 10, $p);
 
 

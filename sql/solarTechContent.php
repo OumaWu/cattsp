@@ -2,7 +2,7 @@
 include("connection.php");
 
 if (isset($id)) {
-    $sql = "SELECT * FROM `solar_technologies` where id = $id";
+    $sql = "SELECT * FROM `solar_technologies` where `id` = '{$id}'";
     try {
         $result = $pdo->prepare($sql);
         if ($result->execute()) {

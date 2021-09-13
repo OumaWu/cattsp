@@ -52,27 +52,35 @@ $DEMAND = $_SESSION["LANG"]["demand"];
 
 <!--  信息板块{  -->
 <div class="main">
-    <div class="xa_bread"><?= $LABEL["current_pos"] ?> <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp;<?= $LABEL["demand_label"] ?></div>
+    <div class="xa_bread">
+        <?= $LABEL["current_pos"] ?>
+        <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp;
+        <?= $LABEL["demand_label"] ?>
+    </div>
     <div class="yun_xuqiu_list yun_list_div">
         <ul class="clearfix">
             <?php
             include('sql/demandList.php');
-            if (!empty($resultSet)) {
-            while ($res = $resultSet["result"]->fetch(PDO::FETCH_OBJ)) { ?>
-                <li>
-                    <p class="hur1"><a href="demands_detailpage.php?id=<?= $res->id; ?>"
-                                       target="_blank"> <?= $res->title; ?> </a></p>
-                    <p class="hur2"><span><?= $DEMAND["demand_location"] ?><?= $res->location; ?> </span><span><?= $DEMAND["publish_time"] ?><?= $res->date; ?> </span>
-                        <span><?= $DEMAND["demand_company"] ?><?= $res->entreprise; ?> </span>
-                        <span><?= $DEMAND["contact_email"] ?><?= $res->email; ?></span></p>
-                </li>
-            <?php } ?>
+            if (!empty($resultSet["result"])) {
+                while ($res = $resultSet["result"]->fetch(PDO::FETCH_OBJ)) { ?>
+                    <li>
+                        <p class="hur1"><a href="demands_detailpage.php?id=<?= $res->id; ?>"
+                                           target="_blank"> <?= $res->title; ?> </a></p>
+                        <p class="hur2">
+                            <span><?= $DEMAND["demand_location"] ?><?= $res->location; ?> </span><span><?= $DEMAND["publish_time"] ?><?= $res->date; ?> </span>
+                            <span><?= $DEMAND["demand_company"] ?><?= $res->entreprise; ?> </span>
+                            <span><?= $DEMAND["contact_email"] ?><?= $res->email; ?></span></p>
+                    </li>
+                <?php }
+            } ?>
         </ul>
     </div>
     <div class="clear"></div>
     <div class="h_page">
         <!-- 分页链接 -->
-        <?= $resultSet["page"]->displayPages();
+        <?php
+        if (!empty($resultSet["page"])) {
+            $resultSet["page"]->displayPages();
         } ?>
     </div>
 </div>

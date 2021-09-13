@@ -1,3 +1,11 @@
+<?php
+// 获取语言包
+require_once(__DIR__ . '/languages/init_lang.php');
+session_start();
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$LABEL = $_SESSION["LANG"]["common"];
+$category_type = "policy";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +14,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>中国-东盟光电子信息技术转移服务平台</title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
 
     <!-- 导入新闻展示模块css{ -->
     <link rel="stylesheet" type="text/css" href="./css/index_news.css">
@@ -43,41 +51,49 @@
 
 <!--  信息板块{  -->
 <div class="main">
-    <div class="xa_bread"> 当前位置： <a href="home.php">首页</a>&nbsp;&gt;&nbsp; <a href="#">相关政策法规</a></div>
+    <div class="xa_bread"> <?= $LABEL["current_pos"] ?>
+        <a href="home.php"><?= $LABEL["home_label"] ?></a>&nbsp;&gt;&nbsp;
+        <?= $LABEL["policy_label"] ?>
+    </div>
     <div class="xb_l clearfix">
-        <?php
-        $category_id = 1;
-        $type = "policy";
-        require_once('common/sidebar.php');
-        ?>
+        <?php require_once('common/sidebar.php'); ?>
         <div class="xb_lb">
             <ul>
                 <?php
-                include("sql/selectPolicyList.php");
-                while ($res = $result->fetch(PDO::FETCH_OBJ)) {
-                    ?>
-                    <li><span><?= $res->date; ?></span> <a
-                                href="policies_detailpage.php?policy_id=<?= $res->id; ?>" target="_blank"
-                                class=" chu"> <?= $res->title; ?></a></li>
-                <?php } ?>
+                include(__DIR__ . "/sql/get_article_list.php");
+                if (!empty($resultSet)) {
+                    while ($res = $resultSet["result"]->fetch(PDO::FETCH_OBJ)) {
+                        ?>
+                        <li><span><?= $res->date; ?></span> <a
+                                    href="policies_detailpage.php?policy_id=<?= $res->id; ?>&category_id=<?= $res->category; ?>"
+                                    target="_blank"
+                                    class=" chu"> <?= $res->title; ?></a></li>
+                    <?php }
+                } ?>
             </ul>
             <div class="h_page">
                 <!-- 分页链接 -->
                 <ul class="pagination">
+                    <?php if (!empty($resultSet)) {
+                        if ($resultSet["page"]->currentPage != 1) { ?>
+                            <li><a href="<?= "{$_SERVER["PHP_SELF"]}?category_id={$resultSet["category_id"]}&p=1"; ?>">&laquo;</a>
+                            </li>
+                        <?php } ?>
 
-                    <?php if ($page->currentPage != 1) { ?>
-                        <li><a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p=1";?>">&laquo;</a></li>
-                    <?php } ?>
+                        <?php for ($i = $resultSet["page"]->startPage; $i <= $resultSet["page"]->endPage; $i++) { ?>
+                            <li <?php if ($i == $resultSet["page"]->currentPage) { ?>class="active"<?php } ?>>
+                                <a href="<?= "{$_SERVER["PHP_SELF"]}?category_id={$resultSet["category_id"]}&p={$i}"; ?>"><?= $i; ?>
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                        <?php } ?>
 
-                    <?php for ($i = $page->startPage; $i <= $page->endPage; $i++) { ?>
-                        <li <?php if ($i == $page->currentPage) { ?>class="active"<?php } ?>>
-                            <a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p={$i}";?>"><?=$i;?><span class="sr-only">(current)</span></a>
-                        </li>
-                    <?php } ?>
-
-                    <?php if ($page->currentPage != $page->pageCount && $page->pageCount > 1) { ?>
-                        <li><a href="<?="{$_SERVER["PHP_SELF"]}?category_id={$category_id}&p={$page->pageCount}";?>">&raquo;</a></li>
-                    <?php } ?>
+                        <?php if ($resultSet["page"]->currentPage != $resultSet["page"]->pageCount && $resultSet["page"]->pageCount > 1) { ?>
+                            <li>
+                                <a href="<?= "{$_SERVER["PHP_SELF"]}?category_id={$resultSet["category_id"]}&p={$resultSet["page"]->pageCount}"; ?>">&raquo;</a>
+                            </li>
+                        <?php }
+                    } ?>
                 </ul>
             </div>
         </div>
