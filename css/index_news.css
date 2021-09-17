@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.tit {
-    padding-left: 30% !important;
-}
-
 .left {
     float: right;
 }
@@ -21,7 +17,7 @@
 
 .register {
     margin: 0 auto;
-    max-width: 450px;
+    max-width: 500px;
     min-height: auto;
 }
 
@@ -1380,13 +1376,17 @@ a.c333:hover {
     height: inherit;
 }
 
+/*.tit {*/
+/*    padding-left: 50% !important;*/
+/*}*/
+
 .wys_regbox {
     /*padding-bottom: 50px;*/
 }
 
 .wys_regbox .tit {
     padding-top: 20px;
-    padding-left: 14%;
+    padding-left: 60%;
     margin-bottom: 25px;
     height: 40px;
     text-align: center;
@@ -1423,13 +1423,13 @@ a.c333:hover {
     float: left;
     width: auto;
     text-align: right;
-    font-size: 30px;
+    font-size: 25px;
     color: #FFF;
 }
 
 .wys_regbox .reginp {
     float: right;
-    width: 262px;
+    width: 250px;
     height: 27px;
     line-height: 27px;
     border: 1px #ddd solid;
@@ -4968,11 +4968,11 @@ i.wys_numicon em {
 
 .wys_loginbox {
     float: right;
-    width: 380px;
-    height: 350px;
+    min-width: 380px;
+    min-height: 350px;
     background-color: #fff;
-    margin: 50px 50px 0 0;
-    padding: 20px 0 30px 0;
+    /*margin: 50px 50px 0 0;*/
+    padding: 20px 0 0 0;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -4982,6 +4982,7 @@ i.wys_numicon em {
 }
 
 .wys_loginbox .tit {
+    max-width: 380px;
     line-height: 55px;
     background-color: #f5f5f5;
     font-size: 25px;

@@ -1,3 +1,12 @@
+<?php
+// 获取语言包
+require_once(__DIR__ . '/languages/init_lang.php');
+session_start();
+$HTTP_HEADER = $_SESSION["LANG"]["http_header"];
+$LABEL = $_SESSION["LANG"]["common"];
+$REGISTER = $_SESSION["LANG"]["register"];
+$BANNER = $_SESSION["LANG"]["banner"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +15,14 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
-    <title>中国-东盟光电子信息技术转移服务平台</title>
+    <title><?= $HTTP_HEADER["title"] ?></title>
 
     <!-- 导入版头css文件{ -->
     <link rel="stylesheet" type="text/css" href="./css/header.css">
     <!-- }导入版头css文件 -->
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?v">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?p">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他css和js文件{ -->
@@ -43,42 +52,49 @@
 <!--  信息板块{  -->
 <div class="background">
     <div class="main">
+
         <form id="gform" name="gform" action="sql/registration.php" method="post">
             <div class="wys_layout">
+                <div class="login_img clearfix">
+                    <h1 style="font-size:35px; color:white;"><b><?= $BANNER["header"] ?></b></h1>
+                    <?php if ($_SESSION["LANG_CODE"] !== 'en_US') { ?>
+                        <h1 style="font-size:20px; color:white;">
+                            <b>China-ASEAN Optoelectronic Information Technology Transfer Service Platform</b>
+                        </h1>
+                    <?php } ?>
+                </div>
                 <div class="wys_borderbg wys_regbox clearfix">
                     <div class="tit">
-                        <h2><b>会员注册</b></h2>
+                        <h2><b><?= $REGISTER["register_form_title"] ?></b></h2>
                     </div>
                     <div class="left">
                         <ul class="register">
                             <li>
-                                <label for="accountname"><span class="cf50">*</span><b>用户名：</b></label>
+                                <label for="accountname"><span class="cf50">*</span><b><?= $REGISTER["user_name"] ?></b></label>
                                 <input class="reginp" type="text" name="accountname" id="accountname"
-                                       maxlength="15" placeholder="请输入用户名"
-                                       onblur="checkLogin();"/>
+                                       maxlength="15" placeholder=" <?= $LABEL["user_name_input"] ?>"/>
                             </li>
                             <li>
-                                <label for="password"><span class="cf50">*</span><b>密码：</b></label>
+                                <label for="password"><span
+                                            class="cf50">*</span><b><?= $REGISTER["password"] ?></b></label>
                                 <input class="reginp" type="password" name="password" id="password"
-                                       maxlength="20" placeholder="请输入密码"
-                                       onblur="checkPwd();">
+                                       maxlength="20" placeholder=" <?= $LABEL["password_input"] ?>">
                             </li>
                             <li>
-                                <label for="pswconfirm"><span class="cf50">*</span><b>确认密码：</b></label>
+                                <label for="pswconfirm"><span
+                                            class="cf50">*</span><b><?= $REGISTER["confirm_password"] ?></b></label>
                                 <input class="reginp" type="password" name="pswconfirm" id="pswconfirm"
-                                       maxlength="20"
-                                       onblur="checkPwdConfirm();">
+                                       maxlength="20">
                             </li>
                             <li>
-                                <label for="email"><span class="cf50">*</span><b>电子邮箱：</b></label>
-                                <input class="reginp" type="text" name="email" id="email" maxlength="30"
-                                       onblur="checkEmail();">
+                                <label for="email"><span class="cf50">*</span><b><?= $REGISTER["email"] ?></b></label>
+                                <input class="reginp" type="text" name="email" id="email" maxlength="30">
                             </li>
                         </ul>
                         <div class="regbtn">
                             <label for="btn-submit"></label>
                             <button type="button" id="btn-submit" class="wys_bluebtn saveClass"
-                                    onclick="checkForm();">立即注册
+                                    onclick="checkForm();"><?= $REGISTER["register_button"] ?>
                             </button>
                         </div>
                         <div class="agree" style="height: 40px;"></div>
@@ -107,8 +123,7 @@
         if (login === "") {
             alert("用户名不能为空！！");
             checkList.loginCheck = false;
-        }
-        else {
+        } else {
             checkList.loginCheck = true;
             checkDuplicate(login);
         }
@@ -119,8 +134,7 @@
         if ($("#password").val() === "") {
             alert("密码不能为空！");
             checkList.checkPsw = false;
-        }
-        else {
+        } else {
             checkList.checkPsw = true;
         }
     }
@@ -131,8 +145,7 @@
         if ($("#password").val() !== $("#pswconfirm").val()) {
             alert("两次输入的密码不一致！");
             checkList.checkPswConfirm = false;
-        }
-        else {
+        } else {
             checkList.checkPswConfirm = true;
         }
     }
@@ -142,31 +155,31 @@
         if ($("#email").val() === "") {
             alert("请填邮箱！！");
             checkList.checkEmail = false;
-        }
-        else {
+        } else {
             checkList.checkEmail = true;
         }
     }
 
     //检查表单
     function checkForm() {
+        checkLogin();
+        checkDuplicate();
+        checkPwd();
+        checkPwdConfirm();
+        checkEmail();
         if (checkList.loginCheck === false
             || checkList.checkDuplicate === false
             || checkList.checkPsw === false
             || checkList.checkPswConfirm === false
             || checkList.checkEmail === false) {
-            alert("请填必填信息！");
             return false;
-        }
-        else {
+        } else {
             $("#gform").submit();
             return true;
         }
     }
 
     function checkDuplicate(login) {
-
-
         $.ajax(
             {
                 url: "./sql/checklogin.php",
@@ -176,8 +189,7 @@
                 success: function (result) {
                     if (result === 1) {
                         checkList.checkDuplicate = true;
-                    }
-                    else if (result === 0) {
+                    } else if (result === 0) {
                         alert("用户名已被注册！");
                         checkList.checkDuplicate = false;
                     }
