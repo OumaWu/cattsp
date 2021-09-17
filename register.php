@@ -22,11 +22,11 @@ $BANNER = $_SESSION["LANG"]["banner"];
     <!-- }导入版头css文件 -->
 
     <!-- 导入新闻展示模块css{ -->
-    <link rel="stylesheet" type="text/css" href="./css/index_news.css?p">
+    <link rel="stylesheet" type="text/css" href="./css/index_news.css?d">
     <!-- }导入新闻展示模块css文件 -->
 
     <!-- 导入其他css和js文件{ -->
-    <link rel="stylesheet" type="text/css" href="./css/common.css" id="theme1">
+    <link rel="stylesheet" type="text/css" href="./css/common.css?p" id="theme1">
     <script src="./js/jquery-3.3.1.min.js"></script>
     <!-- }导入其他css和js文件 -->
 
@@ -55,49 +55,51 @@ $BANNER = $_SESSION["LANG"]["banner"];
 
         <form id="gform" name="gform" action="sql/registration.php" method="post">
             <div class="wys_layout">
-                <div class="login_img clearfix">
-                    <h1 style="font-size:35px; color:white;"><b><?= $BANNER["header"] ?></b></h1>
-                    <?php if ($_SESSION["LANG_CODE"] !== 'en_US') { ?>
-                        <h1 style="font-size:20px; color:white;">
-                            <b>China-ASEAN Optoelectronic Information Technology Transfer Service Platform</b>
-                        </h1>
-                    <?php } ?>
-                </div>
                 <div class="wys_borderbg wys_regbox clearfix">
-                    <div class="tit">
-                        <h2><b><?= $REGISTER["register_form_title"] ?></b></h2>
+                    <div class="login_img">
+                        <h1 style="font-size:35px; color:white;"><b><?= $BANNER["header"] ?></b></h1>
+                        <?php if ($_SESSION["LANG_CODE"] !== 'en_US') { ?>
+                            <h1 style="font-size:20px; color:white;">
+                                <b>China-ASEAN Optoelectronic Information Technology Transfer Service Platform</b>
+                            </h1>
+                        <?php } ?>
                     </div>
-                    <div class="left">
-                        <ul class="register">
-                            <li>
-                                <label for="accountname"><span class="cf50">*</span><b><?= $REGISTER["user_name"] ?></b></label>
-                                <input class="reginp" type="text" name="accountname" id="accountname"
-                                       maxlength="15" placeholder=" <?= $LABEL["user_name_input"] ?>"/>
-                            </li>
-                            <li>
-                                <label for="password"><span
-                                            class="cf50">*</span><b><?= $REGISTER["password"] ?></b></label>
-                                <input class="reginp" type="password" name="password" id="password"
-                                       maxlength="20" placeholder=" <?= $LABEL["password_input"] ?>">
-                            </li>
-                            <li>
-                                <label for="pswconfirm"><span
-                                            class="cf50">*</span><b><?= $REGISTER["confirm_password"] ?></b></label>
-                                <input class="reginp" type="password" name="pswconfirm" id="pswconfirm"
-                                       maxlength="20">
-                            </li>
-                            <li>
-                                <label for="email"><span class="cf50">*</span><b><?= $REGISTER["email"] ?></b></label>
-                                <input class="reginp" type="text" name="email" id="email" maxlength="30">
-                            </li>
-                        </ul>
-                        <div class="regbtn">
-                            <label for="btn-submit"></label>
-                            <button type="button" id="btn-submit" class="wys_bluebtn saveClass"
-                                    onclick="checkForm();"><?= $REGISTER["register_button"] ?>
-                            </button>
+                    <div style="float: right; max-width: 500px;">
+                        <div class="tit">
+                            <h2><b><?= $REGISTER["register_form_title"] ?></b></h2>
                         </div>
-                        <div class="agree" style="height: 40px;"></div>
+                        <div class="left">
+                            <ul class="register">
+                                <li>
+                                    <label for="accountname"><span class="cf50">*</span><b><?= $REGISTER["user_name"] ?></b></label>
+                                    <input class="reginp" type="text" name="accountname" id="accountname"
+                                           maxlength="15" placeholder=" <?= $LABEL["user_name_input"] ?>"/>
+                                </li>
+                                <li>
+                                    <label for="password"><span
+                                                class="cf50">*</span><b><?= $REGISTER["password"] ?></b></label>
+                                    <input class="reginp" type="password" name="password" id="password"
+                                           maxlength="20" placeholder=" <?= $LABEL["password_input"] ?>">
+                                </li>
+                                <li>
+                                    <label for="pswconfirm"><span
+                                                class="cf50">*</span><b><?= $REGISTER["confirm_password"] ?></b></label>
+                                    <input class="reginp" type="password" name="pswconfirm" id="pswconfirm"
+                                           maxlength="20">
+                                </li>
+                                <li>
+                                    <label for="email"><span class="cf50">*</span><b><?= $REGISTER["email"] ?></b></label>
+                                    <input class="reginp" type="text" name="email" id="email" maxlength="30">
+                                </li>
+                            </ul>
+                            <div class="regbtn">
+                                <label for="btn-submit"></label>
+                                <button type="button" id="btn-submit" class="wys_bluebtn saveClass"
+                                        onclick="checkForm();"><?= $REGISTER["register_button"] ?>
+                                </button>
+                            </div>
+                            <div class="agree" style="height: 40px;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
